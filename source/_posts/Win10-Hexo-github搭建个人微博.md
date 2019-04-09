@@ -683,7 +683,9 @@ hexo g -d
 - 通过git clone 命令下载的themes或者module文件中可能有.git文件，会有影响，所以删去。比如我就是在next这个主题文件夹里有个.git文件。
 
 - 报错
-```Please make sure you have the correct access rights and the repository exists```
+```
+Please make sure you have the correct access rights and the repository exists
+```
 这个貌似是因为我们新建了分支的关系，反正它的意思就是找不到你的服务器了，如果上面操作都没问题的话建议你删除在user/username/下的.ssh文件夹，然后重新回到[四->03、部署git和github]再配置一下你的ssh key。
 
 ## 02.博客管理流程
@@ -711,10 +713,9 @@ git clone git@github.com:username/username.github.io.git
 拷贝仓库（默认分支为 source）；
 ii.在本地新拷贝的username.github.io文件夹下通过终端依次执行下列指令：
 ```
-sudo npm install -g hexo-cli
-sudo npm install
-sudo npm install
-hexo-deployer-git
+npm install -g hexo-cli
+npm install
+npm install hexo-deployer-git
 ```
 这里的【username.github.io】文件夹其实就是我们一直在说的【Hexo】文件夹。
 
