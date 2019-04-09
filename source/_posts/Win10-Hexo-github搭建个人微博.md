@@ -188,6 +188,7 @@ tags:
 4. User Pages 通过 `http(s)://username.github.io` 进行访问，而 Projects Pages 通过 `http(s)://username.github.io/projectname` 进行访问。
 ```
 - 相关资料 [GitHub Pages Basics / User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
+
 ## 03 配置Git 与 GitHub
 打开git bash,设置用户名称和邮件地址
 ```
@@ -638,23 +639,53 @@ local_search:
 ```
 # 六、版本控制
  ## 01 修改博客及部署操作
+ 
+ i.首先，我们先在username.github.io仓库里做这些事情。
+ 在仓库中新建一个分支，命名为source
+ ![new branch](https://s2.ax1x.com/2019/04/10/ATZKcn.png)
+ ii.然后把source设置为默认分支。
+ ![default branch](https://s2.ax1x.com/2019/04/10/ATZu1s.png)
+ iii.然后开始准备你的第一次提交git
  修改博客内容后依次执行以下命令来提交网站相关的文件：
  ```
+ 
  git init 
  //这句在这里主要是为了在文件夹中git init让git标记此文件夹为版本库
  //如果不写这句，不出意外会报错
  //"fatal: not a git repository (or any of the parent directories): .git"
  //和hexo init一样，只要第一次时运行一次就好
-git add .
-git commit -m "自定义内容即可"
-git push origin source
+ git checkout -b source
+ //不出意外的话这里你会和我遇到一样的问题，你的分支依然是master，
+ //所以要转到source，其实无伤大雅，反正下面提交命令还是提交到source
+ git add .
+ //添加文件到本地仓库
+ git commit -m "自定义内容即可"
+ //添加文件描述信息
+ git remote add origin git@github.com:username/username.github.io.git
+ // 远程仓库地址 //链接远程仓库，创建主分支
+ git pull origin master 
+ // 把本地仓库的变化连接到远程仓库主分支
+ git push -u origin source -f
+//把本地仓库的文件推送到远程仓库
+//-f 是强制提交，主要是因为前后版本不一致造成的，
 ```
 然后执行以下任意一条生成网站并部署到 GitHub 上。
 ```  
 hexo generate -d
 hexo g -d
 ```
-这样一来，在 GitHub 上的 username.github.io 仓库就有两个分支，一个 source 分支用来存放网站的原始文件，一个 master 分支用来存放生成的静态网页。
+这样一来，在 GitHub 上的 username.github.io 仓库就有两个分支，
+一个 source 分支用来存放网站的原始文件，
+一个 master 分支用来存放生成的静态网页。
+
+可能遇到的bug 
+
+- 通过git clone 命令下载的themes或者module文件中可能有.git文件，会有影响，所以删去。比如我就是在next这个主题文件夹里有个.git文件。
+
+- 报错
+```Please make sure you have the correct access rights and the repository exists```
+这个貌似是因为我们新建了分支的关系，反正它的意思就是找不到你的服务器了，如果上面操作都没问题的话建议你删除在user/username/下的.ssh文件夹，然后重新回到[四->03、部署git和github]再配置一下你的ssh key。
+
 ## 02.博客管理流程
  在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：
  i.依次执行指令
