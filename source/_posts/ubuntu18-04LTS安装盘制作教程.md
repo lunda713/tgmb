@@ -1,6 +1,6 @@
 title: ubuntu18.04LTS安装盘制作教程
 categories:
-  - ubuntu
+  - Akilarの巧克力
 tags:
   - ubuntu
   - 启动盘制作

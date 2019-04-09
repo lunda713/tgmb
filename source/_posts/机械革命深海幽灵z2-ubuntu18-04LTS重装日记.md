@@ -1,6 +1,6 @@
 title: 机械革命深海幽灵z2 ubuntu18.04LTS重装日记
 categories:
-  - ubuntu
+  - Akilarの巧克力
 tags:
   - ubuntu
   - 系统重装
