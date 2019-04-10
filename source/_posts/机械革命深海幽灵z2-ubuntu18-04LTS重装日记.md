@@ -1,4 +1,4 @@
-title: 机械革命深海幽灵z2 ubuntu18.04LTS重装日记
+title: 'ubuntu18.04LTS 机械革命深海幽灵z2 重装日记 '
 categories:
   - Akilarの巧克力
 tags:
