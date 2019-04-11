@@ -1,96 +1,282 @@
-title: Win10 Hexo+github搭建个人博客
+title: Ubuntu 18.04LTS Hexo+github搭建个人博客
 author: Akilarlxh
 tags:
-  - win10
-  - Hexo
+  - 'ubuntu '
+  - hexo
   - github
-  - gitalk
-  - 教程贴
-  - local search
 categories:
-  - Akilarの棉花糖
-date: 2019-04-09 19:41:00
+  - Akilarの巧克力
+date: 2019-04-11 17:03:00
 ---
 # 一、写在最前
 
-最开始接触博客的契机是我第一次重装ubuntu的时候。看的是[楠皮的博客](https://blog.vanxnf.top)，之后又重装了7次ubuntu，每次都去看楠皮的博客，一个人撑起了他的博客访问量。自此，我终于意识到我也该写个博客了，一开始用到的是csdn，虽然csdn自带的网页markdown非常方便，还有快捷键支持，但是实在是架不住那边烦人的站点广告，之后也试过简书，虽然好看了许多，但是还是没有我当初浏览楠皮博客时那种丝般顺滑的感觉。
+其实我已开始最先尝试的就是ubuntu上搭建，但是，非常遗憾的是，ubuntu的各种读写权限把我弄得死去活来。
 
-最后，在无数个下定决心的双休日，我终于在前天，也即是20190407，记牢这个历史性的时刻，搭建成功了我的第一个个人博客，虽然还很简略，没什么文章，但是不急，把我那200多篇个人日记慢慢搬过来就好了。
+毕竟一开始看的就是楠皮的博客来尝试的，后来发现没什么大用，不够详细倒是其次，主要是缺乏他其他几篇那样的普适性。怎么说呢，我花了三天时间踩坑，终于算是可以正常使用并且和win10完美同步了。
 
+所以之后写的内容里有很多都会附加上我踩坑时的怨念。
+
+---
 # 二、准备工作
 
-首先要安装必要的软件
-##  [Node.js](https://nodejs.org/en/)
+
+## 1、安装node.js和npm
 ```
-我下载的是目前最新的11.13.0 版本。
-Node.js是基于Chrome的V8 JavaScript引擎构建的
-运行在服务端的JavaScript开发平台,知道这些就够了。
-反正作为一个开发环境，安装以后再也不用去打扰它。
-默默运行就是了。
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get npm
 ```
-##  [git](https://git-scm.com/)
+安装完成以后可以输入
 ```
-我下载的是2.21.0版本，可以选择安装版，也可以选择绿色版，
-不过绿色版需要加上Git_HOME，%Git_HOME%\bin之类的，我就偷懒了，
-安装版一路默认安装即可。作为最强大的版本控制软件，
-以后我还要专门写几篇活用教程的。
+nodejs -v
+npm -v
 ```
-## [Atom](https://www.atom.io/)
+来查看版本号确认是否安装成功。
+
+## 2、安装git
 ```
-Atom自带markdown渲染，shift+ctrl+M即可。而且安装简单。
-界面美观，怎么吹都不过分啊。要是没有特殊需求的话这个就足够了。
-之后会提到一个Hexo-admin的插件，可以直接在浏览器上管理，
-这个是后话了。
+sudo apt-get install git
 ```
+如果你是先看了我那篇ubuntu重装日记，那git应该之前就有安装过。
+
+## 3、安装Markdown编辑器
+以下任选一个即可
+- 1.[Atom](https://atom.io/)
+
+Atom是一个我挺喜欢的本地文本编辑器，自带markdown插件，按shift+ctrl+m即可渲染。缺点是实时渲染效果很卡顿，不流畅啊。
+下载安装.deb文件后，用dpkg命令安装
+```
+sudo dpkg -i atom-amd64.deb
+//若报错，就执行
+sudo apt-get install -f
+
+```
+
+
+- 2.[Typora](https://www.typora.io/)
+
+Typora是专业的markdown编辑器，支持主题自定义，而且源代码模式和markdown模式随意切换，使用起来也很流畅。官网有各种系统的客户端安装教程
+```
+# or run:
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+# add Typora's repository
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-get update
+# install typora
+sudo apt-get install typora
+```
+除了这些软件形式的编辑器
+- 3.hexo-admin
+之后还会提到一个Hexo-admin的插件，
+可以直接在浏览器上管理，前提是你要先把hexo安装好，所以这个等会再讲。
+## 4、踩坑点
+- i、绝大多是依赖错误都可以通过这三行代码解决
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -f
+```
+
+- ii、另外要是安装特别慢的话，就别等了，可以把ubuntu的软件库换成国内源
+目前我知道对于版本适配的比较好的有清华源
+[清华大学 ubuntu | 镜像站 ](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
+他可以帮你适配你的ubuntu版本。
+![AHA69H.png](https://s2.ax1x.com/2019/04/11/AHA69H.png)
+修改你的source.list；
+为了留个备份好反悔我们先把source.list复制一份
+```
+sudo cp /etc/apt/source.list /etc/apt/source.list.bak
+```
+然后修改source.list文件
+```
+sudo gedit /etc/apt/source.list
+```
+把清华源里面的内容覆盖进去
+
+```
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+```
+之后再执行
+```
+sudo apt-get update
+```
+这样你的软件库就是清华源的了，速度能提高很多，其他第三方源也可以去找，替换方法都一样。
+
+---
+
 # 三、安装Hexo
-- [Hexo官网](https://hexo.io/zh-cn/)
-在这里可以找到全套的使用文档，而且hexo的作者是个台湾人，对中文的支持很不错。
+## 1、已经在win10上成功搭建Hexo
 
-## 01 建立Hexo文件夹
-在你的非系统盘建立一个文件夹[Hexo]，这个习惯在[win10重装日记](https://akilarlxh.github.io/2019/04/08/%E6%9C%BA%E6%A2%B0%E9%9D%A9%E5%91%BD%E6%B7%B1%E6%B5%B7%E5%B9%BD%E7%81%B5z2-win10-1809-%E9%87%8D%E8%A3%85%E6%97%A5%E8%AE%B0/)里提到过了，因为说起来个人博客和工程文件是分在一类的。
+首先，未看过win10下搭建Hexo的，只想在ubuntu上搭建Hexo的，请移步到下一小节（三、2）
 
-然后在**[Hexo]**文件夹内右键->Git Bash Here
+这里可以说一下，**如果你已经在win10上复现了我上一篇日志里写的全部内容**，~~当然，我希望你还是不要主动去复现bug。~~**并且git版本控制正常，可以正常使用git来提交源码内容到userame.github.io的source分支上。**
+
+那么,现在我们就能很快乐的直接git clone我们已经上传到username.github.io仓库的source分支上的内容了。
+```
+sudo git clone git@github.com:username:username.github.io.git
+```
+这里如果报了权限错误
+```
+Permission denied (publickey). fatal: Could not read from remote repository.
+```
+---
+- 没关系，下面来说踩坑点：
+
+### 在管理员模式下配置git的sshkey
+
+
+*在ubuntu下，普通用户和超级用户是被当成两个不同的用户的，而不是简单的权限升级。如果你是在普通用户模式下配置的sshkey，那么每当你在提交Hexo时，一旦涉及到到文件读写权限，你必须使用sudo时，对不起，秘钥显示你没有权限读写git仓库。然而诸多文件读写里面，在普通用户和超级用户之间的切换简直是剪不断理还乱。*
+
+所以，困扰了我许多天的问题就出在这里。**我们首先要在su模式下来配置git**
+```
+sudo passwd
+```
+然后会提示你输入新的UNIX密码，密码设置ok以后，我们进入管理员模式。输入：
+```
+su
+```
+输入密码后就进入了管理员模式
+![AHVaTK.png](https://s2.ax1x.com/2019/04/11/AHVaTK.png)
+然后在这里配置git
+
+```
+git config --global user.name "username"
+git config --global user.email "username@example.com"
+ssh-keygen -t rsa -C youremail@example.com
+//-C后面加你在github的用户名邮箱，这样公钥才会被github认可
+//如果你已经配置过，这里会提示你是否覆盖，输入yes。
+less ~/.ssh/id_rsa.pub
+查看公钥内容，稍后加入Github账户的sshkey中
+
+```
+![AHVjtU.png](https://s2.ax1x.com/2019/04/11/AHVjtU.png)
+打开[github网页](https://github.com/)
+单击头像->settings,在设置页面找到SSH and GPG keys
+单击New SSH key
+
+![AHZAAK.png](https://s2.ax1x.com/2019/04/11/AHZAAK.png)
+
+这部分内容和win10那篇一样了。
+
+---
+### 正确配置git后，重新尝试
+找一个你觉得合适的位置打开terminal，我是在~/Documents下
+
+```
+sudo git clone git@github.com:username:username.github.io.git
+```
+请务必确保你有把source设置为默认分支，
+否则你要是下载了一个master分支上的那些网页下来，
+对不起，智商税你自己交。
+
+```
+cd username.github.io.git
+npm config set registry http://registry.npm.taobao.org
+//这里为了提速，使用的是阿里的镜像。
+sudo npm install -g hexo-cli
+sudo npm install
+sudo npm install hexo-deployer-git
+//还有其他插件可以自己去下。
+//会写在接下来的给未在win10搭建过Hexo的小伙伴的环节里。
+```
+好了，就这些了。对，已经可以了。你在win10流过的血泪在这一刻得到了回报。
+
+再贴一下一些常用命令
+hexo博客上的：（master分支）
+```
+sudo hexo clean
+//清空缓存
+sudo hexo generate
+//重新编译，可以简写为sudo hexo g
+sudo hexo server
+//打开本地预览，可以简写为sudo hexo s
+sudo hexo deploy
+//提交到git仓库，可以简写为sudo hexo d
+```
+git版本控制上的：（source分支）
+```
+ sudo git add .
+ //添加文件到本地仓库
+ sudo git commit -m "自定义内容即可"
+ //添加文件描述信息
+ sudo git remote add origin git@github.com:username/username.github.io.git
+ // 链接远程仓库，创建主分支
+ sudo git push -u origin source
+//把本地仓库的文件推送到远程仓库
+
+```
+## 2、未在win10上搭建过Hexo，只想在ubuntu下使用
+
+### 01 建立Hexo文件夹
+随便那个目录都行，别是回收站就成。我是安装在Documents目录下
+```
+cd ~/Documents
+sudo mkdir Hexo
+//创建目录
+cd Hexo
+//切换目录
+```
+### 02 更改镜像源
 因为npm是国外的库，所以呢，没有翻墙的话会很慢，
 事实上我就算翻墙照样慢，没办法，没有钱啊，买不起高速服务器。
 亲身体会是不翻墙的话两个小时下不下一个插件，慢到怀疑人生。
-## 02 更改镜像源
 ```
-npm config set registry http://registry.npm.taobao.org
+sudo npm config set registry http://registry.npm.taobao.org
 //这里使用的是阿里的镜像。
+```
+### 03 全局安装Hexo
+```
+sudo npm install -g hexo-cli
 
 ```
-之后的安装就会迅速很多了。
-## 03 安装Hexo
-```
-npm install hexo-cli -g
-```
 因为已经改了镜像源，所以安装很快。不用谢我。
-## 04 部署Hexo
-依然是在「Hexo」文件夹中，在git bash中输入
+### 04 部署Hexo
+在[Hexo]文件夹下打开terminal
 ```
-hexo init
+sudo Hexo init
 ```
-## 05 安装插件
-一股脑全放出来了，不过记得一条一条来。
+这里如果报错了的话,执行代码：
 ```
-npm install hexo-generator-index --save
-npm install hexo-generator-archive --save
-npm install hexo-generator-category --save
-npm install hexo-generator-tag --save
-npm install hexo-server --save
-npm install hexo-deployer-git --save 
+sudo npm config set user 0
+sudo npm config set unsafe-perm true
+sudo npm install -g hexo-cli
+```
+不报错就请忽略
+### 05 安装插件
+虽然全部放出来了，但是我还是建议你一条一条执行，一次性全部复制粘贴可能会卡死。
+```
+sudo npm install hexo-generator-index --save
+sudo npm install hexo-generator-archive --save
+sudo npm install hexo-generator-category --save
+sudo npm install hexo-generator-tag --save
+sudo npm install hexo-server --save
+sudo npm install hexo-deployer-git --save
 //关系到git的deploy支持，必须有。
-npm install hexo-deployer-heroku --save
-npm install hexo-deployer-rsync --save
-npm install hexo-deployer-openshift --save
-npm install hexo-renderer-marked --save
-npm install hexo-renderer-stylus --save
-npm install hexo-generator-feed --save
-npm install hexo-generator-sitemap --save
-npm install hexo-admin --save 
+sudo npm install hexo-deployer-heroku --save
+sudo npm install hexo-deployer-rsync --save
+sudo npm install hexo-deployer-openshift --save
+sudo npm install hexo-renderer-marked --save
+sudo npm install hexo-renderer-stylus --save
+sudo npm install hexo-generator-feed --save
+sudo npm install hexo-generator-sitemap --save
+sudo npm install hexo-admin --save 
 //这就是我之前提到的hexo-admin，装了你不会后悔的。
+
 ```
-## 06 常用命令
+### 06 常用命令
 ```
 hexo clean
 //清空缓存
@@ -106,24 +292,33 @@ hexo deploy
 hexo d //简写
 //部署到github上，这个待会讲。
 ```
-## 07 测试效果
-在Hexo右键打开git bash，输入
+### 07 测试效果
+在[Hexo]下打开terminal
+输入
 ```
-hexo server
+sudo hexo server
+//或者
+sudo hexo s
 ```
-![hexo server](https://s2.ax1x.com/2019/04/09/AomUuq.png)
-然后在浏览器中打开**localhost:4000** ,就能看到
+只是预览网页的话，可以不打sudo，
+但是要用hexo-admin的话，因为会涉及到文件操作，所以要sudo
+![AHucIx.png](https://s2.ax1x.com/2019/04/11/AHucIx.png)
+然后在浏览器中打开localhost:4000 ,就能看到
 [![A7DdZq.png](https://s2.ax1x.com/2019/04/11/A7DdZq.png)](https://imgchr.com/i/A7DdZq)
-
-如果你安装了hexo-admin插件，
+如果你还安装了hexo-admin插件，
 就可以通过访问**localhost:4000/admin**来管理你的文章了。
 并且在可视化界面中操作文章内容
 恭喜你，博客的本地部署到这里算是告一段落了。
-## 08 补充内容
+
+---
+**注意点：在terminal中，ctrl+c无效，因为热键占用，要换成ctrl+shift+c才行**
+
+---
+### 08 补充内容
 这部分关系到后面的主题配置，作为前瞻来写。
-### 1. 创建“分类”页面
+#### 1. 创建“分类”页面
 ```
-hexo new page categories
+sudo hexo new page categories
 ```
 打开~/Hexo/sources/categories/index.md
 在它的头部加上type属性。
@@ -142,9 +337,9 @@ date: 2018-06-07 00:38:36
 categories: 学习笔记
 tags: [node.js, express]
 ```
-### 2. 创建“标签”页面
+#### 2. 创建“标签”页面
 ```
-hexo new page tags
+sudo hexo new page tags
 ```
 打开~/Hexo/sources/tags/index.md
 在它的头部加上type属性。
@@ -191,26 +386,41 @@ tags:
 - 相关资料 [GitHub Pages Basics / User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
 
 ## 03 配置Git 与 GitHub
-打开git bash,设置用户名称和邮件地址
+*之前已经说过，在ubuntu下，普通用户和超级用户是被当成两个不同的用户的，而不是简单的权限升级。如果你是在普通用户模式下配置的sshkey，那么每当你在提交Hexo时，一旦涉及到到文件读写权限，你必须使用sudo时，对不起，秘钥显示你没有权限读写git仓库。然而诸多文件读写里面，在普通用户和超级用户之间的切换简直是剪不断理还乱。所以我们要在管理员模式下设置秘钥*
+
+打开terminal,**在管理员模式下设置用户名称和邮件地址**
+
+
+```
+sudo passwd
+```
+然后会提示你输入新的UNIX密码，密码设置ok以后，我们进入管理员模式。输入：
+```
+su
+```
+输入密码后就进入了管理员模式
+![AHVaTK.png](https://s2.ax1x.com/2019/04/11/AHVaTK.png)
+然后在这里配置git
 ```
 git config --global user.name "username"
 git config --global user.email "username@example.com"
 ```
 为了能够在本地使用 git 管理 github 上的项目，需要进行一些配置，这里介绍 SSH 的方法。
-检查电脑是否已经有 SSH keys。第一次安装肯定是没有的嘛。
+检查电脑是否已经有 SSH keys。~~第一次安装肯定是没有的嘛。~~
 ```
 ssh-keygen -t rsa -C youremail@example.com
 //-C后面加你在github的用户名邮箱，这样公钥才会被github认可
 less ~/.ssh/id_rsa.pub
 //查看公钥内容稍后加入Github账户的sshkey中
 ```
-![sshkey](https://s2.ax1x.com/2019/04/09/AoM9Re.png)
-打开[github网页](https://github.com/)
-单击头像->settings,在设置页面找到SSH and GPG keys
-单击New SSH key
-![gitkey](https://s2.ax1x.com/2019/04/09/AoMCxH.png)
+![AHVjtU.png](https://s2.ax1x.com/2019/04/11/AHVjtU.png)
+- 打开[github网页](https://github.com/)
+- 单击头像->settings,在设置页面找到SSH and GPG keys
+- 单击New SSH key
 
-保存后，在git bash测试sshkey是否添加成功，输入
+![AHZAAK.png](https://s2.ax1x.com/2019/04/11/AHZAAK.png)
+
+保存后，在terminal中测试sshkey是否添加成功，输入
 ```
 ssh -T git@github.com
 # Attempts to ssh to GitHub
@@ -237,11 +447,11 @@ deploy:
 ```
 这里deploy前面不要有空格，而所有“:”后面都要有空格。格式很重要。
 ## 05 把本地hexo提交到git仓库
-全部配置完毕，在hexo文件夹下打开git bash,执行
+全部配置完毕，在hexo文件夹下打开terminal,执行
 ```
-hexo clean
-hexo generate
-hexo deploy
+sudo hexo clean
+sudo hexo generate
+sudo hexo deploy
 ```
 不出意外，就可以在浏览器上输入
 **https://username.github.io**
@@ -253,6 +463,7 @@ ERROR Deployer not found: git
 ```
 解决办法
 1.git用户名和邮箱配置错误，
+回到管理员模式重新配置，最坏情况是重做第四节
 ```
 git config --global user.name%"username"
 git config --global user.email%"username@example.com"
@@ -260,11 +471,11 @@ git config --global user.email%"username@example.com"
 这里的%，在正确的格式中是一个空格，如果你之前没有打空格，那么邮箱和用户名根本就没有记录进去，请把整个第三部分全部重做一遍。
 2.git deploy的插件没有安装正确，执行 
 ```
-npm install hexo-deployer-git –save 
+sudo npm install hexo-deployer-git –save 
 ```
 之后再使用
 ```
-hexo deploy
+sudo hexo deploy
 ```
 重新提交即可
 
@@ -282,7 +493,7 @@ hexo deploy
 
 我是用的git clone的方法，文档中还有其他方法
 ```
-$ git clone https://github.com/theme-next/hexo-theme-next
+$ sudo git clone https://github.com/theme-next/hexo-theme-next
 
 ```
 下载成功后建议把[hexo-theme-next]文件夹改名为[next]，并且把[next]文件夹拖动到~/Hexo/themes/下
@@ -423,7 +634,6 @@ Homepage URL： # 你的网站URL，如https://akilarlxh.github.io
 Application description # 描述，随意
 Authorization callback URL：# 网站URL，https://akilarlxh.github.io
 ```
-
 点击注册后，页面跳转如下，其中Client ID和Client Secret在后面的配置中需要用到，到时复制粘贴即可
 ![clientid](https://s2.ax1x.com/2019/04/09/AoBp7T.png)
 以后可以在github->头像->setting->Developer settings->OAuth Apps->your applications name
@@ -434,6 +644,7 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
 vii.在主题配置文件~/Hexo/themes/next/_config.yml中修改:即可）**
 
 ---
+
 #### ii.gitalk.swig
 新建~/Hexo/themes/next/layout/_third-party/comments/gitalk.swig文件，并添加内容：
 ```
@@ -483,6 +694,7 @@ vii.在主题配置文件~/Hexo/themes/next/_config.yml中修改:即可）**
  ```
  #### vii._config.yml
  在主题配置文件~/Hexo/themes/next/_config.yml中添加如下内容：
+ （20190410以后的更新中，这部分代码已经被添加进去，搜素到以后取消注释修改即可。）
  ```
  gitalk:
   enable: true
@@ -494,6 +706,7 @@ vii.在主题配置文件~/Hexo/themes/next/_config.yml中修改:即可）**
   distractionFreeMode: true
 ```
 #### viii.可能~~呸，怎么看都是肯定~~会遇到的bug，
+（20190410以后的更新中已经修复该bug）
 评论时报错
 ```
 Error:Validation Failed
@@ -648,6 +861,7 @@ local_search:
 # 六、版本控制
  ## 01 修改博客及部署操作
  
+  
  ### i.创建source分支
  首先，我们先在username.github.io仓库里做这些事情。
  在仓库中新建一个分支，命名为source
@@ -656,42 +870,43 @@ local_search:
  ![default branch](https://s2.ax1x.com/2019/04/10/ATZu1s.png)
  ### iii.第一次提交git
  开始准备你的第一次提交git
- 修改博客内容后依次执行以下命令来提交网站相关的文件：
+ 修改博客内容后
+ 在[Hexo]下打开terminal，依次执行以下命令来提交网站相关的文件：
  ```
- git init 
+ sudo git init 
  //这句在这里主要是为了在文件夹中git init让git标记此文件夹为版本库
  ```
 如果不写这句，不出意外会报错
 **"fatal: not a git repository (or any of the parent directories): .git"**
 和hexo init一样，只要第一次时运行一次就好
 ```
- git add .
+ sudo git add .
  //添加文件到本地仓库
- git commit -m "自定义内容即可"
+ sudo git commit -m "自定义内容即可"
  //添加文件描述信息
- git remote add origin git@github.com:username/username.github.io.git
+ sudo git remote add origin git@github.com:username/username.github.io.git
  // 远程仓库地址 //链接远程仓库，创建主分支
  ```
  //要是提示origin已经存在，那么执行
  ```
- git remote rm origin
+sudo git remote rm origin
  ```
  然后再试试
  ```
- git pull origin source 
+ sudo git pull origin source 
  // 把远程仓库的新增的内容覆盖到本地仓库
- git push -u origin source -f
+ sudo git push -u origin source -f
 //把本地仓库的文件推送到远程仓库
 //-f 是强制提交，主要是因为前后版本不一致造成的，
 ```
 然后执行以下任意一条生成网站并部署到 GitHub 上。
 ```  
-hexo generate -d
-hexo g -d
+sudo hexo generate -d
+sudo hexo g -d
 ```
-**这样一来，在 GitHub 上的 username.github.io 仓库就有两个分支，
+这样一来，在 GitHub 上的 username.github.io 仓库就有两个分支，
 一个 source 分支用来存放网站的原始文件，
-一个 master 分支用来存放生成的静态网页。**
+一个 master 分支用来存放生成的静态网页。
 
 ### iv.可能遇到的bug 
 
@@ -701,14 +916,14 @@ hexo g -d
 ```
 Please make sure you have the correct access rights and the repository exists
 ```
-这个貌似是因为我们新建了分支的关系，反正它的意思就是找不到你的服务器了，如果上面操作都没问题的话建议你删除在user/username/下的.ssh文件夹，然后重新回到[四->03、部署git和github]再配置一下你的ssh key。
+这个貌似是因为我们新建了分支的关系，反正它的意思就是找不到你的服务器了，如果上面操作都没问题的话建议你删除在主目录home/下的.ssh文件夹，然后重新回到[四->02、部署git和github]再配置一下你的ssh key。
 
 - 分支依然是master
  
 不出意外的话这里你会和我遇到一样的问题，你的分支依然是master，
 所以要转到source，其实无伤大雅，反正下面提交命令还是提交到source
 ```
-git checkout -b source
+sudo git checkout -b source
 ```
 
 - 提示**refusing to merge unrelated histories**
@@ -717,39 +932,38 @@ git checkout -b source
 那么添加上** --allow-unrelated-histories** 选项
 按理说新建的分支其实不会遇到这个问题，除非之前失败现在重试
  ```
- git pull origin source --allow-unrelated-histories 
+sudo git pull origin source --allow-unrelated-histories 
  ```
+
 
 ## 02.博客管理流程
  在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：
  i.依次执行指令
  ```
- git add .
- git commit -m "..."
- git push origin source
+ sudo git add .
+ sudo git commit -m "..."
+ sudo git push origin source
  ```
  将改动推送到 GitHub（此时当前分支应为 source）；
 ii.然后才执行
 ``` 
-hexo generate -d 
+sudo hexo generate -d 
 //或者
-hexo g -d 
+sudo hexo g -d 
 ```
 将本地文件发布网站到 master 分支上。
 ## 03.本地资料丢失或多PC同步
-当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：
+当重装电脑之后，或者想在其他电脑上修改博客，先走一下一二的流程，之后可以使用下列步骤：
+其实就是本篇一、二、三的内容
 i.使用 
 ```
-git clone git@github.com:username/username.github.io.git
+sudo git clone git@github.com:username/username.github.io.git
 ```
 拷贝仓库（默认分支为 source）；
 ii.在本地新拷贝的username.github.io文件夹下通过终端依次执行下列指令：
 ```
-npm install -g hexo-cli
-npm install
-npm install hexo-deployer-git
+sudo npm install -g hexo-cli
+sudo npm install
+sudo npm install hexo-deployer-git
 ```
 这里的【username.github.io】文件夹其实就是我们一直在说的【Hexo】文件夹。
-
-
-- 下一篇写一下ubuntu下的hexo配置，用这个方法部署文件就会很快。
