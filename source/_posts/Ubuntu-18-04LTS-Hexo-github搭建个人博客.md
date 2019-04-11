@@ -184,7 +184,7 @@ sudo git clone git@github.com:username:username.github.io.git
 
 ```
 cd username.github.io.git
-npm config set registry http://registry.npm.taobao.org
+sudo npm config set registry http://registry.npm.taobao.org
 //这里为了提速，使用的是阿里的镜像。
 sudo npm install -g hexo-cli
 sudo npm install
@@ -468,7 +468,7 @@ ERROR Deployer not found: git
 git config --global user.name%"username"
 git config --global user.email%"username@example.com"
 ```
-这里的%，在正确的格式中是一个空格，如果你之前没有打空格，那么邮箱和用户名根本就没有记录进去，请把整个第三部分全部重做一遍。
+这里的%，在正确的格式中是一个空格，如果你之前没有打空格，那么邮箱和用户名根本就没有记录进去，请把整个第四部分全部重做一遍。
 2.git deploy的插件没有安装正确，执行 
 ```
 sudo npm install hexo-deployer-git –save 
@@ -493,7 +493,7 @@ sudo hexo deploy
 
 我是用的git clone的方法，文档中还有其他方法
 ```
-$ sudo git clone https://github.com/theme-next/hexo-theme-next
+sudo git clone https://github.com/theme-next/hexo-theme-next
 
 ```
 下载成功后建议把[hexo-theme-next]文件夹改名为[next]，并且把[next]文件夹拖动到~/Hexo/themes/下
