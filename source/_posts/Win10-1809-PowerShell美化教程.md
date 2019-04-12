@@ -28,7 +28,7 @@ date: 2019-04-12 09:52:00
 
 ---
 
-# 1、[Chocolatey](https://chocolatey.org/)
+## 1、[Chocolatey](https://chocolatey.org/)
 
 我也不知道这个算不算软件了。不过看它和npm、anaconda一样，都是命令行安装平台，那似乎确实是软件。废话，不是硬件就是软件嘛。
 
@@ -59,7 +59,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 ```
 如此一来就安装好了。这里需要某种“较为稳定的稳定的网络环境”，懂的都懂。记得开全局模式，这玩意不是很上道，不会自己挑大路走。不会科学上网的可以去看我写的win10重装日记。
 
-# 2、安装ConEmu
+## 2、安装ConEmu
 
 ConEmu相当于windows终端的增强版,可以直接打开多种类型的控制台窗口，之后我们安装完了会用他替换powershell，没关系，调试好以后使用感觉一定比原版powershell好。
 
@@ -67,7 +67,7 @@ ConEmu相当于windows终端的增强版,可以直接打开多种类型的控制
 ```
 choco install ConEmu
 ```
-# 3、安装Powerline字体
+## 3、安装Powerline字体
 想要舒适体验，少不了字体支持，ubuntu那边说过理由了，不用的话到时候就是丑丑的乱码。~~对，我就是在威胁你。~~
 powerline的项目也是github上开源的。
 - [powerline/fonts](https://github.com/powerline/fonts)
@@ -79,7 +79,7 @@ git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.ps1
 ```
-# 4、可能遇到的bug：
+## 4、可能遇到的bug：
 这个问题只要是powershell的脚本运行执行权限没有赋予完全。之后可能会经常遇到，我就不多说了，只写这一次。
 
 **如果提示：**
