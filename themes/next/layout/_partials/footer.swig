@@ -45,3 +45,4 @@
   #}{{ theme.footer.custom_text }}{#
 #}</div>
 {% endif %}
+<span id="busuanzi_container_site_uv">本站访问次数：<span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>

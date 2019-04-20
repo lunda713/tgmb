@@ -1,1 +1,61 @@
 // Custom styles.
+//背景图片
+body{
+        background:url(/images/backgroundwhite.png) no-repeat;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-position:center;
+         /* 设置背景颜色，背景图加载过程中会显示背景色 */
+        background-color: rgba(0, 0, 0, 0.5);
+}
+//顶栏图片
+.header {
+          background:rgba(#CDC9C9,50%) none repeat scroll !important;
+}
+//底栏背景色
+.footer {
+          background:rgba(#CDC9C9,50%) none repeat scroll !important;
+}
+//侧栏图片及内部文字颜色修改
+#sidebar {
+            background:url(/images/sidebar.png);
+            background-size: cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            p,span,a {color: rgba(#ffffff, 1);}
+}
+//侧边栏置于左侧
+.sidebar {
+  left: 0;
+}
+//侧栏开关置于左侧
+.sidebar-toggle {
+  left: $b2t-position-right;
+}
+
+// 主页文章添加阴影效果
+.post {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   padding: 25px;
+   background:rgba(255,255,255,0.9) none repeat scroll !important;
+   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
+}
+
+// 主页文章添加阴影效果
+.categories {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   padding: 25px;
+   background:rgba(255,255,255,0.9) none repeat scroll !important;
+   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
+}
+
+.content {
+	border-radius: 20px; //文章背景设置圆角
+	padding: 30px 60px 30px 60px;
+	background:rgba(255, 255, 255, 0.8) none repeat scroll !important;
+}

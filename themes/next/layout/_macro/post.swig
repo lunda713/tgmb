@@ -290,6 +290,11 @@
       {% endif %}
 
       {% if is_index %}
+          {% if post.images %}
+          	<div class="out-img-topic">
+          		<img src={{ post.images }} class="img-topic">
+          	</div>
+          {% endif %}
         {% if post.description and theme.excerpt_description %}
           {{ post.description }}
           <!--noindex-->
@@ -356,7 +361,7 @@
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fa fa-tag"></i> {{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
