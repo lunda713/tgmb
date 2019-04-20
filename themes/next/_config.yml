@@ -159,7 +159,7 @@ baidu_push: false
 menu:
   home: / || home
   archives: /archives/ || archive
-  top: /top/ || signal
+  # top: /top/ || signal
   categories: /categories/ || th
   tags: /tags/ || tags
   #about: /about/ || user
@@ -795,7 +795,7 @@ vkontakte_api:
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
-  enable: true
+  enable: false
   id: 18127    #<app_id>
   color:  fc9533
 # ---------------------------------------------------------------
@@ -803,7 +803,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: lVSTRSnKWswWTDpuD5pacTHq-gzGzoHsz #<app_id>
   app_key: JOENCTOEfaxeJoeHrvWFF659 #<app_key>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
@@ -1003,7 +1003,7 @@ canvas_nest:
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
 # three_waves
-three_waves: true
+three_waves: false
 # canvas_lines
 canvas_lines: false
 # canvas_sphere
