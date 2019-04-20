@@ -670,7 +670,7 @@ gitment:
 gitalk:
   enable: true
   github_id: akilarlxh  # Github repo owner
-  repo:  akilarlxh.github.io # Repository name to store issues
+  repo: akilarlxh.github.io # Repository name to store issues
   client_id: 658353c677f184d58eb6 # Github Application Client ID
   client_secret: 59a71d3cc97edd21a138aec8aaeb0887110cb28a # Github Application Client Secret
   admin_user: akilarlxh # GitHub repo owner and collaborators, only these guys can initialize github issues

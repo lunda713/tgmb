@@ -97,7 +97,7 @@ symbols_count_time:
   time: true
   total_symbols: true
   total_time: true
-//这孩子超可爱的！
+#这孩子超可爱的！
 live2d:
   enable: true
   scriptFrom: local
@@ -114,7 +114,7 @@ live2d:
     show: true
 
 
-//网页加速配置
+# 网页加速配置
 # offline config passed to sw-precache.
 service_worker:
   maximumFileSizeToCacheInBytes: 5242880
