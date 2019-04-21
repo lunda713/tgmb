@@ -9,13 +9,15 @@ author: Akilarlxh
 date: 2019-04-08 15:21:00
 ---
 # 一、写在最前
+<div class="note info"><p>ubuntu又挂了，实在是体质特殊，同样的安装文件安装方式，到我这总能遇到神奇bug，我都觉得我就应该去做软件测试师，怎么干都有bug，虽然大概会被同事打死。总之为了避免再遇到同样的问题，也遵从楠皮的建议把遇到的坑归纳下来。</p></div>
 
-ubuntu又挂了，实在是体质特殊，同样的安装文件安装方式，到我这总能遇到神奇bug，我都觉得我就应该去做软件测试师，怎么干都有bug，虽然大概会被同事打死。总之为了避免再遇到同样的问题，也遵从楠皮的建议把遇到的坑归纳下来。
+
 
 # 二、安装盘制作教程
 这个直接参考另一篇博客。很简单，全程傻瓜式安装：
+<div class="note primary"><p>[ubuntu18.04LTS安装盘制作教程](https://akilarlxh.github.io/2019/04/08/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/)</p></div>
 
-[ubuntu18.04LTS安装盘制作教程](https://akilarlxh.github.io/2019/04/08/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/)
+
 
  1. 我的机型是**机械革命深海幽灵z2 1060款** ；
  2. 第一步：**准备好wepe**，对，没错就是pe，因为要先准备好ubuntu的分区，我只是拿来做做实验外加体验一下linux操作系统，之前双硬盘双系统，
@@ -36,14 +38,18 @@ ubuntu又挂了，实在是体质特殊，同样的安装文件安装方式，�
  - 我使用的是 [Grub-theme-vimix](https://www.gnome-look.org/p/1009236/) 这款，
   主要是它的背景图片可以任意替换，原版图片我委实不太喜欢，修改过之后文件名
   不同的话记得在 Vimix 文件夹下的 theme.txt 中对应修改。
+  
 ## 01. 默认安装
+
   ctrl+alt+T ，打开terminal，也可以右键快捷菜单打开啦，
   ubuntu基本都是靠命令行来管理，要做好心理准备。
 ```
 cd ~/Downloads/grub-theme-vimix
 sudo ./Install
 ```
+
 ## 02. 修改分辨率
+
 装主题后,要编辑grub文件中的分辨率让它生效。
 ```
 sudo gedit /etc/default/grub
@@ -57,44 +63,55 @@ GRUB_GFXMODE=1920x1080
 sudo update-grub
 ```
 重启即可
+
+
+
 ## 03. 可能遇到的bug
-我也不知道为什么，按理说Install脚本没问题，但是安装还是会出错导致不生效，这时候找到
+
+<div class="note warning"><p>我也不知道为什么，按理说Install脚本没问题，但是安装还是会出错导致不生效，这时候找到</p></div>
+
 ```
 sudo nautilus /boot/grub/themes
 ```
-会发现Vimix的主题文件被直接放在了themes文件夹里，**新建一个Vimix文件夹（注意大小写）**，把这些文件拖进去就好。
-4. 以后的更改背景图片也是同理，直接在**/boot/grub/themes/Vimix**文件夹里放入你想要更改的图片，然后修改themes.txt中desktop-image: "你想要更改的背景图的路径"，接着运行
+会发现Vimix的主题文件被直接放在了themes文件夹里，
+<div class="note success"><p>**新建一个Vimix文件夹（注意大小写）**，把这些文件拖进去就好。</p></div>
+
+
+## 04.更改背景
+以后的更改背景图片也是同理，直接在**/boot/grub/themes/Vimix**文件夹里放入你想要更改的图片，然后修改themes.txt中desktop-image: "你想要更改的背景图的路径"，接着运行
  ```
 sudo update-grub
 ```
 # 四、登录界面美化
 ## 01修改gdm3.css
-理论上这个登录界面就是个前端界面，因为它就是通过css文件修改的。推荐在修改之前最好备份一个gdm3.css方便以后恢复。
+<div class="note default"><p>理论上这个登录界面就是个前端界面，因为它就是通过css文件修改的。推荐在修改之前最好备份一个gdm3.css方便以后恢复。</p></div>
 编辑配置这个文件：
  ```
 sudo gedit /etc/alternatives/gdm3.css
 ```
 找到这一行
- ```
-1814 #lockDialogGroup {
-1815 background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png);
-1816 background-repeat: repeat;
-1817 }
-```
-改成
- ```
+ ``` 
 #lockDialogGroup {
-background: #2c001e url(file:///usr/share/backgrounds/mypicture.jpg);         
-/*其中usr/share/backgrounds/mypicture.jpg是我的
-文件路径，替换成你自己的，记得图片分辨率要和自己的电脑
-保持一致*/
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png);
+background-repeat: repeat;
 }
 ```
+改成
+ ``` diff
+#lockDialogGroup {
+- background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png);
++ background: #2c001e url(file:///usr/share/backgrounds/mypicture.jpg); 
+- background-repeat: repeat;
++ background-repeat: no-repeat;
++ background-size: cover;
++ background-position: center;
+}
+```
+<div class="note info"><p>其中usr/share/backgrounds/mypicture.jpg是我的文件路径，替换成你自己的，记得图片分辨率要和自己的电脑保持一致</p></div>
+
 ## 2.可能遇到的bug
-也不算bug吧，ubuntu更新时会重置gdm3.css，这时候登录界面又会变成丑丑的纯色界面，重新操作一下上面的流程就好。有兴趣继续探索的可以慢慢研究，css嘛，前端学的好的就能改的。
+
+<div class="note warning"><p>也不算bug吧，ubuntu更新时会重置gdm3.css，这时候登录界面又会变成丑丑的纯色界面，重新操作一下上面的流程就好。有兴趣继续探索的可以慢慢研究，css嘛，前端学的好的就能改的。</p></div>
 
 
 # 五、安装主题
@@ -183,7 +200,7 @@ echo $SHELL
 /usr/bin/zsh
 ```
 4.插件安装
-我对这个没兴趣，我不会在终端编程，有功能完善的ide干嘛自找麻烦。有兴趣的自己去找。
+<div class="note danger"><p>我对这个没兴趣，我不会在终端编程，有功能完善的ide干嘛自找麻烦。有兴趣的自己去找。</p></div>
 
 
 # 七、开发环境配置
@@ -191,7 +208,7 @@ echo $SHELL
 ## 01.配置java
 
 到官网下载[jdk8](https://www.oracle.com/technetwork/cn/java/javase/downloads/index.html)
-我下载的是jdk-8u201-linux-x64.tar.gz，后来人看到的肯定不是这个版本了，关系不大，改下版本号就行。
+<div class="note info"><p>我下载的是jdk-8u201-linux-x64.tar.gz，后来人看到的肯定不是这个版本了，关系不大，改下版本号就行。</p></div>
 打开terminal，执行：
 ```
 sudo mkdir /usr/lib/jvm
@@ -215,9 +232,9 @@ source ~/.zshrc
 ```
 
 为系统设置默认 JDK，打开terminal
+<div class="note warning"><p> 这里我虽然全部都贴出来了，但是在terminal里运行的时候,还是要老老实实一行一行运行，别想着全部复制过去一次跑完。</p></div>
  ```
- //这里我虽然全部都贴出来了，但是在terminal里运行的时候
- //还是要老老实实一行一行运行，别想着全部复制过去一次跑完。
+
 sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_201/bin/java 300
 sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_201/bin/javac 300
 sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk1.8.0_201/bin/jar 300
@@ -226,20 +243,24 @@ sudo update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/jdk1.8.0_20
 sudo update-alternatives --config java
 ```
 若是初次安装 JDK，会有下面的提示:
-```
-There is only one alternative in link group java (providing /usr/bin/java): /usr/lib/jvm/jdk1.8.0_201/bin/java
-Nothing to configure.
-```
+<div class="note success"><p>There is only one alternative in link group java (providing /usr/bin/java): /usr/lib/jvm/jdk1.8.0_201/bin/java
+Nothing to configure.</p></div>
+
+
 否则，选择合适的 JDK即可。
 查看Java版本
 ```
 java -version
 ```
 ## 02.安装Anaconda
-[Anaconda历代版本](https://repo.continuum.io/archive/)
+<div class="note info"><p>[Anaconda历代版本](https://repo.continuum.io/archive/)</p></div>
+
 因为有一下python版本的对应，这里给个对照图表好了
 ![Alt](https://img-blog.csdnimg.cn/20181227144158333.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1ZWppc3VvMTk0OA==,size_16,color_FFFFFF,t_70#pic_center)
-这里我下载的是**Anaconda3-5.2.0-Linux-x86_64.sh**
+
+<div class="note info"><p>这里我下载的是**Anaconda3-5.2.0-Linux-x86_64.sh**
+</p></div>
+
 执行以下命令安装：
 ```
 bash Anaconda3-5.2.0-Linux-x86_64.sh
@@ -251,8 +272,9 @@ sudo gedit ~/.zshrc
 在文件末尾加入
 ```
 #added by Anaconda3 installer
-export PATH="/home/akilar/anaconda3/bin:$PATH"//akilar是我的用户名，改成你自己的
+export PATH="/home/akilar/anaconda3/bin:$PATH"
   ```
+  <div class="note warning"><p>akilar是我的用户名，改成你自己的</p></div>
 保存后执行
 ```
 source ~/.zshrc
@@ -261,25 +283,30 @@ source ~/.zshrc
 火狐我是不习惯，香肯定还是chrome香。
 下载chrome的deb安装包[chrome for linux](http://www.ubuntuchrome.com/)
 使用**sudo dpkg -i 包名.deb**安装即可。
-
-接下来要下载一个叫SwitchyOmega的插件。这关系到下面的v2ray安装。
+<div class="note info"><p>接下来要下载一个叫SwitchyOmega的插件。这关系到下面的v2ray安装。
 不过有点矛盾，我就是因为要翻墙才下插件，但是要翻墙了才能在谷歌应用社区下插件。
-所以呢，就要靠万能的github了，谢天谢地它还没被墙。
+所以呢，就要靠万能的github了，谢天谢地它还没被墙。</p></div>
+
 访问[SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega/releases)
 拉到最下下载这个文件 ：SwitchyOmega_Chromium.crx
 下载完成后安装到chrome内。
+
 - 可能遇到的bug：
-新版本的chrome似乎不支持直接使用crx脚本安装。这里先把SwitchyOmega_Chromium.crx改名为
-SwitchyOmega_Chromium.zip，解压后保存为SwitchyOmega_Chromium文件夹。
-在chrome里头像旁边三个点->setting->more tools->extensions->development->load unpack，
+<div class="note warning"><p>新版本的chrome似乎不支持直接使用crx脚本安装。
+  这里先把`SwitchyOmega_Chromium.crx`
+  改名为`SwitchyOmega_Chromium.zip`，
+  解压后保存为`SwitchyOmega_Chromium`文件夹。
+**在chrome里头像旁边三个点->setting->more tools->extensions->development->load unpack，**
 (头像旁边三个点->设置->更多工具->扩展->打开开发者模式->加载已解压的扩展程序)
-选择SwitchyOmega_Chromium文件夹即可。
+选择`SwitchyOmega_Chromium`文件夹即可。</p></div>
+
 
 
 
 ## 04.科学上网
 ### i. electron-ssr
-ssr的用户可以安装electron-ssr
+<div class="note info"><p>ssr的用户可以安装electron-ssr</p></div>
+
 这是一个Ubuntu下也能够使用的ssr客户端，下载
 [electron-ssr](https://github.com/erguotou520/electron-ssr/releases)中的release，
 我的是**electron-ssr-0.2.6.deb**
@@ -297,13 +324,14 @@ sudo apt-get install -f
 这两行命令来修复依赖关系。以后会经常用到它们的。
 
 ### ii. v2ray
-v2ray的用户请使用v2ray，~~感觉这是一句废话~~
+<div class="note info"><p>v2ray的用户请使用v2ray，~~感觉这是一句废话~~</p></div>
+
 
 有现成的安装脚本，但在那之前必须先准备好配置文件。希望你们已经看过win10系统下v2rayN客户端的教程。
-[机械革命深海幽灵z2 win10 1809 重装日记](https://akilarlxh.github.io/2019/04/08/%E6%9C%BA%E6%A2%B0%E9%9D%A9%E5%91%BD%E6%B7%B1%E6%B5%B7%E5%B9%BD%E7%81%B5z2-win10-1809-%E9%87%8D%E8%A3%85%E6%97%A5%E8%AE%B0/)
+<div class="note primary"><p>[机械革命深海幽灵z2 win10 1809 重装日记](https://akilarlxh.github.io/2019/04/08/%E6%9C%BA%E6%A2%B0%E9%9D%A9%E5%91%BD%E6%B7%B1%E6%B5%B7%E5%B9%BD%E7%81%B5z2-win10-1809-%E9%87%8D%E8%A3%85%E6%97%A5%E8%AE%B0/)</p></div>
 先在win10的v2rayN客户端选中所有的结点，然后右键->导出所选服务器为客户端配置，导出的文件保存为config.json
 
-切回ubuntu，先在git上下载指定的客户端源代码，没有图形化界面真是抱歉呢。
+切回ubuntu，先在git上下载指定的客户端源代码，~~没有图形化界面真是抱歉呢。~~
 客户端的源代码网址:[v2ray-core](https://github.com/v2ray/v2ray-core)
 非64位系统到这里找找指定的版本。
 ```
@@ -321,8 +349,9 @@ sudo chmod 777 /etc/v2ray/config.json
 sudo gedit /etc/v2ray/config.json
 //打开你的配置文件
 ```
-接下来就要用到一开始在win10那边生成的文件了
-ubuntu是直接可以读写win10那边的文件的真是太好了，不用重启一次。
+<div class="note info"><p>接下来就要用到一开始在win10那边生成的文件了
+ubuntu是直接可以读写win10那边的文件的真是太好了，不用重启一次。</p></div>
+
 把那边的config.json文件内容全部拷贝过来，覆盖到/etc/v2ray/config.json内
 ```
 //以下是我的配置文件。
@@ -436,8 +465,11 @@ ubuntu是直接可以读写win10那边的文件的真是太好了，不用重启
 在chrome的SwitchyOmega插件上，选项里新建情景模式，我命名为proxy
 具体配置是这样的：
 ![proxy](https://s2.ax1x.com/2019/04/08/A5QZ6A.png)
-其中10808是我的服务器端口，见上文配置文件config.json内的注释。
-127.0.0.1则是本地的IP地址。
+
+<div class="note warning"><p>其中10808是我的服务器端口，见上文配置文件config.json内的注释。
+127.0.0.1则是本地的IP地址。</p></div>
+
+
 打开terminal
 ```
 service v2ray start    //启动v2ray
@@ -445,21 +477,24 @@ service v2ray status   //查看v2ray状态
 service v2ray stop     //停止v2ray，不过一次配置以后一直是开机启动的。
 service v2ray restart // 重启v2ray，修改配置文件后重启一下v2ray
 ```
-记得在浏览器里把情景模式设置为auto switch，这样浏览器会自动选择是直接连接还是代理。
+<div class="note warning"><p>记得在浏览器里把情景模式设置为auto switch，这样浏览器会自动选择是直接连接还是代理。</p></div>
 
 ## 04.jetbrain全家桶安装（IDE）
-这个就不得不说jetbrain大法好了，直接到官网下载[jetbrain toolbox](http://www.jetbrains.com/toolbox/app/),
+这个就不得不说jetbrain大法好了，直接到官网下载
+
+<div class="note info"><p>[jetbrain toolbox](http://www.jetbrains.com/toolbox/app/)</p></div>
 然后就能像在creative cloud上安装adobe全家桶一样方便的在Ubuntu上安装jetbrain全家桶了
 常用的有
-
-- python：pycharm professional
+<div class="note default no-icon"><p>- python：pycharm professional
 - java：idea Ultimate
 - C/C++:clion
 - android：android studio
+</p></div>
+
 
 需要免费使用的可以去申请一下学生账号资格。
+<div class="note primary"><p>[jetbrain 学生产品](https://www.jetbrains.com/shop/eform/students)</p></div>
 
-[jetbrain 学生产品](https://www.jetbrains.com/shop/eform/students)
 
 
 
@@ -472,7 +507,8 @@ sudo dpkg -i atom-amd64.deb
 # 八、常用软件
 ## 01.通讯软件和下载软件
 
-不管是微信，qq,tim还是随便什么，反正先安装[deepin-wine](https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu)。
+<div class="note info"><p>不管是微信，qq,tim还是随便什么，反正先安装[deepin-wine](https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu)。</p></div>
+
 在download文件夹内打开terminal
 ```
 git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git
@@ -492,44 +528,46 @@ sudo apt-get install -f
 ```
 sudo ./install.sh
 ```
-以下是几个常用软件，下载deb文件后用**sudo dpkg -i 包名.deb**安装即可
-[qq](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/)
+<div class="note info"><p>以下是几个常用软件，下载deb文件后用**sudo dpkg -i 包名.deb**安装即可</p></div>
+<div class="note success no-icon"><p>[qq](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/)
 [tim](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.office/)
 [wechat](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/)
 [百度网盘](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.baidu.pan/)
-[迅雷极速版](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.thunderspeed/)
+[迅雷极速版](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.thunderspeed/)</p></div>
+
 
 
 
 ## 02.输入法
-搜狗输入法有bug，偶尔会出现中文乱码，但还是习惯这个，没办法的事情。
-[sogou input for linux](https://pinyin.sogou.com/linux/)
+<div class="note warning"><p>搜狗输入法有bug，偶尔会出现中文乱码，但还是习惯这个，没办法的事情。
+  [sogou input for linux](https://pinyin.sogou.com/linux/)</p></div>
+
+
 使用**sudo dpkg -i 包名.deb**安装。
 
-打开设置，语言选项，按manager installed language选项，肯定会出错，没关系，打开terminal
+打开设置，语言选项，按`manager installed language`选项，肯定会出错，没关系，打开terminal
 ```javascript
 sudo apt-get update
 sudo apt-get install -f
 ```
 可能需要多试几次。不报错了，再安装一遍搜狗输入法。
 
-然后在语言管理界面把键盘输入法系统改为fcitx。
+然后在语言管理界面把键盘输入法系统改为`fcitx`。
 
 重启以后把搜狗输入法添加进去即可。
-
-推荐搜狗输入法皮肤
+<div class="note primary"><p>推荐搜狗输入法皮肤
 [科技透明极简](https://pinyin.sogou.com/skins/detail/view/info/510242?rf=search&tf=p)
+</p></div>
 
+<div class="note warning"><p>可能遇到中文乱码bug，简单粗暴一点</p></div>
 
-可能遇到中文乱码bug，简单粗暴一点
 ```javascript
 cd ~/.config
 rm -rf SogouPY* sogou*
 ```
 然后重启即可。
 # 九、gnome插件
-推荐的gnome插件，楠皮就写得很完善了，就当帮他引流了。
-[GNOME-SHELL拓展](https://blog.vanxnf.top/2018/10/04/GNOME-SHELL-%E6%8B%93%E5%B1%95/)
+<div class="note info"><p>推荐的gnome插件，楠皮就写得很完善了，就当帮他引流了。[GNOME-SHELL拓展](https://blog.vanxnf.top/2018/10/04/GNOME-SHELL-%E6%8B%93%E5%B1%95/)</p></div>
 ## 01.插件拓展支持
 先安装一下插件拓展支持，虽然火狐也可以装插件，不过这个时候你一定可以使用chrome了。
 ```
@@ -539,77 +577,65 @@ sudo apt-get install chrome-gnome-shell
 ## 02.浏览器插件拓展支持
 除此之外，你还需要安装浏览器插件拓展支持。
 在google应用商店下载
-- [GNOME Shell integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
+<div class="note primary"><p>[GNOME Shell integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)</p></div>
+
 
 
 ## 03.推荐的插件
 然后是推荐的插件(看不懂的话，右键google网页翻译)，
 不得不说我当初就是因为这些丰富的插件才陷入ubuntu不能自拔的。
 - [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
-```
-Clipboard Manager extension for Gnome-Shell - Adds a clipboard indicator to the top panel, and caches clipboard history.
-```
+<div class="note default no-icon"><p>Clipboard Manager extension for Gnome-Shell - Adds a clipboard indicator to the top panel, and caches clipboard history.</p></div>
 
 - [Coverflow Alt-Tab](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)
-```
-Replacement of Alt-Tab, iterates through windows in a cover-flow manner.
-```
+<div class="note default no-icon"><p>Replacement of Alt-Tab, iterates through windows in a cover-flow manner.</p></div>
+
 
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
-```
-A dock for the Gnome Shell. This extension moves the dash out of the overview transforming it in a dock for an easier launching of applications and a faster switching between windows and desktops. Side and bottom placement options are available.
-```
+<div class="note default no-icon"><p>A dock for the Gnome Shell. This extension moves the dash out of the overview transforming it in a dock for an easier launching of applications and a faster switching between windows and desktops. Side and bottom placement options are available.</p></div>
+
 
 - [Gnome Shell Audio Output Switcher](https://extensions.gnome.org/extension/1028/gnome-shell-audio-output-switcher/)
-```
-Gnome-Shell Extension: Easily switch between your audio outputs from the system menu.
-```
+<div class="note default no-icon"><p>Gnome-Shell Extension: Easily switch between your audio outputs from the system menu.</p></div>
+
 - [Lock Keys](https://extensions.gnome.org/extension/36/lock-keys/)
-```
-Numlock & Capslock status on the panel.
-```
+<div class="note default no-icon"><p>Numlock & Capslock status on the panel.</p></div>
+
 - [Multi Monitors Add-On](https://extensions.gnome.org/extension/921/multi-monitors-add-on/)
-```
-Add multiple monitors overview and panel for gnome-shell.
-```
+<div class="note default no-icon"><p>Add multiple monitors overview and panel for gnome-shell.</p></div>
+
 - [Pixel Saver](https://extensions.gnome.org/extension/723/pixel-saver/)
-```
-Pixel Saver is designed to save pixel by fusing activity bar and title bar in a natural way.
-```
+<div class="note default no-icon"><p>Pixel Saver is designed to save pixel by fusing activity bar and title bar in a natural way.</p></div>
+
+
 - [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)
-```
-Conveniently create, copy, store and upload screenshots.
-```
+<div class="note default no-icon"><p>Conveniently create, copy, store and upload screenshots.</p></div>
+
+
 - [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/)
-```
-This extension moves legacy tray icons (bottom left of Gnome Shell) to the top panel. It is a fork from the original extension from ag with settings for icon opacity, saturation, padding, size and tray position, along with a few minor fixes and integration with the Skype integration extension.
-```
+<div class="note default no-icon"><p>This extension moves legacy tray icons (bottom left of Gnome Shell) to the top panel. It is a fork from the original extension from ag with settings for icon opacity, saturation, padding, size and tray position, along with a few minor fixes and integration with the Skype integration extension.</p></div>
+
 - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
-```
-Load shell themes from user directory.
-```
+<div class="note default no-icon"><p>Load shell themes from user directory.</p></div>
+
 - [Suspend Button](https://extensions.gnome.org/extension/826/suspend-button/)
-```
-Allows to modify the suspend/shutdown button in the status menu.
-```
-
-
-
-
+<div class="note default no-icon"><p>Allows to modify the suspend/shutdown button in the status menu.</p></div>
 
 
 
 # 十、遇到的bug（不定时更新）
 ## 01.开机卡在登录界面进不去桌面。
-但可以打开命令行界面。也可以进入recovery界面。
-不跟他废话，你敢故障我就敢重装你。当然，这里小打小闹重装一下桌面就好。
+<div class="note warning"><p>但可以打开命令行界面。也可以进入recovery界面。
+  不跟他废话，你敢故障我就敢重装你。当然，这里小打小闹重装一下桌面就好。
+</p></div>
 
-长按开机键强制重启，在grub启动页选择**Ubuntu高级选项**，从recovery模式启动。也可以按Alt+Ctrl+F1进入命令行界面操作。我是推荐命令行的，虽然我本人是图形界面重度患者。
+
+长按开机键强制重启，在grub启动页选择`Ubuntu高级选项`，从`recovery模式`启动。也可以按`Alt+Ctrl+F1`进入命令行界面操作。我是推荐命令行的，虽然我本人是图形界面重度患者。
 
 卸载Xwindows软件
 ```
- sudo apt-get autoremove ubuntu-desktop
- ```
+sudo apt-get autoremove ubuntu-desktop
+```
 重新安装所有依赖软件
 ```
 sudo apt-get install ubuntu-desktop
@@ -621,18 +647,20 @@ sudo apt-get install libupstart1:amd64
 ```
 sudo reboot
 ```
-- 20190409：最新的发现是貌似是在寝室使用的时候把主屏幕设置为外接显示器导致的，具体原理还在探索，以上方法治标不治本的。只能是养成好习惯，每次离开寝室的时候把主屏幕设置为内置显示器吧。
+<div class="note warning"><p>20190409：最新的发现是貌似是在寝室使用的时候把主屏幕设置为外接显示器导致的，具体原理还在探索，以上方法治标不治本的。只能是养成好习惯，每次离开寝室的时候把主屏幕设置为内置显示器吧。</p></div><div class="note success"><p>20190410：最新的解决方法，氪金，在某宝上下载一个**HDMI接口显卡欺骗器**。大小和U盘差不多。虽然人家的初衷不是为了解决这个问题的，但是亲测竟然意外的好用。</p></div>
 
-- 20190410：最新的解决方法，氪金，在某宝上下载一个**HDMI接口显卡欺骗器**。大小和U盘差不多。虽然人家的初衷不是为了解决这个问题的，但是亲测竟然意外的好用。
 
 ## 02.触摸板失灵，无法使用。
-Z2的触控板是满足I2C_HID接口要求。而linux 现在已经支持I2C_HID.。
-只是18.04的早期内核有BUG，所以无法用。
-但该BUG在4.18.15版本以后的内核版本中已经修复.
-所以,**只要升级内核到4.18.15以上版本就能支持.**
+<div class="note warning"><p>Z2的触控板是满足I2C_HID接口要求。
+  而linux 现在已经支持I2C_HID.。
+只是18.04的早期内核有BUG，所以无法用。</p></div>
 
-[ubuntu 内核历史版本](https://kernel.ubuntu.com/~kernel-ppa/mainline/)
-下载最新版本的内核文件即可。
+<div class="note success"><p>但该BUG在4.18.15版本以后的内核版本中已经修复.
+  所以,只要升级内核到4.18.15以上版本就能支持.</p></div>
+
+<div class="note primary"><p>[ubuntu 内核历史版本](https://kernel.ubuntu.com/~kernel-ppa/mainline/)
+  下载最新版本的内核文件即可。</p></div>
+
 比如我就是这四个文件
 ```
   sudo wget  linux-headers-5.1.0-050100rc3_5.1.0-050100rc3.201904010618_all.deb
