@@ -413,7 +413,7 @@ custom_logo:
 # Code Highlight theme
 # Available values: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night
+highlight_theme: normal
 
 # Enable "cheers" for archive page.
 cheers: true
@@ -907,8 +907,8 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: simple
-  icons: false
+  style: flat
+  icons: true
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
@@ -918,7 +918,7 @@ note:
 tabs:
   enable: true
   transition:
-    tabs: false
+    tabs: true
     labels: true
   border_radius: 0
 
@@ -1215,7 +1215,7 @@ images: images
 # 文章末尾添加“本文结束”标记
 passage_end_tag:
   enabled: true
-
+# #这孩子超可爱的！
 live2d:
   enable: true
   scriptFrom: local
@@ -1232,8 +1232,8 @@ live2d:
     height: 300
   mobile:
     show: true
-  react:
-    opacity: 0.7
+  # react:
+  #   opacity: 0.7
 
 # Online contact
 daovoice: true
