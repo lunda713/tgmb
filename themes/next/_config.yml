@@ -1234,3 +1234,7 @@ live2d:
     show: true
   react:
     opacity: 0.7
+
+# Online contact
+daovoice: true
+daovoice_app_id: 77178ed9
