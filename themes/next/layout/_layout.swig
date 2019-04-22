@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="/js/src/dytitle.js"></script>
-
 {# NexT version #}
 {% set version = next_env('version') %}
 

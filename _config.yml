@@ -41,7 +41,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
 
 # Home page setting
@@ -104,6 +104,8 @@ symbols_count_time:
   time: true
   total_symbols: true
   total_time: true
+
+
 #这孩子超可爱的！
 live2d:
   enable: true
@@ -121,3 +123,28 @@ live2d:
     show: true
   # react:
   #   opacity: 0.7
+
+# hexo-neat
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exclude:
+# 压缩css
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/jquery.fancybox.pack.js'
+    - '**/index.js'
+    - '**/love.js'
+    # - '**/eye.js'
