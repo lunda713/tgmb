@@ -5,7 +5,7 @@
 # Site
 title: Akilarの糖果屋
 subtitle: Rookie programmer's growth diary
-description: Nothing is true,everything is premited
+description: Nothing is true.Everything is premited
 keywords: diary; experience; tutorial;
 author: Akilar
 language: zh-CN
@@ -114,7 +114,7 @@ live2d:
   pluginJsPath: lib/
   pluginModelPath: assets/
   model:
-    use: live2d-widget-model-tororo
+    use: live2d-widget-model-koharu
   display:
     position: left
     width: 150
