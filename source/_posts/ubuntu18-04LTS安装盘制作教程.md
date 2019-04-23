@@ -1,3 +1,4 @@
+---
 title: ubuntu18.04LTS安装盘制作教程
 categories:
   - Akilarの巧克力
@@ -6,6 +7,7 @@ tags:
   - 启动盘制作
   - 系统重装
 author: Akialrlxh
+abbrlink: 328a67be
 date: 2019-04-08 14:42:00
 ---
 # 写在最前

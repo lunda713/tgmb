@@ -1,3 +1,4 @@
+---
 title: 'ubuntu18.04LTS 机械革命深海幽灵z2 重装日记 '
 categories:
   - Akilarの巧克力
@@ -6,6 +7,7 @@ tags:
   - 系统重装
   - ubuntu美化
 author: Akilarlxh
+abbrlink: 2f7e1a55
 date: 2019-04-08 15:21:00
 ---
 # 写在最前

@@ -1,3 +1,4 @@
+---
 title: 美化hexo参考文章鸣谢
 author: Akilar
 tags:
@@ -8,6 +9,7 @@ tags:
   - js
 categories:
   - Akilarの糖葫芦
+abbrlink: a73a1f5e
 date: 2019-04-21 18:25:00
 ---
 

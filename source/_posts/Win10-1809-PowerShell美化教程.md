@@ -1,3 +1,4 @@
+---
 title: Win10 1809 PowerShell美化教程
 author: Akilarlxh
 tags:
@@ -6,6 +7,7 @@ tags:
   - 教程
 categories:
   - Akilarの棉花糖
+abbrlink: 8a76eb87
 date: 2019-04-12 09:52:00
 ---
 # 一、写在最前

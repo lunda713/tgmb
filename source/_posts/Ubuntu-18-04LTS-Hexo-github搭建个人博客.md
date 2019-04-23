@@ -1,3 +1,4 @@
+---
 title: Ubuntu 18.04LTS Hexo+github搭建个人博客
 author: Akilarlxh
 tags:
@@ -6,6 +7,7 @@ tags:
   - github
 categories:
   - Akilarの巧克力
+abbrlink: e5502ef6
 date: 2019-04-11 17:03:00
 ---
 # 一、写在最前

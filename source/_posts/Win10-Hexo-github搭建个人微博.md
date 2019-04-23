@@ -1,3 +1,4 @@
+---
 title: Win10 1809 Hexo+github搭建个人博客
 tags:
   - hexo
@@ -6,6 +7,7 @@ tags:
 categories:
   - Akilarの棉花糖
 author: Akilar
+abbrlink: 6ef63e2d
 date: 2019-04-09 23:03:00
 ---
 # 写在最前

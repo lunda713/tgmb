@@ -1,3 +1,4 @@
+---
 title: 双系统 Hexo和github的常用命令行归纳
 author: Akilarlxh
 tags:
@@ -9,6 +10,7 @@ tags:
 categories:
   - Akilarの糖葫芦
   - ''
+abbrlink: 803c5fab
 date: 2019-04-12 13:58:00
 ---
 # 一、写在最前
