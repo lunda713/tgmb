@@ -315,7 +315,6 @@ excerpt_description: true
 auto_excerpt:
   enable: true
   length: 150
-  read_more_btn: true
 # Read more button
 # If true, the read more button would be displayed in excerpt section.
 read_more_btn: true
