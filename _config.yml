@@ -21,7 +21,7 @@ permalink_defaults:
 abbrlink:
   alg: crc32  # 算法：crc16(default) and crc32
   rep: hex    # 进制：dec(default) and hex
-  
+
 # Directory
 source_dir: source
 public_dir: public
@@ -152,3 +152,6 @@ neat_js:
     - '**/index.js'
     - '**/love.js'
     # - '**/eye.js'
+
+aplayer:
+  meting: true

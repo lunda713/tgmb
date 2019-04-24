@@ -1,6 +1,7 @@
 ---
 title: 店主的一封信
 date: 2019-04-23 22:51:26
+comments: false
 ---
 # 致每个糖果屋的过客：
 <div class="note default"><p>首先呢，很感谢您肯在这里驻足片刻。Akilarの糖果屋是一个个人性质的博客，我会在这里发表各种各样的内容。</p></div>
