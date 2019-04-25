@@ -640,6 +640,7 @@ img:hover {
 // 时间轴文章标题
 .posts-collapse .post-title a {
   padding-left: 50px;
+  padding-right: 50px;
   color: rgb(80, 115, 184);
 }
 
@@ -682,6 +683,13 @@ img:hover {
 // 分类页面
 .post-block.page {
   margin-top: 60px;
+  align-content: center;
+}
+
+li.category-list-item {
+padding-left: 50px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 255);
 }
 
 .category-all-page {
@@ -955,22 +963,23 @@ span#inline-toc {
 
 // 自定义的文章摘要图片样式
 img.img-topic {
-  display: block ;
+  width: 100%;
+  display: block;
   margin-left: .7em;
   margin-right: .7em;
   padding: 0;
-  float: right;
-  clear: right;
 }
 
 //图片外部的容器方框
 .out-img-topic {
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.35);
+  border-style: solid;
+  border-radius: 10px;
   display: block;
-  max-height:200px;
+  max-height: 200px;
   margin-bottom: 24px;
   overflow: hidden;
 }
-
 
 // 自定义的文章置顶样式
 .post-sticky-flag {
@@ -1125,43 +1134,39 @@ code.description {
 
 /* gitalk评论样式 */
 .gt-container {
-
   margin-top: 30px !important;
   margin-left: 20px !important;
   margin-right: 20px !important;
-margin-bottom: 30px !important;
-border: solid;
-border-color: #fff;
-border-radius: 5px;
-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px !important;
+  border: solid;
+  border-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .gt-meta {
   margin-top: 30px !important;
   margin-left: 20px !important;
   margin-right: 20px !important;
-margin-bottom: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 .gt-header {
-
   margin-top: 30px !important;
   margin-left: 20px !important;
   margin-right: 20px !important;
-margin-bottom: 30px !important;
-
+  margin-bottom: 30px !important;
 }
-
 
 .gt-comments {
   margin-top: 30px !important;
   margin-left: 20px !important;
   margin-right: 20px !important;
-margin-bottom: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 .gt-comment-content {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 /*valine 评论系统样式 老是挂有点难受，换回去了*/
@@ -1356,7 +1361,6 @@ div.vedit {
   content: "点击查看全部" !important;
   font-weight: 400 !important;
 } */
-
 /**/
 //十二生肖字体
 .chinese-zodiac {

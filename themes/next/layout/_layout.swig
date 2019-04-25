@@ -12,10 +12,11 @@
 
 {% set html_class = 'theme-next ' + theme.scheme %}
 {% if theme.motion.enable %}
-  {% set html_class = html_class + ' use-motion' %}
+{% set html_class = html_class + ' use-motion' %}
 {% endif %}
 
 <html class="{{ html_class | lower }}" lang="{{ config.language }}">
+
 <head>
   {{ partial('_partials/head/head.swig', {}, {cache: theme.cache.enable}) }}
   {% include '_partials/head/head-unique.swig' %}
@@ -26,9 +27,11 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
 
+
+
   {% set container_class = 'container' %}
   {% if theme.sidebar.position %}
-    {% set container_class = container_class + ' sidebar-position-' + theme.sidebar.position %}
+  {% set container_class = container_class + ' sidebar-position-' + theme.sidebar.position %}
   {% endif %}
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %}">
@@ -44,7 +47,7 @@
       <div class="main-inner">
         <div class="content-wrap">
           {% if theme.scheme === 'Pisces' || theme.scheme === 'Gemini' %}
-            {% include '_partials/header/sub-menu.swig' %}
+          {% include '_partials/header/sub-menu.swig' %}
           {% endif %}
           <div id="content" class="content">
             {% block content %}{% endblock %}
@@ -52,7 +55,7 @@
           {% include '_partials/comments.swig' %}
         </div>
         {% if theme.sidebar.display !== 'remove' %}
-          {% block sidebar %}{% endblock %}
+        {% block sidebar %}{% endblock %}
         {% endif %}
       </div>
     </main>
@@ -66,32 +69,32 @@
     </footer>
 
     {% if theme.back2top.enable and not theme.back2top.sidebar %}
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        {% if theme.back2top.scrollpercent %}
-          <span id="scrollpercent"><span>0</span>%</span>
-        {% endif %}
-      </div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      {% if theme.back2top.scrollpercent %}
+      <span id="scrollpercent"><span>0</span>%</span>
+      {% endif %}
+    </div>
     {% endif %}
 
     {% if theme.needmoreshare2.enable and theme.needmoreshare2.float.enable %}
-      <div id="needsharebutton-float">
-        <span class="btn">
-          <i class="fa fa-share-alt" aria-hidden="true"></i>
-        </span>
-      </div>
+    <div id="needsharebutton-float">
+      <span class="btn">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </span>
+    </div>
     {% endif %}
 
     {% if theme.baidushare and theme.baidushare.type === "slide" %}
-      <div>
-        {% include '_partials/share/baidushare.swig' %}
-      </div>
+    <div>
+      {% include '_partials/share/baidushare.swig' %}
+    </div>
     {% endif %}
 
     {% if theme.add_this_id %}
-      <div>
-        {% include '_partials/share/add-this.swig' %}
-      </div>
+    <div>
+      {% include '_partials/share/add-this.swig' %}
+    </div>
     {% endif %}
   </div>
 
@@ -125,6 +128,7 @@
   {% include '_third-party/tidio.swig' %}
   {% include '_custom/custom.swig' %}
 </body>
+
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/love.js"></script>
