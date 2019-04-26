@@ -10,43 +10,51 @@ categories:
 abbrlink: e5502ef6
 date: 2019-04-11 17:03:00
 ---
-# 一、写在最前
-
+# 写在最前
+<div class="note default no-icon"><p>
 其实我已开始最先尝试的就是ubuntu上搭建，但是，非常遗憾的是，ubuntu的各种读写权限把我弄得死去活来。
-
 毕竟一开始看的就是楠皮的博客来尝试的，后来发现没什么大用，不够详细倒是其次，主要是缺乏他其他几篇那样的普适性。怎么说呢，我花了三天时间踩坑，终于算是可以正常使用并且和win10完美同步了。
-
 所以之后写的内容里有很多都会附加上我踩坑时的怨念。
+</p></div>
 
 ---
-# 二、准备工作
+
+# 准备工作
 
 
-## 1、安装node.js和npm
+## 安装node.js和npm
 ```
 sudo apt-get update
 sudo apt-get install nodejs
 sudo apt-get npm
 ```
-安装完成以后可以输入
+
+<div class="note default no-icon"><p>安装完成以后可以输入</p></div>
+
 ```
 nodejs -v
 npm -v
 ```
-来查看版本号确认是否安装成功。
 
-## 2、安装git
+<div class="note default no-icon"><p>
+来查看版本号确认是否安装成功。</p></div>
+
+## 安装git
 ```
 sudo apt-get install git
 ```
-如果你是先看了我那篇ubuntu重装日记，那git应该之前就有安装过。
 
-## 3、安装Markdown编辑器
-以下任选一个即可
-- 1.[Atom](https://atom.io/)
+<div class="note default no-icon"><p>如果你是先看了我那篇ubuntu重装日记，那git应该之前就有安装过。</p></div>
+
+## 安装Markdown编辑器
+
+<div class="note default no-icon"><p>以下任选一个即可</p></div>
+
+<div class="note default no-icon"><p>1.[Atom](https://atom.io/)
 
 Atom是一个我挺喜欢的本地文本编辑器，自带markdown插件，按shift+ctrl+m即可渲染。缺点是实时渲染效果很卡顿，不流畅啊。
-下载安装.deb文件后，用dpkg命令安装
+下载安装.deb文件后，用dpkg命令安装</p></div>
+
 ```
 sudo dpkg -i atom-amd64.deb
 //若报错，就执行
@@ -54,10 +62,10 @@ sudo apt-get install -f
 
 ```
 
+<div class="note default no-icon"><p>2.[Typora](https://www.typora.io/)
 
-- 2.[Typora](https://www.typora.io/)
+Typora是专业的markdown编辑器，支持主题自定义，而且源代码模式和markdown模式随意切换，使用起来也很流畅。官网有各种系统的客户端安装教程</p></div>
 
-Typora是专业的markdown编辑器，支持主题自定义，而且源代码模式和markdown模式随意切换，使用起来也很流畅。官网有各种系统的客户端安装教程
 ```
 # or run:
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
@@ -68,11 +76,13 @@ sudo apt-get update
 # install typora
 sudo apt-get install typora
 ```
-除了这些软件形式的编辑器
-- 3.hexo-admin
+
+<div class="note default no-icon"><p>3.hexo-admin
+除了这些软件形式的编辑器。
 之后还会提到一个Hexo-admin的插件，
-可以直接在浏览器上管理，前提是你要先把hexo安装好，所以这个等会再讲。
-## 4、踩坑点
+可以直接在浏览器上管理，前提是你要先把hexo安装好，所以这个等会再讲。</p></div>
+
+## 踩坑点
 - i、绝大多是依赖错误都可以通过这三行代码解决
 ```
 sudo apt-get update
@@ -119,10 +129,11 @@ sudo apt-get update
 
 ---
 
-# 三、安装Hexo
-## 1、已经在win10上成功搭建Hexo
+# 安装Hexo
+## 已经在win10上成功搭建Hexo
 
-首先，未看过win10下搭建Hexo的，只想在ubuntu上搭建Hexo的，请移步到下一小节（三、2）
+<div class="note warning"><p>
+首先，未看过win10下搭建Hexo的，只想在ubuntu上搭建Hexo的，请移步到下一小节（三、2）</p></div>
 
 这里可以说一下，**如果你已经在win10上复现了我上一篇日志里写的全部内容**，~~当然，我希望你还是不要主动去复现bug。~~**并且git版本控制正常，可以正常使用git来提交源码内容到userame.github.io的source分支上。**
 
@@ -220,9 +231,9 @@ git版本控制上的：（source分支）
 //把本地仓库的文件推送到远程仓库
 
 ```
-## 2、未在win10上搭建过Hexo，只想在ubuntu下使用
+## 未在win10上搭建过Hexo，只想在ubuntu下使用
 
-### 01 建立Hexo文件夹
+### 建立Hexo文件夹
 随便那个目录都行，别是回收站就成。我是安装在Documents目录下
 ```
 cd ~/Documents
@@ -231,7 +242,7 @@ sudo mkdir Hexo
 cd Hexo
 //切换目录
 ```
-### 02 更改镜像源
+### 更改镜像源
 因为npm是国外的库，所以呢，没有翻墙的话会很慢，
 事实上我就算翻墙照样慢，没办法，没有钱啊，买不起高速服务器。
 亲身体会是不翻墙的话两个小时下不下一个插件，慢到怀疑人生。
@@ -239,13 +250,13 @@ cd Hexo
 sudo npm config set registry http://registry.npm.taobao.org
 //这里使用的是阿里的镜像。
 ```
-### 03 全局安装Hexo
+### 全局安装Hexo
 ```
 sudo npm install -g hexo-cli
 
 ```
 因为已经改了镜像源，所以安装很快。不用谢我。
-### 04 部署Hexo
+### 部署Hexo
 在[Hexo]文件夹下打开terminal
 ```
 sudo Hexo init
@@ -257,7 +268,7 @@ sudo npm config set unsafe-perm true
 sudo npm install -g hexo-cli
 ```
 不报错就请忽略
-### 05 安装插件
+### 安装插件
 虽然全部放出来了，但是我还是建议你一条一条执行，一次性全部复制粘贴可能会卡死。
 ```
 sudo npm install hexo-generator-index --save
@@ -278,7 +289,7 @@ sudo npm install hexo-admin --save
 //这就是我之前提到的hexo-admin，装了你不会后悔的。
 
 ```
-### 06 常用命令
+### 常用命令
 ```
 hexo clean
 //清空缓存
@@ -294,7 +305,7 @@ hexo deploy
 hexo d //简写
 //部署到github上，这个待会讲。
 ```
-### 07 测试效果
+### 测试效果
 在[Hexo]下打开terminal
 输入
 ```
@@ -316,9 +327,9 @@ sudo hexo s
 **注意点：在terminal中，ctrl+c无效，因为热键占用，要换成ctrl+shift+c才行**
 
 ---
-### 08 补充内容
+### 补充内容
 这部分关系到后面的主题配置，作为前瞻来写。
-#### 1. 创建“分类”页面
+#### 创建“分类”页面
 ```
 sudo hexo new page categories
 ```
@@ -339,7 +350,7 @@ date: 2018-06-07 00:38:36
 categories: 学习笔记
 tags: [node.js, express]
 ```
-#### 2. 创建“标签”页面
+#### 创建“标签”页面
 ```
 sudo hexo new page tags
 ```
@@ -369,12 +380,12 @@ tags:
 - express
 ```
 
-# 四、部署到GitHub
+# 部署到GitHub
 
-## 01注册github账号
+## 注册github账号
 首先，要有一个github账号
 - [github](https://github.com/)
-## 02 新建username.github.io仓库
+## 新建username.github.io仓库
 然后在单击头像->Your repositories
 在自己的 GitHub 账号下创建一个新的仓库，命名为 username.github.io（username是你的账号名)。
 ```
@@ -387,7 +398,7 @@ tags:
 ```
 - 相关资料 [GitHub Pages Basics / User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
 
-## 03 配置Git 与 GitHub
+## 配置Git 与 GitHub
 *之前已经说过，在ubuntu下，普通用户和超级用户是被当成两个不同的用户的，而不是简单的权限升级。如果你是在普通用户模式下配置的sshkey，那么每当你在提交Hexo时，一旦涉及到到文件读写权限，你必须使用sudo时，对不起，秘钥显示你没有权限读写git仓库。然而诸多文件读写里面，在普通用户和超级用户之间的切换简直是剪不断理还乱。所以我们要在管理员模式下设置秘钥*
 
 打开terminal,**在管理员模式下设置用户名称和邮件地址**
@@ -436,7 +447,7 @@ Are you sure you want to continue connecting (yes/no)?
 Hi username! You've successfully authenticated, but GitHub does not
 provide shell access.
 ```
-## 04 配置hexo的本地配置文件
+## 配置hexo的本地配置文件
 打开~/Hexo/_config.yml：
 修改底部的deploy
 ```
@@ -481,7 +492,7 @@ sudo hexo deploy
 ```
 重新提交即可
 
-# 五、主题配置
+# 主题配置
 我使用的nexT，理由是它界面简洁但是功能强大。
 首先贴出它的使用文档
 - [NexT使用文档](http://theme-next.iissnan.com/)
@@ -491,7 +502,7 @@ sudo hexo deploy
 - 02 [Hexo NexT主题中集成gitalk评论系统](https://asdfv1929.github.io/2018/01/20/gitalk/)
 - 03 [Hexo NexT使用Gitalk未找到相关的Issues进行评论Error:Validation Failed](https://liujunzhou.top/2018/8/10/gitalk-error/)
 - 04 [给Hexo Next添加本地搜索功能](https://www.jianshu.com/p/608e4d2a511d)
-## 01安装NexT
+## 安装NexT
 
 我是用的git clone的方法，文档中还有其他方法
 ```
@@ -499,7 +510,7 @@ sudo git clone https://github.com/theme-next/hexo-theme-next
 
 ```
 下载成功后建议把[hexo-theme-next]文件夹改名为[next]，并且把[next]文件夹拖动到~/Hexo/themes/下
-## 02 设置主题为NexT
+## 设置主题为NexT
 打开~/Hexo/_config.yml
 找到theme行设置主题
 ```
@@ -514,7 +525,7 @@ theme: next
 
 官方文档里写的是有些配置需要将一部分代码添加到配置文件中，但其实不用，我们逐行看配置文件就会发现，有很多功能都已经放在配置文件里了，只是注释掉了，我们只需要取消注释，把需要的相关信息补全即可使用
 
-### 001菜单栏 menu
+### 菜单栏 menu
 
 原生菜单栏有主页、关于、分类、标签等数个选项，但是在配置文件中是注释掉的状态，这里我们自行修改注释就行
 ```
@@ -538,7 +549,7 @@ menu:
 menu_icons记得选enable: true（默认应该是true）
 ```
 
-### 002主题风格 schemes
+### 主题风格 schemes
 ```
 主题提供了4个，把想要的主题分格前的注释取消，保持其他三个在注释掉的状态即可。
 ```
@@ -551,7 +562,7 @@ menu_icons记得选enable: true（默认应该是true）
 - Gemini
 ![gemini](https://upload-images.jianshu.io/upload_images/9240001-0e58f7644c380210.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
 
-### 003底部建站时间和图标修改
+### 底部建站时间和图标修改
 ```
 footer:
   # Specify the date when the site was setup.
@@ -577,7 +588,7 @@ footer:
     # version: false
    //theme: enable:false 把主题的内容也取消了 
  ```
- ### 004 个人社交信息 social
+ ### 个人社交信息 social
  ```
  social:
   GitHub: https://github.com/akilarlxh || github
@@ -592,7 +603,7 @@ footer:
      建议不要找太新的fontAwesome图标，主题关联的
      库版本没有那么新，很可能显示不了或者显示一个地球*/
  ```
-### 005 网站动画效果 motion
+### 网站动画效果 motion
  如果是为了网站响应速度我们可以把网站的动画关掉
  ```
  motion:
@@ -619,13 +630,13 @@ canvas_lines: false
 # canvas_sphere
 canvas_sphere: false
  ```
-### 006 博客评论功能
+### 博客评论功能
  next支持很多评论插件，但是大半都被万里长城拦在墙外，剩下的不是国内大厂的阴谋就是资本家的收费陷阱。
  这里我推荐使用gitalk，这是一个基于Github Issue 和 Preact 开发的评论插件，和github绑定，免费，登录github即可评论，而且评论支持markdown格式。
 
 详情可见：[gitalk demo](https://gitalk.github.io/)
 
-#### i. Register Application
+#### Register Application
 在GitHub上注册新应用，
 [Register a new OAuth application](https://github.com/settings/applications/new)
 ![application](https://s2.ax1x.com/2019/04/09/AoBCAU.png)
@@ -647,7 +658,7 @@ vii.在主题配置文件~/Hexo/themes/next/_config.yml中修改:即可）**
 
 ---
 
-#### ii.gitalk.swig
+#### gitalk.swig
 新建~/Hexo/themes/next/layout/_third-party/comments/gitalk.swig文件，并添加内容：
 ```
 {% if page.comments && theme.gitalk.enable %}
@@ -680,7 +691,7 @@ vii.在主题配置文件~/Hexo/themes/next/_config.yml中修改:即可）**
  {% include 'gitalk.swig' %}
 
  ```
- #### v.gitalk.styl
+ #### gitalk.styl
  
  新建~/Hexo/source/css/_common/components/third-party/gitalk.styl文件，添加内容：
  ```
@@ -837,15 +848,15 @@ Gitalk项目仓库 Issues115，通过MD5加密ID来缩短labal长度。*/
 ```
 其他问题看这节抬头的参考来源。
 
-### 007 全局搜索功能 local search
+### 全局搜索功能 local search
 
 Local Search 由 flashlab 贡献,在[next使用文档](http://theme-next.iissnan.com/third-party-services.html#local-search)里有完备的安装指导。
-#### i.安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：
+#### 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：
 ```
 npm install hexo-generator-search --save
 npm install hexo-generator-searchdb --save
 ```
-#### ii.编辑 站点配置文件~/Hexo/_config.yml，新增以下内容到任意位置：
+#### 编辑 站点配置文件~/Hexo/_config.yml，新增以下内容到任意位置：
 ```
 search:
   path: search.xml
@@ -860,17 +871,17 @@ search要顶格，“:”后要有空格，格式很重要。
 local_search:
   enable: true
 ```
-# 六、版本控制
- ## 01 修改博客及部署操作
+# 版本控制
+ ## 修改博客及部署操作
  
   
- ### i.创建source分支
+ ### 创建source分支
  首先，我们先在username.github.io仓库里做这些事情。
  在仓库中新建一个分支，命名为source
  ![new branch](https://s2.ax1x.com/2019/04/10/ATZKcn.png)
- ### ii.然后把source设置为默认分支。
+ ### 然后把source设置为默认分支。
  ![default branch](https://s2.ax1x.com/2019/04/10/ATZu1s.png)
- ### iii.第一次提交git
+ ### 第一次提交git
  开始准备你的第一次提交git
  修改博客内容后
  在[Hexo]下打开terminal，依次执行以下命令来提交网站相关的文件：
@@ -910,7 +921,7 @@ sudo hexo g -d
 一个 source 分支用来存放网站的原始文件，
 一个 master 分支用来存放生成的静态网页。
 
-### iv.可能遇到的bug 
+### 可能遇到的bug 
 
 - 通过git clone 命令下载的themes或者module文件中可能有.git文件，会有影响，所以删去。比如我就是在next这个主题文件夹里有个.git文件。
 
@@ -938,7 +949,7 @@ sudo git pull origin source --allow-unrelated-histories
  ```
 
 
-## 02.博客管理流程
+## 博客管理流程
  在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：
  i.依次执行指令
  ```
@@ -954,7 +965,7 @@ sudo hexo generate -d
 sudo hexo g -d 
 ```
 将本地文件发布网站到 master 分支上。
-## 03.本地资料丢失或多PC同步
+## 本地资料丢失或多PC同步
 当重装电脑之后，或者想在其他电脑上修改博客，先走一下一二的流程，之后可以使用下列步骤：
 其实就是本篇一、二、三的内容
 i.使用 

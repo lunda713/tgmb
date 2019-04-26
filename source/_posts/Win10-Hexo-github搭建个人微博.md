@@ -748,9 +748,9 @@ local_search:
   enable: true
 ```
 
-# 六、版本控制
+# 版本控制
 
- ## 01 修改博客及部署操作
+ ## 修改博客及部署操作
 
  ### 创建source分支
 
@@ -856,7 +856,7 @@ hexo g -d
 <div class="note success"><p>将本地文件发布网站到 master 分支上。</p></div>
 
 
-## 03.本地资料丢失或多PC同步
+## 本地资料丢失或多PC同步
 
 <div class="note info"><p>当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：</p></div>
 
