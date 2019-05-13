@@ -1,8 +1,9 @@
 ---
 title: Atom插件安装和推荐
-date: 2019-05-13 13:37:46
 categories: Akilarの糖葫芦
 tags: Atom
+abbrlink: 498e6e74
+date: 2019-05-13 13:37:46
 images:
 top:
 ---
@@ -12,7 +13,9 @@ top:
 在[Atom官网](https://atom.io/)下载对应版本，因为是个小水管，所以经常会遇到加载失败的问题，有点耐心就可以。
 
 可以预览一下，我的配置效果是这样的。
-![](/Atom插件安装和推荐/20190513014951914.png)
+
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513014951914.png)
+
 # 安装Atom插件
 
 在国内希望通过Atom自带的package安装插件几乎是天方夜谭，所以我这里推荐的是使用**node.js**配合**git**来使用命令行安装。
@@ -32,13 +35,13 @@ top:
 
 在搜索框里搜索我们要的插件
 **atom-simplified-chinese-menu**
-![](/Atom插件安装和推荐/20190513015804849.png)
+![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513015804849.png)
 不要按右边那个醒目的Install按钮，无限加载看一下午没什么意义。
 
 点击进入介绍界面，找到他的git仓库网址
-![](/Atom插件安装和推荐/20190513020036320.png)
+![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513020036320.png)
 然后就到github了，把这个clone到atom的插件文件夹里
-![](/Atom插件安装和推荐/20190513020210545.png)
+![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513020210545.png)
 在**C:\Users\用户名\.atom\packages**文件夹打开终端，输入
 ```
 git clone https://github.com/chinakids/atom-simplified-chinese-menu
