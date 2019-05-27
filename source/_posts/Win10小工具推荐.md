@@ -20,6 +20,6 @@ top:
 
 直到我遇见了sinpaste，这文体咋这么像推销的。总之谁用谁知道。支持开机自启，占用资源很小，反正都用ssd硬盘了，谁在意那点开机时间啊。
 [sinpaste中文官方网站](https://zh.snipaste.com/)
-![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10%E5%B0%8F%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/20190524114714683.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10%E5%B0%8F%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/20190524115201921.png)
 
 # 未完待续
