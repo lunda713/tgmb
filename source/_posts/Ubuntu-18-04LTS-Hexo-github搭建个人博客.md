@@ -189,7 +189,7 @@ less ~/.ssh/id_rsa.pub
 找一个你觉得合适的位置打开terminal，我是在~/Documents下
 
 ```
-sudo git clone git@github.com:username:username.github.io.git
+sudo git clone git@github.com:username/username.github.io.git
 ```
 请务必确保你有把source设置为默认分支，
 否则你要是下载了一个master分支上的那些网页下来，
