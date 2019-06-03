@@ -1,8 +1,9 @@
 ---
 title: Android Studio安装备忘
-date: 2019-06-02 12:24:47
 categories: Akilarの糖葫芦
 tags: Android
+abbrlink: 256c7ca
+date: 2019-06-02 12:24:47
 images:
 top:
 ---
@@ -39,14 +40,14 @@ top:
 
 点完Cancle多半还会转半天，直接关闭Android Studio即可。实在卡的时候试试按ESC键。
 
-打开C:\Users\username\.gradle\wrapper\dists
+打开C:\Users\username\ .gradle\ wrapper\ dists
 查看对应的gradle版本。
 比如我就是
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602125502131.png)
 然后到gradle发布网站下载对应版本。
 [Gradle distributions](http://services.gradle.org/distributions/)
 
-之后把下载下来的压缩包放到**C:\Users\84489\.gradle\wrapper\dists\gradle-5.1.1-all\97z1ksx6lirer3kbvdnh7jtjg ** 里。
+之后把下载下来的压缩包放到**C:\Users\ username \ .gradle\ wrapper\ dists\ gradle-5.1.1-all\ 97z1ksx6lirer3kbvdnh7jtjg ** 里。
 
 ***不要解压！*** ***不要解压！*** ***不要解压！***
 
