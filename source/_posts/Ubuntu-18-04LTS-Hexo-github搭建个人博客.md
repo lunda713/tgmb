@@ -50,7 +50,9 @@ sudo apt-get install git
 
 <div class="note default no-icon"><p>以下任选一个即可</p></div>
 
-<div class="note default no-icon"><p>1.[Atom](https://atom.io/)
+<div class="note default no-icon"><p>
+
+1.[Atom](https://atom.io/)
 
 Atom是一个我挺喜欢的本地文本编辑器，自带markdown插件，按shift+ctrl+m即可渲染。缺点是实时渲染效果很卡顿，不流畅啊。
 下载安装.deb文件后，用dpkg命令安装</p></div>
@@ -62,7 +64,9 @@ sudo apt-get install -f
 
 ```
 
-<div class="note default no-icon"><p>2.[Typora](https://www.typora.io/)
+<div class="note default no-icon"><p>
+
+2.[Typora](https://www.typora.io/)
 
 Typora是专业的markdown编辑器，支持主题自定义，而且源代码模式和markdown模式随意切换，使用起来也很流畅。官网有各种系统的客户端安装教程</p></div>
 
@@ -77,7 +81,9 @@ sudo apt-get update
 sudo apt-get install typora
 ```
 
-<div class="note default no-icon"><p>3.hexo-admin
+<div class="note default no-icon"><p>
+
+3.hexo-admin
 除了这些软件形式的编辑器。
 之后还会提到一个Hexo-admin的插件，
 可以直接在浏览器上管理，前提是你要先把hexo安装好，所以这个等会再讲。</p></div>
