@@ -63,4 +63,4 @@ date: 2019-04-21 18:25:00
 ## 5、Markdown教程
 其实这个是最好找的，不过他的网页源代码对于我解决markdown语法的转义很有启发，所以一并在这里鸣谢。
 
-<div class="note info"><p>[HEXO下的Markdown语法](https://www.ofind.cn/blog/HEXO/HEXO%E4%B8%8B%E7%9A%84Markdown%E8%AF%AD%E6%B3%95(GFM)%E5%86%99%E5%8D%9A%E5%AE%A2.html)</p></div>
+<div class="note info"><p>[HEXO下的Markdown语法](https://anson2416.github.io/posts/ed86d43f/)</p></div>
