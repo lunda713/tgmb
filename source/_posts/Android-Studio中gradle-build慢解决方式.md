@@ -60,6 +60,9 @@ top:
 先把图中这四个文件删了再打开即可。
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602125942731.png)
 
+
 # 参考文章
 
 [Android studio安装与配置](https://www.cnblogs.com/xiadewang/p/7820377.html)
+
+

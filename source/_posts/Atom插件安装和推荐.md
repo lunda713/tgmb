@@ -62,19 +62,27 @@ ubuntu安装方式类似，都是要先找到atom的packages文件夹在哪里�
 
 为了方便我直接贴github的网址了，免了打开atom搜索的部分，不用谢。
 
-<div class="note primary"><p>[activate-power-mode](https://github.com/JoelBesada/activate-power-mode)
+<div class="note primary"><p>
+
+[activate-power-mode](https://github.com/JoelBesada/activate-power-mode)
 这是一个是代码动起来的插件，具体什么意思呢，代码删除时有一种早期红白机游戏机的特效，具体可以看插件介绍，我最初想要安装插件的动机就是这个特效。
 </p></div>
 
-<div class="note primary"><p>[atom-beautify](https://github.com/Glavin001/atom-beautify)
+<div class="note primary"><p>
+
+[atom-beautify](https://github.com/Glavin001/atom-beautify)
 用来整理代码的，不过对python之类对空格对齐都有要求的代码还请谨慎使用。整理代码的快捷键是Ctrl+Alt+B。
 </p></div>
 
-<div class="note primary"><p>[file-type-icons](https://github.com/lee-dohm/file-type-icons)
+<div class="note primary"><p>
+
+[file-type-icons](https://github.com/lee-dohm/file-type-icons)
 会替换不同类型的文件图标，效果还不错。md风格美美哒。
 </p></div>
 
-<div class="note primary"><p>[minimap](https://github.com/atom-minimap/minimap)
+<div class="note primary"><p>
+
+[minimap](https://github.com/atom-minimap/minimap)
 类似于sublime的小地图，就是代码总览啦，蛮好看的，多个小窗口阅读的时候有点碍事的话可以在package里停用。
 </p></div>
 
