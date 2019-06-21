@@ -1,5 +1,5 @@
 ---
-title: Android Studio安装备忘
+title: Android Studio安装注意事项
 categories: Akilarの糖葫芦
 tags: Android
 abbrlink: 256c7ca
@@ -60,6 +60,17 @@ top:
 先把图中这四个文件删了再打开即可。
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602125942731.png)
 
+# 其他
+
+1. 根据报错，可能会遇到无法删除`~\AndroidProjects\Test\app\build\intermediates\signing_config\debug\out\signing-config.json`,这时候按照报错找到这个文件，用安全管家软件提供的粉碎文件功能强制删除即可。
+2. emulator: ERROR: Unknown AVD name 
+   这个情况是因为AVD创建位置的问题，可能是以前装过SDK没卸载干净，或者项目文件指向目录错误。
+   例如我的AVD在**C:\Users\Akilar\.android\avd**
+   而我的SDK在**C:\Users\Akilar\AppData\Local\Android\Sdk**，
+   这里把AVD整个目录下的文件拷贝到SDK目录下，
+   ```
+   cp C:\Users\Akilar\.android\avd C:\Users\Akilar\AppData\Local\Android\Sdk\avd
+   ```
 
 # 参考文章
 
