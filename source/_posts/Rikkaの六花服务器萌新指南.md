@@ -721,11 +721,25 @@ IC2的超频升级组件合成过程需要用到IC2冷却液，而直接用水�
 
 </p></div>
 
+## 自动化活石祭坛锤炼
+
+<div class="note info no-icon"><p>
+最低限度材料：ME驱动器x1，ME控制器x1，供能设备（太阳能或任意发电机）x1，ME玻璃线缆若干，发射器x1，锤子（魔力钢锤，源质钢锤，泰拉钢锤，究极镀金锤均可）至少1个，活石祭坛，输出总线x1，输入总线x1，容量卡x2，悬浮沙漏x1。
+
+结构十分简单。
+
+![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Rikka%E3%81%AE%E5%85%AD%E8%8A%B1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%90%8C%E6%96%B0%E6%8C%87%E5%8D%97/20191201092710185.png)
+**然后往悬浮沙漏里放一颗沙子。**给输出总线标记上镀金服务器和精神燃料。给输入总线标记上镀金土豆泥和精神碎片。
+![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Rikka%E3%81%AE%E5%85%AD%E8%8A%B1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%90%8C%E6%96%B0%E6%8C%87%E5%8D%97/20191201092929357.png)
+![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Rikka%E3%81%AE%E5%85%AD%E8%8A%B1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%90%8C%E6%96%B0%E6%8C%87%E5%8D%97/20191201092956341.png)
+之后只需要把锤子放进发射器，然后把镀金服务器和精神燃料丢进AE里就好了，不过要注意锤子耐久的消耗，每一下锤炼会消耗5点耐久。记得及时拿出来修复耐久。
+![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Rikka%E3%81%AE%E5%85%AD%E8%8A%B1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%90%8C%E6%96%B0%E6%8C%87%E5%8D%97/20191201093340415.png)
+![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Rikka%E3%81%AE%E5%85%AD%E8%8A%B1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%90%8C%E6%96%B0%E6%8C%87%E5%8D%97/20191201093417246.png)
+
+</p></div>
 ## 自动化花药台
 
-
 <div class="note warning no-icon"><p>
-
 
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Rikka%E3%81%AE%E5%85%AD%E8%8A%B1%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/20190930104923366.png)
 最低限度材料：ME接口x2，ME驱动器x1，ME控制器x1，供能设备（太阳能或任意发电机）x1，样板终端x1，空白样板若干，存储合成器（至少1k）x1，花格箱x1，花药台x1，泵x1，水槽x1，活石桶x1，ME玻璃线缆若干，漏斗花（或浮空漏斗花）x1。
@@ -849,7 +863,7 @@ IC2的超频升级组件合成过程需要用到IC2冷却液，而直接用水�
 |     缺点 |   半自动   |   需要双倍频道   |
 
 
-# 自动化元件制造机+电动压缩机
+## 自动化元件制造机+电动压缩机
 
 <div class="note warning no-icon"><p>
 
