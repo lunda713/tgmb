@@ -737,6 +737,8 @@ IC2的超频升级组件合成过程需要用到IC2冷却液，而直接用水�
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Rikka%E3%81%AE%E5%85%AD%E8%8A%B1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%90%8C%E6%96%B0%E6%8C%87%E5%8D%97/20191201093417246.png)
 
 </p></div>
+
+
 ## 自动化花药台
 
 <div class="note warning no-icon"><p>
