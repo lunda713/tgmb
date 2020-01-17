@@ -32,5 +32,14 @@ Ubuntu下有个很方便的剪贴板增强插件，但是win10迟迟找不到，
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10%E5%B0%8F%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/20191213095922113.png)
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10%E5%B0%8F%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/20191213095930685.png)
 
+# 优效日历
+
+[优效日历](http://www.youxiao.cn/index.php/yxcalendar/)
+
+优效日历采用了win10的设计风格，安装后直接替换windows原版日历，
+![](/Win10小工具推荐/20200109034338203.png)，
+日历界面色彩更加丰富，且支持自定义，软件占用资源极低，可以放心使用。
+支持自由安排日程，倒计时，可以和微信绑定，直接通过小程序添加新日程，还有日程同步功能。
+
 
 # 未完待续
