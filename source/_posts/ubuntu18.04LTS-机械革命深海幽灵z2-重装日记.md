@@ -337,13 +337,13 @@ echo $SHELL
 
 到官网下载[jdk8](https://www.oracle.com/technetwork/cn/java/javase/downloads/index.html)</p></div>
 
-<div class="note info"><p>我下载的是jdk-8u201-linux-x64.tar.gz，后来人看到的肯定不是这个版本了，关系不大，改下版本号就行。</p></div>
+<div class="note info"><p>我下载的是jdk-8u211-linux-x64.tar.gz，后来人看到的肯定不是这个版本了，关系不大，改下版本号就行。</p></div>
 
 <div class="note default"><p>打开terminal，执行：</p></div>
 
 ```
 sudo mkdir /usr/lib/jvm
-sudo tar -zxvf jdk-8u201-linux-x64.tar.gz -C /usr/lib/jvm
+sudo tar -zxvf jdk-8u211-linux-x64.tar.gz -C /usr/lib/jvm
 ```
 
 <div class="note default"><p>
@@ -358,7 +358,7 @@ sudo gedit ~/.zshrc
  
 ``` diff
 #set oracle jdk environment
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_201
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_211
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
@@ -375,16 +375,16 @@ source ~/.zshrc
 <div class="note warning"><p> 这里我虽然全部都贴出来了，但是在terminal里运行的时候,还是要老老实实一行一行运行，别想着全部复制过去一次跑完。</p></div>
 
  ```
-sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_201/bin/java 300
-sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_201/bin/javac 300
-sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk1.8.0_201/bin/jar 300
-sudo update-alternatives --install /usr/bin/javah javah /usr/lib/jvm/jdk1.8.0_201/bin/javah 300
-sudo update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/jdk1.8.0_201/bin/javap 300
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_211/bin/java 300
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_211/bin/javac 300
+sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk1.8.0_211/bin/jar 300
+sudo update-alternatives --install /usr/bin/javah javah /usr/lib/jvm/jdk1.8.0_211/bin/javah 300
+sudo update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/jdk1.8.0_211/bin/javap 300
 sudo update-alternatives --config java
 ```
 <div class="note info"><p>若是初次安装 JDK，会有下面的提示:</p></div>
 
-<div class="note success"><p>There is only one alternative in link group java (providing /usr/bin/java): /usr/lib/jvm/jdk1.8.0_201/bin/java
+<div class="note success"><p>There is only one alternative in link group java (providing /usr/bin/java): /usr/lib/jvm/jdk1.8.0_211/bin/java
 Nothing to configure.</p></div>
 
 <div class="note default"><p>否则，选择合适的 JDK即可。
@@ -482,7 +482,7 @@ source ~/.zshrc
 
 
 ## 科学上网
-### electron-ssr
+### electron-ssr（2020-7-8修订，electron-ssr已经停止更新，原作者删了源代码，且SSR服务并不如V2Ray稳定，推荐使用V2Ray）
 <div class="note info"><p>
 
 ssr的用户可以安装`electron-ssr`，这是一个Ubuntu下也能够使用的ssr客户端，</p></div>
@@ -690,6 +690,19 @@ service v2ray restart // 重启v2ray，修改配置文件后重启一下v2ray
 <div class="note warning"><p>
 
 记得在浏览器里把情景模式设置为`auto switch`，这样浏览器会自动选择是直接连接还是代理。</p></div>
+
+### Clash
+
+<div class="note primary"><p>
+
+Clash是一个Go语言开发的多平台代理客户端
+
+[Clash](https://github.com/Dreamacro/clash/releases)
+
+具体教程请移步https://www.jianshu.com/p/2906066d2e0a
+
+待我以后脑子再热一热，想到反复重装Ubuntu 19.10的时候再回来详细写这个。
+</p></div>
 
 ## jetbrain全家桶安装（IDE）
 
