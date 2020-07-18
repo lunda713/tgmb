@@ -41,7 +41,13 @@ Node.js是基于Chrome的V8 JavaScript引擎构建的
 我下载的是2.21.0版本，可以选择安装版，也可以选择绿色版，
 不过绿色版需要加上`Git_HOME`，`%Git_HOME%\bin`之类的，我就偷懒了，
 安装版一路默认安装即可。作为最强大的版本控制软件，
-以后我还要专门写几篇活用教程的。</p></div>
+以后我还要专门写几篇活用教程的。
+
+*20200719修订：这里提示一下，有些用户注册github账号时可能会遇到**“Unable to verify your captcha response”**报错，解决方案有以下三种：*
+- 升级浏览器内核，其实直接下载安装最新版chrome或者Microsoft edge浏览器即可。
+- 使用翻墙软件，具体怎么操作可以看另一篇博客[win10重装日记](https://akilarlxh.github.io/post/29cf4234.html)里的3.3-3.5章节。
+- 把github域名添加到hosts文件中。这个操作方式请自行百度。
+</p></div>
 
 
 ## [Atom](https://www.atom.io/)
@@ -58,7 +64,9 @@ Atom自带markdown渲染，`shift+ctrl+M`即可。而且安装简单。
  <div class="note primary"><p>typora是一个专业的markdown编辑器，比之atom的最大优势就是同步渲染速度，缺点是对于代码高亮的支持并不是很方便，自带源代码模式 ，拿来看看代码也不错</p></div>
 
  ## Hexo-admin
-<div class="note warning"><p>之后会提到一个`Hexo-admin`的插件，可以直接在浏览器上管理，而且可以拖动代码，像office word一样这是以上两个编辑器都没有的功能。
+<div class="note warning"><p>
+
+管理，而且可以拖动代码，像office word一样这是以上两个编辑器都没有的功能。
 要用得先装好hexo，所以这个是后话了。</p></div>
 
 
@@ -68,7 +76,7 @@ Atom自带markdown渲染，`shift+ctrl+M`即可。而且安装简单。
 
 [Hexo官网](https://hexo.io/zh-cn/)</p></div>
 
-<div class="note info"><p>在这里可以找到全套的使用文档，而且hexo的作者是个台湾人，对中文的支持很不错。</p></div>
+<div class="note info"><p>内容仅供参考，具体搭建可以直接看下面的教程。放网页的目的是在这里可以找到全套的使用文档，而且hexo的作者是个台湾人，对中文的支持很不错。</p></div>
 
 ## 建立Hexo文件夹
 
@@ -80,7 +88,9 @@ Atom自带markdown渲染，`shift+ctrl+M`即可。而且安装简单。
 
 ## 更改镜像源
 
-<div class="note default no-icon"><p>然后在`Hexo`文件夹内`右键`->`Git Bash Here`
+<div class="note default no-icon"><p>
+
+然后在`Hexo`文件夹内`右键`->`Git Bash Here`
 因为npm是国外的库，所以呢，没有翻墙的话会很慢，
 事实上我就算翻墙照样慢，没办法，没有钱啊，买不起高速服务器。
 亲身体会是不翻墙的话两个小时下不下一个插件，慢到怀疑人生。</p></div>
