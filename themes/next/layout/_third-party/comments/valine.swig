@@ -27,6 +27,7 @@
     meta: guest,
     pageSize: '{{ theme.valine.pageSize }}' || 10,
     visitor: {{ theme.valine.visitor }},
-    lang: '{{ theme.valine.language }}' || 'zh-cn'
+    lang: '{{ theme.valine.language }}' || 'zh-cn',
+    enableQQ: true,
   });
 </script>

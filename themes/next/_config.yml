@@ -633,16 +633,16 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # More info available at https://valine.js.org
 valine:
-  enable: false # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
-  appid: lVSTRSnKWswWTDpuD5pacTHq-gzGzoHsz # your leancloud application appid
-  appkey: JOENCTOEfaxeJoeHrvWFF659 # your leancloud application appkey
-  notify: false # mail notifier, See: https://github.com/xCss/Valine/wiki
+  enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
+  appid: XwqMALzbkBMQaRWTh0P8kC5T-gzGzoHsz # your leancloud application appid
+  appkey: pUPAvvxy7BziPHsKzlB6aFkD # your leancloud application appkey
+  notify: true # mail notifier, See: https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: ヾﾉ≧∀≦)o来啊，快活啊! # comment box placeholder
   avatar: retro # gravatar style
   guest_info: nick,mail # custom comment header
   pageSize: 5 # pagination size
-  language: # language, available values: en, zh-cn
+  language: zh-cn # language, available values: en, zh-cn
   visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
   comment_count: true # if false, comment count will only be displayed in post page, not in home page
 
@@ -669,7 +669,7 @@ gitment:
 # Gitalk
 # Demo: https://gitalk.github.io
 gitalk:
-  enable: true
+  enable: false
   github_id: akilarlxh  # Github repo owner
   repo: akilarlxh.github.io # Repository name to store issues
   client_id: 658353c677f184d58eb6 # Github Application Client ID
