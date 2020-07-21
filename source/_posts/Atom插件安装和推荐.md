@@ -19,6 +19,7 @@ top:
 # 安装Atom插件
 
 在国内希望通过Atom自带的package安装插件几乎是天方夜谭，所以我这里推荐的是使用**node.js**配合**git**来使用命令行安装。
+
 ## 安装node.js和git
 同样的，需要安装node.js和git，安装方法可以对应系统版本参考我那两篇Hexo博客搭建教程。
 
@@ -29,9 +30,9 @@ top:
 
 ## 安装插件
 
-安装步骤都是一样的，所以这里我拿一个汉化包插件举例，就算再怎么劝，我到底还是喜欢多一点中文啊。
+因为是通过命令行安装，所以不管是windows系统linux系统，安装步骤都是一样的。这里我拿一个汉化包插件举例~~，就算再怎么劝，我到底还是喜欢多一点中文啊~~。
 
-打开atom，在左上角找到File->Settings->Install
+打开`atom`，在左上角找到`File->Settings->Install`
 
 在搜索框里搜索我们要的插件
 **atom-simplified-chinese-menu**

@@ -121,7 +121,9 @@ hexo init
 ```
 ## 安装插件
 
-<div class="note default no-icon"><p>虽然一股脑全放出来了，不过记得一条一条来。全部一起复制粘贴可能导致卡死，别问我咋知道的，说多了都是泪</p></div>
+<div class="note default no-icon"><p>
+
+依然是在`Hexo`文件夹中，在`git bash`中输入以下代码，虽然一股脑全放出来了，不过记得一条一条来。全部一起复制粘贴可能导致卡死~~，别问我咋知道的，说多了都是泪~~</p></div>
 
 ```
 npm install hexo-generator-index --save
@@ -190,6 +192,9 @@ hexo server
 <div class="note default no-icon"><p>这部分关系到后面的主题配置，作为前瞻来写。</p></div>
 
 ### 创建“分类”页面
+
+依然是在`Hexo`文件夹中，在`git bash`中输入
+
 ```
 hexo new page categories
 ```
@@ -265,16 +270,18 @@ tags:
 
 <div class="note warning"><p>
 
+（20200720修订，专门写给老实孩子看的，这段主要是为了解释为啥要按照**username.github.io**这个要求来新建仓库名，不感兴趣的话跳过这段看后面的**配置Git 与 GitHub**就好，不用追根究底）
 在这里，要知道，GitHub Pages 有两种类型：User/Organization Pages 和 Project Pages，而我所使用的是 User Pages。
+
 简单来说，User Pages 与 Project Pages 的区别是：
 1. User Pages 是用来展示用户的，而 Project Pages 是用来展示项目的。
 2. 用于存放 User Pages 的仓库必须使用 username.github.io 的命名规则，而 Project Pages 则没有特殊的要求。
 3. User Pages 将使用仓库的 master 分支，而 Project Pages 将使用 gh-pages 分支。
-4. User Pages 通过 `http(s)://username.github.io` 进行访问，而 Projects Pages 通过 `http(s)://username.github.io/projectname` 进行访问。</p></div>
+4. User Pages 通过 http(s)://username.github.io进行访问，而 Projects Pages 通过 http(s)://username.github.io/projectname进行访问。</p></div>
 
 <div class="note info"><p>
 
-- - 相关资料 [GitHub Pages Basics / User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)</p></div>
+- 相关资料 [GitHub Pages Basics / User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)</p></div>
 
 
 ## 配置Git 与 GitHub
@@ -410,10 +417,13 @@ hexo deploy
 
 ## 安装NexT
 
-<div class="note default no-icon"><p>我是用的git clone的方法，文档中还有其他方法</p></div>
+<div class="note default no-icon"><p>我是用的git clone的方法，文档中还有其他方法。</p></div>
 
 ```
+//依然是在Hexo文件夹中，在git bash中输入
 git clone https://github.com/theme-next/hexo-theme-next themes/next
+//这个指令就是把NexT主题的项目文件拷贝到了~/Hexo/themes/next 路径下。
+//建议找到~/Hexo/themes/next文件夹，删除里面的.git文件夹。以免在提交到Git仓库时，因为有多个.git文件夹，导致提交出错。
 
 ```
 
@@ -491,22 +501,22 @@ menu_icons记得选enable: true（默认应该是true）</p></div>
 <div class="note danger no-icon"><p>
 
 - Muse
-![muse](https://upload-images.jianshu.io/upload_images/9240001-5e7193faf3720112.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)</p></div>
+![](/Win10-1809-Hexo+github搭建个人博客/20200720051912433.png)</p></div>
 
 <div class="note warning no-icon"><p>
 
 - Mist
-![mist](https://upload-images.jianshu.io/upload_images/9240001-dbd774ea0be0fe87.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)</p></div>
+![](/Win10-1809-Hexo+github搭建个人博客/20200720051938307.png)</p></div>
 
 <div class="note success no-icon"><p>
 
 - Pisces
-![pisces](https://upload-images.jianshu.io/upload_images/9240001-327385996d44bb02.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)</p></div>
+![](/Win10-1809-Hexo+github搭建个人博客/20200720052003513.png)</p></div>
 
 <div class="note info no-icon"><p>
 
 - Gemini
-![gemini](https://upload-images.jianshu.io/upload_images/9240001-0e58f7644c380210.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)</p></div>
+![](/Win10-1809-Hexo+github搭建个人博客/20200720052029789.png)</p></div>
 
 
 ### 底部建站时间和图标修改
@@ -611,8 +621,7 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
 
 <div class="note warning"><p>
 
-一条重要信息 (next在20190410以后的更新中，:5.3.7.2到2.3.7.8的内容基本都已经被添加进了next的源码中，直接
-跳到5.3.7.7：在主题配置文件~/Hexo/themes/next/_config.yml中修改即可）</p></div>
+一条重要信息 (next在20190410以后的更新中，5.3.7.2至5.3.7.8的内容基本都已经被添加进了next的源码中，安装的是这之后的版本的读者请直接跳到5.3.7.7：在主题配置文件~/Hexo/themes/next/_config.yml中修改即可）</p></div>
 
 
 ---
@@ -864,6 +873,37 @@ local_search:
 # 版本控制
 
  ## 修改博客及部署操作
+ 
+<div class="note error"><p>
+ 
+20200720修订：郑重声明，如果按照以下内容进行部署双分支，虽然可以在一个仓库内同时管理博客源码和博客生成的网页文件，但是基于博客仓库必须是开放的性质，所以你的博客源码将是完全开源的，任何人都能通过git clone拷贝你的博客源码，唯一的区别就是在没有部署SSH Key的情况下他们不可能提交到你的库内。如果觉得不能接受，可以另外新建一个保密仓库作为源码存放库。
+  
+操作方式大同小异。在hexo文件夹打开git bash，使用以下代码进行提交即可。
+  
+  ```
+//初始化git
+git init
+//添加文件到本地仓库
+git add .
+//添加文件描述信息
+git commit -m "自定义内容即可"
+// 远程仓库地址 //链接远程仓库，创建主分支
+git remote add origin git@github.com:username/YourRepositoryName .git
+//要是提示origin已经存在，那么执行
+git remote rm origin
+//然后再试试
+git remote add origin git@github.com:username/YourRepositoryName.git
+// 把远程仓库的新增的内容覆盖到本地仓库
+git pull origin YourBranchName
+//把本地仓库的文件推送到远程仓库的主分支，YourBranchName记得替换成分支名，一般是source
+git push -u origin YourBranchName -f
+//-f 是强制提交，主要是因为前后版本不一致造成的，
+//然后执行以下任意一条生成网站并部署到 GitHub 上。(Hexo部署网站是根据_config.yml内的配置，所以不受影响）
+hexo generate -d
+hexo g -d
+```
+ </p></div>
+ 
 
  ### 创建source分支
 
