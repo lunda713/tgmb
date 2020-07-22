@@ -596,7 +596,7 @@ canvas_sphere: false
  
  next支持很多评论插件，但是大半都被万里长城拦在墙外，剩下的不是国内大厂的阴谋就是资本家的收费陷阱。
   我现在在用的`valine`和一个插件有些兼容bug，所以以后再说。
- 这里我先推荐使用gitalk，这是一个基于Github Issue 和 Preact 开发的评论插件，和github绑定，免费，登录github即可评论，而且评论支持markdown格式。
+ 这里我先推荐使用gitalk，这是一个基于Github Issue 和 Preact 开发的评论插件，和github绑定，免费，登录github即可评论，而且评论支持markdown格式。而且会将每篇文章的评论放置到一个github仓库的issues里，方便管理。这里推荐直接放置到username.github.io仓库的issues。
 详情可见：[gitalk demo](https://gitalk.github.io/)</p></div>
 
 #### Register Application
@@ -701,10 +701,10 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
  gitalk:
   enable: true
   githubID: github帐号  # 例：akilarlxh   
-  repo: 仓库名称   # 例：akilarlxh.github.io
+  repo: 存放issues的仓库名称   # 例：akilarlxh.github.io
   ClientID: Client ID //之前注册的application内找到复制粘贴
   ClientSecret: Client Secret //同上
-  adminUser: github帐号 #指定可初始化评论账户,如akilarlxh
+  adminUser: 管理员github帐号 #指定可初始化评论的账户,如akilarlxh
   distractionFreeMode: true
  ```
 #### 可能~~呸，怎么看都是肯定~~会遇到的bug
