@@ -633,7 +633,7 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # More info available at https://valine.js.org
 valine:
-  enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
+  enable: false # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
   appid: XwqMALzbkBMQaRWTh0P8kC5T-gzGzoHsz # your leancloud application appid
   appkey: pUPAvvxy7BziPHsKzlB6aFkD # your leancloud application appkey
   notify: true # mail notifier, See: https://github.com/xCss/Valine/wiki
@@ -653,7 +653,7 @@ valine:
 # Gitment
 # Introduction: https://github.com/imsun/gitment
 gitment:
-  enable: false
+  enable: true
   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
