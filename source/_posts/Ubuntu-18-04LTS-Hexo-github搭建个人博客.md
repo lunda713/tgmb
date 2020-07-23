@@ -12,8 +12,8 @@ date: 2019-04-11 17:03:00
 ---
 # 写在最前
 <div class="note default no-icon"><p>
-其实我已开始最先尝试的就是ubuntu上搭建，但是，非常遗憾的是，ubuntu的各种读写权限把我弄得死去活来。
-毕竟一开始看的就是楠皮的博客来尝试的，后来发现没什么大用，不够详细倒是其次，主要是缺乏他其他几篇那样的普适性。怎么说呢，我花了三天时间踩坑，终于算是可以正常使用并且和win10完美同步了。
+其实我一开始最先尝试的就是ubuntu上搭建，但是，非常遗憾的是，ubuntu的各种读写权限把我弄得死去活来。
+毕竟一开始看的就是楠皮的博客来尝试的，后来发现没什么大用，不够详细倒是其次，主要是缺乏他其他几篇博客那样的普适性。怎么说呢，我花了三天时间踩坑，终于算是可以正常使用并且和win10完美同步了。
 所以之后写的内容里有很多都会附加上我踩坑时的怨念。
 </p></div>
 
@@ -23,6 +23,7 @@ date: 2019-04-11 17:03:00
 
 
 ## 安装node.js和npm
+直接在桌面右键打开终端，输入
 ```
 sudo apt-get update
 sudo apt-get install nodejs
@@ -89,7 +90,7 @@ sudo apt-get install typora
 可以直接在浏览器上管理，前提是你要先把hexo安装好，所以这个等会再讲。</p></div>
 
 ## 踩坑点
-- i、绝大多是依赖错误都可以通过这三行代码解决
+- i、绝大多数依赖错误都可以通过这三行代码解决
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -99,7 +100,7 @@ sudo apt-get install -f
 - ii、另外要是安装特别慢的话，就别等了，可以把ubuntu的软件库换成国内源
 目前我知道对于版本适配的比较好的有清华源
 [清华大学 ubuntu | 镜像站 ](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
-他可以帮你适配你的ubuntu版本。
+他会自动帮你适配你的ubuntu版本。
 ![AHA69H.png](https://s2.ax1x.com/2019/04/11/AHA69H.png)
 修改你的source.list；
 为了留个备份好反悔我们先把source.list复制一份
@@ -199,7 +200,7 @@ sudo git clone git@github.com:username/username.github.io.git
 ```
 请务必确保你有把source设置为默认分支，
 否则你要是下载了一个master分支上的那些网页下来，
-对不起，智商税你自己交。
+对不起，智商税你自己交。~~（我不会承认我已经交过一遍了）~~
 
 ```
 cd username.github.io.git
@@ -263,17 +264,17 @@ sudo npm install -g hexo-cli
 ```
 因为已经改了镜像源，所以安装很快。不用谢我。
 ### 部署Hexo
-在[Hexo]文件夹下打开terminal
+在**Hexo**文件夹下打开terminal，执行
 ```
 sudo Hexo init
 ```
-这里如果报错了的话,执行代码：
+这里如果报错了的话,执行代码：（不报错就请忽略）
 ```
 sudo npm config set user 0
 sudo npm config set unsafe-perm true
 sudo npm install -g hexo-cli
 ```
-不报错就请忽略
+
 ### 安装插件
 虽然全部放出来了，但是我还是建议你一条一条执行，一次性全部复制粘贴可能会卡死。
 ```
@@ -297,22 +298,22 @@ sudo npm install hexo-admin --save
 ```
 ### 常用命令
 ```
-hexo clean
+sudo hexo clean
 //清空缓存
-hexo generate 
-hexo g //简写
+sudo hexo generate 
+sudo hexo g //简写
 //重新编译
-hexo server
-hexo s //简写
+sudo hexo server
+sudo hexo s //简写
 //打开本地访问
-hexo new <layout> "文章title"
+sudo hexo new <layout> "文章title"
 //新建文章
-hexo deploy
-hexo d //简写
+sudo hexo deploy
+sudo hexo d //简写
 //部署到github上，这个待会讲。
 ```
 ### 测试效果
-在[Hexo]下打开terminal
+在**Hexo**下打开terminal
 输入
 ```
 sudo hexo server
@@ -320,13 +321,13 @@ sudo hexo server
 sudo hexo s
 ```
 只是预览网页的话，可以不打sudo，
-但是要用hexo-admin的话，因为会涉及到文件操作，所以要sudo
+但是要用hexo-admin的话，因为会涉及到文件操作，所以还是要sudo~~，既然如此，还不如受累多打四个字母~~。
 ![AHucIx.png](https://s2.ax1x.com/2019/04/11/AHucIx.png)
 然后在浏览器中打开localhost:4000 ,就能看到
 [![A7DdZq.png](https://s2.ax1x.com/2019/04/11/A7DdZq.png)](https://imgchr.com/i/A7DdZq)
 如果你还安装了hexo-admin插件，
 就可以通过访问**localhost:4000/admin**来管理你的文章了。
-并且在可视化界面中操作文章内容
+并且还可以在可视化界面中操作文章内容
 恭喜你，博客的本地部署到这里算是告一段落了。
 
 ---
@@ -454,8 +455,9 @@ Hi username! You've successfully authenticated, but GitHub does not
 provide shell access.
 ```
 ## 配置hexo的本地配置文件
-打开~/Hexo/_config.yml：
+打开 -/Hexo/_config.yml：
 修改底部的deploy
+
 ```
 # 站点部署到github要配置Deployment 
 ## Docs: http://zespia.tw/hexo/docs/deploy.html
@@ -465,7 +467,8 @@ deploy:
   branch: master
 ```
 这里deploy前面不要有空格，而所有“:”后面都要有空格。格式很重要。
-## 05 把本地hexo提交到git仓库
+
+## 把本地hexo提交到git仓库
 全部配置完毕，在hexo文件夹下打开terminal,执行
 ```
 sudo hexo clean
@@ -475,7 +478,7 @@ sudo hexo deploy
 不出意外，就可以在浏览器上输入
 **https://username.github.io**
 访问你的博客了。
-## 06 可能出现的bug
+## 可能出现的bug
 报错
 ```
 ERROR Deployer not found: git
@@ -497,6 +500,53 @@ sudo npm install hexo-deployer-git –save
 sudo hexo deploy
 ```
 重新提交即可
+
+## 域名配置
+
+<div class="note success no-icon"><p>（20200723修订，最后还是屈服于境泽定律，实在是top域名价格太美丽，首年只要1元/年，之后续费也是25元/年，折算下来比我买v2ray服务还便宜）</p></div>
+
+### 购买域名
+
+<div class="note primary no-icon"><p>因为用用腾讯云的对象存储功能作为图床存储，所以我图个方便，就在腾讯云购买的top域名，其他的像阿里云的万网也是可行的。
+**记得留意域名注册页面的活动优惠，直接购买域名是首年9元起步的，在活动里才能找到首年1元的选项，买的时候也要记得看之后的续费内容，不要花费多余的精力和金钱。**
+
+- [腾讯云域名注册](https://dnspod.cloud.tencent.com/)
+- [阿里云域名注册](https://wanwang.aliyun.com/)
+
+购买成功后按照网站提示逐步完成域名实名认证和域名信息，等待下发域名证书。（我用的是腾讯云，审核速度很快，实名信息上传到电子证书下发还不到半小时）
+
+**关于备案：**因为Hexo博客是托管在github上的，所以，除非你购买的域名是**.cn后缀的**或者你给博客使用的某些插件需要**部署在另外的云服务器**这两种情况，否则是不需要备案的。
+</p></div>
+
+### 绑定域名
+
+<div class="note primary no-icon"><p>
+
+1. 首先要获取博客的IP,打开cmd或者powershell，输入
+```
+ping username.github.io
+# username记得替换成你的用户名
+```
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723100548766.png)
+
+2. 获取到的ip地址填入域名解析。
+这里以腾讯云为例。进入控制台->域名注册->我的域名。在购买的域名的操作栏选择解析。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723101044570.png)
+3. 进入解析页面后需要添加两条记录。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723101444765.png)
+4. 在**~/Hexo/source/**目录下新建**CNAME**文件（注意不要有后缀名，就叫CNAME即可，什么txt、js之类的后缀都不能有），在CNAME文件中添加上你购买的域名。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723101906965.png)
+5. 配置username.github.io。打开username.github.io，点击右上角的setting
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723102148239.png)
+下拉找到Github Pages栏，在Custom domain中填入你购买的域名。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723102314604.png)
+6. 最后，重新部署一下hexo即可通过你的域名来访问博客了。
+```
+hexo generate
+hexo depoly
+```
+</p></div>
+
 
 # 主题配置
 我使用的nexT，理由是它界面简洁但是功能强大。

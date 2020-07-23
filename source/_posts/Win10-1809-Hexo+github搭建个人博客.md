@@ -397,6 +397,53 @@ npm install hexo-deployer-git –save
 hexo deploy
 ```
 
+## 域名配置
+
+<div class="note success no-icon"><p>（20200723修订，最后还是屈服于境泽定律，实在是top域名价格太美丽，首年只要1元/年，之后续费也是25元/年，折算下来比我买v2ray服务还便宜）</p></div>
+
+### 购买域名
+
+<div class="note primary no-icon"><p>因为用用腾讯云的对象存储功能作为图床存储，所以我图个方便，就在腾讯云购买的top域名，其他的像阿里云的万网也是可行的。
+**记得留意域名注册页面的活动优惠，直接购买域名是首年9元起步的，在活动里才能找到首年1元的选项，买的时候也要记得看之后的续费内容，不要花费多余的精力和金钱。**
+
+- [腾讯云域名注册](https://dnspod.cloud.tencent.com/)
+- [阿里云域名注册](https://wanwang.aliyun.com/)
+
+购买成功后按照网站提示逐步完成域名实名认证和域名信息，等待下发域名证书。（我用的是腾讯云，审核速度很快，实名信息上传到电子证书下发还不到半小时）
+
+**关于备案：**因为Hexo博客是托管在github上的，所以，除非你购买的域名是**.cn后缀的**或者你给博客使用的某些插件需要**部署在另外的云服务器**这两种情况，否则是不需要备案的。
+</p></div>
+
+### 绑定域名
+
+<div class="note primary no-icon"><p>
+
+1. 首先要获取博客的IP,打开cmd或者powershell，输入
+```
+ping username.github.io
+# username记得替换成你的用户名
+```
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723100548766.png)
+
+
+2. 获取到的ip地址填入域名解析。
+这里以腾讯云为例。进入控制台->域名注册->我的域名。在购买的域名的操作栏选择解析。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723101044570.png)
+3. 进入解析页面后需要添加两条记录。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723101444765.png)
+4. 在**~/Hexo/source/**目录下新建**CNAME**文件（注意不要有后缀名，就叫CNAME即可，什么txt、js之类的后缀都不能有），在CNAME文件中添加上你购买的域名。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723101906965.png)
+5. 配置username.github.io。打开username.github.io，点击右上角的setting
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723102148239.png)
+下拉找到Github Pages栏，在Custom domain中填入你购买的域名。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200723102314604.png)
+6. 最后，重新部署一下hexo即可通过你的域名来访问博客了。
+```
+hexo generate
+hexo depoly
+```
+</p></div>
+
 
 # 主题配置
 
