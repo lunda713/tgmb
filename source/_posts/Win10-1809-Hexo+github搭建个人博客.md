@@ -874,11 +874,11 @@ local_search:
 
  ## 修改博客及部署操作
  
-<div class="note error"><p>
+<div class="note warning"><p>
  
 20200720修订：郑重声明，如果按照以下内容进行部署双分支，虽然可以在一个仓库内同时管理博客源码和博客生成的网页文件，但是基于博客仓库必须是开放的性质，所以你的博客源码将是完全开源的，任何人都能通过git clone拷贝你的博客源码，唯一的区别就是在没有部署SSH Key的情况下他们不可能提交到你的库内。如果觉得不能接受，可以另外新建一个保密仓库作为源码存放库。
   
-操作方式大同小异。在hexo文件夹打开git bash，使用以下代码进行提交即可。
+操作方式大同小异。在hexo文件夹打开git bash，使用以下代码进行提交即可。（对博客源码没有保密需求的从下面的**创建source分支**看起即可）
   
   ```
 //初始化git
@@ -888,7 +888,7 @@ git add .
 //添加文件描述信息
 git commit -m "自定义内容即可"
 // 远程仓库地址 //链接远程仓库，创建主分支
-git remote add origin git@github.com:username/YourRepositoryName .git
+git remote add origin git@github.com:username/YourRepositoryName.git
 //要是提示origin已经存在，那么执行
 git remote rm origin
 //然后再试试
