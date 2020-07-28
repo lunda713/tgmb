@@ -6,3 +6,5 @@ node_modules/
 public/
 .deploy*/
 hexo-publish.sh
+git-publish.sh
+package-lock.json
