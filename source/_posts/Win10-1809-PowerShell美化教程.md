@@ -31,7 +31,7 @@ date: 2019-04-12 09:52:00
 ---
 
 ## 1、[Chocolatey](https://chocolatey.org/)
-
+（20200728修订，chocolatey非必须，原本是为了给ConEmu提供安装路径和修复依赖，但是现在ConEmu作者已经释出了安装包，可以直接安装。至于依赖的.C环境和python环境，需要的时候再装即可。）
 我也不知道这个算不算软件了。不过看它和npm、anaconda一样，都是命令行安装平台，那似乎确实是软件。废话，不是硬件就是软件嘛。
 
 官方发布了两种安装方法，一种是cmd，一种是powershell，这里我是从powershell安装。
@@ -87,15 +87,15 @@ cd fonts
 **如果提示：**
 
 ```
-无法加载文件 ******.ps1，因为在此系统中禁止执行脚本。有关详细信息，请参阅 "get-help about_signing"。 
-所在位置 行:1 字符: 17 
-+ E:\Test\test.ps1 <<<< 
-+ CategoryInfo : NotSpecified: (:) [], PSSecurityException 
+无法加载文件 ******.ps1，因为在此系统中禁止执行脚本。有关详细信息，请参阅 "get-help about_signing"。
+所在位置 行:1 字符: 17
++ E:\Test\test.ps1 <<<<
++ CategoryInfo : NotSpecified: (:) [], PSSecurityException
 + FullyQualifiedErrorId : RuntimeException
 ```
 **那么执行：**
 ```
-set-ExecutionPolicy RemoteSigned 
+set-ExecutionPolicy RemoteSigned
 ```
 **在接下来的选项中输入Y来获取执行政策。**
 
