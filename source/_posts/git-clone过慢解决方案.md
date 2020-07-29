@@ -42,7 +42,7 @@ git算得上是最舒适的版本控制软件了，但是因为各种各样的�
 git remote get-url origin
 //输出的是https://gitee.com/username/username.github.io
 //重新修改为github的远程仓库地址
- git remote set-url origin https://github.com/Akilarlxh/Akilarlxh.github.io.git
+ git remote set-url origin https://github.com/username/username.github.io.git
  //如此一来就和从github上clone下来的一样了
 ```
 

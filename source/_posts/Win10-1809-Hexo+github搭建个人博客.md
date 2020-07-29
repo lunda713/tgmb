@@ -1079,7 +1079,7 @@ hexo g -d
 
 <div class="note default"><p>
 
-i.使用`git clone git@github.com:username/username.github.io.git`拷贝仓库（默认分支为 source）；</p></div>
+i.使用`git clone git@github.com:Akilarlxh/Akilarlxh.github.io.git`拷贝仓库（默认分支为 source）；</p></div>
 
 <div class="note default"><p>
 
@@ -1093,3 +1093,29 @@ npm install hexo-deployer-git
 
 <div class="note info"><p>这里的【username.github.io】文件夹其实就是我们一直在说的【Hexo】文件夹。
 下一篇写一下ubuntu下的hexo配置，用这个方法部署文件就会很快。</p></div>
+
+## 指令脚本
+
+<div class="note success"><p>
+
+每次都要反复敲那么几行指令一定会无聊，那么干脆把指令存在脚本里，每次需要用到的时候双击一下就可以高枕无忧了。
+在~/Hexo文件夹下新建三个txt文件，分别命名为git-pull、git-push、hexo-publish,打开后依次在里面输入相应的命令。
+- git-pull（用来从远程仓库拉取最新更改，适用于多PC或多系统端之间的版本对接）
+```
+git pull origin source
+```
+- git-push（用于提交每次的修改到远程仓库）
+```
+git add .
+git commit -m "deploy from hexo-admin"
+git push origin source
+```
+- hexo-publish（清空本地缓存后重新部署博客页面）
+```
+hexo clean
+hexo generate
+hexo depoly
+```
+
+</p></div>
+
