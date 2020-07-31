@@ -307,6 +307,7 @@ less ~/.ssh/id_rsa.pub
 //查看公钥内容稍后加入Github账户的sshkey中,
 ```
 有些版本的win10可能缺少less语句支持，访问C:\Users\Username\.ssh\id_rsa.pub复制即可
+(20200731修订：win10缺少C语言环境支持，可以在git bash中运行指令，笔者之前是因为使用的powershell来运行的才导致无法使用less指令）
 <div class="note primary"><p>
 
 ![sshkey](https://s2.ax1x.com/2019/04/09/AoM9Re.png)</p></div>
@@ -334,6 +335,19 @@ Are you sure you want to continue connecting (yes/no)?
 //此处请输入yes
 Hi username! You've successfully authenticated, but GitHub does not
 provide shell access.</p></div>
+
+<div class="note error"><p>
+
+可能遇到的bug,输出报错为
+```
+ssh: connect to host gitee.com port 22: Connection timed out
+```
+这是由于在当前网络环境中，端口22被占用了，我们改用其他端口再试试
+```
+ssh -T -p 443 git@ssh.github.com
+# -p 443表示使用443端口，要是443也被占用，也可以尝试其他端口
+```
+</p></div>
 
 
 ## 配置hexo的本地配置文件
@@ -615,7 +629,7 @@ footer:
   enable: false
  ```
  <div class="note default no-icon"><p>
- 
+
  ~~但是写微博就是为了装B啊！如果不够酷炫谁要写博客啊，会睡着的好伐啦！~~
  但我觉得页面比较素，所以开了动画，
  主题自带四种效果，可以选自己喜欢的。
@@ -640,7 +654,7 @@ canvas_sphere: false
  ```
 ### 博客评论功能
  <div class="note default no-icon"><p>
- 
+
  next支持很多评论插件，但是大半都被万里长城拦在墙外，剩下的不是国内大厂的阴谋就是资本家的收费陷阱。
   我现在在用的`valine`和一个插件有些兼容bug，所以以后再说。
  这里我先推荐使用gitalk，这是一个基于Github Issue 和 Preact 开发的评论插件，和github绑定，免费，登录github即可评论，而且评论支持markdown格式。而且会将每篇文章的评论放置到一个github仓库的issues里，方便管理。这里推荐直接放置到username.github.io仓库的issues。
@@ -708,7 +722,7 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
 ```
  #### index.swig
  <div class="note primary"><p>
- 
+
  修改`~/Hexo/themes/next/layout/_third-party/comments/index.swig`，在最后一行添加内容：</p></div>
 
  ```
@@ -718,7 +732,7 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
  #### gitalk.styl
 
  <div class="note primary"><p>
- 
+
  新建`~/Hexo/source/css/_common/components/third-party/gitalk.styl`文件，添加内容：</p></div>
 
  ```
@@ -730,7 +744,7 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
  #### third-party.styl
 
  <div class="note primary"><p>
- 
+
  修改`~/Hexo/source/css/_common/components/third-party/third-party.styl`，在最后一行上添加内容，引入样式：</p></div>
 
  ```
@@ -739,7 +753,7 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
  #### _config.yml
 
  <div class="note primary"><p>
- 
+
  在主题配置文件`~/Hexo/themes/next/_config.yml`中添加如下内容：</p></div>
 
  <div class="note info"><p>如果是next6.0以上版本，这里就是你唯一需要修改的了，其他步骤你会发现已经整合好了</p></div>
@@ -920,13 +934,13 @@ local_search:
 # 版本控制
 
  ## 修改博客及部署操作
- 
+
 <div class="note warning"><p>
- 
+
 20200720修订：郑重声明，如果按照以下内容进行部署双分支，虽然可以在一个仓库内同时管理博客源码和博客生成的网页文件，但是基于博客仓库必须是开放的性质，所以你的博客源码将是完全开源的，任何人都能通过git clone拷贝你的博客源码，唯一的区别就是在没有部署SSH Key的情况下他们不可能提交到你的库内。如果觉得不能接受，可以另外新建一个保密仓库作为源码存放库。
-  
+
 操作方式大同小异。在hexo文件夹打开git bash，使用以下代码进行提交即可。（对博客源码没有保密需求的从下面的**创建source分支**看起即可）
-  
+
   ```
 //初始化git
 git init
@@ -950,12 +964,12 @@ hexo generate -d
 hexo g -d
 ```
  </p></div>
- 
+
 
  ### 创建source分支
 
  <div class="note primary"><p>
- 
+
  首先，我们先在username.github.io仓库里做这些事情。
  在仓库中新建一个分支，命名为source
  ![new branch](https://s2.ax1x.com/2019/04/10/ATZKcn.png)
@@ -964,7 +978,7 @@ hexo g -d
  ### 然后把source设置为默认分支。
 
  <div class="note default"><p>
- 
+
  ![default branch](https://s2.ax1x.com/2019/04/10/ATZu1s.png)
  </p></div>
 
@@ -973,13 +987,13 @@ hexo g -d
 
   <div class="note default"><p>开始准备你的第一次提交git
  修改博客内容后依次执行以下命令来提交网站相关的文件：</p></div>
- 
+
  ```
  git init
 
  ```
   <div class="note warning"><p>
-  
+
   这句在这里主要是为了在文件夹中git init让git标记此文件夹为版本库
   如果不写这句，不出意外会报错`"fatal: not a git repository (or any of the parent directories): .git"`
   和`hexo init`一样，只要第一次时运行一次就好</p></div>
@@ -1118,4 +1132,3 @@ hexo depoly
 ```
 
 </p></div>
-
