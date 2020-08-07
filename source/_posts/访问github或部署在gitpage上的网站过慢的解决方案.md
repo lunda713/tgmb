@@ -61,13 +61,14 @@ github.io
 这里要用到python，**安装推荐使用Anaconda**，Anaconda安装方式推荐参看[win10重装日记](https://akilarlxh.github.io/post/29cf4234.html)的3.2章节。根据Anaconda版本与python版本的对照选择自己需要的Anaconda安装包，然后直接安装即可，路径建议修改为非系统盘，同时**务必勾选将python路径加入到环境变量**的选项。
 
 新建一个python脚本——githosts.py（最简单的方法，新建一个txt文本文件，把下面的代码粘贴进去以后，修改后缀为.py）
+
 ```
 s = """
 github.com
 assets-cdn.github.com
 avatars0.githubusercontent.com
 avatars1.githubusercontent.com
-documentcloud.github.com 
+documentcloud.github.com
 help.github.com
 nodeload.github.com
 raw.github.com
@@ -80,9 +81,9 @@ from bs4 import BeautifulSoup
 
 ans = []
 for i in s.split():
-    url = "http://ip.chinaz.com/" + i.strip()
+    url = "http://ip.tool.chinaz.com/" + i.strip()
     resp = requests.get(url)
-    soup = BeautifulSoup(resp.text)
+    soup = BeautifulSoup(resp.text,"html5lib")
     x = soup.find(class_="IcpMain02")
     x = x.find_all("span", class_="Whwtdhalf")
     x = "%s %s" % (x[5].string.strip(), i.strip())
@@ -109,3 +110,8 @@ python githosts.py
 那就是安装的时候没勾选，找到Anaconda的安装目录，在根目录里有python.exe文件，至于怎么添加还请自行百度。（其实卸载了Anaconda以后重新安装，这次记得勾选添加到环境变量也可以。顺带一提，卸载很慢哦，还不如老老实实自己添加一下）
 ## 缺少requests包
 一般anaconda是自带一些基础包库的，没有这个包说明你是从python官网下载的python安装包。不过就算缺少，也可以通过`pip install 包名 `来安装。遇到安装速度慢的情况，就去自行百度**“pip install 换清华源”**
+
+## 报错“NoneType' object has no attribute 'find_all”
+最有可能是站长之家的域名网址变动，例如从ip.chinaz.com变为ip.tool.chinaz.com,将源代码中19行的域名改为现行网址即可。
+
+如果是页面元素结构变化则需要通过F12查看原网页元素id或者class来确定元素位置重新改写源代码23行需要find_all的元素（也即是我们需要的ip查询结果）
