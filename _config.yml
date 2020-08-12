@@ -110,9 +110,9 @@ symbols_count_time:
   total_time: true
 
 
-#这孩子超可爱的！
+# 默认看板娘
 live2d:
-  enable: true
+  enable: false
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/

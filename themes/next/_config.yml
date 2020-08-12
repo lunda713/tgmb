@@ -1221,3 +1221,7 @@ passage_end_tag:
 # Online contact
 daovoice: true
 daovoice_app_id: 77178ed9
+
+# 张书樵大神魔改看板娘，可换装会说话
+live2d:
+  enable: true
