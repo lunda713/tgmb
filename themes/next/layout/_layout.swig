@@ -18,6 +18,8 @@
 <html class="{{ html_class | lower }}" lang="{{ config.language }}">
 
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
   {{ partial('_partials/head/head.swig', {}, {cache: theme.cache.enable}) }}
   {% include '_partials/head/head-unique.swig' %}
   <title>{% block title %}{% endblock %}</title>
@@ -26,8 +28,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
-
-
+<script src="/live2d-widget/autoload.js"></script>
 
   {% set container_class = 'container' %}
   {% if theme.sidebar.position %}
