@@ -1,3 +1,3 @@
 hexo clean
-hexo g
-hexo d
+hexo generate
+hexo deploy

@@ -1,6 +1,5 @@
 ---
 title: categories
-date: 2019-04-08 11:41:00
+date: 2020-08-14 08:35:00
 type: "categories"
-comments: false
 ---
