@@ -4,8 +4,6 @@ categories: Akilarの糖葫芦
 tags: Tomcat
 abbrlink: 28c6392e
 date: 2019-04-29 09:54:53
-images:
-top:
 ---
 # 写在最前
 
@@ -50,8 +48,3 @@ D:\Projects\Tomcat9
 # 使用
 
 找到~/tomcat9/bin,然后按住shift，再单击右键，在此处打开powershell，输入startup，如果在powershell里弹出一堆环境变量，而且还有另一个窗口弹出的话就是成功了（乱码也没关系，这是字符集不一样造成的）。打开浏览器输入**localhost:8080**即可。
-
-
-
-
-

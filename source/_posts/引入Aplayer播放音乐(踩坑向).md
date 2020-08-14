@@ -3,7 +3,9 @@ title: 引入Aplayer播放音乐(踩坑向)
 abbrlink: 3afa069a
 date: 2019-04-24 11:06:48
 categories: Akilarの糖葫芦
-tags: Hexo
+tags:
+  - Hexo
+  - Aplayer
 ---
 
 # 写在最前

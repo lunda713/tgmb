@@ -4,8 +4,6 @@ categories: Akilarの糖葫芦
 tags: Android
 abbrlink: 256c7ca
 date: 2019-06-02 12:24:47
-images:
-top:
 ---
 # 写在最前
 每次安装Android Studio都能被那超慢的速度搞崩溃，这次写下备忘，按照这个来，应该就不会那么慢了。
@@ -63,7 +61,7 @@ top:
 # 其他
 
 1. 根据报错，可能会遇到无法删除`~\AndroidProjects\Test\app\build\intermediates\signing_config\debug\out\signing-config.json`,这时候按照报错找到这个文件，用安全管家软件提供的粉碎文件功能强制删除即可。
-2. emulator: ERROR: Unknown AVD name 
+2. emulator: ERROR: Unknown AVD name
    这个情况是因为AVD创建位置的问题，可能是以前装过SDK没卸载干净，或者项目文件指向目录错误。
    例如我的AVD在**C:\Users\Akilar\.android\avd**
    而我的SDK在**C:\Users\Akilar\AppData\Local\Android\Sdk**，
@@ -75,5 +73,3 @@ top:
 # 参考文章
 
 [Android studio安装与配置](https://www.cnblogs.com/xiadewang/p/7820377.html)
-
-

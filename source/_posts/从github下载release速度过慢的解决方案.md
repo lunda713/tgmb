@@ -4,8 +4,6 @@ categories: Akilarの糖葫芦
 tags: git
 abbrlink: '7357e481'
 date: 2020-07-29 10:09:23
-images:
-top:
 ---
 
 # 写在最前

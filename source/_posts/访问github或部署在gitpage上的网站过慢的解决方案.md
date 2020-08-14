@@ -4,8 +4,6 @@ categories: Akilarの棉花糖
 tags: github
 abbrlink: 61b3e163
 date: 2020-07-29 15:53:50
-images:
-top:
 ---
 # 写在最前
 

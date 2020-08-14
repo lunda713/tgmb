@@ -4,8 +4,6 @@ categories: Akilarの糖葫芦
 tags: yarn
 abbrlink: e6610502
 date: 2019-06-03 20:12:39
-images:
-top:
 ---
 
 # 参考文章
@@ -50,5 +48,3 @@ npm实在是太慢了，慢到让人无法接受你晓得嘛！而且yarn在一�
 |  卸载	|  npm uninstall [–save/–save-dev]	|  yarn remove xx|  
 |  清除缓存	|  npm cache clean	|  yarn cache clean|  
 |  重装	|  rm -rf node_modules && npm install|  	yarn upgrade|  
-
-

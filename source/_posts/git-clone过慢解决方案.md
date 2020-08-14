@@ -4,8 +4,6 @@ categories: Akilarの糖葫芦
 tags: git
 abbrlink: 24a51aa5
 date: 2020-07-28 17:12:56
-images:
-top:
 ---
 
 # 写在最前
@@ -45,5 +43,3 @@ git remote get-url origin
  git remote set-url origin https://github.com/username/username.github.io.git
  //如此一来就和从github上clone下来的一样了
 ```
-
-

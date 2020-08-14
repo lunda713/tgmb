@@ -1,11 +1,13 @@
 ---
 title: 给博客添加一个会说话能换装的live2d看板娘
-images: 
+images:
 abbrlink: 5b8f515f
 date: 2020-08-12 14:10:43
-categories:
+categories: Akilarの糖葫芦
 tags:
-top:
+  - 看板娘
+  - live2d
+cover: https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/Hexo%E5%8D%9A%E5%AE%A2NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E4%B9%8B%E6%96%B0%E5%A2%9E%E7%9C%8B%E6%9D%BF%E5%A8%98-1.gif
 ---
 # 写在最前
 最早的时候看别人的博客很多都有一个可爱的看板娘，然后就找了教程给自己也整了一个。因为找到的教程都是稂莠不齐的，原作者自己说的也略显含糊（其实是我自己看不懂）。总之秉承着一如既往的小白风格。把网上的教程做个整合。
