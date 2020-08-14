@@ -174,12 +174,13 @@ neat_js:
 
 aplayer:
   meting: true
+  asset_inject: false
 
 # douban电影插件
 # https://github.com/mythsman/hexo-douban
 douban:
   user: 221290483
-  builtin: false
+  builtin: true
   book:
     title: 'This is my book title'
     quote: 'This is my book quote'

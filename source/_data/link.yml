@@ -4,14 +4,29 @@
     - name: JerryC
       link: https://jerryc.me/
       avatar: https://jerryc.me/image/avatar.png
-      descr: 今日事,今日畢
+      descr: Bufferfly的缔造者
     - name: Hexo
       link: https://hexo.io/zh-tw/
       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
-      descr: 快速、簡單且強大的網誌框架
+      descr: Hexo官方网站
+    - name: VanXNF
+      link: https://blog.vanxnf.top/
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/VanXNF.png
+      descr: VanXNF
+    - name: Kevin
+      link: https://kevin409.top/
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/Kevin.jpg
+      descr: Kevinの茶馆
+    - name: 米米的博客
+      link: https://zhangshuqiao.org/
+      avatar: https://zhangshuqiao.org/images/icon.gif
+      descr: 看板娘的魔改者
 
-- class_name: 網站
-  class_desc: 值得推薦的網站
+
+
+
+- class_name: 网站
+  class_desc: 好用的网站值得一阅
   link_list:
     - name: Youtube
       link: https://www.youtube.com/
