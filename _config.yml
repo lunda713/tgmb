@@ -70,7 +70,7 @@ index_generator:
   order_by: -date
 
 archive_generator:
-  per_page: 12 ##归档页面默认20篇文章标题
+  per_page: 20 ##归档页面默认20篇文章标题
   yearly: true  ##生成年视图
   monthly: true ##生成月视图
 
