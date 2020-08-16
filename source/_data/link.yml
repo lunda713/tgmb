@@ -1,5 +1,5 @@
-- class_name: 友情鏈接
-  class_desc: 那些人，那些事
+- class_name: 友情链接
+  class_desc: 谨以此鸣谢一直以来帮助过我的人。
   link_list:
     - name: JerryC
       link: https://jerryc.me/
@@ -26,17 +26,41 @@
 
 
 - class_name: 网站
-  class_desc: 好用的网站值得一阅
+  class_desc: 好用的网站值得一阅！
   link_list:
-    - name: Youtube
-      link: https://www.youtube.com/
-      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
-      descr: 視頻網站
-    - name: Weibo
-      link: https://www.weibo.com/
-      avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png
-      descr: 中國最大社交分享平台
-    - name: Twitter
-      link: https://twitter.com/
-      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
-      descr: 社交分享平台
+    - name: 码云
+      link: https://gitee.com/
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/mayun.png
+      descr: 国内代码托管
+    - name: ProcessOn
+      link: https://www.processon.com/
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/processon.png
+      descr: 在线作图
+    - name: MCBBS
+      link: https://www.mcbbs.net/portal.php
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/mcbbs.png
+      descr: MineCraft中文论坛
+    - name: 吾爱破解
+      link: https://www.52pojie.cn/
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/wuai.png
+      descr: 为了政治正确，我本不该推荐。
+    - name: Greasyfork
+      link: https://greasyfork.org/zh-CN/scripts
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/greasyfork.png
+      descr: 搭配TamperMonkey插件使用
+    - name: Bejson
+      link: https://www.bejson.com/
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/bejson.png
+      descr: 不止是图片格式转换
+    - name: 78动漫
+      link: http://acg.78dm.net/z4/3t.html
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/78dm.png
+      descr: 手办模型评测
+    - name: Bilibili
+      link: https://www.bilibili.com/
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/bilibili.png
+      descr: 哔哩哔哩 (゜-゜)つロ 干杯~
+    - name: 3Dmgame
+      link: https://www.3dmgame.com/
+      avatar: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/game.png
+      descr: 单机游戏下载
