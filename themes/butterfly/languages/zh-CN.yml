@@ -7,9 +7,9 @@ footer:
   theme: 主题
 
 copy:
-  success: 复制成功
-  error: 复制错误
-  noSupport: 浏览器不支持
+  success: 内容复制成功啦！
+  error: 抱歉，复制好像出了点问题。
+  noSupport: 你的浏览器好像不支持
 
 page:
   articles: 文章总览
@@ -18,7 +18,7 @@ page:
   archives: 归档
 
 sticky: 置顶
-no_title: 无题
+no_title: 雪忘记了她的颜色
 
 post:
   created: 发表于
@@ -75,7 +75,7 @@ aside:
     site_pv_name: 本站总访问量
   more_button: 查看更多
 
-donate: 打赏
+donate: 不给糖果就捣蛋~
 share: 分享
 bookmark:
   title: 添加书签
@@ -103,14 +103,14 @@ Snackbar:
   bookmark:
     message_prev: 按
     message_next: 键将本页加入书签
-  chs_to_cht: 你已切换为繁体
-  cht_to_chs: 你已切换为简体
-  day_to_night: 你已切换为深色模式
-  night_to_day: 你已切换为浅色模式
+  chs_to_cht: 您已切换为繁体
+  cht_to_chs: 您已切换为简体
+  day_to_night: 您已切换为深色模式
+  night_to_day: 您已切换为浅色模式
 
-error_title: 页面没有找到
-loading: 加载中...
+error_title: (＞﹏＜)页面跑掉了
+loading: o(〃'▽'〃)o 糖果屋营业中！
 
 error404:
-  error_title: 页面没有找到
-  back_button: 回到主页
+  error_title: (＞﹏＜)页面跑掉了
+  back_button: 打道回府
