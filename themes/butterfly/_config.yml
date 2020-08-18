@@ -531,11 +531,17 @@ click_heart: false
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
 ClickShowText:
-  enable: false
+  enable: true
   text:
-    - I
-    - LOVE
-    - YOU
+    - w(ﾟДﾟ)w
+    - ヽ(✿ﾟ▽ﾟ)ノ
+    - ♪(^∇^*)
+    - ヾ(≧▽≦*)o
+    - o(*≧▽≦)ツ
+    - o(*////▽////*)q
+    - ε(┬┬﹏┬┬)3
+    - o(*￣3￣)o
+    - (*￣ω￣)
   fontSize: 15px
 
 # Default display mode (網站默認的顯示模式)
