@@ -81,7 +81,7 @@ ans = []
 for i in s.split():
     url = "http://ip.tool.chinaz.com/" + i.strip()
     resp = requests.get(url)
-    soup = BeautifulSoup(resp.text,"html5lib")
+    soup = BeautifulSoup(resp.text,"html.parser")
     x = soup.find(class_="IcpMain02")
     x = x.find_all("span", class_="Whwtdhalf")
     x = "%s %s" % (x[5].string.strip(), i.strip())
