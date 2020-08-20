@@ -11,8 +11,9 @@ menu:
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  友链: /link/ || fas fa-link
-  留言板: /comments || fas fa-comments
+  友人帐: /link/ || fas fa-link
+  留言板: /comments/ || fas fa-comments
+  相册: /gallery/ || fas fa-camera
   关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
@@ -90,7 +91,7 @@ favicon: /img/favicon.ico
 
 # Avatar (頭像)
 avatar:
-  img: /img/author.png
+  img: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%8F%8B%E9%93%BE%E5%A4%B4%E5%83%8F/author.png
   effect: false
 # the banner image of home page
 index_img: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/burrerfly-cover/background.png
@@ -312,7 +313,7 @@ valine:
   guest_info: nick,mail,link # valine comment header info (nick/mail/link)
   recordIP: false # Record reviewer IP
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/burrerfly-cover/valinebg.png # valine background
+  bg: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/burrerfly-cover/valinebg2.gif # valine background
   emojiCDN: # emoji CDN
   enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
   requiredFields: nick,mail # required fields (nick/mail)
