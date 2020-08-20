@@ -27,7 +27,7 @@ date: 2019-04-11 17:03:00
 ```
 sudo apt-get update
 sudo apt-get install nodejs
-sudo apt-get npm
+sudo apt-get install npm
 ```
 
 <div class="note default no-icon"><p>安装完成以后可以输入</p></div>
@@ -146,7 +146,7 @@ sudo apt-get update
 
 那么,现在我们就能很快乐的直接git clone我们已经上传到username.github.io仓库的source分支上的内容了。
 ```
-sudo git clone git@github.com:username:username.github.io.git
+sudo git clone git@github.com:username/username.github.io.git
 ```
 这里如果报了权限错误
 ```
