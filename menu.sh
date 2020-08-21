@@ -1,4 +1,4 @@
-#!/bin/sh
+8#!/bin/sh
 echo "==========================================="
 echo "          欢迎来到Akilarの糖果屋！"
 echo "==========================================="
@@ -8,7 +8,7 @@ echo " "
 printf "\033[32m Blog 根目录："${HexoPath}"\033[0m"
 echo " "
 echo " "
-echo "[0] 切换到主菜单"
+echo "[0] 退出菜单"
 echo "[1] 开启本地预览"
 echo "[2] 从Github拉取最新版本"
 echo "[3] 提交本地修改到GitHub"
@@ -132,10 +132,10 @@ else
 								else
 									if [ "$answer" = "0" ]; then
 										echo " "
-										printf "\033[32mINFO \033[0m 准备切换到主菜单...\n"
+										printf "\033[32mINFO \033[0m 欢迎下次光临！\n"
 										sleep 1s
 										echo " "
-										exec ${HexoPath}/menu.sh
+										exit 0
 						else
 							echo " "
 							printf "\033[31mERROR \033[0m 输入错误，请返回重新选择...\n"
