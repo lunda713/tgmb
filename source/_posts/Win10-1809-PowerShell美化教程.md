@@ -3,8 +3,6 @@ title: Win10 1809 PowerShell美化教程
 author: Akilarlxh
 tags:
   - win10
-  - powershell
-  - 教程
 categories:
   - Akilarの棉花糖
 abbrlink: 8a76eb87

@@ -4,7 +4,6 @@ categories:
   - Akilarの巧克力
 tags:
   - ubuntu
-  - 启动盘制作
   - 系统重装
 author: Akialrlxh
 abbrlink: 328a67be
@@ -34,13 +33,13 @@ usb2.0，8g以上绰绰有余了。正好因为独显驱动导致外接屏幕无
 [ubuntu download](https://www.ubuntu.com/download/desktop)</p></div>
 
 
-<div class="note default no-icon"><p>我这会是Ubuntu18.04.2LTS，下面还有个18.10的，怎么说呢，学软件的应该都知道越新的版本越有风险吧。还是选择长期支持的稳定版本好了。 
+<div class="note default no-icon"><p>我这会是Ubuntu18.04.2LTS，下面还有个18.10的，怎么说呢，学软件的应该都知道越新的版本越有风险吧。还是选择长期支持的稳定版本好了。
   如果有钟情于老版本的，这里附上Ubuntu历史版本的镜像库：</p></div>
 
- 
+
 
  <div class="note primary"><p>
- 
+
  [ubuntu history mirror](http://mirrors.melbourne.co.uk/ubuntu-releases/)</p></div>
 
 
@@ -62,7 +61,7 @@ usb2.0，8g以上绰绰有余了。正好因为独显驱动导致外接屏幕无
 # 制作安装盘
 
 <div class="note default no-icon"><p>后面直接照搬一下人家的图文教程</p></div>
-  
+
 ## 1
 <div class="note default"><p>
 
@@ -91,7 +90,7 @@ usb2.0，8g以上绰绰有余了。正好因为独显驱动导致外接屏幕无
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072115995.png)</p></div>
 
 ## 5
-<div class="note primary"><p> 
+<div class="note primary"><p>
 
 选择`便捷启动`--`写入新的驱动器引导扇区`--`Syslinux`，然后在跳出的窗口中点击`是`，最后会提示`引导扇区写入成功`，然后点击`确定`：
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072149401.png)

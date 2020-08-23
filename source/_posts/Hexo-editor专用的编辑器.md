@@ -3,7 +3,6 @@ title: Hexo-editor专用的编辑器
 categories: Akilarの糖葫芦
 tags:
   - hexo
-  - markdown
 abbrlink: 1da4f99e
 date: 2019-04-23 19:00:41
 ---
@@ -76,39 +75,39 @@ date: 2019-04-23 19:00:41
 | 键 |	方法	| 说明  |
 | :---: | :---: | :----: |
 | Tab |	tabAdd |	添加缩进 |
-|	Shift - Tab	|	tabSubtract	|	减少压痕|	
-|	Ctrl - B	|	toggleBlod	|	切换blod |	
-|	Ctrl - I	|	toggleItalic	|	切换斜体|	
-|	Ctrl - D|		toggleDelete|		删除当前行|	
-|	Ctrl - `	|	toggleComment|		切换评论|	
-|	Ctrl - L|		toggleUnOrderedList	|	切换无序列表|	
-|	Ctrl- Alt-L	|	toggleOrderedList	|	切换有序列表|	
+|	Shift - Tab	|	tabSubtract	|	减少压痕|
+|	Ctrl - B	|	toggleBlod	|	切换blod |
+|	Ctrl - I	|	toggleItalic	|	切换斜体|
+|	Ctrl - D|		toggleDelete|		删除当前行|
+|	Ctrl - `	|	toggleComment|		切换评论|
+|	Ctrl - L|		toggleUnOrderedList	|	切换无序列表|
+|	Ctrl- Alt-L	|	toggleOrderedList	|	切换有序列表|
 |	Ctrl - ]|		toggleHeader	|	降级标题|		
-|	Ctrl - [|		toggleUnHeader|		升级标题|	
-|	Ctrl - =	|	toggleBlockquote|		添加blockquote|	
-|	Ctrl - -|		toggleUnBlockquote|		减少blockquote|	
-|	Ctrl - U	|	drawLink|		添加超链接|	
-|	Ctrl- Alt-U	|	drawImageLink|		添加图片|	
-|	Ctrl - T	|	drawTable（row col）|		添加表（行列）|	
-|	Ctrl - V	|	pasteOriginContent|		粘贴原始内容|	
-|	Shift- Ctrl-V|		pasteContent	|	自动粘贴内容|	
-|	Alt - F	formatTables|			格式表|	
-|	Ctrl - N	|		|		新的md文件|	
-|	Ctrl - H	|	|		新的hexo文件|	
-|	Ctrl - O	|	|		打开md文档|	
-|	Ctrl - S	|	|		保存md文件|	
-|	Shift- Ctrl-S	|	|		另存为|	
-|	Alt- Ctrl-S	| |			打开设置|	
-|	Ctrl - W	|	|		切换写入模式|	
-|	Ctrl - P|		|		切换预览模式|	
-|	Ctrl - R	|	|		切换读取模式|	
+|	Ctrl - [|		toggleUnHeader|		升级标题|
+|	Ctrl - =	|	toggleBlockquote|		添加blockquote|
+|	Ctrl - -|		toggleUnBlockquote|		减少blockquote|
+|	Ctrl - U	|	drawLink|		添加超链接|
+|	Ctrl- Alt-U	|	drawImageLink|		添加图片|
+|	Ctrl - T	|	drawTable（row col）|		添加表（行列）|
+|	Ctrl - V	|	pasteOriginContent|		粘贴原始内容|
+|	Shift- Ctrl-V|		pasteContent	|	自动粘贴内容|
+|	Alt - F	formatTables|			格式表|
+|	Ctrl - N	|		|		新的md文件|
+|	Ctrl - H	|	|		新的hexo文件|
+|	Ctrl - O	|	|		打开md文档|
+|	Ctrl - S	|	|		保存md文件|
+|	Shift- Ctrl-S	|	|		另存为|
+|	Alt- Ctrl-S	| |			打开设置|
+|	Ctrl - W	|	|		切换写入模式|
+|	Ctrl - P|		|		切换预览模式|
+|	Ctrl - R	|	|		切换读取模式|
 
 ---
 
  ## 使用习惯
- 
+
  要先保存再打开，现在还有一些不影响使用的bug存在，但是bug毕竟是bug，还是要有好的习惯才不会有更多的麻烦。
- 
+
 ### 预览
  1. 先右键->上传腾讯云
  2. 右键->hexo->结束占用进程
@@ -123,6 +122,3 @@ date: 2019-04-23 19:00:41
  <div class="note info"><p>这里说一下，你可以右键图片，上传腾讯云，这样子本地路径会被替换成一个远程链接，也就是上传到腾讯云上的图片链接。你也可以右键已经上传的图片，选择取消上传，这样腾讯云上的文件就会被删除，图片也被替换回本地链接。是不是很有意思。</p></div>
  2. 右键->hexo清除缓存文件
  3. 右键->hexo->一键部署
-
-
-

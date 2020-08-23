@@ -3,7 +3,7 @@ title: Win10 1809 Hexo+github搭建个人博客
 tags:
   - hexo
   - win10
-  - github
+  - git
 categories:
   - Akilarの棉花糖
 author: Akilar

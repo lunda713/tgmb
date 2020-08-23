@@ -170,7 +170,7 @@ neat_js:
     - '**/jquery.fancybox.pack.js'
     - '**/index.js'
     - '**/love.js'
-    # - '**/eye.js'
+    - '**/botui.js'
 
 aplayer:
   meting: true

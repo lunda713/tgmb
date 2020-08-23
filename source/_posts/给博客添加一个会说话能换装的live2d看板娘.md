@@ -5,6 +5,7 @@ abbrlink: 5b8f515f
 date: 2020-08-12 14:10:43
 categories: Akilarの糖葫芦
 tags:
+  - hexo
   - 看板娘
   - live2d
 cover: https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/Hexo%E5%8D%9A%E5%AE%A2NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E4%B9%8B%E6%96%B0%E5%A2%9E%E7%9C%8B%E6%9D%BF%E5%A8%98-1.gif

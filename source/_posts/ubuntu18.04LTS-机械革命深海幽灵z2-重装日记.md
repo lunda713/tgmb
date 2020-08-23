@@ -5,7 +5,6 @@ categories:
 tags:
   - ubuntu
   - 系统重装
-  - ubuntu美化
 author: Akilarlxh
 abbrlink: 2f7e1a55
 date: 2019-04-08 15:21:00
@@ -25,7 +24,7 @@ date: 2019-04-08 15:21:00
 </p></div>
 
 
-<div class="note default"><p> 
+<div class="note default"><p>
 
  1. 我的机型是`机械革命深海幽灵z2 1060款` ；
  2. 第一步： `准备好wepe` ，对，没错就是pe，因为要先准备好`ubuntu的分区`，我只是拿来做做实验外加体验一下linux操作系统，之前双硬盘双系统，
@@ -46,7 +45,7 @@ date: 2019-04-08 15:21:00
 
 </p></div>
 
-<div class="note default"><p> 
+<div class="note default"><p>
 
 基本上都会配有安装说明，会想到安装Ubuntu  的人的英语底子应该还是能看懂的。
 
@@ -57,10 +56,10 @@ date: 2019-04-08 15:21:00
 我使用的是 [Grub-theme-vimix](https://www.gnome-look.org/p/1009236/) 这款，
   主要是它的背景图片可以任意替换，原版图片我委实不太喜欢，修改过之后文件名
   不同的话记得在 `Vimix` 文件夹下的 `theme.txt` 中对应修改。
-  
+
 </p></div>
 
-  
+
 
 
 ## 默认安装
@@ -74,7 +73,7 @@ date: 2019-04-08 15:21:00
 
 ubuntu基本都是靠命令行来管理，要做好心理准备。
 
-</p></div> 
+</p></div>
 
 ```
 cd ~/Downloads/grub-theme-vimix
@@ -109,7 +108,7 @@ GRUB_GFXMODE=1920x1080
 sudo update-grub
 ```
 <div class="note warning"><p>以后但凡是涉及到grub的内容，修改后都要运行一下这个</p></div>
-  
+
 <div class="note default"><p>重启即可</p></div>
 
 
@@ -148,7 +147,7 @@ sudo update-grub
 理论上这个登录界面就是个前端界面，因为它就是通过css文件修改的。
   推荐在修改之前最好备份一个`gdm3.css`方便以后恢复。
   编辑配置这个文件：
-  
+
   </p></div>
 
  ```
@@ -157,7 +156,7 @@ sudo gedit /etc/alternatives/gdm3.css
 ```
 <div class="note default"><p>找到这一行</p></div>
 
-``` 
+```
 #lockDialogGroup {
 background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png);
 background-repeat: repeat;
@@ -168,7 +167,7 @@ background-repeat: repeat;
 
 ```
 #lockDialogGroup {
-  background: #2c001e url(file:///usr/share/backgrounds/mypicture.jpg); 
+  background: #2c001e url(file:///usr/share/backgrounds/mypicture.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -291,7 +290,7 @@ DEFAULT_USER=$USER
 <div class="note default"><p>保存退出，运行</p></div>
 
 ```
-source ~/.zshrc 
+source ~/.zshrc
 //以后凡是修改过这个的都要运行一遍这行代码
 ```
 
@@ -308,16 +307,16 @@ cd fonts
 的电脑很上道，直接自己帮你设好默认了。保险起见还是设置一下。</p></div>
 
 ```
-sudo chsh -s $(which zsh) 
+sudo chsh -s $(which zsh)
 //设置zsh为默认shell
-sudo reboot 
+sudo reboot
 //注销重新登录，为了防止你自己老是不愿意重登
 ```
 
 <div class="note default"><p>重启后检查下</p></div>
 
  ```
-echo $SHELL 
+echo $SHELL
 //确认zsh是否是默认SHELL
 ```
 
@@ -355,7 +354,7 @@ sudo gedit ~/.zshrc
 ```
 
  <div class="note default"><p>在文件末尾添加：</p></div>
- 
+
 ``` diff
 #set oracle jdk environment
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_211
@@ -365,7 +364,7 @@ export PATH=${JAVA_HOME}/bin:$PATH
 ```
 
  <div class="note default"><p>然后执行：</p></div>
- 
+
 ```
 source ~/.zshrc
 ```
@@ -431,9 +430,9 @@ export PATH="/home/akilar/anaconda3/bin:$PATH"
 ```
 
 <div class="note warning"><p>akilar是我的用户名，改成你自己的</p></div>
-  
+
 <div class="note default"><p>保存后执行</p></div>
-  
+
 ```
 source ~/.zshrc
 ```
@@ -459,11 +458,11 @@ source ~/.zshrc
 访问[SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega/releases)</p></div>
 
  <div class="note default"><p>
- 
+
  拉到最下下载这个文件 ：`SwitchyOmega_Chromium.crx`
 下载完成后安装到chrome内。
 
-</p></div> 
+</p></div>
 
 
 
@@ -525,7 +524,7 @@ v2ray的用户请使用v2ray，~~感觉这是一句废话~~</p></div>
 
 先在`win10`的`v2rayN客户端`选中所有的结点，然后`右键`->`导出所选服务器为客户端配置`，导出的文件保存为`config.json`
 切回`ubuntu`，先在`git`上下载指定的客户端源代码，~~没有图形化界面真是抱歉呢。~~</p></div>
-  
+
 <div class="note primary"><p>
 
 客户端的源代码网址:[v2ray-core](https://github.com/v2ray/v2ray-core)
@@ -555,7 +554,7 @@ sudo gedit /etc/v2ray/config.json
 把`win10`那边的`config.json`文件内容全部拷贝过来，覆盖到`/etc/v2ray/config.json`内</p></div>
 
 #### 配置文件config.json
-``` 
+```
 //以下是我的配置文件。
 {
   "log": {
@@ -969,10 +968,10 @@ sudo reboot
  ```
  ## win10和ubuntu时间不同步
  <div class="note success"><p>在ubuntu下输入以下三行命令</p></div>
- 
+
  ```
- sudo apt-get install ntpdate 
- sudo ntpdate time.windows.com 
+ sudo apt-get install ntpdate
+ sudo ntpdate time.windows.com
  //在ubuntu下更新本地时间
  sudo hwclock --localtime --systohc
  //将本地时间更新到硬件上

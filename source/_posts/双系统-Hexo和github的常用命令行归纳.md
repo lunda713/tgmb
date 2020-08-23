@@ -6,10 +6,9 @@ tags:
   - hexo
   - 双系统
   - git
-  - win0
+  - win10
 categories:
   - Akilarの糖葫芦
-  - ''
 abbrlink: 803c5fab
 date: 2019-04-12 13:58:00
 ---
@@ -172,6 +171,3 @@ git clone https://github.com/stayor/git-gui-zh.git
 ```
 然后把项目中的**zh_cn.msg**文件复制到**$GITROOT/mingw64/share/gitk/lib/msgs/zh_cn.msg**路径下
 例如windows默认安装路径是：**C:\Program Files\Git\mingw64\share\git-gui\lib\msgs\zh_cn.msg**
-
-
-

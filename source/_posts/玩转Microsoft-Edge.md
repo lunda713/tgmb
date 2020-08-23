@@ -1,7 +1,7 @@
 ---
 title: 玩转Microsoft Edge
 categories: Akilarの棉花糖
-tags: Win10
+tags: win10
 abbrlink: 8c8df126
 date: 2020-08-10 15:14:47
 ---

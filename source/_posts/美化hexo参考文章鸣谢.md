@@ -1,12 +1,6 @@
 ---
-title: 美化hexo参考文章鸣谢
-author: Akilar
-tags:
-  - markdown
-  - next美化
-  - 教程
-  - css
-  - js
+title: hexo-NexT主题美化参考文章鸣谢
+tags: hexo
 categories:
   - Akilarの糖葫芦
 abbrlink: a73a1f5e

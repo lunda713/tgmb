@@ -2,9 +2,9 @@
 title: Ubuntu 18.04LTS Hexo+github搭建个人博客
 author: Akilarlxh
 tags:
-  - 'ubuntu '
+  - ubuntu
   - hexo
-  - github
+  - git
 categories:
   - Akilarの巧克力
 abbrlink: e5502ef6
@@ -292,7 +292,7 @@ sudo npm install hexo-renderer-marked --save
 sudo npm install hexo-renderer-stylus --save
 sudo npm install hexo-generator-feed --save
 sudo npm install hexo-generator-sitemap --save
-sudo npm install hexo-admin --save 
+sudo npm install hexo-admin --save
 //这就是我之前提到的hexo-admin，装了你不会后悔的。
 
 ```
@@ -300,7 +300,7 @@ sudo npm install hexo-admin --save
 ```
 sudo hexo clean
 //清空缓存
-sudo hexo generate 
+sudo hexo generate
 sudo hexo g //简写
 //重新编译
 sudo hexo server
@@ -382,7 +382,7 @@ layout: posts
 title: 写给小白的express学习笔记1： express-static文件静态管理
 date: 2018-06-07 00:38:36
 categories: 学习笔记
-tags: 
+tags:
 - node.js//注意短线后有空格
 - express
 ```
@@ -459,7 +459,7 @@ provide shell access.
 修改底部的deploy
 
 ```
-# 站点部署到github要配置Deployment 
+# 站点部署到github要配置Deployment
 ## Docs: http://zespia.tw/hexo/docs/deploy.html
 deploy:
   type: git
@@ -491,9 +491,9 @@ git config --global user.name%"username"
 git config --global user.email%"username@example.com"
 ```
 这里的%，在正确的格式中是一个空格，如果你之前没有打空格，那么邮箱和用户名根本就没有记录进去，请把整个第四部分全部重做一遍。
-2.git deploy的插件没有安装正确，执行 
+2.git deploy的插件没有安装正确，执行
 ```
-sudo npm install hexo-deployer-git –save 
+sudo npm install hexo-deployer-git –save
 ```
 之后再使用
 ```
@@ -570,7 +570,7 @@ sudo git clone https://github.com/theme-next/hexo-theme-next
 打开~/Hexo/_config.yml
 找到theme行设置主题
 ```
-theme: next 
+theme: next
 //默认是landscape
 ```
 ## 03 配置NexT主题
@@ -599,7 +599,7 @@ menu:
 如果事先没有通过hexo new page <pageName>来创建页面的话，
 即使在配置文件中取消注释，页面也没法显示
 我们也可以添加自己想要添加的页面，不用局限在配置文件里提供的选择里
-  
+
 ||后面是fontAwesome里的文件对应的名称
 
 menu_icons记得选enable: true（默认应该是true）
@@ -626,7 +626,7 @@ footer:
   since: 2018
 
   # Icon between year and copyright info.
-  icon: snowflake-o 
+  icon: snowflake-o
   //把用户的图标从小人user改成了雪花snowflake-o
 
   # If not defined, will be used `author` from Hexo main config.
@@ -642,7 +642,7 @@ footer:
     enable: false
     # Version info of NexT after scheme info (vX.X.X).
     # version: false
-   //theme: enable:false 把主题的内容也取消了 
+   //theme: enable:false 把主题的内容也取消了
  ```
  ### 个人社交信息 social
  ```
@@ -652,7 +652,7 @@ footer:
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
-  
+
   /*  ||后面对应的名称是fontAwesome里图标的名称，
      如果我们选择的账号没有对应的图标（如豆瓣、知乎），
      我们可以在fontAwesome库里去选择自己喜欢的图标
@@ -673,7 +673,7 @@ footer:
 motion:
   enable: true
   async: true
-  
+
 # Canvas-nest
 canvas_nest: true
 
@@ -748,7 +748,7 @@ vii.在主题配置文件~/Hexo/themes/next/_config.yml中修改:即可）**
 
  ```
  #### gitalk.styl
- 
+
  新建~/Hexo/source/css/_common/components/third-party/gitalk.styl文件，添加内容：
  ```
  .gt-header a, .gt-comments a, .gt-popup a
@@ -779,8 +779,8 @@ vii.在主题配置文件~/Hexo/themes/next/_config.yml中修改:即可）**
 评论时报错
 ```
 Error:Validation Failed
-/*这个问题就比较复杂了，部分文章的评论区会报Error: 
-Validation Failed,具体原因是由于 Github 限制 labal 
+/*这个问题就比较复杂了，部分文章的评论区会报Error:
+Validation Failed,具体原因是由于 Github 限制 labal
 长度不能超过 50引起的，该问题解决方案来自
 Gitalk项目仓库 Issues115，通过MD5加密ID来缩短labal长度。*/
 
@@ -929,8 +929,8 @@ local_search:
 ```
 # 版本控制
  ## 修改博客及部署操作
- 
-  
+
+
  ### 创建source分支
  首先，我们先在username.github.io仓库里做这些事情。
  在仓库中新建一个分支，命名为source
@@ -942,7 +942,7 @@ local_search:
  修改博客内容后
  在[Hexo]下打开terminal，依次执行以下命令来提交网站相关的文件：
  ```
- sudo git init 
+ sudo git init
  //这句在这里主要是为了在文件夹中git init让git标记此文件夹为版本库
  ```
 如果不写这句，不出意外会报错
@@ -962,7 +962,7 @@ sudo git remote rm origin
  ```
  然后再试试
  ```
- sudo git pull origin source 
+ sudo git pull origin source
  // 把远程仓库的新增的内容覆盖到本地仓库
  sudo git push -u origin source -f
 //把本地仓库的文件推送到远程仓库
@@ -977,7 +977,7 @@ sudo hexo g -d
 一个 source 分支用来存放网站的原始文件，
 一个 master 分支用来存放生成的静态网页。
 
-### 可能遇到的bug 
+### 可能遇到的bug
 
 - 通过git clone 命令下载的themes或者module文件中可能有.git文件，会有影响，所以删去。比如我就是在next这个主题文件夹里有个.git文件。
 
@@ -988,7 +988,7 @@ Please make sure you have the correct access rights and the repository exists
 这个貌似是因为我们新建了分支的关系，反正它的意思就是找不到你的服务器了，如果上面操作都没问题的话建议你删除在主目录home/下的.ssh文件夹，然后重新回到[四->02、部署git和github]再配置一下你的ssh key。
 
 - 分支依然是master
- 
+
 不出意外的话这里你会和我遇到一样的问题，你的分支依然是master，
 所以要转到source，其实无伤大雅，反正下面提交命令还是提交到source
 ```
@@ -1001,7 +1001,7 @@ sudo git checkout -b source
 那么添加上** --allow-unrelated-histories** 选项
 按理说新建的分支其实不会遇到这个问题，除非之前失败现在重试
  ```
-sudo git pull origin source --allow-unrelated-histories 
+sudo git pull origin source --allow-unrelated-histories
  ```
 
 
@@ -1015,16 +1015,16 @@ sudo git pull origin source --allow-unrelated-histories
  ```
  将改动推送到 GitHub（此时当前分支应为 source）；
 ii.然后才执行
-``` 
-sudo hexo generate -d 
+```
+sudo hexo generate -d
 //或者
-sudo hexo g -d 
+sudo hexo g -d
 ```
 将本地文件发布网站到 master 分支上。
 ## 本地资料丢失或多PC同步
 当重装电脑之后，或者想在其他电脑上修改博客，先走一下一二的流程，之后可以使用下列步骤：
 其实就是本篇一、二、三的内容
-i.使用 
+i.使用
 ```
 sudo git clone git@github.com:username/username.github.io.git
 ```

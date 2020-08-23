@@ -3,7 +3,7 @@ title: 使用Hexo-neat插件对网页进行加速
 abbrlink: d1f227cc
 date: 2020-08-12 15:37:59
 categories: Akilarの糖葫芦
-tags: Hexo
+tags: hexo
 ---
 # 写在最前
 这里不写前言，直接交代结论，用hexo-neat插件压缩静态页面，来提高响应速度，具体内容可以参考相应教程。
