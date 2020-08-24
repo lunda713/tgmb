@@ -1,5 +1,5 @@
 ---
-title: ubuntu18.04LTS安装盘制作教程
+title: Ubuntu18.04LTS安装盘制作教程
 categories:
   - Akilarの巧克力
 tags:

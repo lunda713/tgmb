@@ -8,7 +8,7 @@ categories:
 abbrlink: 8a76eb87
 date: 2019-04-12 09:52:00
 ---
-# 一、写在最前
+# 写在最前
 我一直秉持着一个美化舒适的开发环境能够极大的激发编程的兴趣这件事。
 
 体验过了ubuntu以后为什么会对它如此着迷呢？我曾经这样问过自己，但是迟迟没想到答案。于是我又复读了两遍我以前写的win10和ubuntu重装日记，发现了一件事情。
@@ -22,13 +22,13 @@ date: 2019-04-12 09:52:00
 
 ---
 
-# 二、安装必要软件
+# 安装必要软件
 先放一下oh-my-posh的官方网站，其实就是个git仓库。
 - [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)
 
 ---
 
-## 1、[Chocolatey](https://chocolatey.org/)
+## [Chocolatey](https://chocolatey.org/)
 （20200728修订，chocolatey非必须，原本是为了给ConEmu提供安装路径和修复依赖，但是现在ConEmu作者已经释出了安装包，可以直接安装。至于依赖的.C环境和python环境，需要的时候再装即可。）
 我也不知道这个算不算软件了。不过看它和npm、anaconda一样，都是命令行安装平台，那似乎确实是软件。废话，不是硬件就是软件嘛。
 
@@ -59,7 +59,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 ```
 如此一来就安装好了。这里需要某种“较为稳定的稳定的网络环境”，懂的都懂。记得开全局模式，这玩意不是很上道，不会自己挑大路走。不会科学上网的可以去看我写的win10重装日记。
 
-## 2、安装ConEmu
+## 安装ConEmu
+（20200824修订，现在可以直接访问[ConEmu官网](https://www.fosshub.com/ConEmu.html)下载安装包，不用通过chocolate来安装了）
 
 ConEmu相当于windows终端的增强版,可以直接打开多种类型的控制台窗口，之后我们安装完了会用他替换powershell，没关系，调试好以后使用感觉一定比原版powershell好。
 
@@ -67,20 +68,21 @@ ConEmu相当于windows终端的增强版,可以直接打开多种类型的控制
 ```
 choco install ConEmu
 ```
-## 3、安装Powerline字体
+
+## 安装Powerline字体
 想要舒适体验，少不了字体支持，ubuntu那边说过理由了，不用的话到时候就是丑丑的乱码。~~对，我就是在威胁你。~~
 powerline的项目也是github上开源的。
 - [powerline/fonts](https://github.com/powerline/fonts)
 安装方法要用到git。**Win+X然后再按A**，启动powershell管理员模式。执行代码：
 ```
-# clone
-git clone https://github.com/powerline/fonts.git --depth=1
+# clone，此处已经替换成了gitee的镜像仓库
+git clone https://gitee.com/akilarlxh/fonts.git --depth=1
 # install
 cd fonts
 ./install.ps1
 ```
-## 4、可能遇到的bug：
-这个问题只要是powershell的脚本运行执行权限没有赋予完全。之后可能会经常遇到，我就不多说了，只写这一次。
+## 可能遇到的bug：
+这个问题主要是powershell的脚本运行执行权限没有赋予完全。之后可能会经常遇到，我就不多说了，只写这一次。
 
 **如果提示：**
 
@@ -97,7 +99,7 @@ set-ExecutionPolicy RemoteSigned
 ```
 **在接下来的选项中输入Y来获取执行政策。**
 
-# 三、安装posh-git和oh-my-posh
+# 安装posh-git和oh-my-posh
 
 依旧是Win+A后按A打开powershell管理员模式。
 输入
@@ -119,32 +121,32 @@ Set-Theme Agnoster
 其中Set-Theme Agnoster设置了Agnoster主题,也可以去官网找其他你喜欢的风格
 - [oh-my-posh themes](https://github.com/JanDeDobbeleer/oh-my-posh)
 拉到最下面有主题预览，所见即所得。
-![AbuHNq.png](https://s2.ax1x.com/2019/04/12/AbuHNq.png)
+![](https://s2.ax1x.com/2019/04/12/AbuHNq.png)
 
-# 四、设置ConEmu
+# 设置ConEmu
 先放一下我的配置效果：
-![AbnezD.png](https://s2.ax1x.com/2019/04/12/AbnezD.png)
+![](https://s2.ax1x.com/2019/04/12/AbnezD.png)
 设置很简单。打开ConEmu，右键上方栏位，选择setting：
-## 1、把界面默认语言改为中文简体：
+## 把界面默认语言改为中文简体：
 
-![AbnXmd.png](https://s2.ax1x.com/2019/04/12/AbnXmd.png)
-## 2、设置默认启动shell为powershell
+![](https://s2.ax1x.com/2019/04/12/AbnXmd.png)
+## 设置默认启动shell为powershell
 当然你也可以选择别的，例如管理员模式
-![Abnq6e.png](https://s2.ax1x.com/2019/04/12/Abnq6e.png)
-## 3、设置字体为powerline字体
+![](https://s2.ax1x.com/2019/04/12/Abnq6e.png)
+## 设置字体为powerline字体
 这里我用的是Meslo LG M，你也可以改成别的，有powerline字体标识就好。
-![AbnLOH.png](https://s2.ax1x.com/2019/04/12/AbnLOH.png)
-## 4、设置不显示标签栏
+![](https://s2.ax1x.com/2019/04/12/AbnLOH.png)
+## 设置不显示标签栏
 把标签栏显示设置为不要显示，要是想留着也没事。
-![AbnHSO.png](https://s2.ax1x.com/2019/04/12/AbnHSO.png)
-## 5、取消显示状态栏
+![](https://s2.ax1x.com/2019/04/12/AbnHSO.png)
+## 取消显示状态栏
 把状态栏显示的勾选去掉，要是想留着也没事。
-![AbnTfK.png](https://s2.ax1x.com/2019/04/12/AbnTfK.png)
-## 6、设置powershell为默认shell
+![](https://s2.ax1x.com/2019/04/12/AbnTfK.png)
+## 设置powershell为默认shell
 这里我选择的是管理员模式，你也可以只选powershell。
-![AbnblD.png](https://s2.ax1x.com/2019/04/12/AbnblD.png)
-## 7、设置ConEmu为默认shell
+![](https://s2.ax1x.com/2019/04/12/AbnblD.png)
+## 设置ConEmu为默认shell
 这一步的目的就是为了用ConEmu替换掉powershell，原生的Powershell是不支持第三方字体的。没关系，按照上面的设置以后，界面效果只会更好。
-![Abnj0A.png](https://s2.ax1x.com/2019/04/12/Abnj0A.png)
+![](https://s2.ax1x.com/2019/04/12/Abnj0A.png)
 # 五、后记
 至此，powershell美化就完成了，如果你是用安装版的git，那么你可以直接通过在你的Hexo文件下，按住shift，右键，在此处打开powershell，然后在powershell（其实是ConEmu了）里使用hexo和git命令了。绿色版的git的话，请你老老实实去把GIT_HOME之类的环境变量配好吧。
