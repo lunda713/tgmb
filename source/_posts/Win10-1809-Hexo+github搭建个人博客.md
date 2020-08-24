@@ -463,6 +463,7 @@ hexo depoly
 
 <div class="note primary"><p>
 
+（20200821修订，本博客主题现已改用[Butterfly](https://demo.jerryc.me/)，相比NexT，Butterfly的功能高度集成化，仅仅只需在配置文件中修改true或false即可）
 我使用的nexT，理由是它界面简洁但是功能强大。
 首先贴出它的使用文档
 - [NexT使用文档](http://theme-next.iissnan.com/)</p></div>
