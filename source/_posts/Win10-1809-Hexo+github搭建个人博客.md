@@ -1187,11 +1187,11 @@ exec ${HexoPath}/menu.sh
 else
 if [ "$answer" = "4" ]; then
 printf "\033[32mINFO \033[0m 正在清理本地缓存...\n"
-Hexo clean
+hexo clean
 printf "\033[32mINFO \033[0m 正在重新编译静态页面...\n"
 hexo g
 printf "\033[32mINFO \033[0m 正在开启本地预览，可以按Ctrl+C退出\n"
-Hexo s
+hexo s
 exec ${HexoPath}/menu.sh
 else
 if [ "$answer" = "5" ]; then
