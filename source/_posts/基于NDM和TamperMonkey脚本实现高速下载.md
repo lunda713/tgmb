@@ -5,7 +5,7 @@ date: 2020-08-23 21:23:31
 tags: [百度网盘,win10,NDM]
 categories: Akilarの糖葫芦
 keywords: 百度网盘,Win10
-description: 使用TamperMonkey提供的网盘助手脚本配合NPM下载器，实现一定程度上的下载加速，仅作为对Pandownload失效后的代替品
+description: 使用TamperMonkey提供的网盘助手脚本配合NDM下载器，实现一定程度上的下载加速，作为Pandownload失效后的代替品
 top_img:
 comments:
 cover:
