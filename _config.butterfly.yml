@@ -433,8 +433,7 @@ bing_site_verification:
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
-baidu_site_verification:  <meta name="baidu-site-verification" content="ssXtvEceT0" />
-
+baidu_site_verification: 
 # 360 Webmaster tools verification setting
 # see http://zhanzhang.so.com/
 qihu_site_verification:
