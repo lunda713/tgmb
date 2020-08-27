@@ -800,6 +800,7 @@ inject:
   bottom:
     # - <script src="xxxx"></script>
     - <script type="text/javascript" src="/js/dytitle.js"></script>
+    - <script type="text/javascript" src="/js/redirect.js"></script>
     - <script src="/live2d-widget/autoload.js"></script>
     - <div class="aplayer no-destroy" data-id="5183531430" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
     - <script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/js/hideMobileSidebar.js"></script>
