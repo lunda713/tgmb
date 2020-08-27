@@ -7,7 +7,7 @@ footer:
   theme: 主题
 
 copy:
-  success: 内容复制成功啦！
+  success: 吾辈宣布你的剪贴板已经被我占领啦！
   error: 抱歉，复制好像出了点问题。
   noSupport: 你的浏览器好像不支持
 

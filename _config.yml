@@ -4,8 +4,8 @@
 
 # Site
 title: Akilarの糖果屋
-subtitle: Rookie programmer's growth diary
-description: Nothing is true.Everything is premited
+subtitle: 无限大な梦のあとの 何もない世の中じゃ
+description: 流水幽吟绕耳边，煦风馨语抚心弦，挥臂欲揽冰钩月，银星斟酌醉人涎。
 keywords: diary; experience; tutorial;
 author: Akilar
 language: zh-CN
@@ -172,25 +172,12 @@ neat_js:
     - '**/love.js'
     - '**/botui.js'
 
+# APlayer
+# https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
 aplayer:
   meting: true
   asset_inject: false
 
-# douban电影插件
-# https://github.com/mythsman/hexo-douban
-douban:
-  user: 221290483
-  builtin: true
-  book:
-    title: 'This is my book title'
-    quote: 'This is my book quote'
-  movie:
-    title: 'This is my movie title'
-    quote: 'This is my movie quote'
-  game:
-    title: 'This is my game title'
-    quote: 'This is my game quote'
-  timeout: 10000
 
 # local_search
 search:
@@ -206,3 +193,16 @@ markdown_it_plus:
       enable: true
       options:
         strict: false
+# hexo-generator-feed
+# https://github.com/hexojs/hexo-generator-feed
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
+
+# hexo-generator-sitemap
+sitemap:
+  path: sitemap.xml
+  # hexo-generator-baidu-sitemap
+baidusitemap:
+  path: baidusitemap.xml

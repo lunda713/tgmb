@@ -41,6 +41,8 @@ social:
   fas fa-envelope: mailto:Akilarlxh@gmail.com || Email
   fas fa-heartbeat: https://space.bilibili.com/22976782 || Bilibili
   fas fa-music: https://music.163.com/#/user/home?id=292643778 || Cloudmusic
+  fas fa-rss: https://akilarlxh.github.io/atom.xml || RSS
+
 
 # search (搜索)
 # --------------------------------------
@@ -433,7 +435,7 @@ bing_site_verification:
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
-baidu_site_verification: 
+baidu_site_verification:
 # 360 Webmaster tools verification setting
 # see http://zhanzhang.so.com/
 qihu_site_verification:
@@ -797,6 +799,7 @@ inject:
 
   bottom:
     # - <script src="xxxx"></script>
+    - <script type="text/javascript" src="/js/dytitle.js"></script>
     - <script src="/live2d-widget/autoload.js"></script>
     - <div class="aplayer no-destroy" data-id="5183531430" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
     - <script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/js/hideMobileSidebar.js"></script>
