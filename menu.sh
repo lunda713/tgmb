@@ -20,7 +20,7 @@ printf "请选择需要的功能，默认选择[1]"
 echo " "
 printf "选择："
 read answer
-if [ "$answer" = "1" ] || [ "$answer" == "" ]; then
+if [ "$answer" = "1" ] || [ "$answer" = "" ]; then
 printf "\033[32mINFO \033[0m 正在启动本地预览，可以按Ctrl+C退出\n"
 hexo s
 exec ${HexoPath}/menu.sh

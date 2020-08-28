@@ -1109,7 +1109,7 @@ npm install hexo-deployer-git
 <div class="note info"><p>这里的【username.github.io】文件夹其实就是我们一直在说的【Hexo】文件夹。
 下一篇写一下ubuntu下的hexo配置，用这个方法部署文件就会很快。</p></div>
 
-## 指令脚本
+## 指令脚本（20200828修订，这段已过时，直接看下面的升级版）
 
 <div class="note success"><p>
 
@@ -1141,7 +1141,7 @@ hexo depoly
 （20200821修订）
 因为最近尝试用Termux在手机上进行博客编辑，学了点脚本的皮毛。写了个相对好用的脚本。
 
-```shell
+```C
 #!/bin/sh
 echo "==========================================="
 echo "          欢迎来到Akilarの糖果屋！"
@@ -1164,7 +1164,7 @@ printf "请选择需要的功能，默认选择[1]"
 echo " "
 printf "选择："
 read answer
-if [ "$answer" = "1" ] || [ "$answer" == "" ]; then
+if [ "$answer" = "1" ] || [ "$answer" = "" ]; then
 printf "\033[32mINFO \033[0m 正在启动本地预览，可以按Ctrl+C退出\n"
 hexo s
 exec ${HexoPath}/menu.sh
