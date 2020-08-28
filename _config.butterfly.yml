@@ -791,12 +791,10 @@ fragment_cache: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    
     - <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
     - '<style type="text/css">#toggle-sidebar {bottom: 80px}</style>'
     - <link rel="stylesheet" href="/css/customstyl.css">
-    # - <link rel="stylesheet" href="/css/atom-one-dark-reasonable.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/css/hideCategory.min.css">
 
   bottom:
