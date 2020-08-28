@@ -203,6 +203,13 @@ feed:
 # hexo-generator-sitemap
 sitemap:
   path: sitemap.xml
-  # hexo-generator-baidu-sitemap
+# hexo-generator-baidu-sitemap
 baidusitemap:
   path: baidusitemap.xml
+# hexo-filter-nofollow
+nofollow:
+  enable: true
+  field: site
+  exclude:
+    - 'akilarlxh.github.io'
+    - 'akilar.top'
