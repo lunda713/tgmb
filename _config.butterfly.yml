@@ -13,7 +13,9 @@ menu:
   分类: /categories/ || fas fa-folder-open
   友人帐: /link/ || fas fa-link
   留言板: /comments/ || fas fa-comments
-  相册: /gallery/ || fas fa-camera
+  生活||fa fa-diamond:
+    - 动态 || /shuoshuo/ || fa fa-comments-o
+    - 相册 || /gallery/ || fas fa-camera
   关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
@@ -306,8 +308,8 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: XwqMALzbkBMQaRWTh0P8kC5T-gzGzoHsz # leancloud application app id
-  appKey: pUPAvvxy7BziPHsKzlB6aFkD # leancloud application app key
+  appId: HgKoEBNqlisn3UceL0eYnctL-MdYXbMMI # leancloud application app id
+  appKey: NTRASNBeLT2prREh6XVbDMyt # leancloud application app key
   pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   lang: zh-CN # i18n: zh-CN/zh-TW/en/ja

@@ -1,5 +1,5 @@
 ---
-title: 店主的一封信
+title: 店长的信
 date: 2019-04-23 22:51:26
 comments: false
 top_img: https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/banner/pagebanner3.jpg
