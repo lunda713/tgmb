@@ -766,13 +766,13 @@ lazyload:
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
 # pwa:
-#   enable: false
-#   manifest: /image/pwa/manifest.json
-#   theme_color: "#fff"
-#   apple_touch_icon: /image/pwa/apple-touch-icon.png
-#   favicon_32_32: /image/pwa/32.png
-#   favicon_16_16: /image/pwa/16.png
-#   mask_icon: /image/pwa/safari-pinned-tab.svg
+#   enable: true
+#   manifest: /manifest.json
+#   theme_color: "#49b1f5"
+#   apple_touch_icon: /img/apple-touch-icon.png
+#   favicon_32_32: /img/favicon_32_32.png
+#   favicon_16_16: /img/favicon_16_16.png
+#   mask_icon: /img/favicon.ico
 
 # Disable Baidu transformation on mobile devices (禁止百度轉碼)
 disable_baidu_transformation: true
