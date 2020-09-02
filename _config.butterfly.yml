@@ -24,7 +24,7 @@ menu:
 highlight_theme: mac # default / darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
-highlight_shrink: true # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
+highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
 code_word_wrap: true
 
 # copy settings
@@ -565,7 +565,7 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, "Times New Roman", "Helvetica Neue", Lato, Roboto, "Hiragino Sans GB", "HYYaKuHeiW", "FZCuQian-M17S", sans-serif
   code-font: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
 
 
@@ -573,7 +573,7 @@ font:
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
   font_link: https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
-  font-family: Titillium Web, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif
+  font-family: Titillium Web, 'Hiragino Sans GB', 'HYYaKuHeiW', 'FZCuQian-M17S', sans-serif
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
@@ -587,7 +587,7 @@ subtitle:
   # Typewriter Effect (打字效果)
   effect: true
   # loop (循環打字)
-  loop: false
+  loop: true
   # source調用第三方服務
   # source: false 關閉調用
   # source: 1  調用搏天api的隨機語錄（簡體） https://api.btstu.cn/
@@ -610,7 +610,7 @@ preloader: true
 
 aside:
   enable: true
-  mobile: false # display on mobile
+  mobile: true # display on mobile
   position: right # left or right
   card_author:
     enable: true

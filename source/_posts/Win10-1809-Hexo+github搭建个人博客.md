@@ -12,197 +12,168 @@ date: 2019-04-09 23:03:00
 sticky: 2
 ---
 # 写在最前
+{% hideToggle %}
+{% note info %}
+最开始接触博客的契机是我第一次重装ubuntu的时候。看的是[楠皮的博客](https://blog.vanxnf.top)，之后又重装了7次ubuntu，每次都去看楠皮的博客，一个人撑起了他的博客访问量。自此，我终于意识到我也该写个博客了，一开始用到的是csdn，虽然csdn自带的网页markdown非常方便，还有快捷键支持，但是实在是架不住那边烦人的站点广告，之后也试过简书，虽然好看了许多，但是还是没有我当初浏览楠皮博客时那种丝般顺滑的感觉。
+{% endnote %}
 
-<div class="note info"><p>
-
-最开始接触博客的契机是我第一次重装ubuntu的时候。看的是[楠皮的博客](https://blog.vanxnf.top)，之后又重装了7次ubuntu，每次都去看楠皮的博客，一个人撑起了他的博客访问量。自此，我终于意识到我也该写个博客了，一开始用到的是csdn，虽然csdn自带的网页markdown非常方便，还有快捷键支持，但是实在是架不住那边烦人的站点广告，之后也试过简书，虽然好看了许多，但是还是没有我当初浏览楠皮博客时那种丝般顺滑的感觉。</p></div>
-
-<div class="note success"><p>最后，在无数个下定决心的双休日，我终于在前天，也即是20190407，记牢这个历史性的时刻，搭建成功了我的第一个个人博客，虽然还很简略，没什么文章，但是不急，把我那200多篇个人日记慢慢搬过来就好了。</p></div>
-
+{% note success %}
+最后，在无数个下定决心的双休日，我终于在前天，也即是20190407，记牢这个历史性的时刻，搭建成功了我的第一个个人博客，虽然还很简略，没什么文章，但是不急，把我那200多篇个人日记慢慢搬过来就好了。
+{% endnote %}
+{% endhideToggle %}
 
 # 准备工作
 
-<div class="note default"><p>首先要安装必要的软件</p></div>
-
+{% note default %}
+首先要安装必要的软件
+如果下载速度过慢可以参考这篇教程:[基于NDM和TamperMonkey脚本实现高速下载](https://akilar.top/post/e332c532.html)
+以下五个软件中，Node.js和git为必要软件，后三者作为之后编写博客的Markdown编辑器，挑选一个使用即可。
+{% endnote %}
+{% tabs 需要安装的软件,-1 %}
+<!-- tab Node.js -->
 ##  [Node.js](https://nodejs.org/en/)
-
-<div class="note primary"><p>
-
+{% note danger no-icon %}
 我下载的是目前最新的`11.13.0 `版本。（建议选择左边的稳定版本，右边的最新版本可能会出现莫名bug）
-Node.js是基于Chrome的V8 JavaScript引擎构建的
-运行在服务端的JavaScript开发平台,知道这些就够了。
-反正作为一个包管理器，安装以后再也不用去打扰它的具体配置。默默运行就是了。</p></div>
-
-
+Node.js是基于Chrome的V8 JavaScript引擎构建的运行在服务端的JavaScript开发平台,知道这些就够了。
+反正作为一个包管理器，安装以后再也不用去打扰它的具体配置。默默运行就是了。
+{% endnote %}
+<!-- endtab -->
+<!-- tab git -->
 ##  [git](https://git-scm.com/)
+{% note warning no-icon %}
+我下载的是2.21.0版本，可以选择安装版，也可以选择绿色版。
+不过绿色版需要加上`Git_HOME`，`%Git_HOME%\bin`之类的，我就偷懒了，安装版一路默认安装即可。
 
-<div class="note primary"><p>
-
-我下载的是2.21.0版本，可以选择安装版，也可以选择绿色版，
-不过绿色版需要加上`Git_HOME`，`%Git_HOME%\bin`之类的，我就偷懒了，
-安装版一路默认安装即可。作为最强大的版本控制软件，
-以后我还要专门写几篇活用教程的。
-
-*20200719修订：这里提示一下，有些用户注册github账号时可能会遇到**“Unable to verify your captcha response”**报错，解决方案有以下三种：*
+有些用户注册github账号时可能会遇到**Unable to verify your captcha response**报错，解决方案有以下三种：
 - 升级浏览器内核，其实直接下载安装最新版chrome或者Microsoft edge浏览器即可。
-- 使用翻墙软件，具体怎么操作可以看另一篇博客[win10重装日记](https://akilarlxh.github.io/post/29cf4234.html)里的3.3-3.5章节。
-- 把github域名添加到hosts文件中。这个操作方式请自行百度。
-</p></div>
+- 使用翻墙软件，具体怎么操作可以看另一篇教程:[Win10重装日记](https://akilarlxh.github.io/post/29cf4234.html)里的3.3-3.5章节。
+- 把github域名添加到hosts文件中，可以自行百度，也可以参考这篇教程:[访问github或部署在gitpage上的网站过慢的解决方案](https://akilar.top/post/61b3e163.html)
+{% endnote %}
+<!-- endtab -->
 
-
-## [Atom](https://www.atom.io/)
-
-<div class="note primary"><p>
-
+<!-- tab Atom -->
+## [Atom](https://github.com/atom/atom/releases)
+{% note info no-icon %}
 Atom自带markdown渲染，`shift+ctrl+M`即可。而且安装简单。
 界面美观，怎么吹都不过分啊。要是没有特殊需求的话这个就足够了。
-事实上如果atom安装了插件之后会很酷炫，以后有空会专门写一篇来安利一下插件。
-</p></div>
+事实上如果atom安装了插件之后会很酷炫
+插件安装教程和推荐可以参考这篇教程:[Atom插件安装和推荐](https://akilar.top/post/498e6e74.html)
+{% endnote %}
+<!-- endtab -->
 
+<!-- tab Typora -->
 ## [Typora](https://www.typora.io/)
-
- <div class="note primary"><p>typora是一个专业的markdown编辑器，比之atom的最大优势就是同步渲染速度，缺点是对于代码高亮的支持并不是很方便，自带源代码模式 ，拿来看看代码也不错</p></div>
-
- ## Hexo-admin
-<div class="note warning"><p>
-
-管理，而且可以拖动代码，像office word一样这是以上两个编辑器都没有的功能。
-要用得先装好hexo，所以这个是后话了。</p></div>
-
+ {% note success no-icon %}
+ typora是一个专业的markdown编辑器，比之atom的最大优势就是同步渲染速度，缺点是对于代码高亮的支持并不是很方便，自带源代码模式 ，拿来看看代码也不错
+ {% endnote %}
+<!-- endtab -->
+<!-- tab Hexo-editor -->
+## [HexoEditor](https://github.com/zhuzhuyule/HexoEditor/releases)
+{% note primary no-icon %}
+HexoEditor是我目前一直最喜爱的一款Markdown编辑器，自带图片复制转Markdown链接，同时支持三种图床。具备各种快捷键，还能拖动文本，自带预览，对一些主题渲染有适配，没适配的也能通过导入相应的tags配置进行渲染。
+有兴趣的可以看一下我专门为它写的配置教程:[Hexo-editor——Hexo专用的编辑器](https://akilar.top/post/1da4f99e.html)
+{% endnote %}
+<!-- endtab -->
+{% endtabs %}
 
 # 安装Hexo
-
-<div class="note primary"><p>
-
-[Hexo官网](https://hexo.io/zh-cn/)</p></div>
-
-<div class="note info"><p>内容仅供参考，具体搭建可以直接看下面的教程。放网页的目的是在这里可以找到全套的使用文档，而且hexo的作者是个台湾人，对中文的支持很不错。</p></div>
+{% note primary %}
+首先给出官方网址:[Hexo官网](https://hexo.io/zh-cn/)
+内容仅供参考，具体搭建可以直接看下面的教程。放官网的目的是在这里可以找到全套的使用文档，而且hexo的作者是个台湾人，对中文的支持很不错。
+{% endnote %}
 
 ## 建立Hexo文件夹
+{% note default no-icon %}
+在你的非系统盘建立一个文件夹`Hexo`，这个习惯在[win10重装日记](https://akilarlxh.github.io/post/2f7e1a55.html)里提到过了，因为说起来个人博客和工程文件是分在一类的。
+{% endnote %}
 
-<div class="note default no-icon"><p>
-
-在你的非系统盘建立一个文件夹`Hexo`，这个习惯在[win10重装日记](https://akilarlxh.github.io/post/2f7e1a55.html)里提到过了，因为说起来个人博客和工程文件是分在一类的。</p></div>
-
-
-
-## 更改镜像源
-
-<div class="note default no-icon"><p>
-
-然后在`Hexo`文件夹内`右键`->`Git Bash Here`
-因为npm是国外的库，所以呢，没有翻墙的话会很慢，
-事实上我就算翻墙照样慢，没办法，没有钱啊，买不起高速服务器。
-亲身体会是不翻墙的话两个小时下不下一个插件，慢到怀疑人生。</p></div>
-
+## 使用npm安装Hexo
+{% note default no-icon %}
+然后在`Hexo`文件夹内`右键`->`Git Bash Here`,输入
 ```
 npm config set registry http://registry.npm.taobao.org
-//这里使用的是阿里的镜像。
-
-```
-<div class="note success no-icon"><p>之后的安装就会迅速很多了。</p></div>
-
-## 安装Hexo
-
-<div class="note default no-icon"><p>因为已经改了镜像源，所以安装很快。不用谢我。</p></div>
-
-```
+#将npm源替换为阿里的镜像。之后的安装就会迅速很多了。
 npm install hexo-cli -g
-```
-
-## 部署Hexo
-
-<div class="note default no-icon"><p>
-
-依然是在`Hexo`文件夹中，在`git bash`中输入</p></div>
-
-```
+# 安装Hexo
 hexo init
+# 初始化Hexo
 ```
+{% endnote %}
 ## 安装插件
-
-<div class="note default no-icon"><p>
-
-依然是在`Hexo`文件夹中，在`git bash`中输入以下代码，虽然一股脑全放出来了，不过记得一条一条来。全部一起复制粘贴可能导致卡死~~，别问我咋知道的，说多了都是泪~~</p></div>
-
-```
+{% note default no-icon %}
+依然是在`Hexo`文件夹中，在`git bash`使用npm指令挑选需要的插件安装。
+```bash
 npm install hexo-generator-index --save
+# 主页插件，最新版Hexo默认安装，可跳过
 npm install hexo-generator-archive --save
+# 归档插件，最新版Hexo默认安装，可跳过
 npm install hexo-generator-category --save
+# 分类插件，最新版Hexo默认安装，可跳过
 npm install hexo-generator-tag --save
+# 标签插件，最新版Hexo默认安装，可跳过
 npm install hexo-server --save
-npm install hexo-deployer-git --save
-//关系到git的deploy支持，必须有。
-npm install hexo-deployer-heroku --save
-npm install hexo-deployer-rsync --save
-npm install hexo-deployer-openshift --save
+# 服务插件，最新版Hexo默认安装，可跳过
 npm install hexo-renderer-marked --save
+# markdown渲染支持插件，最新版Hexo默认安装，可跳过
 npm install hexo-renderer-stylus --save
+# nib css支持插件，如无需求，可跳过
 npm install hexo-generator-feed --save
+# RSS订阅支持插件，如无需求，可跳过
 npm install hexo-generator-sitemap --save
+# sitemap生成插件，帮助搜索引擎抓取，如无需求，可跳过
 npm install hexo-admin --save
-//这就是我之前提到的hexo-admin，装了你不会后悔的。
+# 网页端hexo文档管理插件，如无需求，可跳过
+npm install hexo-deployer-git --save
+# git部署插件，必须安装
 ```
-
+{% endnote %}
 ## 常用命令
-```
+{% note primary no-icon %}
+常用命令在这篇文章中有详细总结:[双系统 Hexo和github的常用命令行归纳](https://akilar.top/post/803c5fab.html)
+```bash
 hexo clean
-//清空缓存
+#清空缓存
 hexo generate
-hexo g //简写
-//重新编译
+hexo g #简写
+#重新编译
 hexo server
-hexo s //简写
-//打开本地访问
+hexo s #简写
+#打开本地访问
 hexo new <layout> "文章title"
-//新建文章
+#新建文章
 hexo deploy
-hexo d //简写
-//部署到github上，这个待会讲。
+hexo d #简写
+#部署到github上
 ```
+{% endnote %}
 ## 测试效果
-
-<div class="note default no-icon"><p>
-
-在`Hexo`右键打开`git bash`，输入</p></div>
-
+{% note default no-icon %}
+在`Hexo`右键打开`git bash`，输入
 ```
 hexo server
 ```
 
-<div class="note default no-icon"><p>
-
-![hexo server](https://s2.ax1x.com/2019/04/09/AomUuq.png)</p></div>
-
-<div class="note success"><p>
-
+![hexo server](https://s2.ax1x.com/2019/04/09/AomUuq.png)
 然后在浏览器中打开`localhost:4000` ,就能看到
 ![hello world](https://s2.ax1x.com/2019/04/11/A7DdZq.png)
-</p></div>
-
-<div class="note info"><p>
-
 如果你安装了hexo-admin插件，
 就可以通过访问`localhost:4000/admin`来管理你的文章了。
 并且在可视化界面中操作文章内容
-恭喜你，博客的本地部署到这里算是告一段落了。</p></div>
+恭喜你，博客的本地部署到这里算是告一段落了。
+{% endnote %}
 
 ## 补充内容
-
-<div class="note default no-icon"><p>这部分关系到后面的主题配置，作为前瞻来写。</p></div>
-
-### 创建“分类”页面
-
+{% note default no-icon %}
+这部分关系到后面的主题配置，作为前瞻来写。
 依然是在`Hexo`文件夹中，在`git bash`中输入
-
+- 添加分类页面
 ```
 hexo new page categories
+# 创建“分类”页面
 ```
-<div class="note default no-icon"><p>
 
 打开`~/Hexo/sources/categories/index.md`
-在它的头部加上`type`属性。</p></div>
-
+在它的头部加上`type`属性。
 ```diff
 ---
   title: 文章分类
@@ -210,7 +181,7 @@ hexo new page categories
 + type: "categories"
 ---
 ```
-<div class="note default no-icon"><p>给文章添加分类，例：</p></div>
+给文章添加分类，例：
 
 ```
   layout: posts
@@ -220,20 +191,19 @@ hexo new page categories
   tags: [node.js, hexo]
 ```
 
-### 创建“标签”页面
+- 添加标签页面
 ```
 hexo new page tags
 ```
-<div class="note default no-icon"><p>打开~/Hexo/sources/tags/index.md
-在它的头部加上type属性。</p></div>
 
+打开`~/Hexo/sources/tags/index.md`
+在它的头部加上`type`属性。
 ```diff
   title: tags
   date: 2018-08-06 22:48:29
 + type: "tags" #新添加的内容
 ```
-<div class="note default no-icon"><p>给文章添加标签</p></div>
-
+给文章添加标签
 ```
 layout: posts
 title: Win10 1809 Hexo+github搭建个人博客
@@ -241,8 +211,7 @@ date: 2019-04-07 00:38:36
 categories: 学习笔记
 tags: [node.js, hexo]//逗号是英文逗号
 ```
-<div class="note default no-icon"><p>第二种写法是用-短划线列出来</p></div>
-
+第二种写法是用-短划线列出来
 ```
 layout: posts
 title: Win10 1809 Hexo+github搭建个人博客
@@ -252,23 +221,23 @@ tags:
 - node.js//注意短线后有空格
 - hexo
 ```
-
+{% endnote %}
 # 部署到GitHub
 
 ## 注册github账号
 
-<div class="note default no-icon"><p>
+{% note default no-icon %}
 
-首先，要有一个github账号:[github](https://github.com/)</p></div>
+首先，要有一个github账号:[github](https://github.com/){% endnote %}
 
 ## 新建username.github.io仓库
 
-<div class="note default no-icon"><p>
+{% note default no-icon %}
 
 然后再单击`头像`->`Your repositories`
-在自己的 GitHub 账号下创建一个新的仓库，命名为 `username.github.io`（username是你的账号名)。</p></div>
+在自己的 GitHub 账号下创建一个新的仓库，命名为 `username.github.io`（username是你的账号名)。{% endnote %}
 
-<div class="note warning"><p>
+{% note warning %}
 
 （20200720修订，专门写给老实孩子看的，这段主要是为了解释为啥要按照**username.github.io**这个要求来新建仓库名，不感兴趣的话跳过这段看后面的**配置Git 与 GitHub**就好，不用追根究底）
 在这里，要知道，GitHub Pages 有两种类型：User/Organization Pages 和 Project Pages，而我所使用的是 User Pages。
@@ -277,28 +246,28 @@ tags:
 1. User Pages 是用来展示用户的，而 Project Pages 是用来展示项目的。
 2. 用于存放 User Pages 的仓库必须使用 username.github.io 的命名规则，而 Project Pages 则没有特殊的要求。
 3. User Pages 将使用仓库的 master 分支，而 Project Pages 将使用 gh-pages 分支。
-4. User Pages 通过 http(s)://username.github.io进行访问，而 Projects Pages 通过 http(s)://username.github.io/projectname进行访问。</p></div>
+4. User Pages 通过 http(s)://username.github.io进行访问，而 Projects Pages 通过 http(s)://username.github.io/projectname进行访问。{% endnote %}
 
-<div class="note info"><p>
+{% note info %}
 
-- 相关资料 [GitHub Pages Basics / User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)</p></div>
+- 相关资料 [GitHub Pages Basics / User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/){% endnote %}
 
 
 ## 配置Git 与 GitHub
 
-<div class="note default no-icon"><p>
+{% note default no-icon %}
 
-打开`git bash`,设置用户名称和邮件地址</p></div>
+打开`git bash`,设置用户名称和邮件地址{% endnote %}
 
 ```
 git config --global user.name "akilarlxh"
 git config --global user.email "akilarlxh@gmail.com"
 ```
 
-<div class="note default no-icon"><p>
+{% note default no-icon %}
 
 为了能够在本地使用 git 管理 github 上的项目，需要进行一些配置，这里介绍 SSH 的方法。
-检查电脑是否已经有 `SSH keys`。~~第一次安装肯定是没有的嘛~~。</p></div>
+检查电脑是否已经有 `SSH keys`。~~第一次安装肯定是没有的嘛~~。{% endnote %}
 
 ```
 ssh-keygen -t rsa -C akilarlxh@gmail.com
@@ -308,25 +277,25 @@ less ~/.ssh/id_rsa.pub
 ```
 有些版本的win10可能缺少less语句支持，访问C:\Users\Username\.ssh\id_rsa.pub复制即可
 (20200731修订：win10缺少C语言环境支持，可以在git bash中运行指令，笔者之前是因为使用的powershell来运行的才导致无法使用less指令）
-<div class="note primary"><p>
+{% note primary %}
 
-![sshkey](https://s2.ax1x.com/2019/04/09/AoM9Re.png)</p></div>
+![sshkey](https://s2.ax1x.com/2019/04/09/AoM9Re.png){% endnote %}
 
-<div class="note default no-icon"><p>
+{% note default no-icon %}
 
 打开[github网页](https://github.com/)
 单击头像->settings,在设置页面找到SSH and GPG keys
 单击New SSH key
-![gitkey](https://s2.ax1x.com/2019/04/09/AoMCxH.png)</p></div>
+![gitkey](https://s2.ax1x.com/2019/04/09/AoMCxH.png){% endnote %}
 
-<div class="note default"><p>保存后，在git bash测试sshkey是否添加成功，输入</p></div>
+{% note default %}保存后，在git bash测试sshkey是否添加成功，输入{% endnote %}
 
 ```
 ssh -T git@github.com
 # Attempts to ssh to GitHub
 ```
 
-<div class="note success"><p>
+{% note success %}
 
 正常输出是：
 The authenticity of host 'github.com (207.97.227.239)' can't be established.
@@ -334,9 +303,9 @@ RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
 Are you sure you want to continue connecting (yes/no)?
 //此处请输入yes
 Hi username! You've successfully authenticated, but GitHub does not
-provide shell access.</p></div>
+provide shell access.{% endnote %}
 
-<div class="note error"><p>
+{% note error %}
 
 可能遇到的bug,输出报错为
 ```
@@ -347,13 +316,13 @@ ssh: connect to host gitee.com port 22: Connection timed out
 ssh -T -p 443 git@ssh.github.com
 # -p 443表示使用443端口，要是443也被占用，也可以尝试其他端口
 ```
-</p></div>
+{% endnote %}
 
 
 ## 配置hexo的本地配置文件
 
-<div class="note default no-icon"><p>打开~/Hexo/_config.yml：
-修改底部的deploy</p></div>
+{% note default no-icon %}打开~/Hexo/_config.yml：
+修改底部的deploy{% endnote %}
 
 ```
 # 站点部署到github要配置Deployment
@@ -364,13 +333,13 @@ deploy:
   branch: master
 ```
 
-<div class="note warning"><p>
+{% note warning %}
 
-这里`deploy`前面不要有`空格`，而所有`:`后面都要有空格。格式很重要。</p></div>
+这里`deploy`前面不要有`空格`，而所有`:`后面都要有空格。格式很重要。{% endnote %}
 
 ## 把本地hexo提交到git仓库
 
-<div class="note default no-icon"><p>全部配置完毕，在hexo文件夹下打开git bash,执行</p></div>
+{% note default no-icon %}全部配置完毕，在hexo文件夹下打开git bash,执行{% endnote %}
 
 ```
 hexo clean
@@ -378,34 +347,34 @@ hexo generate
 hexo deploy
 ```
 
-<div class="note danger no-icon"><p>
+{% note danger no-icon %}
 
-不出意外，就可以在浏览器上输入`https://username.github.io`访问你的博客了。</p></div>
+不出意外，就可以在浏览器上输入`https://username.github.io`访问你的博客了。{% endnote %}
 
 ## 可能出现的bug
 
-<div class="note danger"><p>
+{% note danger %}
 
-报错`ERROR Deployer not found: git`</p></div>
+报错`ERROR Deployer not found: git`{% endnote %}
 
-<div class="note warning"><p>1.git用户名和邮箱配置错误，</p></div>
+{% note warning %}1.git用户名和邮箱配置错误，{% endnote %}
 
 ```
 git config --global user.name%"username"
 git config --global user.email%"username@example.com"
 ```
 
-<div class="note default no-icon"><p>
+{% note default no-icon %}
 
-这里的`%`，在正确的格式中是一个`空格`，如果你之前没有打空格，那么邮箱和用户名根本就没有记录进去，请把整个`4.3.配置git与github`全部重做一遍。</p></div>
+这里的`%`，在正确的格式中是一个`空格`，如果你之前没有打空格，那么邮箱和用户名根本就没有记录进去，请把整个`4.3.配置git与github`全部重做一遍。{% endnote %}
 
-<div class="note warning"><p>2.git deploy的插件没有安装正确，执行</p></div>
+{% note warning %}2.git deploy的插件没有安装正确，执行{% endnote %}
 
 ```
 npm install hexo-deployer-git –save
 ```
 
-<div class="note success"><p>之后再重新提交即可</p></div>
+{% note success %}之后再重新提交即可{% endnote %}
 
 ```
 hexo deploy
@@ -413,11 +382,11 @@ hexo deploy
 
 ## 域名配置
 
-<div class="note success no-icon"><p>（20200723修订，最后还是屈服于境泽定律，实在是top域名价格太美丽，首年只要1元/年，之后续费也是25元/年，折算下来比我买v2ray服务还便宜）</p></div>
+{% note success no-icon %}（20200723修订，最后还是屈服于境泽定律，实在是top域名价格太美丽，首年只要1元/年，之后续费也是25元/年，折算下来比我买v2ray服务还便宜）{% endnote %}
 
 ### 购买域名
 
-<div class="note primary no-icon"><p>因为用用腾讯云的对象存储功能作为图床存储，所以我图个方便，就在腾讯云购买的top域名，其他的像阿里云的万网也是可行的。
+{% note primary no-icon %}因为用用腾讯云的对象存储功能作为图床存储，所以我图个方便，就在腾讯云购买的top域名，其他的像阿里云的万网也是可行的。
 **记得留意域名注册页面的活动优惠，直接购买域名是首年9元起步的，在活动里才能找到首年1元的选项，买的时候也要记得看之后的续费内容，不要花费多余的精力和金钱。**
 
 - [腾讯云域名注册](https://dnspod.cloud.tencent.com/)
@@ -426,11 +395,11 @@ hexo deploy
 购买成功后按照网站提示逐步完成域名实名认证和域名信息，等待下发域名证书。（我用的是腾讯云，审核速度很快，实名信息上传到电子证书下发还不到半小时）
 
 **关于备案：**因为Hexo博客是托管在github上的，所以，除非你购买的域名是**.cn后缀的**或者你给博客使用的某些插件需要**部署在另外的云服务器**这两种情况，否则是不需要备案的。
-</p></div>
+{% endnote %}
 
 ### 绑定域名
 
-<div class="note primary no-icon"><p>
+{% note primary no-icon %}
 
 1. 首先要获取博客的IP,打开cmd或者powershell，输入
 ```
@@ -456,30 +425,30 @@ ping username.github.io
 hexo generate
 hexo depoly
 ```
-</p></div>
+{% endnote %}
 
 
 # 主题配置
 
-<div class="note primary"><p>
+{% note primary %}
 
 （20200821修订，本博客主题现已改用[Butterfly](https://demo.jerryc.me/)，相比NexT，Butterfly的功能高度集成化，仅仅只需在配置文件中修改true或false即可）
 我使用的nexT，理由是它界面简洁但是功能强大。
 首先贴出它的使用文档
-- [NexT使用文档](http://theme-next.iissnan.com/)</p></div>
+- [NexT使用文档](http://theme-next.iissnan.com/){% endnote %}
 
-<div class="note info"><p>
+{% note info %}
 
 理论上你可以在这里找到所有使用教程。
  **参考文章**
 01 [绝配：hexo+next主题及我走过的坑](https://www.jianshu.com/p/21c94eb7bcd1)
 02 [Hexo NexT主题中集成gitalk评论系统](https://asdfv1929.github.io/2018/01/20/gitalk/)
 03 [Hexo NexT使用Gitalk未找到相关的Issues进行评论Error:Validation Failed](https://liujunzhou.top/2018/8/10/gitalk-error/)
-04 [给Hexo Next添加本地搜索功能](https://www.jianshu.com/p/608e4d2a511d)</p></div>
+04 [给Hexo Next添加本地搜索功能](https://www.jianshu.com/p/608e4d2a511d){% endnote %}
 
 ## 安装NexT
 
-<div class="note default no-icon"><p>我是用的git clone的方法，文档中还有其他方法。</p></div>
+{% note default no-icon %}我是用的git clone的方法，文档中还有其他方法。{% endnote %}
 
 ```
 //依然是在Hexo文件夹中，在git bash中输入
@@ -490,9 +459,9 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next
 ```
 
 ## 设置主题为NexT
-<div class="note default no-icon"><p>
+{% note default no-icon %}
 
-打开`~/Hexo/_config.yml`,找到theme行设置主题</p></div>
+打开`~/Hexo/_config.yml`,找到theme行设置主题{% endnote %}
 
 ```
 theme: next
@@ -501,19 +470,19 @@ theme: next
 
 ## 配置NexT主题
 
-<div class="note info"><p>
+{% note info %}
 
 Hexo的配置文件分为站点配置文件和主题配置文件。
  -站点配置文件：` ~/Hexo/_config.yml`
  -主题配置文件：`~/Hexo/themes/next/_config.yml`
 接下来我们就可以来按需配置主题内容了，
-没有特别声明的，都在`~Hexo/themes/next`文件夹下的`_config.yml`文件里修改。</p></div>
+没有特别声明的，都在`~Hexo/themes/next`文件夹下的`_config.yml`文件里修改。{% endnote %}
 
 ### 站点 site
 
-<div class="note primary"><p>
+{% note primary %}
 
-打开站点配置文件`~/Hexo/_config.yml`，先来修改你的站点名称</p></div>
+打开站点配置文件`~/Hexo/_config.yml`，先来修改你的站点名称{% endnote %}
 
 ```
 # Site
@@ -527,14 +496,14 @@ timezone:
 
 ```
 
-<div class="note info"><p>官方文档里写的是有些配置需要将一部分代码添加到配置文件中，但其实不用，我们逐行看配置文件就会发现，有很多功能都已经放在配置文件里了，只是注释掉了，我们只需要取消注释，把需要的相关信息补全即可使用</p></div>
+{% note info %}官方文档里写的是有些配置需要将一部分代码添加到配置文件中，但其实不用，我们逐行看配置文件就会发现，有很多功能都已经放在配置文件里了，只是注释掉了，我们只需要取消注释，把需要的相关信息补全即可使用{% endnote %}
 
-<div class="note primary"><p>
+{% note primary %}
 
-打开`~/Hexo/themes/next/_config.yml`</p></div>
+打开`~/Hexo/themes/next/_config.yml`{% endnote %}
 
 ### 菜单栏 menu
-<div class="note default no-icon"><p>原生菜单栏有主页、关于、分类、标签等数个选项，但是在配置文件中是注释掉的状态，这里我们自行修改注释就行</p></div>
+{% note default no-icon %}原生菜单栏有主页、关于、分类、标签等数个选项，但是在配置文件中是注释掉的状态，这里我们自行修改注释就行{% endnote %}
 
 ```
 menu:
@@ -547,38 +516,38 @@ menu:
   # sitemap: /sitemap.xml || sitemap
   # commonweal: /404/ || heartbeat
 ```
-<div class="note warning"><p>
+{% note warning %}
 
 注意点：
 如果事先没有通过hexo new page "pageName"来创建页面的话，
 即使在配置文件中取消注释，页面也没法显示
 我们也可以添加自己想要添加的页面，不用局限在配置文件里提供的选择里
 ||后面是fontAwesome里的文件对应的名称
-menu_icons记得选enable: true（默认应该是true）</p></div>
+menu_icons记得选enable: true（默认应该是true）{% endnote %}
 
 ### 主题风格 schemes
 
-<div class="note default no-icon"><p>主题提供了4个，把想要的主题分格前的注释取消，保持其他三个在注释掉的状态即可。</p></div>
+{% note default no-icon %}主题提供了4个，把想要的主题分格前的注释取消，保持其他三个在注释掉的状态即可。{% endnote %}
 
-<div class="note danger no-icon"><p>
+{% note danger no-icon %}
 
 - Muse
-![](/Win10-1809-Hexo+github搭建个人博客/20200720051912433.png)</p></div>
+![](/Win10-1809-Hexo+github搭建个人博客/20200720051912433.png){% endnote %}
 
-<div class="note warning no-icon"><p>
+{% note warning no-icon %}
 
 - Mist
-![](/Win10-1809-Hexo+github搭建个人博客/20200720051938307.png)</p></div>
+![](/Win10-1809-Hexo+github搭建个人博客/20200720051938307.png){% endnote %}
 
-<div class="note success no-icon"><p>
+{% note success no-icon %}
 
 - Pisces
-![](/Win10-1809-Hexo+github搭建个人博客/20200720052003513.png)</p></div>
+![](/Win10-1809-Hexo+github搭建个人博客/20200720052003513.png){% endnote %}
 
-<div class="note info no-icon"><p>
+{% note info no-icon %}
 
 - Gemini
-![](/Win10-1809-Hexo+github搭建个人博客/20200720052029789.png)</p></div>
+![](/Win10-1809-Hexo+github搭建个人博客/20200720052029789.png){% endnote %}
 
 
 ### 底部建站时间和图标修改
@@ -623,18 +592,18 @@ footer:
      库版本没有那么新，很可能显示不了或者显示一个地球*/
  ```
 ### 网站动画效果 motion
-<div class="note default no-icon"><p>如果是为了网站响应速度我们可以把网站的动画关掉</p></div>
+{% note default no-icon %}如果是为了网站响应速度我们可以把网站的动画关掉{% endnote %}
 
  ```
  motion:
   enable: false
  ```
- <div class="note default no-icon"><p>
+ {% note default no-icon %}
 
  ~~但是写微博就是为了装B啊！如果不够酷炫谁要写博客啊，会睡着的好伐啦！~~
  但我觉得页面比较素，所以开了动画，
  主题自带四种效果，可以选自己喜欢的。
- 我选择的是canvas-nest</p></div>
+ 我选择的是canvas-nest{% endnote %}
 
  ```
 motion:
@@ -654,18 +623,18 @@ canvas_lines: false
 canvas_sphere: false
  ```
 ### 博客评论功能
- <div class="note default no-icon"><p>
+ {% note default no-icon %}
 
  next支持很多评论插件，但是大半都被万里长城拦在墙外，剩下的不是国内大厂的阴谋就是资本家的收费陷阱。
   我现在在用的`valine`和一个插件有些兼容bug，所以以后再说。
  这里我先推荐使用gitalk，这是一个基于Github Issue 和 Preact 开发的评论插件，和github绑定，免费，登录github即可评论，而且评论支持markdown格式。而且会将每篇文章的评论放置到一个github仓库的issues里，方便管理。这里推荐直接放置到username.github.io仓库的issues。
-详情可见：[gitalk demo](https://gitalk.github.io/)</p></div>
+详情可见：[gitalk demo](https://gitalk.github.io/){% endnote %}
 
 #### Register Application
-<div class="note default no-icon"><p>
+{% note default no-icon %}
 
 在GitHub上注册新应用，[Register a new OAuth application](https://github.com/settings/applications/new)
-![application](https://s2.ax1x.com/2019/04/09/AoBCAU.png)</p></div>
+![application](https://s2.ax1x.com/2019/04/09/AoBCAU.png){% endnote %}
 
 ```
 参数说明：
@@ -674,23 +643,23 @@ Homepage URL： # 你的网站URL，如https://akilarlxh.github.io
 Application description # 描述，随意
 Authorization callback URL：# 网站URL，https://akilarlxh.github.io
 ```
-<div class="note success"><p>
+{% note success %}
 
 点击注册后，页面跳转如下，其中`Client ID`和`Client Secret`在后面的配置中需要用到，到时复制粘贴即可
 ![clientid](https://s2.ax1x.com/2019/04/09/AoBp7T.png)
 以后可以在github->头像->setting->Developer settings->OAuth Apps->your applications name
-中找到Client ID</p></div>
+中找到Client ID{% endnote %}
 
-<div class="note warning"><p>
+{% note warning %}
 
-一条重要信息 (next在20190410以后的更新中，5.3.7.2至5.3.7.8的内容基本都已经被添加进了next的源码中，安装的是这之后的版本的读者请直接跳到5.3.7.7：在主题配置文件~/Hexo/themes/next/_config.yml中修改即可）</p></div>
+一条重要信息 (next在20190410以后的更新中，5.3.7.2至5.3.7.8的内容基本都已经被添加进了next的源码中，安装的是这之后的版本的读者请直接跳到5.3.7.7：在主题配置文件~/Hexo/themes/next/_config.yml中修改即可）{% endnote %}
 
 
 ---
 #### gitalk.swig
-<div class="note primary"><p>
+{% note primary %}
 
-新建`~/Hexo/themes/next/layout/_third-party/comments/gitalk.swig`文件，并添加内容：</p></div>
+新建`~/Hexo/themes/next/layout/_third-party/comments/gitalk.swig`文件，并添加内容：{% endnote %}
 
 ```
 {% if page.comments && theme.gitalk.enable %}
@@ -713,18 +682,18 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
 ```
 #### comments.swig
 
-<div class="note primary"><p>
+{% note primary %}
 
-修改`~/Hexo/themes/next/layout/_partials/comments.swig`，添加内容如下，与前面的elseif同一级别上：</p></div>
+修改`~/Hexo/themes/next/layout/_partials/comments.swig`，添加内容如下，与前面的elseif同一级别上：{% endnote %}
 
 ```
 {% elseif theme.gitalk.enable %}
  <div id="gitalk-container"></div>
 ```
  #### index.swig
- <div class="note primary"><p>
+ {% note primary %}
 
- 修改`~/Hexo/themes/next/layout/_third-party/comments/index.swig`，在最后一行添加内容：</p></div>
+ 修改`~/Hexo/themes/next/layout/_third-party/comments/index.swig`，在最后一行添加内容：{% endnote %}
 
  ```
  {% include 'gitalk.swig' %}
@@ -732,9 +701,9 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
  ```
  #### gitalk.styl
 
- <div class="note primary"><p>
+ {% note primary %}
 
- 新建`~/Hexo/source/css/_common/components/third-party/gitalk.styl`文件，添加内容：</p></div>
+ 新建`~/Hexo/source/css/_common/components/third-party/gitalk.styl`文件，添加内容：{% endnote %}
 
  ```
  .gt-header a, .gt-comments a, .gt-popup a
@@ -744,20 +713,20 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
  ```
  #### third-party.styl
 
- <div class="note primary"><p>
+ {% note primary %}
 
- 修改`~/Hexo/source/css/_common/components/third-party/third-party.styl`，在最后一行上添加内容，引入样式：</p></div>
+ 修改`~/Hexo/source/css/_common/components/third-party/third-party.styl`，在最后一行上添加内容，引入样式：{% endnote %}
 
  ```
  @import "gitalk";
  ```
  #### _config.yml
 
- <div class="note primary"><p>
+ {% note primary %}
 
- 在主题配置文件`~/Hexo/themes/next/_config.yml`中添加如下内容：</p></div>
+ 在主题配置文件`~/Hexo/themes/next/_config.yml`中添加如下内容：{% endnote %}
 
- <div class="note info"><p>如果是next6.0以上版本，这里就是你唯一需要修改的了，其他步骤你会发现已经整合好了</p></div>
+ {% note info %}如果是next6.0以上版本，这里就是你唯一需要修改的了，其他步骤你会发现已经整合好了{% endnote %}
 
  ```
  gitalk:
@@ -772,17 +741,17 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
 #### 可能~~呸，怎么看都是肯定~~会遇到的bug
 
 
-<div class="note success"><p>next6.0以上版本已经修复该bug</p></div>
+{% note success %}next6.0以上版本已经修复该bug{% endnote %}
 
-<div class="note danger"><p>
+{% note danger %}
 
-评论时报错`Error:Validation Failed`</p></div>
+评论时报错`Error:Validation Failed`{% endnote %}
 
-<div class="note default"><p>
+{% note default %}
 
 这个问题就比较复杂了，部分文章的评论区会报Error:Validation Failed,具体原因是由于 Github 限制 labal长度不能超过 50引起的，该问题解决方案来自Gitalk项目仓库 Issues115，通过`MD5加密ID`来缩短labal长度。具体操作如下：
 创建或者从GitHub{% btn https://github.com/blueimp/JavaScript-MD5/blob/master/js/md5.min.js, 下载md5.min.js , download fa-lg fa-fw %}
-放置到`~Hexo/themes/next/source/js/src/`目录。</p></div>
+放置到`~Hexo/themes/next/source/js/src/`目录。{% endnote %}
 
 
 
@@ -899,14 +868,14 @@ Authorization callback URL：# 网站URL，https://akilarlxh.github.io
   </script>
 {% endif %}
 ```
-<div class="note default no-icon"><p> 其他问题看这节抬头的参考来源。</p></div>
+{% note default no-icon %} 其他问题看这节抬头的参考来源。{% endnote %}
 
 ### 全局搜索功能 local search
 
-<div class="note info"><p>
+{% note info %}
 
 Local Search 由 flashlab 贡献,
-在[next使用文档](http://theme-next.iissnan.com/third-party-services.html#local-search)里有完备的安装指导。</p></div>
+在[next使用文档](http://theme-next.iissnan.com/third-party-services.html#local-search)里有完备的安装指导。{% endnote %}
 
 #### 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：
 ```
@@ -936,7 +905,7 @@ local_search:
 
  ## 修改博客及部署操作
 
-<div class="note warning"><p>
+{% note warning %}
 
 20200720修订：郑重声明，如果按照以下内容进行部署双分支，虽然可以在一个仓库内同时管理博客源码和博客生成的网页文件，但是基于博客仓库必须是开放的性质，所以你的博客源码将是完全开源的，任何人都能通过git clone拷贝你的博客源码，唯一的区别就是在没有部署SSH Key的情况下他们不可能提交到你的库内。如果觉得不能接受，可以另外新建一个保密仓库作为源码存放库。
 
@@ -964,40 +933,40 @@ git push -u origin YourBranchName -f
 hexo generate -d
 hexo g -d
 ```
- </p></div>
+ {% endnote %}
 
 
  ### 创建source分支
 
- <div class="note primary"><p>
+ {% note primary %}
 
  首先，我们先在username.github.io仓库里做这些事情。
  在仓库中新建一个分支，命名为source
  ![new branch](https://s2.ax1x.com/2019/04/10/ATZKcn.png)
- </p></div>
+ {% endnote %}
 
  ### 然后把source设置为默认分支。
 
- <div class="note default"><p>
+ {% note default %}
 
  ![default branch](https://s2.ax1x.com/2019/04/10/ATZu1s.png)
- </p></div>
+ {% endnote %}
 
  ### 第一次提交git
 
 
-  <div class="note default"><p>开始准备你的第一次提交git
- 修改博客内容后依次执行以下命令来提交网站相关的文件：</p></div>
+  {% note default %}开始准备你的第一次提交git
+ 修改博客内容后依次执行以下命令来提交网站相关的文件：{% endnote %}
 
  ```
  git init
 
  ```
-  <div class="note warning"><p>
+  {% note warning %}
 
   这句在这里主要是为了在文件夹中git init让git标记此文件夹为版本库
   如果不写这句，不出意外会报错`"fatal: not a git repository (or any of the parent directories): .git"`
-  和`hexo init`一样，只要第一次时运行一次就好</p></div>
+  和`hexo init`一样，只要第一次时运行一次就好{% endnote %}
 
 ```js
 //添加文件到本地仓库
@@ -1020,42 +989,42 @@ hexo generate -d
 hexo g -d
 ```
 
-<div class="note success"><p>
+{% note success %}
 
 这样一来，在 GitHub 上的 username.github.io 仓库就有两个分支，
 一个 `source` 分支用来存放网站的原始文件，
-一个 `master` 分支用来存放生成的静态网页。</p></div>
+一个 `master` 分支用来存放生成的静态网页。{% endnote %}
 
 ### 可能遇到的bug
 
-<div class="note warning"><p>
+{% note warning %}
 
-1. 通过git clone 命令下载的themes或者module文件中可能有`.git文件夹`，会有影响，所以删去，想留着以后方便升级主题也有办法，不过实在太烦，还不如删了痛快，留着教程以后重新配置主题可能还快些。比如我就是在next这个主题文件夹里有个.git文件夹。</p></div>
+1. 通过git clone 命令下载的themes或者module文件中可能有`.git文件夹`，会有影响，所以删去，想留着以后方便升级主题也有办法，不过实在太烦，还不如删了痛快，留着教程以后重新配置主题可能还快些。比如我就是在next这个主题文件夹里有个.git文件夹。{% endnote %}
 
-<div class="note danger"><p>
+{% note danger %}
 
 2. 报错:`Please make sure you have the correct access rights and the repository exists`
 这个貌似是因为我们新建了分支的关系，反正它的意思就是找不到你的服务器了，如果上面操作都没问题的话建议你删除在`user/username/`下的`.ssh文件夹`，
-然后重新回到`4.3.部署git和github`再配置一下你的`ssh key`。</p></div>
+然后重新回到`4.3.部署git和github`再配置一下你的`ssh key`。{% endnote %}
 
 
-<div class="note warning"><p>
+{% note warning %}
 
 3. 分支依然是master
 不出意外的话这里你会和我遇到一样的问题，你的分支依然是master，
-所以要转到source，其实无伤大雅，反正下面提交命令还是提交到source</p></div>
+所以要转到source，其实无伤大雅，反正下面提交命令还是提交到source{% endnote %}
 
 ```
 git checkout -b source
 ```
 
-<div class="note warning"><p>
+{% note warning %}
 
 4. 提示**refusing to merge unrelated histories**
 意思就是，这两个合并的仓库提交历史不一致，所以拒绝合并。
 那么添加上** --allow-unrelated-histories** 选项
 按理说新建的分支其实不会遇到这个问题，除非之前失败现在重试
-</p></div>
+{% endnote %}
 
 
  ```
@@ -1064,9 +1033,9 @@ git checkout -b source
 
 ## 博客管理流程
 
-<div class="note info"><p>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：</p></div>
+{% note info %}在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：{% endnote %}
 
-<div class="note default"><p>i.依次执行指令</p></div>
+{% note default %}i.依次执行指令{% endnote %}
 
  ```
  git add .
@@ -1075,9 +1044,9 @@ git checkout -b source
  ```
 
 
- <div class="note default no-icon"><p>将改动推送到 GitHub（此时当前分支应为 source）；</p></div>
+ {% note default no-icon %}将改动推送到 GitHub（此时当前分支应为 source）；{% endnote %}
 
- <div class="note default"><p>ii.然后才执行</p></div>
+ {% note default %}ii.然后才执行{% endnote %}
 
 
 ```
@@ -1085,20 +1054,20 @@ hexo generate -d
 //或者
 hexo g -d
 ```
-<div class="note success"><p>将本地文件发布网站到 master 分支上。</p></div>
+{% note success %}将本地文件发布网站到 master 分支上。{% endnote %}
 
 
 ## 本地资料丢失或多PC同步
 
-<div class="note info"><p>当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：</p></div>
+{% note info %}当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：{% endnote %}
 
-<div class="note default"><p>
+{% note default %}
 
-i.使用`git clone git@github.com:Akilarlxh/Akilarlxh.github.io.git`拷贝仓库（默认分支为 source）；</p></div>
+i.使用`git clone git@github.com:Akilarlxh/Akilarlxh.github.io.git`拷贝仓库（默认分支为 source）；{% endnote %}
 
-<div class="note default"><p>
+{% note default %}
 
-ii.在本地新拷贝的username.github.io文件夹下通过终端依次执行下列指令：</p></div>
+ii.在本地新拷贝的username.github.io文件夹下通过终端依次执行下列指令：{% endnote %}
 
 ```
 npm install -g hexo-cli
@@ -1106,12 +1075,14 @@ npm install
 npm install hexo-deployer-git
 ```
 
-<div class="note info"><p>这里的【username.github.io】文件夹其实就是我们一直在说的【Hexo】文件夹。
-下一篇写一下ubuntu下的hexo配置，用这个方法部署文件就会很快。</p></div>
+{% note info %}这里的【username.github.io】文件夹其实就是我们一直在说的【Hexo】文件夹。
+下一篇写一下ubuntu下的hexo配置，用这个方法部署文件就会很快。{% endnote %}
 
-## 指令脚本（20200828修订，这段已过时，直接看下面的升级版）
+## 指令脚本
 
-<div class="note success"><p>
+{% tabs 指令脚本 %}
+<!-- tab 普通版 -->
+{% note success %}
 
 每次都要反复敲那么几行指令一定会无聊，那么干脆把指令存在脚本里，每次需要用到的时候双击一下就可以高枕无忧了。
 在~/Hexo文件夹下新建三个txt文件，分别命名为git-pull、git-push、hexo-publish,打开后依次在里面输入相应的命令。
@@ -1132,15 +1103,13 @@ hexo generate
 hexo depoly
 ```
 之后将.txt后缀更改为.sh后缀，就是一个可执行脚本了。
+{% endnote %}
+<!-- endtab -->
 
-</p></div>
-
-## 指令脚本升级版
-
-<div class="note primary"><p>
-（20200821修订）
-因为最近尝试用Termux在手机上进行博客编辑，学了点脚本的皮毛。写了个相对好用的脚本。
-
+<!-- tab 升级版 -->
+{% note primary %}
+新建一个脚本文件：menu.sh,将以下内容复制进去。
+{% hideToggle menu.sh %}
 ```C
 #!/bin/sh
 echo "==========================================="
@@ -1253,7 +1222,12 @@ fi
 fi
 fi
 ```
+{% endhideToggle %}
+
 复制后记得按照注释信息修改个人账户和邮箱。
 界面效果如下：
 ![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Win10-1809-Hexo%2Bgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/20200821100749360.png)
-</p></div>
+{% endnote %}
+
+<!-- endtab -->
+{% endtabs %}
