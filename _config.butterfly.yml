@@ -610,7 +610,7 @@ preloader: true
 
 aside:
   enable: true
-  mobile: true # display on mobile
+  mobile: false # display on mobile
   position: right # left or right
   card_author:
     enable: true
@@ -621,7 +621,7 @@ aside:
       link: https://github.com/Akilarlxh
   card_announcement:
     enable: true
-    content: Butterfly主题施工中。。。
+    content: <div>Butterfly主题施工中。。。</div><div class="social-button"><a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=JopvoYdw" rel="external nofollow noreferrer" target="_blank">🎉欢迎加入QQ群🎉</a></div><div class="social-button"><a class="button--animated" href="http://wpa.qq.com/msgrd?v=3&uin=844893474&site=qq&menu=yes" rel="external nofollow noreferrer" target="_blank">🎊QQ好友扩列🎊</a></div
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
