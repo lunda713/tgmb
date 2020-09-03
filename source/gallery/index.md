@@ -1,14 +1,14 @@
 ---
 title: 时光走廊
 date: 2020-08-20 09:28:32
-type: gallery
+type: "gallery"
 comments: "false"
 top_img: "https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/top-img/topimg1.png"
 ---
 {% note info %}作为一个临时的相册存储点，正在思考怎么把QQ空间的图片外链拿过来。{% endnote %}
 
 <div class="gallery-group-main">
-{% galleryGroup name description link img-url %}
+{% galleryGroup MC 在Rikkaの六花服务器里留下的足迹 '/gallery/MC' https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png %}
 {% galleryGroup name description link img-url %}
 {% galleryGroup name description link img-url %}
 </div>
