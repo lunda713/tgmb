@@ -44,7 +44,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -185,14 +185,24 @@ search:
   field: post
   content: true
 
-# KaTeX
-markdown_it_plus:
-  plugins:
-    - plugin:
-      name: '@neilsustc/markdown-it-katex'
-      enable: true
-      options:
-        strict: false
+# # KaTeX
+# markdown_it_plus:
+#   plugins:
+#     - plugin:
+#       name: '@neilsustc/markdown-it-katex'
+#       enable: true
+#       options:
+#         strict: false
+# hexo-renderer-kramed
+# https://www.npmjs.com/package/hexo-renderer-kramed
+kramed:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
 # hexo-generator-feed
 # https://github.com/hexojs/hexo-generator-feed
 feed:

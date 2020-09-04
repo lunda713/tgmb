@@ -76,12 +76,12 @@ local_search:
 
 # MathJax
 mathjax:
-  enable: false
+  enable: true
   per_page: false
 
 # KaTeX
 katex:
-  enable: true
+  enable: false
   # true 表示每一頁都加載katex.js
   # false 需要時加載，須在使用的Markdown Front-matter 加上 katex: true
   per_page: true
