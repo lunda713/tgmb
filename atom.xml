@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Akilarの糖果屋</title>
+  
+  <subtitle>无限大な梦のあとの 何もない世の中じゃ</subtitle>
+  <link href="http://akilarlxh.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://akilarlxh.github.io/"/>
+  <updated>2020-09-06T15:00:29.615Z</updated>
+  <id>http://akilarlxh.github.io/</id>
+  
+  <author>
+    <name>Akilar</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于NDM和TamperMonkey脚本实现高速下载</title>
+    <link href="http://akilarlxh.github.io/post/e332c532.html"/>
+    <id>http://akilarlxh.github.io/post/e332c532.html</id>
+    <published>2020-08-23T13:23:31.000Z</published>
+    <updated>2020-09-06T15:00:29.615Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h1><p>本意是想着在pandownload失效以后，寻找一种新的办法来增加百度网盘下载速度，但是尝试过后，发现效果比预想的还要好，几乎对任何链接都能提供下载。所以特地整理成教程。希望能够帮到那些被龟爬的下载速度折磨的欲仙欲死的人们。教程非常简单，纯粹是安装几个软件就能解决的事情，不涉及任何代码操作，所以就不放图片教程了。</p><h1 id="NDM"><a href="#NDM" class="headerlink" title="NDM"></a><a href="http://www.neatdownloadmanager.com/index.php/en/">NDM</a></h1><p>全称是NeatDownloadManager，感觉上就是模仿IDM的一个下载软件，比IDM还要简洁，简洁到了简陋的地步，优点是完全免费，缺点是不支持BT和磁力链接，但是理论上可以先用磁力链接离线下载到百度网盘上，再用本帖教程所说的方法去下载。NDM直接访问官网下载安装即可。如果有经济能力其实更推荐买个永久版的IDM。<br>为了能够在浏览器上使用它的下载功能，还需要安装NDM的浏览器插件，软件自带Chrome和Firefox的插件链接，如果是Edge用户可能暂时还没法在应用市场搜到，虽然chrome的插件包能够在一定程度上通用，考虑到不是所有人都会科学上网，这里附上插件的链接。<br>蓝奏云：<a href="https://wws.lanzous.com/irb02fyzt7a">https://wws.lanzous.com/irb02fyzt7a</a><br>安装方式是浏览器右上角-&gt;…-&gt;扩展，把插件包拖动到这里就好了。<br>配合插件能够嗅探页面资源。类似一些视频网站，只要播放就可以直接下载视频，对于那些看视频老是卡又不愿意下个客户端来缓存视频的人来说是个福音。</p><h1 id="Tampermonkey插件"><a href="#Tampermonkey插件" class="headerlink" title="Tampermonkey插件"></a>Tampermonkey插件</h1><p>油猴插件配合GreasyFork的庞大脚本资源可以说是神器了，这里需要用到网盘助手这个脚本，油猴插件的安装方式可以参考之前写的<a href="https://akilar.top/posts/8c8df126.html">玩转MicrosoftEdge</a>的教程。关于网盘助手的使用方式则是可以看脚本的介绍界面。</p><h1 id="正常使用"><a href="#正常使用" class="headerlink" title="正常使用"></a>正常使用</h1><p>NDM需要启动才能配合网盘助手以及NDME插件。所以正确顺序是，先打开NDM，然后用网盘助手的直链生成功能获取直链，然后右键，使用NDM下载。个人亲测效果虽然算不上惊艳，但是好歹然原本低于32KB/s的传输速度变成了500KB/s上下。要是在相对好一点的带宽网络下，应该还能进一步提高。</p><h1 id="拓展内容"><a href="#拓展内容" class="headerlink" title="拓展内容"></a>拓展内容</h1><p>之前已经提到过NDM其实是模仿的IDM，可见IDM在性能上更加的好用。但是电脑版IDM需要收费，白嫖党可以在吾爱破解论坛上搜索一下所谓的激活版，因为激活版往往都是期限性质的，所以我就不放长久链接，单纯指下路。（PS，电脑版IDM依然不支持磁力链接和BT种子，但是可以通过离线下载到百度网盘然后再用类似于以上教程的方式下载）</p><p>手机端还有一个IDM+，是完全免费的，功能与IDM相似，最高支持64线程，而且支持磁力链接和BT种子，同样可以嗅探页面资源。对于一些可以在浏览器上观看却没有提供下载按钮的页面资源非常有效。</p>]]></content>
+    
+    
+    <summary type="html">使用TamperMonkey提供的网盘助手脚本配合NDM下载器，实现一定程度上的下载加速，作为Pandownload失效后的代替品</summary>
+    
+    
+    
+    <category term="Akilarの糖葫芦" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E7%B3%96%E8%91%AB%E8%8A%A6/"/>
+    
+    
+    <category term="win10" scheme="http://akilarlxh.github.io/tags/win10/"/>
+    
+    <category term="百度网盘" scheme="http://akilarlxh.github.io/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/"/>
+    
+    <category term="NDM" scheme="http://akilarlxh.github.io/tags/NDM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>售前工作职责和流程（转）</title>
+    <link href="http://akilarlxh.github.io/post/72b9592.html"/>
+    <id>http://akilarlxh.github.io/post/72b9592.html</id>
+    <published>2020-08-18T05:40:49.000Z</published>
+    <updated>2020-09-06T15:00:29.614Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note info">            <p>售前人员应该是项目开发人员与业务销售人员的桥梁，<strong>在业务销售人员眼中</strong>，售前人员扮演的是技术人员或技术专家的角色，而<strong>在项目实施中的开发人员</strong>眼中，售前人员是专注技术的销售人员，在<strong>用户</strong>眼中，售前人员，是代表公司技术水平的技术专家。</p>          </div><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><div class="note primary">            <p>现在IT公司都经历了原来的产品型到解决方案型，再到IT服务型企业过度的一种转变时期，记得在96年做IT销售的时候，鲜有售前工程师这个职务，大小事情都自己做主，于是出现了一些非常不规范的事情，一个销售可以信口开河地承诺任何事情，包括产品性能、服务、价格等等。呵呵，其实呢，一个销售的目的就是卖产品，那管其他的，于是导致了销售的口碑不好，这个问题IBM销售江月讲的非常有意思，可以去看看他的文章：销售为什么爱“撒谎”。</p>          </div><h1 id="售前的来历"><a href="#售前的来历" class="headerlink" title="售前的来历"></a>售前的来历</h1><div class="note default no-icon">            <p>好像在1998年的时候，产品的选择范围也开始比较广泛，出现了货比三家的局面，用户也慢慢进步了，开始有了自己的需求，特别是产品与用户需求相脱节的时候，销售就开始不太好做了，有一天，我在IBM的网站上发现了一个词语：SOLUTION，方案，一下子就明白了一个道理，买产品已经过时了，只有对用户的需求做出反映才是真正的产品，这个时候，国内各种各样的软件公司就如雨后春笋一样开始起来了，产品也越来越个性化，因为用户开始注意到自己的需求，用户是上帝，过去，厂家是上帝，厂家给你什么产品就是什么产品，你就该怎么用，现在是用户提出需求，你来解决，不知不觉我们来到了解决方案的时代，这个时候，销售的能力已经无法满足用户的需求，随着用户要求越来越多，技术也越来越深，市场就出现了PresalesEngineer这个职务。他是专门来负责对用户需求提供建议或帮助用户给出一套解决用户问题的的一个技术职务。哪个时候看到最多的是销售去打单子，左右都跟着一个手提笔记本一样西装革履的年轻人，这个人就是售前，甚至大的项目，跟好几个售前。</p>          </div><h1 id="售前的过去"><a href="#售前的过去" class="headerlink" title="售前的过去"></a>售前的过去</h1><div class="note default no-icon">            <p>售前这个职务，一般是公司开发项目的技术人员，也有一些技术背景比较深的销售人员，觉得有意思的是，当时的甲方（用户）也不太成熟，他们对自身的项目和需求并不是很了解，因为上的很多项目，大概都是一个很简单的想法提出的，甚至是领导的拍脑袋工程，比如：一个OA项目，很可能就是领导攀比、或者觉得电子邮件不方便，不安全而提出的一个办公自动化构想，而这个时候，我们厂商还是比用户在业务上、技术上要成熟的，而同时懂的这些技术和业务的公司不太多，因为大家都在成长，这个时候用户的很多需求，都是厂家引导的，所以那个时候，系统集成、MIS项目利润是很高的，你想想，用户需求是你引导的，再傻的售前也会把用户引导在自己公司技术最成熟、实施成本最低，对自己最有利的地方，也就是说你做你最擅长的那部分。做市场的都知道，有利润就有竞争，在竞争中，软件公司在跌打滚爬中成熟起来了，在这里顺带说一个好有意思的例子：还是说OA项目，北京甲公司提出了资产管理模块，没过1个月远在深圳的一家公司也提出了这个模块，又比如：3层构架一提出，没过半年，全国很多软件公司都是3层构架了，为什么会这么快呢，这里有几个因素：用户需求、技术突破两个因素，导致这种局面的传播，另外就是售前工程师的技术传播，起这非常积极的意见，售前工程师起到了一个非常重要的角色。而售前工程师也是许多软件公司的一个主要职位了，许多软件公司和集成商，售前与销售的比例达到3：7，甚至更多。哪个时候听的最多的一些销售声音是：“能给他做的都做上，我们要把客户侃晕了！”，“用户不了解这个，价格往上提”，面对用户的高难度需求，售前总是说：“这个需求，我要跟后端人员说一下，看看能不能做，不过最好我还是推荐我刚才的思路来做会更好一点。”</p>          </div><h1 id="售前的今天—-混沌与专业共舞"><a href="#售前的今天—-混沌与专业共舞" class="headerlink" title="售前的今天—-混沌与专业共舞"></a>售前的今天—-混沌与专业共舞</h1><div class="note default no-icon">            <p>在2002年的时候，有些售前工程师是专职的，还有售前工程师是开发人员兼任的，随着，市场竞争的日益激烈，用户经常被对手售前洗脑，售前响应时间也越来越频繁。兼任的售前已经不能满足原来的需求了，于是售前越来越专业了，一旦专业，售前的工作就与销售的工作非常紧密了，售前就成了“上午写方案，下午做演讲，晚上陪吃饭”的3点一线的工作模式了，这样很多销售就与售前开始实现：“捆绑”销售计划，我们经常听到的一些销售声音是：“保证利润的前提下，提供解决方案”，“不管怎么样都给我满足，中了标再说”在2002-2004年，售前工程师竞争也是到了白热化阶段，很多优秀的售前工程师开始露出尖尖角，在众多售前工程师面前有的客户也变得混沌，有的客户变的专业，同时这些客户又去影响影响售前，两股力量纠缠在一起，共同进步，共同升华。售前工程师在客户面前也谦卑了许多，甚至，用户能理直气壮的表述一段不太合理的需求，甚至不可能完成的任务，售前在销售凌厉的眼神下不敢多言半句，每当这个时候，销售会对售前说：“客户怎么说，你都不要当面否定他，这里原因肯定很多，水太深，我们回过头再来研究”，这里的如何研究，我建议还是看看吴柏臣：“关于售前题目(一)的答案。”</p><p>当用户在进步的时候，售前就变的谦虚了许多、低调了许多，这个也是职业法则使然。同时售前也更加在知识面广度上、深度上有一定的超越，比如，随便一个做企业级应用的售前工程师，基本没有不知道市场上各类中间件、工作流的，甚至很专业地对比各类产品的优缺点、价格、以及如何应用。</p><p>在今天市场日益细分、同时用户功能需求也非常细化的情况下，售前工程师也开始了项目方式的运做，以前一个售前能搞定客户的日子已经一去不复返了，在一个投标项目中开始更加注重公司的综合实力，比如：在需求分析方面、各类截然不同的技术实现方面，系统集成能力方面、项目管理与实施服务方面、商务方面都要开始考核，就那技术方面来说：有决策支持数据仓库等BI技术、有GIS、遥感技术、有EAI集成、网络集成、安全设计、还涉及到各方面的业务领域和新兴技术等等。售前工程师也开始走专业化道路，各类售前工程师在标书方案上也开始采用项目管理的方式来作业，每个售前工程师各负其责，最终实现标书的“集成”。</p><p>在售前的发展过程中，从售前工程师到售前咨询师，又是一个大的跨度。现在，在行业内售前咨询师的需求在增大，而售前工程师的需求却并不见得有增长。就个人体会，我简单的说说二者的区别：</p><ol><li><p>售前工程师仅仅是针对用户的需求，提供技术实现的方案。也就是说，在售前工程师工作时，有个前提假设，即用户需求的是已经得到确定或者是已经成型。而售前咨询师的工作大部分是通过对用户当前业务或者管理状况的分析，提出用户信息化的架构和策略，并且，根据此架构和策略，提供一套可以实现此架构和策略的方案。如果我们将投标作为一个临界点，那么售前工程师往往提供给用户的是标书，而售前咨询师提供给用户的一般为两个部分：信息化规划和信息系统建设建议书。</p></li><li><p>售前工程师要求对于技术实现、项目管理的熟悉程度要长于用户业务。因为用户的原始需求具有比较高的确定性，所以，只需要通过原始需求的分析，结合自己的技术知识和项目管理知识，为用户展现公司在某个项目上的技术和项目管理实力。而售前咨询师要求对用户的业务和管理理解程度要更高，即，更多的时候，售前咨询师是在对用户当前的业务状况和管理状况数据进行收集、统计和分析，通过对这些数据的利用，为用户提供一套有理有据有益的信息化策略和投资收益比率报告。</p></li></ol>          </div><h1 id="售前工程师岗位职责和基本要求"><a href="#售前工程师岗位职责和基本要求" class="headerlink" title="售前工程师岗位职责和基本要求"></a>售前工程师岗位职责和基本要求</h1><div class="note warning no-icon">            <ol><li><p>负责组织制定系统集成项目的技术方案编写、标书的准备、讲解及用户答疑等工作；</p></li><li><p>配合客户经理完成与用户的技术交流、技术方案宣讲、应用系统演示等工作；</p></li><li><p>配合业务部其它部门做好用户沟通、资料共享、技术协调等工作；</p></li><li><p>配合市场人员完成应用系统演示、产品宣传资料撰写等工作；</p></li><li><p>配合做好与合作伙伴厂商的技术交流。</p></li></ol>          </div><h1 id="如何做一个售前工程师"><a href="#如何做一个售前工程师" class="headerlink" title="如何做一个售前工程师?"></a>如何做一个售前工程师?</h1><div class="note info">            <p>在IT界，成功的完成一个项目，需要销售人员、售前人员、项目实施人员（开发人员）、售后服务人员等密切协作。本文从售前技术支持人员的角度，对售前技术支持工作的过程进行了描述，根据作者在售前的经验，提出了各环节的应该注意的要点，希望能对售前人员的工作有一定的帮助。</p>          </div><h1 id="售前人员需要具备的素质"><a href="#售前人员需要具备的素质" class="headerlink" title="售前人员需要具备的素质"></a>售前人员需要具备的素质</h1><div class="note success no-icon">            <p>售前人员应该是项目开发人员与业务销售人员的桥梁，在业务销售人员眼中，售前人员扮演的是技术人员或技术专家的角色，而在项目实施中的开发人员眼中，售前人员是专注技术的销售人员，在用户眼中，售前人员，是代表公司技术水平的技术专家。在一个具体的售前技术支持活动中，售前人员协调销售人员、用户、后期开发人员间的关系，将公司的技术实力向用户展现，听取用户的初步需求，与用户讨论项目系统的初步框架，协助销售人员将公司的产品和技术优势推荐给用户，为后期开发人员屏蔽用户不合理的、给项目实施带来技术风险的需求，是项目的技术框架的最初设计者。</p><p>售前人员要求具备一个技术人员和销售人员两方面的素质，具体如下：<br>熟悉自己的产品。</p><ul><li><p>具有比较全面技术专业知识。熟悉当前IT的技术发展方向。</p></li><li><p>对本公司的开发能力、技术优势、劣势有比较清楚的认识。</p></li><li><p>作为行业软件的销售，必须熟悉本行业的业务，对本行业的信息化的现状和发展方向有一定的认识，了解行业中的其它专业软件的基本情况。</p></li><li><p>熟悉本行业的技术和产品动向，了解同类产品及其竞争对手的情况和特点。</p></li><li><p>能力熟练使用文本和图形编辑器进行方案、标书的编写。</p></li><li><p>熟悉项目招投标的一般程序。</p></li><li><p>善于交流，有良好的沟通能力和技巧。</p></li></ul><p>一个人通常不可能具备这么全面的知识和技能，因此，对于大型项目，为了与客户进行全方位的交流，展现公司实力，对系统进行初步的论证和设计，其售前往往是一个团队，这个团队根据项目的需求，可能有行业业务专家，数据库专家、操作系统专家、信息安全专家、网络构架师、软件系统分析员、项目管理专家等角色。</p>          </div><h1 id="项目招投标活动的过程描述"><a href="#项目招投标活动的过程描述" class="headerlink" title="项目招投标活动的过程描述"></a>项目招投标活动的过程描述</h1><div class="note info no-icon">            <p>项目从前期跟踪，签单，作为售前人员，需要与销售人员密切合作。通常获得一个项目的前期过程如下：</p><ol><li><p>销售人员拜访用户，了解用户的项目基本情况，向用户介绍公司和公司的产品，与用户建立起良好的关系。</p></li><li><p>销售人员在用户招标前，引入售前技术支持人员，与用户进行技术上的交流和沟通，了解用户在项目上的需求，偏好的技术构架，引导用户到本公司的技术思路上，这个过程可能是需要多次反复。至少要做到用户对公司有一定的兴趣，愿意邀请你参加投标。</p></li><li><p>用户发招标书，售前人员根据招标书的要求，结合前期与用户交流的情况，编写投标书。</p></li><li><p>参加招投标会，进行技术、商务上的讲解和答疑。</p></li><li><p>参加商务和技术的谈判，起草项目商务合同和技术协议书。</p></li><li><p>签订合同，项目实施以及维护。</p></li></ol>          </div><h2 id="招投标前与用户的接触"><a href="#招投标前与用户的接触" class="headerlink" title="招投标前与用户的接触"></a>招投标前与用户的接触</h2><div class="note info no-icon">            <p>招投标前与用户接触，了解用户的真实需求和想法，通过交流，了解用户对系统框架、平台、新技术的偏好，使以后在投标中能“投其所好”“命中要害”。介绍公司的技术和产品，使用户在招标前对本公司技术和产品能有比较清楚的认识和了解，将用户的需求引导到本公司的技术和产品的思路上，使用户的在技术上对本公司有一定的偏好。</p><p>交流和需要了解的内容通常包括：</p><ol><li><p>用户的组织机构，信息化的现状，现有的硬件设备、网络情况、正在使用的软件系统情况；</p></li><li><p>新系统的规划、目标、规模，要求等，包括用户对系统的安全性、可靠性、易用性、扩展性的要求；</p></li><li><p>业务内容、业务流程系统的现状，软件功能需求；</p></li><li><p>平台和数据库的选型；</p></li><li><p>信息安全、存储的需求；</p></li><li><p>对软件开发机制的认识；</p></li><li><p>用户感兴趣的热点技术；</p></li></ol><p>交流应该广泛，不要只限于项目的具体负责人，如果有条件，可以拜访更上级的用户，以及各部门的主要负责人或技术权威，尽量了解用户的对项目的认识和想法，交流和拜访中要善于识别用户的身份，抓住对项目有决定权、影响大的用户的想法，同时，可以初步分析哪些用户可能是以后的招标评委，留意他们对项目感兴趣的地方。以便在投标和讲标中有所针对性。</p><p>引导用户向本公司的擅长的技术路线和产品特点上。可以将以往做过项目的情况、功能特点讲给用户，最好是借助演示，这是用户会告诉你哪些是他感兴趣的，哪些是没有意思的，其它对手的产品是什么样的等等。这样便于与用户进行深入的交流，找到与用户相互的共鸣点。</p><p>跟踪和了解对手情况，了解同类产品的现状，这是一个长期积累的过程，分析对手的产品和解决方案可能的特点，找到或提出比对手有新意的、能吸引用户的系统亮点。当然，这些亮点的提出必须先考虑自己的技术实力和项目的投资规模。</p>          </div><h2 id="投标及投标文件的准备"><a href="#投标及投标文件的准备" class="headerlink" title="投标及投标文件的准备"></a>投标及投标文件的准备</h2><h3 id="成立投标小组"><a href="#成立投标小组" class="headerlink" title="成立投标小组"></a>成立投标小组</h3><div class="note default no-icon">            <p>成立项目投标小组，投标小组的核心应该是项目的法人代表授权人。根据项目的规模、技术难度和招标时间的要求，制订投标计划，将计划分解到每个人员上，确定每个人工作内容和计划，确定计划的执行的监督人员。</p><p>投标的时间一般都是确定的日期，而且比较短，这也是考验一个公司和团队的响应速度，必须在这个有限的时间内完成投标书的制作，否则，将由于准备不充分而丢标。这需要平时的技术积累，对行业知识的积累，投标书的积累，如有类似的的标书或模版，以及良好的团队合作精神和氛围。</p><p>作为一个行业应用项目，技术部分可能涉及到的人员有：网络规划师、硬件产品经理、软件构架师、行业专家、数据规划专家或数据库专家信息安全专家，以及其它专业领域的专家等。这个团队建立，需要整合公司内部和外部的相关资源，来共同完成。例如，可以临时请专业公司相关的售前支持（HP、IBM等）、相关行业的专家、相关专业的大学教授等来扮演相关的角色。甚至可以考虑与相关的其它公司联合投标。</p><p>在投标小组中，建立保密制度，特别是对于特大型项目，关于报价、核心技术等内容，最好在小范围讨论和确定。必要的情况下可采用封闭开发的方式。</p>          </div><h3 id="编写投标书"><a href="#编写投标书" class="headerlink" title="编写投标书"></a>编写投标书</h3><div class="note default no-icon">            <p>用户的招标书通常包括：招标邀请函、商务要求部分、技术要求部分、附件和附图等文档，这些文档是编写投标书的基础。投标小组成员在编写标书前，应该仔细、反复阅读招标书，特别是对投标商的资质要求等内容，投标小组对招标书进行讨论，找出招标书中描述不清楚的地方，根据情况向招标方提出要求解释，确定项目资质情况、投标以及实施的风险、对手情况、投标的优势、劣势等；制订投标策略；确定投标书的内容、投标方式；初步编写投标书的大纲。在投标书编写过程中，应该注意一下几点：</p><ol><li><p>商务投标书应该按照招标书的要求进行严格的应答，应答的顺序和格式最好严格遵循招标书的要求。</p></li><li><p>对于招标书没有要求的内容，特别是商务标书，最好不要画蛇添足，如果希望增加对项目投标有帮助的资质，最好经过慎重的考虑，确保没有漏洞。商务部分主要的目的是展示投标公司的实力，确保参加投标的资格。首要是确保投标有效。注意有些东西可以讲出来，但不是所有可以讲出来的东西都适合写出来。</p></li><li><p>差异表的处理：对于投标文件与招标文件中有差异的部分，通常招标方要求标注在差异表中，在编写投标方案时，应该尽可能的将差异部分找出来，描述清楚，但是，在最后整理、提交差异表时，就需要特别慎重，并不是每个差异都适合在这个正式的场所以正式的方式提出，有些东西需要保持一种模糊的状态，以提高中标的可能性，同时，又可以为商务和技术谈判留下伏笔，便于谈判中的进退。</p></li><li><p>对于报价单的处理：报价单按照正规要求填写、盖章、密封后，最好能有一两套空白的备份，报价单的格式与正式报价单一样，但是价格不填写。因为在正式报价单封装好到递交报价单前的这段时间，销售人员很可能探听到对手的价格或用户对项目整体价格的意见，这是候需要根据项目、市场、对手、用户的情况进行价格调整，这时就可以使用备份的报价单。特别是公司到异地投标，要想重做报价单，时间基本上是不允许的。</p></li><li><p>密封条的处理：在规定的投标文档密封条基础上，一定要多准备几张备用的密封条，当然是盖好章的，特别是公司到异地投标，市场信息千变万化，你不可能保证在投标前不修改你的价格和投标书。</p></li><li><p>商务投标书中的资质和要求公司盖章的部分一定要对照招标书的要求，严格检查，这部分的错误和遗漏将有可能造成废标，因此，最好有两个以上的人员专门检查核对。</p></li><li><p>对于一个集团公司下的多个法人公司之间，可能存在资质共享的情况，这时，应该注意检查哪些资质不是投标法人单位的资质，如果本投标法人单位的资质，应该请资质拥有的法人单位签署授权声明，否则，招标时可能造成“擅用第三方公司的资质欺骗招标单位”的后果而成为废标。</p></li></ol>          </div><h2 id="参加投标"><a href="#参加投标" class="headerlink" title="参加投标"></a>参加投标</h2><div class="note danger no-icon">            <p>对于比较大的项目，参加投标的团队的人员合理分配是很重要的，根据项目具体情况，可将投标人员按照编写标书分工的情况分为：商务人员、技术人员。继续细分为商务联系人员、商务投标人员、技术部分可以分为负责网络部分的、体系结构的、应用系统功能的人员等。</p><p>参加投标人员应该统一服饰，穿统一的职业装，佩戴公司的标志，自信、自然，给招标评委一个良好的整体形象。严格遵循招标纪律。</p><p>通常情况下，不要过多的对熟悉的评委交流。尽管前期与用户有充分的接触，可能与一些评委熟悉并有良好的关系，但是，在招标的正式场所，通常是礼貌的打一下招呼，寒喧一下即可，不易与用户有太多的交流和亲密交谈，这些举动可能会造成其它评委的误会，也可能会给对手“授之以柄”。除非你是专门的、有特殊目的的行为，例如，在有些情况下，与招标中的最好领导或核心人员表现出亲密的关系，可以给其它评委造成“某某人可能已经偏向某公司了，我也应该顺势而为”的误导，同时，给对手造成更大的心理压力和负担。但这种方式有很多风险，要非常。慎重。</p><p>在投标前，讲标的每一部分应该准备好相应的幻灯片，幻灯片的作用有两个，一是通过文字、图片、动画等多种方式，比较直观的向评委传达信息，便于评委对讲解内容的理解，二是通过幻灯片，帮助讲标人自己规范思路，不至于跑题。因此，幻灯片制作，要以这两个作用为目标。每张幻灯片讲些什么内容，讲多长时间，都要做到心中有数。</p><p>最好有实际的演示，结合演示讲标。作为行业应用软件的用户，比较重视投标厂商以往同类系统的业绩，如果能向用户展示同类的应用系统，结合实例演示来讲解系统的体系结构、功能特点，通常会取得较好的效果。但是，在展示以往系统的时候，要注意扬长避短，屏蔽掉一些系统的弱点和缺陷，同时要注意演示的时间控制。</p><p>对投标中使用的设备要主要保护，投标中使用的笔记本电脑，在安装好演示系统和幻灯片后，要对设备慎重使用，防止设备的意外损坏导致投标中的设备异常，例如，注意防病毒、防止意外碰坏，不要在投标出差期间用笔记本电脑到网吧上网，在宾馆中防止电脑进水、摔坏，不要轻易整理计算机系统的文件，可能因为不小心删除某文件造成系统不能正常启动。最好在投标出差前将系统的安装盘，应用系统的安装盘等备份好，有条件的可以采用两套笔记本电脑安装。</p><p>适当的与参加投标的对手交谈，也许下次你们还会在另外一次投标中对阵，也许下次他与你并肩战斗，通过交谈，你也可以意外的获得一些有用的信息。</p>          </div><h3 id="讲标"><a href="#讲标" class="headerlink" title="讲标"></a>讲标</h3><div class="note danger no-icon">            <p>讲标应该有既要有重点，又要覆盖到各项内容，突出公司特点和优势、突出技术优势和特点。内容要尽量照顾到每个评委。</p><p>讲标通常都有时间限制的，在这个时间段内，如何将公司介绍、商务介绍、技术介绍、项目实施、技术支持与服务等内容的时间合理分配，需要在讲标前仔细斟酌。时间和内容的分配主要根据以下情况来调整：</p>          </div><h4 id="本公司和技术上的优势和特点。"><a href="#本公司和技术上的优势和特点。" class="headerlink" title="本公司和技术上的优势和特点。"></a>本公司和技术上的优势和特点。</h4><div class="note info no-icon">            <p>讲标中，特别是讲标的顺序排在后面的时候，对于一些共性的东西，评委已经比较清楚了，也没有兴趣听你重复，他关心的是你与其它对手相比的特点</p>          </div><h4 id="招标评委的组成和特点。"><a href="#招标评委的组成和特点。" class="headerlink" title="招标评委的组成和特点。"></a>招标评委的组成和特点。</h4><div class="note primary no-icon">            <p>要力所能及的分析招标评委的组成情况，高层领导、技术专家、部门业务专家等角色的人员组成和数量。通常高层领导对IT技术不熟悉，他评判的主要依据更多的是公司规模、资质、实力、售后服务、价格等非技术性指标，技术专家评判的主要依据是系统体系、采用的新技术、安全性、扩展性、软件开发管理机制等技术指标，而部门业务专家更关心软件的功能、易用性、与现有系统的接口等问题。</p><p>讲标的过程中要注意观察评委的表情、态度，及时调整内容的深度。</p>          </div><h4 id="对手讲标后的情况和弱点。"><a href="#对手讲标后的情况和弱点。" class="headerlink" title="对手讲标后的情况和弱点。"></a>对手讲标后的情况和弱点。</h4><div class="note info no-icon">            <p>针对对手讲标后评委普遍反映的问题进行重点阐述，例如，评委认为系统的安全性和项目开发的规范性很重要，但其它讲过标的对手都没重视，这时，你需要及时调整内容，将安全性和项目开发机制做重点来阐述。</p><p>另外，不要轻易攻击对手，可能有些评委对你的对手有好感，你对对手的直接攻击，会引起他的反感而刻意打压你。攻击对手的方法是突出自己的优势。</p><p>讲标中可能由几个人分工，讲不同的内容，但要注意整体的逻辑上要严密。可以先由一个人将讲标的全部内容安排做一个介绍，然后在每个人讲完自己部分后，简单介绍下部分的内容，引入下个讲解人员。使整个讲标连贯统一。</p><p>讲标前要调整好自己的状态和心态，讲标过程中要放松，不要报着“上考场考”、“被人评判审核”这样的心态，这样会使你陷入一种紧张、诚惶诚恐的状态。当你上到讲标台上，看见评标的人很多，你会更加紧张，越容易出错。你应该对自己方案和产品充满信心，你就是专家，报着“咳！让我给大家介绍一下我们的好东西，绝对能解决你们现在的问题！”的心态，你应该有一种急于向外人展现你的得意作品的冲动，人越多，你越得意、越兴奋，这时，你最好的状态来了！</p>          </div><h3 id="答疑"><a href="#答疑" class="headerlink" title="答疑"></a>答疑</h3><div class="note warning no-icon">            <p>回答讲标和提问时，掌握的原则是：讲不清楚没关系（模临两可），但决不能错！</p><p>不能与评委发生争论。</p><p>不能对评委的问题表示轻视。</p><p>回答不了的问题的答疑的人员要相互配合。当你发现你的同伴被问住的时候，如果你能协助他回答最好，你也不能回答的，你应该迅速想到一个方法，从另外一个角度的回答这个问题，从而逐渐将话题引开，避免尴尬。</p>          </div><h2 id="商务和技术谈判"><a href="#商务和技术谈判" class="headerlink" title="商务和技术谈判"></a>商务和技术谈判</h2><div class="note info no-icon">            <p>在预中标后，将会进行商务和技术谈判，售前技术支持人员主要参加技术协议的谈判和起草。</p><p>技术协议的谈判是降低项目风险的关键过程，谈判的成果－技术协议书通常会作为合同的附件，直接影响到项目实施的难度和风险。因此，一定要耐心、细致，不能为了尽快签合同，就草草了事。</p><p>技术协议目的是界定好功能边界和深度。特别是在行业应用软件中，投标文件和讲标中，通常会有忽略一个“度”。如应用系统的深度、功能的具体边界、新技术采用的程度等问题，往往是比较模糊的，很大的可能性是双方在这些方面的认识存在着较大的差异，这些差异的会给后续的项目实施带来风险。技术协议的谈判就是要对这些“度”进行控制，对敏感问题和技术难点要进行沟通，达成共识，注意不能在技术协议中出现“全面解决某某问题”、“完全解决”等模糊的字眼，这种模糊的界定会给项目开发带来很大的风险，都必须讨论清楚，将完成的深度和采用的技术手段写入技术协议中，使项目风险在项目实施前就得到充分的展示和控制。</p>          </div><h1 id="投标文件的编写"><a href="#投标文件的编写" class="headerlink" title="投标文件的编写"></a>投标文件的编写</h1><div class="note default no-icon">            <p>投标书的编写最核心的要点是要逐条响应招标书，不能有遗漏。</p><p>作为一个大的公司或集团，需要也应该制定统一的《投标标书编写规范与指南》，通过积累，建立一个投标书模版库，以保证投标书的质量、缩短投标书的编写周期。</p><p>关于投标的文件的具体编写，有许多文章都有较好的描述。在此不再赘述。</p><p>首先要纠正一个错误的观点：售前的技术要求不高。售前在用户看来是代表着一个公司的技术水平的市场技术人员，第一个定语是“市场”说明售前需要了解市场需求和发展趋势、行业格局和竞争优劣势等市场信息，第二个定语是“技术”说明根本上还是一个技术人员。与售后不同的工作重点是：售前是推销产品技术的，售后是实施产品技术的，但这绝对不是说售前就不需要关心产品技术的实施。你不懂产品技术怎么去卖产品技术！好的售前都是要有扎实的理论基础以及丰富的实施经验，加上敏锐的市场嗅觉才能“吹嘘”出好的产品技术解决方案和卖点。销售关注客户关系和市场需求，售后关注技术实施，售前是对两者在一定程度上的综合。我对一个好的售前是这样定义的：销售型的技术人员。我见过的最好的售前可以把对手产品技术的明显优势说成很普通，普通说成很差，而且都言之成理，将技术销售的能力发挥到了极致。有好的人脉关系可以做好售前，但是没有好的技术能力一定做不了好的售前。售前是很有技术含量的，只是目前太多的售前并没有达到这样的要求，但不能说明售前只是懂一点技术的销售人员。</p>          </div>]]></content>
+    
+    
+    <summary type="html">关于售前工程师的工作职责和流程，精细到堪称论文了。全文转载自网络，因为转载的人太多，我也不清楚原作者是谁了。</summary>
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用Hexo-neat插件对网页进行加速</title>
+    <link href="http://akilarlxh.github.io/post/d1f227cc.html"/>
+    <id>http://akilarlxh.github.io/post/d1f227cc.html</id>
+    <published>2020-08-12T07:37:59.000Z</published>
+    <updated>2020-09-06T15:00:29.614Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h1><p>这里不写前言，直接交代结论，用hexo-neat插件压缩静态页面，来提高响应速度，具体内容可以参考相应教程。</p><ul><li><a href="https://blog.csdn.net/lewky_liu/article/details/82432003">Hexo瞎折腾系列(5) - 使用hexo-neat插件压缩页面静态资源</a></li><li><a href="https://ilxx.gitee.io/hexo_liu_yasuo.html">hexo next主题深度优化(六)，使用hexo-neat插件压缩页面，大幅度提升页面性能和响应速度</a></li></ul><p>以下内容基本为对第二条教程贴的搬运，可以直接查看第二条教程了解更多细节内容。</p><h1 id="安装Hexo-neat插件"><a href="#安装Hexo-neat插件" class="headerlink" title="安装Hexo-neat插件"></a>安装Hexo-neat插件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat --save</span><br></pre></td></tr></table></figure><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>在~/Hexo/_config.yml文件添加<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># hexo-neat</span><br><span class="line"># 博文压缩</span><br><span class="line">neat_enable: true</span><br><span class="line"># 压缩html</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line"># 压缩css  </span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.css&#39;</span><br><span class="line"># 压缩js</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.js&#39;</span><br><span class="line">    - &#39;**&#x2F;jquery.fancybox.pack.js&#39;</span><br><span class="line">    - &#39;**&#x2F;index.js&#39;</span><br></pre></td></tr></table></figure></p><h1 id="可能的报错"><a href="#可能的报错" class="headerlink" title="可能的报错"></a>可能的报错</h1><h2 id="桃心的点击效果消失"><a href="#桃心的点击效果消失" class="headerlink" title="桃心的点击效果消失"></a>桃心的点击效果消失</h2><p>如果参考过其他的美化教程，可能你的桃心点击效果消失了<br>需要在配置项的相应位置添加<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 压缩js</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.js&#39;</span><br><span class="line">    - &#39;**&#x2F;jquery.fancybox.pack.js&#39;</span><br><span class="line">    - &#39;**&#x2F;index.js&#39;  </span><br><span class="line">    - &#39;**&#x2F;love.js&#39;</span><br></pre></td></tr></table></figure></p><h2 id="gitalk-js文件报错"><a href="#gitalk-js文件报错" class="headerlink" title="gitalk.js文件报错"></a>gitalk.js文件报错</h2><p>接着在压缩js的配置项<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- &#39;**&#x2F;comments.gitalk.js&#39;</span><br></pre></td></tr></table></figure><br>总之就是那里报错添哪里。</p><h2 id="压缩html时不要跳过-md文件"><a href="#压缩html时不要跳过-md文件" class="headerlink" title="压缩html时不要跳过.md文件"></a>压缩html时不要跳过.md文件</h2><p>.md文件就是我们写文章时的markdown文件，如果跳过压缩.md文件，而你又刚好在文章中使用到了NexT自带的tab标签，那么当hexo在生成静态页面时就会发生解析错误。这会导致使用到了tab标签的页面生成失败而无法访问。（教程原话）</p><h2 id="压缩html时不要跳过-swig文件"><a href="#压缩html时不要跳过-swig文件" class="headerlink" title="压缩html时不要跳过.swig文件"></a>压缩html时不要跳过.swig文件</h2><p>.swig文件是模板引擎文件，简单的说hexo可以通过这些文件来生成对应的页面。如果跳过这些文件，那么你将会发现，你的所有页面完全没有起到压缩的效果，页面源代码里依然存在着一大堆空白。（教程原话）</p><h1 id="那么古尔丹，代价是什么？"><a href="#那么古尔丹，代价是什么？" class="headerlink" title="那么古尔丹，代价是什么？"></a>那么古尔丹，代价是什么？</h1><p>压缩的过程会极大的延长页面编译和部署的时间，说的通俗点，在你使用<code>hexo generate</code>指令的时候，为了压缩静态页面，编译时间被大大延长了。这也是某种意义上的等价交换吧，以我为例，我现在都不怎么敢用<code>Hexo clean</code>指令，因为文章已经接近400篇，每次重新部署需要10分钟乃至更久。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;写在最前&quot;&gt;&lt;a href=&quot;#写在最前&quot; class=&quot;headerlink&quot; title=&quot;写在最前&quot;&gt;&lt;/a&gt;写在最前&lt;/h1&gt;&lt;p&gt;这里不写前言，直接交代结论，用hexo-neat插件压缩静态页面，来提高响应速度，具体内容可以参考相应教程。&lt;/p&gt;
+&lt;ul</summary>
+      
+    
+    
+    
+    <category term="Akilarの糖葫芦" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E7%B3%96%E8%91%AB%E8%8A%A6/"/>
+    
+    
+    <category term="hexo" scheme="http://akilarlxh.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>给博客添加一个会说话能换装的live2d看板娘</title>
+    <link href="http://akilarlxh.github.io/post/5b8f515f.html"/>
+    <id>http://akilarlxh.github.io/post/5b8f515f.html</id>
+    <published>2020-08-12T06:10:43.000Z</published>
+    <updated>2020-09-06T15:00:29.620Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h1><p>最早的时候看别人的博客很多都有一个可爱的看板娘，然后就找了教程给自己也整了一个。因为找到的教程都是稂莠不齐的，原作者自己说的也略显含糊（其实是我自己看不懂）。总之秉承着一如既往的小白风格。把网上的教程做个整合。</p><h1 id="Hexo自带看板娘（不会说话，不能换装）"><a href="#Hexo自带看板娘（不会说话，不能换装）" class="headerlink" title="Hexo自带看板娘（不会说话，不能换装）"></a>Hexo自带看板娘（不会说话，不能换装）</h1><p>首先是博客自带的看板娘，这孩子不会说话也不能换装，只会跟着你的鼠标晃动脑袋，不过有几款超可爱。<br>先放一下出处</p><ul><li><a href="https://github.com/xiazeyu/live2d-widget-models">作者的github</a></li><li><a href="https://huaji8.top/post/live2d-plugin-2.0/">模型预览</a></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在Hexo根目录下打开终端，输入以下指令安装必要插件。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure></p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>打开hexo站点配置文件（~Hexo/_config.yml)<br>搜索live2d,按照如下注释内容指示进行操作。<br>如果没有搜到live2d的配置项，就直接把以下内容复制到最底部。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https:&#x2F;&#x2F;github.com&#x2F;EYHN&#x2F;hexo-helper-live2d</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  # enable: false</span><br><span class="line">  scriptFrom: local # 默认</span><br><span class="line">  pluginRootPath: live2dw&#x2F; # 插件在站点上的根目录(相对路径)</span><br><span class="line">  pluginJsPath: lib&#x2F; # 脚本文件相对与插件根目录路径</span><br><span class="line">  pluginModelPath: assets&#x2F; # 模型文件相对与插件根目录路径</span><br><span class="line">  # scriptFrom: jsdelivr # jsdelivr CDN</span><br><span class="line">  # scriptFrom: unpkg # unpkg CDN</span><br><span class="line">  # scriptFrom: https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;live2d-widget@3.x&#x2F;lib&#x2F;L2Dwidget.min.js # 你的自定义 url</span><br><span class="line">  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span><br><span class="line">  debug: false # 调试, 是否在控制台输出日志</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko # npm-module package name</span><br><span class="line">    # use: wanko # 博客根目录&#x2F;live2d_models&#x2F; 下的目录名</span><br><span class="line">    # use: .&#x2F;wives&#x2F;wanko # 相对于博客根目录的路径</span><br><span class="line">    # use: https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;live2d-widget-model-wanko@1.0.5&#x2F;assets&#x2F;wanko.model.json # 你的自定义 url</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true # 手机中是否展示</span><br></pre></td></tr></table></figure><br>完成后保存修改，在Hexo根目录下运行指令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><br>之所以必须要使用hexo clean是因为我们需要清空缓存重新生成静态页面，不然看板娘没被加入生成的静态页面里，是不会出现的。</p><h2 id="更换看板娘"><a href="#更换看板娘" class="headerlink" title="更换看板娘"></a>更换看板娘</h2><p>同样是在Hexo根目录下，打开终端，选择想要的看板娘进行安装，例如我这里用到的是 <strong>live2d-widget-model-koharu</strong>，一个Q版小正太。<br>（其他的模型也可以在<a href="https://huaji8.top/post/live2d-plugin-2.0/">模型预览</a>里查看以供选择。<br>输入指令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save live2d-widget-model-koharu</span><br></pre></td></tr></table></figure><br>然后在配置文件里找到model项修改为期望的模型。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">model:</span><br><span class="line">  use: live2d-widget-model-koharu</span><br><span class="line">  # 默认为live2d-widget-model-wanko</span><br></pre></td></tr></table></figure><br>之后按部就班的运行<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><br>就能在localhost:4000上查看效果了。</p><h2 id="卸载看板娘"><a href="#卸载看板娘" class="headerlink" title="卸载看板娘"></a>卸载看板娘</h2><p>卸载插件和卸载模型的指令都是通过npm进行操作的。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-helper-live2d</span><br><span class="line">npm uninstall live2d-widget-model-modelname</span><br></pre></td></tr></table></figure><br>卸载后为了保证配置项不出错，记得把<strong>~Hexo/_config.yml</strong>里的配置项给注释或者删除掉。</p><h1 id="大神魔改看板娘（会说话，能换装）"><a href="#大神魔改看板娘（会说话，能换装）" class="headerlink" title="大神魔改看板娘（会说话，能换装）"></a>大神魔改看板娘（会说话，能换装）</h1><p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/Hexo%E5%8D%9A%E5%AE%A2NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E4%B9%8B%E6%96%B0%E5%A2%9E%E7%9C%8B%E6%9D%BF%E5%A8%98-1.gif" alt=""><br>照例先放</p><ul><li><a href="https://github.com/stevenjoezhang/live2d-widget">作者的github</a></li><li><a href="https://mi.js.org/live2d-widget/demo/demo.html">预览效果</a></li><li><a href="https://blog.csdn.net/qq_39610915/article/details/90679768?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param">参考教程</a></li></ul><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>在主题（此处仅以NexT主题为例）的source目录下（~Hexo/themes/next/source/)打开终端,输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;stevenjoezhang&#x2F;live2d-widget.git live2d-widget</span><br></pre></td></tr></table></figure><br>这行指令的意思就是clone这个项目到source路径下并重命名为live2d-widget。<del>emm，貌似本来就叫live2d-widget。反正算是一个踩坑点。</del>如果是用下载项目压缩包，解压后放到这里的，也记得把文件夹<strong>更名为live2d-widget</strong>。</p><h2 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>找到路径~Hexo\themes\next\source\live2d-widget\autoload.js，打开<strong>autoload.js</strong>，<br>找到<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const live2d_path &#x3D; &quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;stevenjoezhang&#x2F;live2d-widget&#x2F;&quot;;</span><br></pre></td></tr></table></figure><br>修改为<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const live2d_path &#x3D; &quot;&#x2F;live2d-widget&#x2F;&quot;;</span><br></pre></td></tr></table></figure><br><del>引用一下教程原话：autoload.js中的注释的绝对地址指的是，将资源打包放到hexo/theme/next/source中后，**以hexo/theme/next/source为根目录（/）的绝对路径</del></p><h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>在/themes/next/layout/_layout.swing中,</p><p>在&lt; head &gt;标签中添加如下内容以增加jQuery和font-awesome依赖。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;jquery&#x2F;dist&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;font-awesome&#x2F;css&#x2F;font-awesome.min.css&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure><br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E4%BC%9A%E8%AF%B4%E8%AF%9D%E8%83%BD%E6%8D%A2%E8%A3%85%E7%9A%84live2d%E7%9C%8B%E6%9D%BF%E5%A8%98/20200812030316962.png" alt=""></p><p>在&lt; body &gt;标签中新增如下内容，<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;&#x2F;live2d-widget&#x2F;autoload.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E4%BC%9A%E8%AF%B4%E8%AF%9D%E8%83%BD%E6%8D%A2%E8%A3%85%E7%9A%84live2d%E7%9C%8B%E6%9D%BF%E5%A8%98/20200812025853981.png" alt=""></p><h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在<strong>主题配置文件~/Hexo/themes/next/_config.yml</strong>底部添加如下内容<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure><br>保存所有文件的修改，然后照例执行<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><br>就能在localhost:4000看到预览了。</p><h3 id="自定义修改"><a href="#自定义修改" class="headerlink" title="自定义修改"></a>自定义修改</h3><p>有一定前端基础的小伙伴可以通过修改~Hexo\themes\next\source\live2d-widget路径下的</p><ul><li>waifu-tips.js 包含了按钮和对话框的逻辑</li><li>waifu-tips.json 中定义了触发条件（selector，CSS 选择器）和触发时显示的文字（text）；</li><li>waifu.css 是看板娘的样式表。<br>对看板娘的位置布局等做自定义修改。</li></ul><h1 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h1><p>站点配置文件（Hexo自带看板娘）和主题配置文件（张书樵大神魔改看板娘）的live2d理论上可以共存，但是不建议这么做，只保留一个就好。也不用卸载哪个，只要把配置文件中的<code>enable: true</code>改为<code>enable: false</code>即可。</p><p>这个看板娘的API貌似随时会到期，虽然作者发布了API的迁移公告以及部署教程，但是PHP部署貌似需要自己的服务器，我只有域名，没有服务器，没法部署，得过且过吧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;写在最前&quot;&gt;&lt;a href=&quot;#写在最前&quot; class=&quot;headerlink&quot; title=&quot;写在最前&quot;&gt;&lt;/a&gt;写在最前&lt;/h1&gt;&lt;p&gt;最早的时候看别人的博客很多都有一个可爱的看板娘，然后就找了教程给自己也整了一个。因为找到的教程都是稂莠不齐的，原作者自己说的</summary>
+      
+    
+    
+    
+    <category term="Akilarの糖葫芦" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E7%B3%96%E8%91%AB%E8%8A%A6/"/>
+    
+    
+    <category term="hexo" scheme="http://akilarlxh.github.io/tags/hexo/"/>
+    
+    <category term="看板娘" scheme="http://akilarlxh.github.io/tags/%E7%9C%8B%E6%9D%BF%E5%A8%98/"/>
+    
+    <category term="live2d" scheme="http://akilarlxh.github.io/tags/live2d/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>玩转Microsoft Edge</title>
+    <link href="http://akilarlxh.github.io/post/8c8df126.html"/>
+    <id>http://akilarlxh.github.io/post/8c8df126.html</id>
+    <published>2020-08-10T07:14:47.000Z</published>
+    <updated>2020-09-06T15:00:29.619Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h1><p>最早是在楠皮教会我怎么用谷歌浏览器的时候接触到浏览器插件这种东西，要不怎么说天下浏览器出谷歌呢，国内好多打着自主研发幌子的浏览器，一看内核，都是chromium，具体就不点名了。<br>然后，Microsoft Edge（以下简称edge）在升级到新版以后活脱脱就是个chrome的翻版，因为用的就是谷歌的内核，edge也有自己的插件市场，所以，在导入了chrome的配置之后，我得以完美的从chrome过度到edge。</p><h1 id="升级新版edge"><a href="#升级新版edge" class="headerlink" title="升级新版edge"></a>升级新版edge</h1><p>这个非常简单，目前能找到的最新版win10的iso镜像自带的浏览器依然是老版本edge，但是打开以后就会提示是否升级，当然也可以主动访问<a href="https://www.microsoft.com/zh-cn/edge">新版edge的官方网页</a>进行下载。安装完成后，如果你之前用的是chrome，那你可以直接导入chrome的使用数据。点击edge浏览器右上角的 。。。-&gt;设置-&gt;个人资料-&gt;导入浏览器数据，导入位置选择chrome或者firefox或者任何你想要的浏览器。会把chrome的插件、密码存储等等内容统统转移过来，所以要小心密码被盗。不要随意在非私人电脑上做这些操作。</p><h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><p>以下是我根据自己的日常体验保留的几个很不错的插件，可以在Microsoft Edge的扩展市场中找到。</p><ul><li>直接访问<a href="https://microsoftedge.microsoft.com/addons?hl=zh-CN">Microsoft Edge的扩展</a></li><li>右上角。。。-&gt;扩展-&gt;获取 Microsoft Edge 扩展</li></ul><h2 id="Adguard广告拦截器"><a href="#Adguard广告拦截器" class="headerlink" title="Adguard广告拦截器"></a><a href="https://microsoftedge.microsoft.com/addons/detail/adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8/pdffkfellgipmhklpdmokmckkkfcopbh?hl=zh-CN">Adguard广告拦截器</a></h2><p>顾名思义，能够拦截大部分垃圾广告，支持自定义添加内容。安装好以后还会自动根据用户使用习惯优化拦截规则。</p><h2 id="Dark-mode"><a href="#Dark-mode" class="headerlink" title="Dark mode"></a><a href="https://microsoftedge.microsoft.com/addons/detail/dark-mode/boldmdfoencgjfblcelefkjfafmpiahm?hl=zh-CN">Dark mode</a></h2><p>说白了就是浏览器夜间模式，不过我使用下来有些鸡肋，国内很多视频网站都做了关灯功能，腾讯视频干脆就是暗色调配色。</p><h2 id="Undo-Closed-Tabs-Button"><a href="#Undo-Closed-Tabs-Button" class="headerlink" title="Undo Closed Tabs Button"></a><a href="https://microsoftedge.microsoft.com/addons/detail/undo-closed-tabs-button/hfigadnahbppkfoomjopnladdokbmnkc?hl=zh-CN">Undo Closed Tabs Button</a></h2><p>诚如首页第一条评论所言，给残废的edge添加了一些功能。能够恢复刚刚关闭的页面。想必这是用惯了国产浏览器的用户迫切需要的功能。</p><h2 id="Tampermonkey"><a href="#Tampermonkey" class="headerlink" title="Tampermonkey"></a><a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=zh-CN">Tampermonkey</a></h2><p>油猴插件是一个用户脚本管理插件，单纯的安装它并没有什么用处，但是配合广大开发者提供的脚本，这就是神器了，有了它们，你可以在B站解除港澳台地区限制，曲线救国看新番顺便学习繁体字，也可以破解大部分视频网站的vip限制（虽然清晰度差强人意）。</p><p>脚本推荐在<a href="https://greasyfork.org/zh-CN/scripts">Greasyfork</a>找。这是一个完全免费的插件分享网站。</p><p>顺便分享一下我常用的几个脚本。</p><h3 id="AC-baidu-重定向优化百度搜狗谷歌必应搜索favicon双列"><a href="#AC-baidu-重定向优化百度搜狗谷歌必应搜索favicon双列" class="headerlink" title="AC-baidu:重定向优化百度搜狗谷歌必应搜索favicon双列"></a><a href="https://greasyfork.org/zh-CN/scripts/14178-ac-baidu-%E9%87%8D%E5%AE%9A%E5%90%91%E4%BC%98%E5%8C%96%E7%99%BE%E5%BA%A6%E6%90%9C%E7%8B%97%E8%B0%B7%E6%AD%8C%E5%BF%85%E5%BA%94%E6%90%9C%E7%B4%A2-favicon-%E5%8F%8C%E5%88%97">AC-baidu:重定向优化百度搜狗谷歌必应搜索<em>favicon</em>双列</a></h3><p>脚本的作者更新非常积极，基本上三天两头一个小版本更新。这个脚本能够实现对大多数网页的页面重构，重定向。屏蔽广告，同时最新版本还增加了页面css自定义，美化过后的百度主页相当好看。当然高手玩家还能自己写更漂亮的网页界面。</p><h3 id="百度文库下载"><a href="#百度文库下载" class="headerlink" title="百度文库下载"></a><a href="https://greasyfork.org/zh-CN/scripts/388805-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD">百度文库下载</a></h3><p>这个脚本在百度文库页面左上角加了一个下载按钮，点击后会自动跳转到别人提供的接口页面，因为接口是需要开发者自己付费建设的，所以大概会有关注公众号或者加群之类的推广要求。而且API生命周期完全取决于开发者意愿，好在这样的脚本还是非常多的，在<a href="https://greasyfork.org/zh-CN/scripts">Greasyfork</a>首页随意翻找就能找到替代品。<br>个人认为单纯就非付费文档下载来说，直接使用<a href="http://www.bingdian001.com/?p=30">冰点下载器</a>下载后pdf转word可能还容易些。</p><h3 id="My-Novel-Reader"><a href="#My-Novel-Reader" class="headerlink" title="My Novel Reader"></a><a href="https://greasyfork.org/zh-CN/scripts/292-my-novel-reader">My Novel Reader</a></h3><p>小说阅读脚本，统一阅读样式，内容去广告、修正拼音字、段落整理，自动下一页。（直接复制粘贴了，在用网页看轻小说的时候很好用。至于手机阅读推荐下载“阅读APP”，一个开源的阅读软件，具体使用教程可以在酷安的该软件评论区找到）</p><h3 id="解除B站区域限制"><a href="#解除B站区域限制" class="headerlink" title="解除B站区域限制"></a><a href="https://greasyfork.org/zh-CN/scripts/25718-%E8%A7%A3%E9%99%A4b%E7%AB%99%E5%8C%BA%E5%9F%9F%E9%99%90%E5%88%B6">解除B站区域限制</a></h3><p>所以说港澳台大陆本就是一家嘛。</p><h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>老生常谈了，我记得在Atom的配置教程里就有提过，插件和脚本的探索是无止境的，只要还有富有想象力的开发者在就会有无数种脚本和插件，所以尽量朝着把浏览器配置的更加方便的方向走就好，可不要为了追求花里胡哨而安装一大堆无用的装饰品来拖慢运行速度，那就得不偿失了。以上，祝各位在应用市场和插件市场里玩的愉快。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;写在最前&quot;&gt;&lt;a href=&quot;#写在最前&quot; class=&quot;headerlink&quot; title=&quot;写在最前&quot;&gt;&lt;/a&gt;写在最前&lt;/h1&gt;&lt;p&gt;最早是在楠皮教会我怎么用谷歌浏览器的时候接触到浏览器插件这种东西，要不怎么说天下浏览器出谷歌呢，国内好多打着自主研发幌子的浏</summary>
+      
+    
+    
+    
+    <category term="Akilarの棉花糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%A3%89%E8%8A%B1%E7%B3%96/"/>
+    
+    
+    <category term="win10" scheme="http://akilarlxh.github.io/tags/win10/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20200731</title>
+    <link href="http://akilarlxh.github.io/post/96805ea5.html"/>
+    <id>http://akilarlxh.github.io/post/96805ea5.html</id>
+    <published>2020-07-31T01:10:35.000Z</published>
+    <updated>2020-09-06T15:00:29.598Z</updated>
+    
+    <content type="html"><![CDATA[<p>7月31日 星期五 阴转多云</p><p>感觉已经很久没有写日记了，这个月是实习转试用的第一个月，时间过得还算是相当快了。</p><p>月初的时候因为毕业那天拍毕业照把腰扭了，怎么说呢，这个应该算是旧伤，一方面是疫情期间呆在家里光吃了，体重水涨船高，肌肉力道反而往下掉。然后是总是心血来潮跟着老爹上山采药（emmm，这个好像和前半段说光顾着吃有点矛盾，反正还是缺乏锻炼），然后七拐八拐的走几十里山路，腰就应力性扭伤了，所以有旧疾就容易二次创伤嘛。</p><p>然后第一天还没感觉，但到了第二天就疼的受不了了，毕竟是腰伤，不是小事，赶紧请了半天假去医院。拍了个X光片，骨头没问题，也没有啥扭曲啊，突出啊，就是普通的腰肌劳损。吃药贴伤膏就过去了。</p><p>结果并没有，久坐大概会一直压迫坐骨神经，反正我只觉得一直腰疼。</p><p>兄弟买了瑜伽垫，只看他头两天在上面做仰卧起坐来着。之后，哈哈哈，连着三周大鱼大肉，所以锻炼是为了啥啊。</p><p>因为腰伤吃药，担心体检血检不正常，就推迟了半个月的体检日期，所以体检报告一致到20号才到手，连带着一系列转正手续都推到这么晚。</p><p>单位的设备供应很差劲，其他人原来一直以为我的电脑还有显示器是公司发的，可那是我从实习开始就一直自带的。而单位发的只有一台配置差的可怜的台式机，还只能接单屏，显示器也小小的，总之相当不愉快。</p><p>玲一直想着要聚会一次，但是甬哥的工作实在是忙碌，空余时间都由薛定谔说了算，眼看着一个个周末的可能性都被否定了，我们愉快的决定，不带他玩。（并没有啦，至少晚饭还是有叫他一起吃的）。</p><p>灵隐寺飞来峰原来是要先买飞来峰的套票，然后进去再买灵隐寺的香券才行。不过我们并不清楚灵隐寺在哪。懵懵懂懂的看到有几个溶洞，跟着别的游客就钻进去了。</p><p>玲在前面带路，然而她也不知道灵隐寺在哪。还带歪了一大批后面的游客，哈哈哈。</p><p>天还下着雨，寺里又有不少地方游客止步，本该很不错的避暑胜地一下子就变成了活受罪的长途跋涉。这让提议来此游玩的我感到相当内疚。甬哥这时候还在家里加班。</p><p>已经能够想象他晚饭时会说些什么。比如“傻了吧这天气跑去西湖逛，有这钱买门票活受罪，晚饭的时候海底捞点份排骨他不香吗？”嗯，如果是甬哥的话，他绝对会这么说的。</p><p>“哇塞你学的好像哦”，晨对此表示肯定。</p><p>妹妹到现在还在惊讶于小海的美容美发专业。话说玲时不时话痨的性格以前怎么没感受到。看妹妹对姐姐那样的无语表情，话痨应该不是刚出现的习惯。</p><p>海底捞没有我们想的那么夸张，就是服务相对周到的火锅店，而且服务员无时无刻不在续杯饮料的行为让我很不习惯。</p><p>倒放挑战这个游戏挺有意思的。玲和妹妹在模仿倒放时都会忍不住笑场，听自己声音的倒放时也会笑场，亲姐妹没错了，有时候我也想有个亲生的兄弟姐妹，虽然按我小时候的性格，大概是会变成天天打架的场面吧，emmm，要是差的年纪大太多倒是不会如此了，只是那样好古怪。我发现我对妻子的概念无甚追求，但是对于孩子却有很多期待与构想。但仔细思考就会发现我只是在构思一个新的童年，对自己儿时的很多幼稚行为感到后悔而想着补救罢了。</p><p>该死，不是每天一写而是月底一写果然还是会出现思绪乱飘的情况，大概除了这个时刻的我，其他人，包括明天的我也看不懂这篇写了些啥吧。</p><p>月中的兵检时，医生说我左心尖有杂音，18号体检时也是左心室高电压，然后老爹说我刚出生时因为早产所以心脏就没长好，嗯，后来是有长好的吧，不过血管和瓣膜还是会比正常人弱一点，所以原来小时候老爹让我多吃猪心说的并不是哄小孩的假话吗？我是真的需要缺啥补啥。总结一下就是原本能够正常运作的心脏因为体重增加，而心脏偏弱，所以有些隐患。啊，总之确实需要减肥了。</p><p>买了小米体重秤，和APP绑定的时候跳出来三年前的体重，比现在轻10公斤，联系心脏开始不对头的情况，额，我是真的拼了命在长肉。</p><p>锻炼锻炼的口号喊了一周，只做了一次有氧运动，然后出汗量超恐怖。可是腰伤又出来搅局了。甬哥帮我抹红花油的时候顺带说我肩颈背的肌肉都僵硬的不像话，啊，体质差的不像话。Kevin还想着高考结束来找我玩，到时候看到一个肥宅岂不是超级幻灭。嗯，我身边的人都是看着我长成肥宅的，大概不会幻灭。</p><p>题外话</p><p>全篇写了些什么玩意儿！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;7月31日 星期五 阴转多云&lt;/p&gt;
+&lt;p&gt;感觉已经很久没有写日记了，这个月是实习转试用的第一个月，时间过得还算是相当快了。&lt;/p&gt;
+&lt;p&gt;月初的时候因为毕业那天拍毕业照把腰扭了，怎么说呢，这个应该算是旧伤，一方面是疫情期间呆在家里光吃了，体重水涨船高，肌肉力道反而往下掉。</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>访问github或部署在gitpage上的网站过慢的解决方案</title>
+    <link href="http://akilarlxh.github.io/post/61b3e163.html"/>
+    <id>http://akilarlxh.github.io/post/61b3e163.html</id>
+    <published>2020-07-29T07:53:50.000Z</published>
+    <updated>2020-09-06T15:00:29.620Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h1><p>github时不时抽风，老是访问不了，诚然，用科学上网能解决一切这类问题，但是，能不翻墙还是不要翻墙的好。这里采用的是通过修改本地hosts，配置域名和IP映射关系，这样一来，当我们访问github时，这些域名可以直接从本地hosts文件中获取ip，而不需要再去DNS服务器上询问一圈。从而提高访问速度。</p><h1 id="修改hosts"><a href="#修改hosts" class="headerlink" title="修改hosts"></a>修改hosts</h1><p>以windows系统为例，<br>hosts的路径是<strong>C:\Windows\System32\drivers\etc</strong>，<br>打开后将以下内容复制到文件最下方。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">52.74.223.119 github.com</span><br><span class="line">185.199.110.153 assets-cdn.github.com</span><br><span class="line">151.101.228.133 avatars0.githubusercontent.com</span><br><span class="line">151.101.228.133 avatars1.githubusercontent.com</span><br><span class="line">185.199.109.153 documentcloud.github.com</span><br><span class="line">185.199.108.154 help.github.com</span><br><span class="line">13.229.189.0 nodeload.github.com</span><br><span class="line">151.101.228.133 raw.github.com</span><br><span class="line">140.82.114.18 status.github.com</span><br><span class="line">140.82.114.18 training.github.com</span><br><span class="line">185.199.110.153 github.io</span><br></pre></td></tr></table></figure><br>保存后，win+X，按A，以管理员权限启动powershell，输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ipconfig &#x2F;flushdns</span><br></pre></td></tr></table></figure></p><p>刷新DNS缓存。之后就能变快了……</p><div class="note info"><p>才怪嘞，因为上述域名的IP是不停在变的，这一串映射仅仅适用于今天而已，到了明天，ip一变动，又登不上了，我总不可能天天来更新吧？</p></div><h1 id="使用爬虫脚本实时获取最新ip"><a href="#使用爬虫脚本实时获取最新ip" class="headerlink" title="使用爬虫脚本实时获取最新ip"></a>使用爬虫脚本实时获取最新ip</h1><p>（转载自<a href="https://www.cnblogs.com/weiyinfu/p/6376420.html">weiyinfu的博客园</a>。以下脚本为weiyinfu所原创，笔者仅做转载)</p><p>需要查询ip地址的域名有这么多。手动添加肯定是不乐意的了。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">github.com</span><br><span class="line">assets-cdn.github.com</span><br><span class="line">avatars0.githubusercontent.com</span><br><span class="line">avatars1.githubusercontent.com</span><br><span class="line">documentcloud.github.com</span><br><span class="line">gist.github.com</span><br><span class="line">help.github.com</span><br><span class="line">nodeload.github.com</span><br><span class="line">raw.github.com</span><br><span class="line">status.github.com</span><br><span class="line">training.github.com</span><br><span class="line">github.io</span><br></pre></td></tr></table></figure></p><p>因为github相关的诸多域名的ip是在变动的，为了能够实时获取最新的ip，我们可以使用爬虫来从<a href="http://ip.chinaz.com/">站长之家</a>或其余ip查询网站上爬取最新ip。</p><p>这里要用到python，<strong>安装推荐使用Anaconda</strong>，Anaconda安装方式推荐参看<a href="https://akilarlxh.github.io/post/29cf4234.html">win10重装日记</a>的3.2章节。根据Anaconda版本与python版本的对照选择自己需要的Anaconda安装包，然后直接安装即可，路径建议修改为非系统盘，同时<strong>务必勾选将python路径加入到环境变量</strong>的选项。</p><p>新建一个python脚本——githosts.py（最简单的方法，新建一个txt文本文件，把下面的代码粘贴进去以后，修改后缀为.py）</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">s &#x3D; &quot;&quot;&quot;</span><br><span class="line">github.com</span><br><span class="line">assets-cdn.github.com</span><br><span class="line">avatars0.githubusercontent.com</span><br><span class="line">avatars1.githubusercontent.com</span><br><span class="line">documentcloud.github.com</span><br><span class="line">help.github.com</span><br><span class="line">nodeload.github.com</span><br><span class="line">raw.github.com</span><br><span class="line">status.github.com</span><br><span class="line">training.github.com</span><br><span class="line">github.io</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import requests</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line"></span><br><span class="line">ans &#x3D; []</span><br><span class="line">for i in s.split():</span><br><span class="line">    url &#x3D; &quot;http:&#x2F;&#x2F;ip.tool.chinaz.com&#x2F;&quot; + i.strip()</span><br><span class="line">    resp &#x3D; requests.get(url)</span><br><span class="line">    soup &#x3D; BeautifulSoup(resp.text,&quot;html.parser&quot;)</span><br><span class="line">    x &#x3D; soup.find(class_&#x3D;&quot;IcpMain02&quot;)</span><br><span class="line">    x &#x3D; x.find_all(&quot;span&quot;, class_&#x3D;&quot;Whwtdhalf&quot;)</span><br><span class="line">    x &#x3D; &quot;%s %s&quot; % (x[5].string.strip(), i.strip())</span><br><span class="line">    print(x)</span><br><span class="line">    ans.append(x)</span><br><span class="line"></span><br><span class="line">hosts &#x3D; r&quot;C:\Windows\System32\drivers\etc\hosts&quot;</span><br><span class="line">with open(hosts, &quot;r&quot;) as f:</span><br><span class="line">    content &#x3D; [i for i in f.readlines() if i.startswith(&quot;#&quot;)]</span><br><span class="line">    content.extend(ans)</span><br><span class="line">with open(hosts, &quot;w&quot;) as f:</span><br><span class="line">    f.write(&quot;\n&quot;.join(content))</span><br></pre></td></tr></table></figure><p>然后<strong>把githosts.py放到C:\Windows\System32目录下</strong>（不放其实也可以，只是这样一来每次都要自己cd路径。）<br>win+X，按A，<strong>以管理员权限启动</strong>powershell，输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python githosts.py</span><br></pre></td></tr></table></figure><br>然后脚本就会自动爬取最新的IP与域名到你的hosts文件中了。</p><h1 id="可能遇到的bug"><a href="#可能遇到的bug" class="headerlink" title="可能遇到的bug"></a>可能遇到的bug</h1><p>老老实实按照上面说的来，看仔细加粗的地方，就不会有下面的bug。</p><h2 id="python的环境变量没添加"><a href="#python的环境变量没添加" class="headerlink" title="python的环境变量没添加"></a>python的环境变量没添加</h2><p>那就是安装的时候没勾选，找到Anaconda的安装目录，在根目录里有python.exe文件，至于怎么添加还请自行百度。（其实卸载了Anaconda以后重新安装，这次记得勾选添加到环境变量也可以。顺带一提，卸载很慢哦，还不如老老实实自己添加一下）</p><h2 id="缺少requests包"><a href="#缺少requests包" class="headerlink" title="缺少requests包"></a>缺少requests包</h2><p>一般anaconda是自带一些基础包库的，没有这个包说明你是从python官网下载的python安装包。不过就算缺少，也可以通过<code>pip install 包名</code>来安装。遇到安装速度慢的情况，就去自行百度<strong>“pip install 换清华源”</strong></p><h2 id="报错“NoneType’-object-has-no-attribute-‘find-all”"><a href="#报错“NoneType’-object-has-no-attribute-‘find-all”" class="headerlink" title="报错“NoneType’ object has no attribute ‘find_all”"></a>报错“NoneType’ object has no attribute ‘find_all”</h2><p>最有可能是站长之家的域名网址变动，例如从ip.chinaz.com变为ip.tool.chinaz.com,将源代码中19行的域名改为现行网址即可。</p><p>如果是页面元素结构变化则需要通过F12查看原网页元素id或者class来确定元素位置重新改写源代码23行需要find_all的元素（也即是我们需要的ip查询结果）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;写在最前&quot;&gt;&lt;a href=&quot;#写在最前&quot; class=&quot;headerlink&quot; title=&quot;写在最前&quot;&gt;&lt;/a&gt;写在最前&lt;/h1&gt;&lt;p&gt;github时不时抽风，老是访问不了，诚然，用科学上网能解决一切这类问题，但是，能不翻墙还是不要翻墙的好。这里采用的是通过修</summary>
+      
+    
+    
+    
+    <category term="Akilarの棉花糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%A3%89%E8%8A%B1%E7%B3%96/"/>
+    
+    
+    <category term="git" scheme="http://akilarlxh.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从github下载release速度过慢的解决方案</title>
+    <link href="http://akilarlxh.github.io/post/7357e481.html"/>
+    <id>http://akilarlxh.github.io/post/7357e481.html</id>
+    <published>2020-07-29T02:09:23.000Z</published>
+    <updated>2020-09-06T15:00:29.613Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h1><p>昨天刚学会了git clone的加速方式，正得意满满的时候发现直接fork仓库并不会把人家的release带过来，要下载release中的各种安装包，还是得老老实实的去原来的仓库找，而github中的release托管在amazon上，从国内访问时断时续的，虽说依靠wget或者curl可以解决断点续传的问题，但是依然无益于提高那慢的可怜的下载速度。虽然科学上网就能直接解决这一方案，但是在疫情期间见识到<strong>外国黑客组织举世攻华</strong>的场面以后，我总算明白大学时老师对我们说的建长城是为了保护我们的话了，基于这一理由，我暂时不建议各位翻墙了。这里提供两种不用翻墙的方案。</p><h1 id="使用Free-Download-Manager"><a href="#使用Free-Download-Manager" class="headerlink" title="使用Free Download Manager"></a>使用Free Download Manager</h1><p>找到需要下载的release中的安装包，右键，复制链接，粘贴到<a href="https://d.serctl.com/?dl_start">Free Download Manager</a>中，提交，稍等片刻后从它这里下载即可。<br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101743352.png" alt=""><br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101822410.png" alt=""><br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101901681.png" alt=""></p><h1 id="使用芒果Geek开发的代下载服务"><a href="#使用芒果Geek开发的代下载服务" class="headerlink" title="使用芒果Geek开发的代下载服务"></a>使用芒果Geek开发的代下载服务</h1><p>这个是芒果Geek大神开发的代下载服务网站，操作方式和上述方案基本一致。<br>找到需要下载的release中的安装包，右键，复制链接，粘贴到<a href="http://g.widora.cn/">Github代下载服务</a>网站中，输入验证码，等待压缩完成后下载即可，体验上比Free Download Manager还要快一些。<br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101743352.png" alt=""><br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729102554936.png" alt=""></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;写在最前&quot;&gt;&lt;a href=&quot;#写在最前&quot; class=&quot;headerlink&quot; title=&quot;写在最前&quot;&gt;&lt;/a&gt;写在最前&lt;/h1&gt;&lt;p&gt;昨天刚学会了git clone的加速方式，正得意满满的时候发现直接fork仓库并不会把人家的release带过来，要下载re</summary>
+      
+    
+    
+    
+    <category term="Akilarの糖葫芦" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E7%B3%96%E8%91%AB%E8%8A%A6/"/>
+    
+    
+    <category term="git" scheme="http://akilarlxh.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git clone过慢解决方案</title>
+    <link href="http://akilarlxh.github.io/post/24a51aa5.html"/>
+    <id>http://akilarlxh.github.io/post/24a51aa5.html</id>
+    <published>2020-07-28T09:12:56.000Z</published>
+    <updated>2020-09-06T15:00:29.610Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h1><p>git算得上是最舒适的版本控制软件了，但是因为各种各样的原因，git clone的时候往往只有几K每秒的速度，这对于急切的需要下载项目的我们来说无疑是无法接受的。其实通过一个很简单的方式就可以实现快速加载，虽然会有一些中间步骤，但是与等待几K每秒的龟爬下载比起来，这些中间步骤毫无疑问是可以接受的。</p><h1 id="注册码云"><a href="#注册码云" class="headerlink" title="注册码云"></a>注册码云</h1><p><a href="https://gitee.com/">码云</a>也是一个基于git的代码托管平台，而且由于是国内的服务器，所以下载速度还算令人满意（这里我真的很想说差强人意的，但是又怕被批我舞文弄墨）</p><h1 id="导入仓库"><a href="#导入仓库" class="headerlink" title="导入仓库"></a>导入仓库</h1><p>注册完毕后，在首页右上角的找到<strong>从Github/GitLab导入仓库</strong>选项。<br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052051207.png" alt=""><br>然后在github那边找到我们要导入的仓库地址。<br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052317216.png" alt=""><br>把它粘贴到码云的<strong>Git仓库URL</strong>栏中。<br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052501594.png" alt=""><br>如果没兴趣在码云也配置一遍SSH keys的话，记得拉到下面<strong>点选公开</strong>。然后导入即可。</p><h1 id="直接从github导入"><a href="#直接从github导入" class="headerlink" title="直接从github导入"></a>直接从github导入</h1><p>用github授权以后可以直接从github导入已有仓库。<br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052745339.png" alt=""></p><h1 id="从码云获得git-clone-url"><a href="#从码云获得git-clone-url" class="headerlink" title="从码云获得git clone url"></a>从码云获得git clone url</h1><p>进入码云的仓库，获取url，再用它来clone就快多了。<br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728053033220.png" alt=""></p><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>如果只是为了git别人的开源库，那么只看上文即可。如果是涉及到博客或者gitpages，也就是要git clone的是username.github.io这个仓库的时候，就要记得更换git remote origin，不然会提交到码云的仓库，那样对github那边是不会有任何修改的。</p><p>(其他涉及提交到github的仓库也是同样的操作）</p><p>在git clone下来的username.github.io里打开终端。输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote get-url origin</span><br><span class="line">&#x2F;&#x2F;输出的是https:&#x2F;&#x2F;gitee.com&#x2F;username&#x2F;username.github.io</span><br><span class="line">&#x2F;&#x2F;重新修改为github的远程仓库地址</span><br><span class="line"> git remote set-url origin https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io.git</span><br><span class="line"> &#x2F;&#x2F;如此一来就和从github上clone下来的一样了</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;写在最前&quot;&gt;&lt;a href=&quot;#写在最前&quot; class=&quot;headerlink&quot; title=&quot;写在最前&quot;&gt;&lt;/a&gt;写在最前&lt;/h1&gt;&lt;p&gt;git算得上是最舒适的版本控制软件了，但是因为各种各样的原因，git clone的时候往往只有几K每秒的速度，这对于急切的需</summary>
+      
+    
+    
+    
+    <category term="Akilarの糖葫芦" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E7%B3%96%E8%91%AB%E8%8A%A6/"/>
+    
+    
+    <category term="git" scheme="http://akilarlxh.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20200630</title>
+    <link href="http://akilarlxh.github.io/post/e0450404.html"/>
+    <id>http://akilarlxh.github.io/post/e0450404.html</id>
+    <published>2020-06-30T02:51:47.000Z</published>
+    <updated>2020-09-06T15:00:29.598Z</updated>
+    
+    <content type="html"><![CDATA[<p>2020年6月30日 星期二 阴转多云</p><p>今天算是个特殊的日子，特地请了假回去参加毕业典礼·伪。真正的毕业典礼昨天晚上线上举行掉了，鉴于直播信号不好，所以我完全没有观礼的兴趣。</p><p>虽然昨天信誓旦旦的说要照常6：20起床，结果就是5：10的时候醒过来一次，看了下，闹钟君还没醒，那我再睡会。然后6:20把闹钟君一顿暴揍，结果它就撂挑子了，直到7:45左右才被兄弟窸窸窣窣的起床动静吵醒。单位离得近真好，天天可以睡到这么晚。</p><p>草草洗漱了一下直接出门了，坐电梯到楼下想起来没带伞然后又回去，到家时兄弟居然已经出门了，现在大概正在骑着电动滑板呲溜呲溜的出东北门了。</p><p>等我拿完长柄伞下楼呢，又想起来手机没带，这可不得了，本体落家里了，一着急转身时动作大了点，然后就听到啪嗒一声，我的<strong>折叠伞</strong>从单肩包的侧边包里掉了出来……人生如剧，我浑身是戏啊。</p><p>等我大摇大摆的戴好口罩来到小区门口等车的时候，公交车姗姗来迟，虽然是早高峰，但是还有空位，lucky。</p><p>错误的估计了早高峰的战力，车还没开出一站，就在狭窄的县道路段堵了20分钟，对面的老哥暴脾气上来了，要司机给他开门放他下去，扬言走路都比这快。然后……他一下车道路就通了。嗯，今个儿随机抽取一位幸运观众享受步行上班的快乐。</p><p>后面几站上车的都是出门的老人家，眼看着爱心专座已经被让完了，旁边有位白发苍苍的老奶奶，吾辈欣然让出座位，（比个大拇指，老铁们我做的对么？）奶奶人很好，下车前拉着我说她还有一站就到了，要把座位还我，哎呀这怎么好意思，再说旁边那位虎视眈眈的大妈可没有准备放过空位的打算，嘛，这次我不坐到终点站，就继续站着吧。</p><p>以往6:30的班次原来已经算畅通了，8点以后的班次是真的堵啊，不知道之前下车走路的那位老哥追上来了没有。千辛万苦的终于是到了换乘站，下车时被为了占座，手脚没个轻重的大叔刮到了眼眶，疼了好一会。</p><p>等到学校，手机只剩23%的电了，早高峰真耗电。楠皮吉皮赵皮们已经退完了空调、钥匙、水卡，施施然的去C区领毕业证书了，虽然我很想先去寝室充个电，但是果然还是先把钥匙退了然后赶紧追去C区吧。路上遇到骑着共享单车的波皮。</p><p>L：可惜没有后座。<br>B：你可以坐在轮胎上。</p><p>波特，你竟敢用我的魔法来对付我！</p><p>学校这边相对平缓的路面让我后悔没把大鱼板带来，原来的双翘板不适合在这种路面滑行，但是大鱼板毫无压力啊，说起来我也就买来的头个礼拜上下班用过，后来发现每次过路口就要停下来，而且还要提防电动车就不敢滑了。</p><p>终于杀到C区，从吉皮那里拿到了学士服，变身，今天不穿法师袍的都是麻瓜。早知道路上捡根树枝来也好啊。让我想想有没有什么可以让人开心的咒语。</p><p>拿到了心心念念的毕业证和学位证书，信息学院这边能拿走录取通知书做纪念，我是转专业的，录取通知书要回建工学院拿，好在就在楼上。</p><p>收回前言，貌似除了信息学院有这份心，其他学院都没有发还录取通知书留作纪念的意思。</p><p>楠皮吉皮面子大，副院长主动过来合影，咱也蹭一蹭合影。学士帽带上去以后显得我越发大饼脸，最近伙食太好了，自己做饭，餐餐不剩，1703养猪场实锤了。</p><p>然后就是党员与会，其实就是讲党组织关系转移，和楠皮吉皮几个霸占了空调前面的位置，把空调挡的严严实实，一夫当关，万夫莫开。</p><p>遇到一个小哥问我们学士服在哪里领，这个问题问得好，一看小哥就是赶回来领毕业证，对各种状况不了解的样子，那就好办了。</p><p>L：这个学士服啊，就每个班开学会发一颗种子，然后种在那边，……<br>J：又在皮了！</p><p>真的很佩服我自己，能够一本正经的和人家讲这样的事情。</p><p>然后就是拍照了，虽然来时路上已经看到很多很多毕业生在拍照了，但是呢，真的到自己拍照时果然是不一样啊，辅导员非常忙，但是楠皮还是把他拉过来了，楠皮面子果然大，我大概要把自己的千层下巴擀平才能在面子上与他一较高下。</p><p>校门口，图书馆，水晶剧院统统打卡，遗憾的是没去教学区打卡，A区后面的那个茶馆本该是最好的拍照地点的。</p><p>寝室的合照算是在这次拍了个痛快，在这之前，同时有我们寝室四个人存在的照片只有一张，然后我又被拍成了表情包。唉，报应不爽啊，平时都是我做其他人的表情包的。屠魔的少年终究成魔x2。</p><p>拍照的时候有几个圈子一直跟着我们一行人，大家互相帮忙拍照，等我开始感慨素不相识也能如此互帮互助的时候，他们说都是一个专业的，应该的。我……我承认我哪怕到毕业这天还是没记住同班同学的脸。</p><p>班级大合照时，2班的同学没来齐，这是理所当然的吧，2班的凝聚力全靠咱617二班行政活动中心吊着命。宇来老师打着遮阳伞过来了，真遗憾，我本来还想着跑去A区办公室把他抓过来的，想想老师不舍得学生，怕伤感不愿来拍照，然后学生把老师绑过来的画面才是我想要的那种毕业氛围啊。</p><p>被太阳暴晒，楠皮吉皮跑去参加副院长的饭局了，大合照没有他们，以后同学会再聚首，一定要好好笑话一番。</p><p>等到校门口大合照也拍完了，在那之前先吐槽一波，校门口那个名碑上面是真的烫啊，铁板烧，卖铁板烧。</p><p>烙完了屁股总算是能回去了，什么？还有图书馆？抱歉，不想去了。我要喝水。路上遇到了骑着共享电瓶车匆匆赶往图书馆拍大合照的楠皮和吉皮，毫无理由的就想起了饭卡里还有好些钱没花，我也不知道怎么就把这两件事联系到一起了，总之报复性消费走起，结果到了超市只是买了一瓶快乐水。</p><p>回寝室才充了几分钟的电，昊昊发来消息，邀请我一点半去图书馆拍照，额，话说之前从校门口跳下来的时候好些扭到腰了，祈祷千万别是腰伤复发啊。</p><p>堪堪充电到30%，再怎么快充也架不住没时间给我啊。不过大一室友情还是要顾一顾的，老潘也来，大家一起久违的调侃龙哥吧。</p><p>啊，是活的龙哥，会动的！之前只能在朋友圈里见到照片上的龙哥，怎么说也是252的浪里小白龙啊，就是感觉龙哥的发际线又高了不少。</p><p>信息学院和建工学院的学士服都是明黄色领巾，在下混入其中毫无违和感。老潘的领巾是灰色的，嗯，违和感拉满。</p><p>龙：我觉得老潘这个应该给辉辉穿。<br>辉：为什么嘞？<br>龙：你看你名字里有个辉，老潘这个是灰色。<br>昊：好冷的笑话。</p><p>龙哥，求你了，你真的没有幽默的天赋。再说我名字的辉就该是指明黄色吧！</p><p>陆陆续续的见到了大一原专业的同学，结果他们的名字我都叫的上来。看来归属感这个东西比较先入为主啊。</p><p>nice，早上软工专业的图书馆大合照没凑上，下午跑回给排水来蹭个打卡。然后继续在校门口打卡。铁板烧，卖铁板烧x2。真的很喜欢这边的班级氛围。</p><p>回去时就剩楠皮和赵皮了，吉皮早早的跑去赶动车了。于是就到今天的重磅环节了。之前宿管在离校之前露出了獠牙，因为吉皮不愿意把不要的教材低价卖给他，他就一路追到寝室来，寝室门关上了还要跑回楼下来拿了备用钥匙强行闯入，进来就大骂吉皮不懂规矩，说什么他在学校十多年了，这的书都归他卖云云，还勒令吉皮把寝室当初装修贴的墙纸统统撕掉，说什么这个是垃圾。</p><p>我那个暴脾气哦，当时那是我不在，想我正面硬刚马伟峰，阴阳怪气王建芬，中期答辩怼徐昶，毕设调侃程志刚……今天，我刘怼怼就要，钓！鱼！执！法！</p><p>首先，把楠皮不要的书和赵皮不要的书堆成三份，嗯，612还有一堆书，等会下楼大摇大摆的从宿管面前走过，看他拦不拦我。</p><p>第一次，宿管忙着拦别人，我真就大摇大摆从门前过，书卖了11块钱。额，这次钓鱼失败，再来，一定是书不够多。</p><p>第二次，把两摞书叠起来，大摇大摆从门前过，宿管忙着拦那个拿推车往外运书的哥们……我，我连钓鱼执法的实力都不如人家啊！嗯，第二次卖书卖了15块钱，美滋滋。不对，调整心情，三，二，一，吉皮啊！我对不起你啊！是我没用，连钓鱼执法给你报仇都做不到啊，5555！噫~太浮夸了。</p><p>叫了一辆货拉拉，把寝室搬空掉，有对面寝室的同学帮忙，总算是赶在5点前搬空了寝室。哼，贪得无厌的宿管，让你惦记咱们寝室的东西，我搬空了也不给你留一样值钱玩意儿。然后波皮表示612的东西留下的也不要了，哈哈哈哈，搬仓鼠过境，值钱玩意儿都扫走，我感觉此刻的我就是个贼偷，还是最低级的那种，见啥玩意儿都想抄走，毫无追求。</p><p>货拉拉的司机师傅很有意思，他之前是开公交车的，现在在屏峰上班，开货拉拉是兼职，因为我预约的时间很晚，刚好在他下班以后，正好可以让他挣个外快，所以我得以享受一位拿着A3驾照的司机来为我开搬家货车的至尊服务，回去的路上晚高峰，师傅反手窜进一个小道，一路畅通无阻的开到目的地，期间我又知道他以前还开过公务车，洒家今个儿算是值回票价了。</p><p>幸好卸货的地方里货梯不远，一趟搬完，腰伤确定是复发了，说起来在612淘到了一盒伤膏，洗完澡就去贴上。</p><p>晚饭蒙兄弟照顾，炒了个辣味鸡块。抱歉我实在没法昧着良心说这个是辣子鸡丁。不过好歹很下饭。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2020年6月30日 星期二 阴转多云&lt;/p&gt;
+&lt;p&gt;今天算是个特殊的日子，特地请了假回去参加毕业典礼·伪。真正的毕业典礼昨天晚上线上举行掉了，鉴于直播信号不好，所以我完全没有观礼的兴趣。&lt;/p&gt;
+&lt;p&gt;虽然昨天信誓旦旦的说要照常6：20起床，结果就是5：10的时候醒过来一</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+    <category term="毕业" scheme="http://akilarlxh.github.io/tags/%E6%AF%95%E4%B8%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>垃圾分类识别系统安装引导</title>
+    <link href="http://akilarlxh.github.io/post/9cd81ac3.html"/>
+    <id>http://akilarlxh.github.io/post/9cd81ac3.html</id>
+    <published>2020-05-21T07:18:48.000Z</published>
+    <updated>2020-09-06T15:00:29.615Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h1><p>本文所讨论的垃圾分类微信小程序分为用户端和管理员端，用户端基于微信小程序的云开发架构，管理员端使用vue-admin-element集成模块项目作为模板开发。</p><h1 id="配置微信小程序RecycleOL"><a href="#配置微信小程序RecycleOL" class="headerlink" title="配置微信小程序RecycleOL"></a>配置微信小程序RecycleOL</h1><h2 id="注册微信小程序"><a href="#注册微信小程序" class="headerlink" title="注册微信小程序"></a>注册微信小程序</h2><p>按照<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/getstart.html#%E7%94%B3%E8%AF%B7%E5%B8%90%E5%8F%B7">微信官方文档</a>指示注册微信小程序，直至获取AppID<br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521033007399.png" alt=""></p><h2 id="安装开发者工具"><a href="#安装开发者工具" class="headerlink" title="安装开发者工具"></a>安装开发者工具</h2><p>下载微信开发者工具<br>本人所使用的是<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">稳定版 Stable Build (1.02.2004020)</a></p><p>下载安装完成后，打开微信开发者工具，选择导入项目，找到RecycleOL，在AppID一栏输入上述步骤中获取的AppID，<br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521034252857.png" alt=""></p><div class="note warning"><p>可能还需要在文件project.config.json中修改appid。如果导入不成功，请新建微信小程序，在后端服务一栏选择云开发。然后逐个替换文件。并修改文件project.config.json中的appid。</p></div><h2 id="设置云开发环境"><a href="#设置云开发环境" class="headerlink" title="设置云开发环境"></a>设置云开发环境</h2><p>找到云开发，设置，新建云环境。<br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521034410852.png" alt=""><br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521034420972.png" alt=""><br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521034437693.png" alt=""><br>在云开发平台中找到数据库选项，新建三个数据集：commit，product，sort。<br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521034628125.png" alt=""><br>在product和sort数据集中导入product.csv和sort.json的数据。<br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521035754010.png" alt=""><br>在cloudfunctions中右键addGarbage、baiduAccessToken、commitToGarbarge，选择上传并部署：所有文件。<br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521040004706.png" alt=""></p><h2 id="注册百度AI开放平台"><a href="#注册百度AI开放平台" class="headerlink" title="注册百度AI开放平台"></a>注册百度AI开放平台</h2><p>注册<a href="https://ai.baidu.com/tech/imagerecognition/general">百度AI开放平台</a>账号，进入控制台，选择产品服务-&gt;图像识别-概览，创建应用。接口选择图像识别。<br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521052759594.png" alt=""><br>创建成功后，在管理应用中可以获取百度开放平台图像识别接口的API Key和SecretKey。<br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521052937578.png" alt=""><br>将其填入微信小程序的云函数,找到cloudfunctions-&gt;baiduAccessToken-&gt;index替换其中的apiKey和secretKey<br><img src= "/img/loading.gif" data-lazy-src="https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200521053237543.png" alt=""></p><h1 id="配置后台管理RecycleAdmin"><a href="#配置后台管理RecycleAdmin" class="headerlink" title="配置后台管理RecycleAdmin"></a>配置后台管理RecycleAdmin</h1><h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装<a href="https://nodejs.org/en/">Node.js</a></h2><p>我下载的是<code>11.13.0</code>版本。直接下载最新版本全部默认安装即可。<br>Node.js是基于Chrome的V8 JavaScript引擎构建的<br>运行在服务端的JavaScript开发平台,知道这些就够了。<br>反正作为一个开发环境，安装以后再也不用去打扰它。<br>默默运行就是了。</p><h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装<a href="https://git-scm.com/">git</a></h2><p>我下载的是2.21.0版本，选择安装版,一路默认安装即可。</p><h2 id="配置RecycleAdmin"><a href="#配置RecycleAdmin" class="headerlink" title="配置RecycleAdmin"></a>配置RecycleAdmin</h2><p>找到路径~/RecycleAdmin/src/api/user.js,将env后内容替换成自己的微信小程序云开发环境。<br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200528075656130.png" alt=""><br>还要替换appid和secret为自己的，appsecret可以在微信小程序开发平台主页选择右侧菜单栏-&gt;开发-&gt;开发设置中找到。<br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200528080229067.png" alt=""><br><img src= "/img/loading.gif" data-lazy-src="http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/20200528080320116.png" alt=""><br>直接在RecycleAdmin文件夹内右键-&gt;git bash here,输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 安装依赖</span><br><span class="line">npm install</span><br><span class="line"># 建议不要用 cnpm 安装 会有各种诡异的bug 可以通过更换源解决 npm 下载速度慢的问题，以下是阿里云的源</span><br><span class="line">npm install --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"># 本地开发启动项目</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure><br>如果是用的yarn，把启动指令中的npm替换成yarn即可。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;写在最前&quot;&gt;&lt;a href=&quot;#写在最前&quot; class=&quot;headerlink&quot; title=&quot;写在最前&quot;&gt;&lt;/a&gt;写在最前&lt;/h1&gt;&lt;p&gt;本文所讨论的垃圾分类微信小程序分为用户端和管理员端，用户端基于微信小程序的云开发架构，管理员端使用vue-admin-ele</summary>
+      
+    
+    
+    
+    
+    <category term="毕业设计" scheme="http://akilarlxh.github.io/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20200113</title>
+    <link href="http://akilarlxh.github.io/post/4e3521b9.html"/>
+    <id>http://akilarlxh.github.io/post/4e3521b9.html</id>
+    <published>2020-01-13T02:18:08.000Z</published>
+    <updated>2020-09-06T15:00:29.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>1月13日 星期一 多云转晴</p><p>被咽痛折磨的死去活来，以往感冒，鼻塞已经是常态了，实在没办法，虽说很不习惯，至少还能用嘴呼吸，可是这次咽痛，这就很要命了，呼吸都要牵扯到咽喉那块地方，然后就是一种灼痛，像是体侧1000m以后，嗓子产生的那种灼烧感。</p><p>半夜每隔1个多小时就被窒息感或者灼痛感弄醒，现在想想我好歹还有两个室友在陪着，兄弟他却只是一个人住着，而且出租屋湿气还那么重。交换着想了一下，要是他感冒了，只能从聊天软件上感觉到别人的关心，那种感觉得多无助，无怪乎他会挂那么多除湿袋，喝着祛湿的薏米茶（那玩意分明就是泻药）。</p><p>早上看过去，后街只剩下三家铺子还开着了，不过我现在吞咽口水都要忍受莫大痛苦，早饭什么的暂时还是算了吧。</p><p>最后为了满足医嘱要求的饭后吃药，姑且和水吞了个面包，像是钝刀子割过气管的感觉别提多难受了。</p><p>早上果汁姐过来和我说了下，因为春节假期的关系，这个月的月度总结现在已经可以写起来了，嘿嘿，我早在上周五就把月度总结提交了，要不是我现在重感冒，病恹恹的样子实在提不起精神，我肯定要好好的得意一番的。</p><p>先是写了一小会的日记，然后余荔姐久违了派了任务，年前的最后一个任务了，而且我算是看透了那些政府招标文件编写部门的德行了，就是把发文复制粘贴改一改地名，只要是一个省市县的同类项目招标文件，建设要求都是大同小异，这次这个平阳县的项目和之前的泰顺县的项目的技术内容一比对，真的就是全局替换了地名而已。</p><p>这可便宜我了，你全局替换，我也全局替换。哈哈哈。</p><p>午饭没有胃口，继续啃面包，果汁姐则是因为不吃荤的关系，这会没啥素食餐馆可去了，所以也没出去。然后看我白开水就面包的，特地给了我一罐旺仔牛奶，我则是嗓子疼的话都不好说了，没来得及道谢真的是失礼。</p><p>下午发了个自然资源部产品介绍会的通知</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1月13日 星期一 多云转晴&lt;/p&gt;
+&lt;p&gt;被咽痛折磨的死去活来，以往感冒，鼻塞已经是常态了，实在没办法，虽说很不习惯，至少还能用嘴呼吸，可是这次咽痛，这就很要命了，呼吸都要牵扯到咽喉那块地方，然后就是一种灼痛，像是体侧1000m以后，嗓子产生的那种灼烧感。&lt;/p&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+    <category term="实习日志" scheme="http://akilarlxh.github.io/tags/%E5%AE%9E%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20200112</title>
+    <link href="http://akilarlxh.github.io/post/3932112f.html"/>
+    <id>http://akilarlxh.github.io/post/3932112f.html</id>
+    <published>2020-01-12T01:29:22.000Z</published>
+    <updated>2020-09-06T15:00:29.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>1月12日 星期天 多云转晴</p><p>早上8点多下床，垫补了香蕉苹果以后吃了药，咽痛的感觉似乎好转许多，之前窝在床铺里，四肢发热，结果就是不出汗，我就知道不对劲了，下来灌了一壶热水下去，发汗发出来了自然就好受许多。</p><p>昨天忘了写了，买完药以后去理了下发，应该是年前人少的关系，tony老师相当认真的帮我理发，嗯，这次要剪短一点，毕竟之后一个月都不理发了，哈哈哈，毕竟我可不敢拿舅舅开玩笑2333。正当我觉得这个tony老师剪的不错的时候，他把我发尖给推了，然后发际线瞬间拔高，我……忍了，反正很快能长回来的。</p><p>川贝枇杷膏是真的好吃，尤其是刚咽下去的那一刻，凉意囤积在咽喉处，一下子就感觉不到咽痛了，虽说要不了多久，凉意散去，又会痛起来。</p><p>午饭去后街，学校食堂12号刚好关门，没得选择。结果后街也是萧条景象，好在横街面馆还开着，按例拍出13文大钱，要了一大碗雪菜肉丝面，我现在确信自己在发低烧了，吃嘛嘛不香，感冒对人最大的威胁大概就是会影响食欲了，可恶，饭都吃不爽。</p><p>终于盼来了久违的太阳，晒下被子，然后是多云天，今天晚上睡觉多半是闻不到烤螨虫的香味了。</p><p>进dinosaur MC体验服体验了一把，mod比我想象的多，还加了建筑mod，就是不知道建筑材料能不能自己合成制作。毕竟是删档测试，所以我大致看过了效果以后也就不再玩下去了，低烧不退咋治啊，我想知道除了喝热水还有啥办法。</p><p>我穿的保暖内衣不吸汗，结果早上出的汗贴在衣服上，冷了以后又冻人。我放弃了今天之内就能彻底好转的可笑念头。寄希望于喝热水能缓解症状，至少别让我今晚还被咽痛折磨，咽痛是真的会呼吸的痛啊。</p><p>晚饭想吃饺子，然后就跑去超市看速冻饺子，去了一趟买回来一包宁波汤圆，我仔细想了一下，以我现在的状态，不谈吃不吃得消饺子，问题是此刻感冒的我就该对甜食更加感兴趣，毕竟需要大量糖分来支撑身体修复啊，听着咋那么像机器人啊。</p><p>昨天的事我还记得的，果断和楠皮还有吉皮商量过了，这点就很好，换成赵皮，唉，他大概熄灯前内回寝室就很好了。</p><p>题外话</p><p>有预感，这感冒明天还得恶化。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1月12日 星期天 多云转晴&lt;/p&gt;
+&lt;p&gt;早上8点多下床，垫补了香蕉苹果以后吃了药，咽痛的感觉似乎好转许多，之前窝在床铺里，四肢发热，结果就是不出汗，我就知道不对劲了，下来灌了一壶热水下去，发汗发出来了自然就好受许多。&lt;/p&gt;
+&lt;p&gt;昨天忘了写了，买完药以后去理了下发，应</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>20200111</title>
+    <link href="http://akilarlxh.github.io/post/a03b4095.html"/>
+    <id>http://akilarlxh.github.io/post/a03b4095.html</id>
+    <published>2020-01-11T00:58:25.000Z</published>
+    <updated>2020-09-06T15:00:29.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>1月11日 星期六 小雨</p><p>早上8点起来，图啥子不清楚，我反正和兄弟说的是9点左右去找他，之前搜高德的时候傻乎乎的选择了步行，难怪啥都说是三小时行程。切换公交地铁以后就好办了，206居然可以直达附近，而且206只停靠12站，真的是相当贴心的了。</p><p>结果我磨磨蹭蹭的走去首发站，然后看到发车时间是半小时一班，而我刚刚好9点31走到。我讨厌地铁封路，留一条快捷通道让我可以直接过去车站多好啊。</p><p>百无聊赖的玩着贪食蛇大作战，玩到其他蛇一出生就被我包围的程度，终于发车了，果断自己撞墙退出。</p><p>然后我发现我错误的估计了车子的速度，只停靠12站不假，但是每站都隔着老远，结果花了46分钟，眼瞅着就是饭点了。</p><p>Dinosaur MC在我下车的同一时刻放出了客户端，算是内测开服了，不过我现在要去兄弟那了，嘿嘿，扫黄了扫黄了，独居单身男性青年的那些小道具赶紧藏起来。</p><p>然后这鬼地方GPS信号特别差，空气还特别不好，走了1公里可算是走到兄弟的小区，后面就是他去那个门，我去这个门，然后交换口供，又走岔一个楼层，果然信息不对等就是各种不方便。</p><p>出租屋不大，好在麻雀虽小五脏俱全，之前兄弟就发过我照片，但是效果图毕竟是效果图，真的看到了，我就深深感受到了何谓真正的社畜。</p><p>互相交流了一下实习时的轶事，对上司的吐槽，同事的有趣，同期生的对比之类，都是有一搭没一搭，想到啥就说啥。因为兄弟住的是底层楼层，湿气很重，所以他房间里到处挂着吸湿袋，然后还给我泡了一杯薏米茶，说是祛湿的。又甜又苦的我是喝不太惯，此刻我还没意识到问题的严重性。</p><p>本来是想着请兄弟再去学校那边，我请他吃个自助烧烤啥的，可是他实在是排斥公交车，而且下雨天也不方便，所以就就近原则了，找了一圈，烧烤店倒是找着了，可人家回家过年了，然后七拐八拐的摸进了金拱门，绝了，我千里迢迢过来就为了请兄弟吃一顿金拱门2333，想起来以前四个人一起去绍兴的时候，也是傻乎乎的窝在旅馆里打牌，吃着炸鸡外卖。</p><p>我大言不惭的点了个全家桶，结果吃到一半就吃不下了，然后就打包带走，这里提一下，这个全家桶有四杯饮料却只有3个汉堡，二桃杀三士，用心险恶啊。对，这里我喝了两杯饮料。餐间聊起一个初中同学，兄弟无情的揭露他高中时有多么猥琐，每天望着女生寝室晒出来的内衣，回想起这位大佬初中时的行为举止。嗯。男人好色有什么错！</p><p>喝了两杯可乐的报应很快就来了，下午下雨，实习的事情都聊完了，吃饭时也谈过未来的打算了，真就没事情干，那就王者荣耀呗，然后我就每打一局就上一次厕所，我都要怀疑我是不是肾虚了的时候，兄弟查了一下薏米茶的配料，有几味中草药是利尿的，这么个祛湿法啊！茶里有毒，我那你当兄弟，你却给我下药。</p><p>大概是之前小寒时的高温和这几天的气温骤降，有点染了风寒的苗头，昨天晚上睡前就感受到了久违的咽痛，等到晚上6点准备回去的时候（我们真就打了一下午王者荣耀2333），我开始出现低烧症状，将将赶上206，在车上神志恍惚，确实是感冒了。</p><p>下车时昏昏沉沉的，摸到了最近的药店，轻车熟路的描述了自己的症状，熟练的不可思议，大夫很贴心，然后跟我说最近几天都是这样感冒的，不过基本都是小孩和老人。我觉得我应该还算是小孩吧……太丢人了，免疫力被划归到老幼组了。</p><p>题外话</p><p>吃完了药，早早洗漱睡觉，结果楠皮和吉皮相继在熄灯后洗澡，然后直到11点38分我还要受吹风机的噪音折磨。明天要和他们商量一下，尽早洗漱洗澡。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1月11日 星期六 小雨&lt;/p&gt;
+&lt;p&gt;早上8点起来，图啥子不清楚，我反正和兄弟说的是9点左右去找他，之前搜高德的时候傻乎乎的选择了步行，难怪啥都说是三小时行程。切换公交地铁以后就好办了，206居然可以直达附近，而且206只停靠12站，真的是相当贴心的了。&lt;/p&gt;
+&lt;p&gt;结</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+    <category term="实习日志" scheme="http://akilarlxh.github.io/tags/%E5%AE%9E%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20200110</title>
+    <link href="http://akilarlxh.github.io/post/d73c7003.html"/>
+    <id>http://akilarlxh.github.io/post/d73c7003.html</id>
+    <published>2020-01-10T07:56:22.000Z</published>
+    <updated>2020-09-06T15:00:29.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>1月10日 星期五 小雨</p><p>今天早上起来的时候肚子着凉了，硬是跑厕所耽误了10分钟，然后只能无奈地放弃吃早饭的机会（说实在的，没有包子铺了，我对其他的早饭铺子实在是没有兴趣，又贵还吃不饱，性价比啊，性价比!</p><p>高德地图的实时公交还是坑人，慢了一站的实时显示，得亏我不要命的狂奔————哦，这次还是特地往上跑了一站————不然真就赶不上了。然后就是，因为没吃早饭，还在这狂奔赶公交,所有在公交上好好的享受了一把低血糖的滋味，以后要随身带块巧克力之类的甜食，虽说犯困是常态了，但是低血糖带来的头晕可一点也不好受。</p><p>到公司的时候差不多就是八点零五分，从楼梯里出来时恰好碰上了雪娇姐，艾玛，这么早来公司还被领导撞见，这感觉简直不要太好啊，哈哈哈。</p><p>不过最近也没什么新项目，我就先做个蒸汽热敷好了。每天的工作从眼睛不充血开始吧，呵呵，好凄凉的愿望。</p><p>奇怪的是，我应该是部门最早到的了，然后一来公司的空调就开着。是晚上不关还是有人更早来了？不过也确实看到很多研发组的顶着憔悴的面容在编写程序就是了。想来还有点后怕，我当时要是执意要面试研发岗位，想来迟早也是这么个局面。</p><p>久违的说说MC的事情吧，真的很羡慕Acidg他们，一群人志同道合的凑在一块，一起玩MC，而且都很热爱这个方块游戏，还能一起组建服务器。又想起我当初一个人独自玩耍，造房子，做匠魂，然后看窗外天黑又天亮。游戏里也是天黑又天亮，好没有真实感。（话说当时作息都颠倒到地球背面去了，居然还没猝死，也是福大命大）</p><p>想着是不是要和兄弟约一下，周末一起吃个饭，虽说他大概依旧只想玩王者荣耀，对其他游戏无甚兴趣，但是推杯换盏的时候，我随口提那么一两句，诱导他跟着玩那么一小会还是有可能的吧。</p><p>中午蜀湘阁，以后就不特别提了，真的，自助餐厅吊打公司食堂，菜色丰富，味道还好，最关键的是价格良心啊。不过老板的小心机哦，在收银台旁边放个花生米，一下子就把花生米卖出了荤菜的价格，我想想，荤菜是3块钱/50克，emm，30块钱一斤，要是都买猪肉的话，我买爆！</p><p>中午终于又有沙发睡午觉了，我这个腰啊，正是风华正茂的年纪，腰却酸的像得了风湿病的老东西，下周要不考虑戴着护腰来上班，额，好傻，还是算了吧。</p><p>下午去把各个PPT看了看，也就叶老师的写的条理清晰些，其他几个都像是直接搬的发文内容，太不走心了。</p><p>和兄弟商量好周六一道玩耍，先去他那边逛一圈，晚上巧立名目去吃韩金阁岂不美哉，但愿韩金阁不要已经关门了。</p><p>大概四点左右，杜叔又在群里说到空气炸锅，反手一招想吃烧鸡，然后他就让荔枝姐姐给我派任务，哇，这么明显的以大欺小，2333。有一说一，我确实饿的不行了，四点正是午饭消化光，晚饭又太早的时候啊。坚持住，过了今天又是周末了。</p><p>刘驰得意的表示明天他就回家了，而我还要一礼拜，看到好多拖着旅行箱的同事，敢情都是直接今天就走的，大气。</p><p>晚班车明显比以往宽敞了，以往的周五，正新鸡排店门口肯定挤满了带着小孩的家长。</p><p>买了小米的冲牙器，说实在的，体验效果一般，却又不好说差，只能说很鸡肋。</p><p>晚饭没有点烧鸡，但是有烧烤，都差不多啦。</p><p>题外话</p><p>恐龙战队的各位搭建服务器的热情都满溢出来了，看得出来他们是真的热爱这个游戏。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1月10日 星期五 小雨&lt;/p&gt;
+&lt;p&gt;今天早上起来的时候肚子着凉了，硬是跑厕所耽误了10分钟，然后只能无奈地放弃吃早饭的机会（说实在的，没有包子铺了，我对其他的早饭铺子实在是没有兴趣，又贵还吃不饱，性价比啊，性价比!&lt;/p&gt;
+&lt;p&gt;高德地图的实时公交还是坑人，慢了一站的实</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+    <category term="实习日志" scheme="http://akilarlxh.github.io/tags/%E5%AE%9E%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20200109</title>
+    <link href="http://akilarlxh.github.io/post/b7fbf9e6.html"/>
+    <id>http://akilarlxh.github.io/post/b7fbf9e6.html</id>
+    <published>2020-01-09T01:14:35.000Z</published>
+    <updated>2020-09-06T15:00:29.596Z</updated>
+    
+    <content type="html"><![CDATA[<p>1月9日 星期四 阴</p><p>承接昨天的话题，谢天谢地还有还能蹭吉皮的充电器，但是也只能是勉勉强强，早上经过小晓包子铺的时候，发现这里也只剩卷闸门了，真就没东西可吃了。衣食住行，一到过年，学校这边的生命线都要被掐断了。</p><p>所以干脆也没吃早饭，不过路上同行的一位小哥手里的糯米饭团那是真的香啊，而且饭特别多，不知道是哪家店买的，我实在是被后街起起落落的物价吓怕了。</p><p>公交车上的空气一如既往的难闻，一车人抢着有限的空气，我在车上容易睡着不是没有道理的。</p><p>到单位了也没啥食欲，今天晚上是部门聚餐，仔细想想我很亏啊，对我这个偏食严重的实习生来说，聚餐下馆子，又贵又不好吃，于是就越想越纠结，但又不好直接驳上司面子。</p><p>唉，听老爹的开导好了，本来我不实习的话，就是单纯的赔钱货，实习以后，就当这是在学校里嘛，不仅能学到东西还有钱拿，这么一想，实习期间的一些开销好像也就没那么难以接受了。</p><p>回头读了一下自己以前写的小说，确实更像轻小说，偏偏我还写了堆古风桥段进去，这就更加显得不伦不类了，唉，到底还是阅历太浅，没啥才华。我可能还是多写写微小说比较好，把思绪压缩在短短的篇幅里，不至于因为长篇铺张而露出马脚。</p><p>玲难得主动找我私聊，不过问的都是客套话，不出意外是老师在旁边交代的。</p><p>中午照旧蜀湘阁，不过我比较想试试旁边那家牛肉面，真的是好不做作的一家店，实物和宣传画上的完全一致，看着就很有食欲。</p><p>刘驰拿了带鱼，居然真的有人活到20多岁还没吃过带鱼，看他把带鱼边上的刺都嚼了一遍再“呸呸呸”，看得我憋笑憋出内伤。稍等片刻，我想到高兴的事情。哈哈哈哈。</p><p>下午继续划水，真的是被动划水。我已经开始忧心今天的工作日志没东西可写了。所以为了能够写点东西，我特地去把果汁姐发的各种业务知识看了一遍。</p><p>结论，除了脑壳疼，没学到啥实质性的内容。</p><p>昨天买的眼药水到货了，20多年来第一次主动买眼药水，以前仗着自己没近视，可劲豪迈用眼，得亏成年以后晶状体发育完全，视力基本定型。所以为啥要买眼药水呢？因为上班时一直看着电脑真的很伤眼啊。虽说没近视，但是血丝算是在眼球上扎根了。而且我好菜，滴眼药水的时候会不自觉的闭眼，每次都滴在眼皮上。浪费，太浪费了。</p><p>然后认真的去搜了一下眼药水的滴法。soga，原来是要滴在结膜囊上，难怪我之前滴在眼球上都失败了，看网上的说法那样好像还挺危险的。</p><p>小米9的twrp发布出来了，马上去准备给小米9解锁，结果这次解锁要清空手机设置，等我先把相册和软件备份好。周末再来收拾它。</p><p>工作日志大言不惭的挂在了南平市那个项目下面，怎么了嘛，学习这个项目的主标编制难道不可以吗？</p><p>晚上公司聚餐，写完工作日志等着恰饭，美滋滋。</p><p>晚上聚餐的时间定在6点，地点选择在星光城的千岛丰登饭店，部门的同事们陆陆续续的赶到，我们这桌除了我和超哥全是女同事，一下子咱就成了饭桌上的主战力，而且因为我是在座年纪最小的，明明我自觉是个靠谱青年了，在聚餐的时候却被当成小孩子看待，不过一点也不亏就是了，艾玛，真香。</p><p>聚餐之前肯定要玩游戏，聚会游戏首先就想到谁是卧底，哈哈哈，部门的小姐姐都好菜，不太会玩，杀平民杀的不亦乐乎，卧底到最后还没弄清楚自己的身份，田雪姐和曾荣姐还可劲带节奏，果汁姐划水，秋姐总是莫名其妙被第一波集火，虽然游戏玩的很乱套，但是这一圈下来，嬉嬉笑笑的，开心也开心到了，每个人的名字我也都记住了，这才是聚会的意义所在吧。</p><p>晚班车谢天谢地，玩到8点半，将将赶着倒数第二班车，餐厅出门就是回去的车的始发站，不得不说很有戏剧性。</p><p>题外话</p><p>赵皮QQ貌似又被盗了。回寝室时波皮在玩美瞳。不带电脑回去的我，倒了寝室也没啥别的可做，不想打手游，也没有新番，就坐那刷微博，困了就睡觉，果然是要再刚一刚surface的触屏啊，我确信硬件没坏，架不住微软的shit市场，没测试过就把系统版本强制投放。实在不行，就去下载win8的镜像，下载速度慢点就慢点，好过没法玩触屏啊。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1月9日 星期四 阴&lt;/p&gt;
+&lt;p&gt;承接昨天的话题，谢天谢地还有还能蹭吉皮的充电器，但是也只能是勉勉强强，早上经过小晓包子铺的时候，发现这里也只剩卷闸门了，真就没东西可吃了。衣食住行，一到过年，学校这边的生命线都要被掐断了。&lt;/p&gt;
+&lt;p&gt;所以干脆也没吃早饭，不过路上同行的</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+    <category term="实习日志" scheme="http://akilarlxh.github.io/tags/%E5%AE%9E%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20200108</title>
+    <link href="http://akilarlxh.github.io/post/c0fcc970.html"/>
+    <id>http://akilarlxh.github.io/post/c0fcc970.html</id>
+    <published>2020-01-08T03:12:58.000Z</published>
+    <updated>2020-09-06T15:00:29.596Z</updated>
+    
+    <content type="html"><![CDATA[<p>1月8日 星期三 晴</p><p>妖风天，今天为了表示我真的有在洗澡，终于是换了一件外套，然而除非是吃烧烤或者溅上污渍，我基本不会去洗那件毛茸茸的外套，都是搁着晒一下就是了。我可不希望进一趟洗衣机以后，我所有的衣服都变成毛茸茸了。</p><p>早饭买的奶黄包，今天这个妖风有多大呢，我买好时还是烫手又烫嘴的奶黄包，走到公交站牌的时候已经冷冰冰了。一口冰馒头一口冰豆奶，好端端的早饭硬是让我吃出了点心酸的味道。</p><p>早上继续打瞌睡，我昨天真的是11点就上床睡觉了，但是午夜热醒过来太多次了，早知道就该把被子撤一床掉。顺带一提我终于找到了我的快递，不知道怎么操作的，一个盖章把我的名字遮挡掉了，要不是我先看了下收件物品，推测了盒子大小，还不知道要筛选到什么时候。</p><p>赶在饭点前完成了武义县那个项目的第三稿修改，午饭蜀湘阁走起。</p><p>中午没忍住拿了太多菜，事实证明不会吃辣就不要尝试，为了压住那股子辣味，还多扒了一碗饭，这对体重控制可一点也没有帮助。</p><p>午睡可煎熬坏了，沙发被保洁阿姨打扫以后掀开了，说是晾干前不能坐了，没有沙发躺就只能蜷缩在工位上，虽然中午的时候刘驰开玩笑说，容易打瞌睡和单位的椅子太舒服有关系，但午睡时可就一点也不舒服了，话说我也就是平均升高啊，奈何趴着高处桌子一截，仰着高出椅子一截，怎么着都不舒服。到最后带着眼罩正襟危坐，宛如一座坐像。</p><p>醒过来时看到兄弟发来的照片，他的单位在34楼，之前大雾天时恰好让他拍了张照片，要不是雾气还没浓到盖住马路，我都要误以为这是在迪拜拍的了。</p><p>下午无所事事，1月份基本不会再承接新项目了，最后一旬光阴说白了就是做下收（mo）尾（yu）工作。而对于果汁姐和叶老师她们来说，收尾工作意味着整理模板，总结业务，更新培训文件。对我来说真的就只剩下摸鱼了。于是一个下午都过得毫无目标，本来还想着写写搁置许久的小说，可是架不住自己毫无灵感。才动笔就封笔。</p><p>晚上回去时犹豫再三，破天荒选择把电脑留在单位。稍微思考了一下，带回去也就是每天看看番，但是我现在反正也开了B站大会员了，追番直接用手机就是了，犯不着走其他旁门左道啊。</p><p>晚饭时才知道养闲府之前只是暂停营业一天，今天照旧送餐，希望能坚持久一点，否则最后一个礼拜我大概真的要靠方便面过日子。</p><p>Kevin时隔许久又来联系我，坦白说我现在不知道用什么立场来看待他，我可能还是没法做到坦然面对无间道。</p><p>题外话</p><p>不带电脑回来对下班后的娱乐没啥影响。问题是我忘记带充电器了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1月8日 星期三 晴&lt;/p&gt;
+&lt;p&gt;妖风天，今天为了表示我真的有在洗澡，终于是换了一件外套，然而除非是吃烧烤或者溅上污渍，我基本不会去洗那件毛茸茸的外套，都是搁着晒一下就是了。我可不希望进一趟洗衣机以后，我所有的衣服都变成毛茸茸了。&lt;/p&gt;
+&lt;p&gt;早饭买的奶黄包，今天这个妖</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+    <category term="实习日志" scheme="http://akilarlxh.github.io/tags/%E5%AE%9E%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20200107</title>
+    <link href="http://akilarlxh.github.io/post/5043d4e1.html"/>
+    <id>http://akilarlxh.github.io/post/5043d4e1.html</id>
+    <published>2020-01-07T05:03:15.000Z</published>
+    <updated>2020-09-06T15:00:29.596Z</updated>
+    
+    <content type="html"><![CDATA[<p>1月7日 星期二 小雨转阴</p><p>昨天还感觉暖和的不行，今天早上又是一波猝不及防的降温，得亏我是习惯了看天气预报的。唯一担心的就是预报说今天会有雨，而我昨天忘记把伞带回来了，不过也没大关系，只要回来的时候有伞就好，出门时，寝室里，诶嘿嘿，又不是只有一把伞。</p><p>早上头昏脑涨，昨天为了完成学校党支部的幺蛾子，熬夜写个人小传。奈何在下人生太精彩，从幼儿园扛把子写到现在，那是洋洋洒洒啊。结果键盘敲起来轻轻松松几千字。但是架不住这玩意还得手抄啊！结果就是11点半才写完，勉勉强强压着11:59的时间洗完澡上床睡觉，而且昨天气温还是很高，所以一直在出汗，半夜醒过来好几次。</p><p>所以写标书的时候莫名其妙的就少了10页内容，还好有ctrl+z，不过一早上的工作质量肯定是别提了。统统都得重来。不过幸好最近没有新的项目了，早上做的也只是校稿修编工作，把校对后的版本重新下载一下再改过就好了。</p><p>今天刘驰在了，昨天他答辩请假，再早的时候呢，他愧疚于自己请假，一直主动留个半小时才下班。还有就是，他买的13号的车票，也就是说他还要想办法请8天假，不容易啊。上班才1个半月，就已经请了一旬的假。</p><p>三楼食堂走起，之前我还没注意，只觉得三楼的这个自助午餐卖的菜都好贵，直到刘驰提醒我，这家店的名字叫“蜀湘阁”，All right，破案了，敢把四川和湖南拿来做店名的，不辣反而说不过去。</p><p>中午刷微博忘记午睡了。大事不妙。</p><p>下午开研讨会，我还没实际参与过任何项目建设，只是写标。所以在研讨的内容除了和数据库建设有关的，其他一概听不懂，然后还正好午睡没睡饱，昨天则是为了个人小传熬到十二点，啊啊啊，难受啊，咋办嘛。两眼一闭一睁，感觉回到了大学课堂。最尴尬的是这次会议是坐的长桌，结果我打瞌睡的样子被所有人一览无余。唉，丢人丢大了。</p><p>晚上把武义县的项目校对了一遍，坦白说错误好多，光是编制格式就不对。天晓得它居然是把编制格式藏在附件里，这不是坑人呢吗。</p><p>晚上看到了很漂亮的夕阳和火烧云，越来越怀疑这是个假冬天了，印象里，火烧云是属于夏天的吧？</p><p>我的快递说是说到了，但是真心难找，公司的快递架就是不管什么都往上一丢，也不做分类，反正我要在茫茫多的箱子里找到自己的实在是太难了，我知道我的包裹在这里，可是我找不出来。</p><p>耽误太多时间，不找了，先回去要紧。反正不是什么必需品。</p><p>晚上开始忧心晚饭问题了，养闲府关门回家过年了，麻辣烫也开始最后清仓了，附近好吃的店都相继拉起卷闸门，最后一个礼拜难不成我只能靠方便面了吗？</p><p>题外话</p><p>结果等了一天也没见着下雨。气温完全不像小寒。春节前的杭州怕是不会下雪了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1月7日 星期二 小雨转阴&lt;/p&gt;
+&lt;p&gt;昨天还感觉暖和的不行，今天早上又是一波猝不及防的降温，得亏我是习惯了看天气预报的。唯一担心的就是预报说今天会有雨，而我昨天忘记把伞带回来了，不过也没大关系，只要回来的时候有伞就好，出门时，寝室里，诶嘿嘿，又不是只有一把伞。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+    <category term="实习日志" scheme="http://akilarlxh.github.io/tags/%E5%AE%9E%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>实习经验总结及建议</title>
+    <link href="http://akilarlxh.github.io/post/32bdcc74.html"/>
+    <id>http://akilarlxh.github.io/post/32bdcc74.html</id>
+    <published>2020-01-06T08:26:02.000Z</published>
+    <updated>2020-09-06T15:00:29.615Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h1><p>这篇文章的内容算是单纯的个人意见，并没有什么权威的参考价值，可以简单的当做是一篇踩坑笔记来看待。我会把我在实习时遇到的HR的刁钻提问，以及失败经历和总结写下来。</p><p>请看这篇笔记的读者对自己有信心，哪怕是我，一个大学时期不曾参与任何学科竞赛，GPA始终在中游徘徊，直到面试前一周还不能熟练掌握后端编程的菜鸟都能成功找到实习，没有理由说别人不可以。（我就稍微谦虚一下，别太当真，真的啥本事都没有就不要出去浪费人家HR时间了，大家都很忙的）</p><p>这里我总结的出发点更多的是对自己知识技能储备不足的无奈，所以只能靠着一些投机取巧的小把戏来博得面试官的青睐。所以说打铁还需自身硬，为了面试时不至于捉襟见肘，趁着还有时间多学些工作技能才是王道。（学校老师教的多是应对考试的东西，没太大实际意义，工作技能肯定得靠课外时间泡在图书馆自学）</p><h1 id="简历版面"><a href="#简历版面" class="headerlink" title="简历版面"></a>简历版面</h1><p>好看的简历肯定会比难看的简历吸引目光。而好看的定义有两层，一个是丰富的履历，一个是精美的版面。</p><p>丰富的履历需要较多笔墨，暂且放一放，所以先来说下精美的版面，直接在网络上搜索在线简历制作就能找到合适的网站，比如我使用的就是</p><div class="note info"><p>[五百丁简历](https://www.500d.me/)</p></div><p>它支持在线根据你填入的内容生成简历，生成是免费的，但导出需要会员，虽然可以靠截图强行保存，但关于这点，我的建议是，舍不得孩子套不着狼，有些必要消费还是不应该犹豫的。</p><p>这里以我参加的校招为例（<em>原谅笔者的学校实在称不上什么好学校，社招的竞争压力不是一星半点，所以只敢拿校招说事</em>）<strong>打印简历一般是5份即可</strong>，再多未必面试的过来，最好是彩印，这样在与校招面试官交谈时能够留下良好的第一印象。注意，是一份简历最多五份即可，根据你面试的经验累加，事后肯定还要不停的修改，一蹴而就的毕竟是少数。</p><p>然后就是<strong>丰富的履历</strong>了，其实都是老生常谈，都是身边的人（<em>或者班主任或者辅导员或者学长学姐</em>）反复提过，而很多学生在最后关头到来之前都不会去重视的。</p><p>先说奖项，坦白说我大学以来，因为恬淡的性子，没有参加过什么学科竞赛，所以履历上关于奖项的那一栏十分无力。</p><p>正因如此，我希望后来者能尽可能去多参加一些学科竞赛，名次反而不重要，因为那个竞赛真的就是只要去了就有奖状，而除非是省赛、国赛那样的层次，否则所有奖项在面试官眼里其实差别不大，都是一种锦上添花性质的装饰品。总之，你可以没有高等级的奖项，但是至少积累一些校赛，区赛之类的奖项，这对于版面的填充，履历的丰富相当有效。</p><p>再就是成绩，毫无疑问，专业成绩好的学生在找工作时，会比成绩差的更有优势，一个好的GPA（平均学分绩点）数据，远胜千言万语。</p><h1 id="简历的素材和内容取舍"><a href="#简历的素材和内容取舍" class="headerlink" title="简历的素材和内容取舍"></a>简历的素材和内容取舍</h1><p>很多简历模板都会有什么自我介绍、特长、兴趣爱好之类的东西，而作为一个没有多少奖项的人，第一反应肯定就是靠着填满这些内容来充实版面。这就大错特错了。</p><p>简历的履历素材上面有提到过，必要的就是学历、姓名、联系方式、英语四六级等证书成绩、项目经验，至多再加一个针对项目经验写就的自我介绍，除此之外，面试官对你的性别、年龄、爱好统统不感兴趣。如果过多的写了这方面内容，搞不好还会引起反感。</p><p>而需要你重点去丰富的内容就是项目经验。这里大概又会有难点，绝对有人和我一样，没有参加过比赛，也没有参与过什么大型设计，<strong>那么哪来的项目经验？其实可以有，就是每个专业课程都会有的课程设计。</strong>对于面试官来说，他们见多了企业级的项目开发，绝对看不上眼大学生的课程设计，所以也就不会有兴趣让你展示（<em>当然，如果你能做出可供展示的，也就是已经投入市场盈利的项目，那你绝对是面试官争抢的香饽饽</em>），由此，你大可以<strong>编几个项目名</strong>出来，在项目经验介绍里，<strong>埋入你在面试准备时学习的内容中涉及到的专有名词，诱导面试官来提问</strong>。这样，把原本宽泛的提问内容靠这种小技巧拉到你有准备的领域。还有一点就是，面试官自己所学的专业未必是你的专业，所以那些专有名词你说的越是玄乎，越是能唬住他们。</p><p>项目名的罗列秉承离现在时间节点越近就越要放在简历的前面的原则，并且项目的介绍内容要重点突出自己所做的工作，<strong>简历中最忌讳的就是谦虚</strong>，要努力的把项目的功劳都揽在自己身上，突出自己的贡献。比如，哪怕你只是在项目中负责设计了数据库，也得吹成是负责软件架构设计，数据库的统筹规划，以及最后的运行效果查验，各类文档的编写设计，工作计划的详细制定。做到把自己从打杂的吹成当领导的程度也不为过。</p><p>没必要担心编造的项目被识破，面试官没空去考证这个，而且识破了换一个公司接着面试就是，如果不能在这家公司入职，又何必担心这家公司的面试官的感受。（<strong>胆子要大，脸皮要厚</strong>）</p><h1 id="校招目标企业单位的选择"><a href="#校招目标企业单位的选择" class="headerlink" title="校招目标企业单位的选择"></a>校招目标企业单位的选择</h1><p>首先要确定自己的能力，比如我，后端一窍不通，前端一知半解，除了会写点东西，没有任何就业竞争力。但是不会代码不要紧，能言善道的，就去应聘项目经理，产品销售。有耐心又擅长写作的，就去做售前，计算机类专业的优势就在于任何互联网公司的职位都能作为择业点。当然，最好还是掌握编程技能，这样选择的范围才是最灵活的。</p><p>如是，要找好那些有希望的岗位。而单位选择上，量力而行，这点也好办，面试难度和企业实力是成正比的，企业实力越高，面试难度越高，很简单的道理。</p><p>不要因为校招时面试摊位的一句话（<em>“来看看”“专业不限”“要不先把简历留着”</em>）就老老实实把简历递出去，必须是自己判断过后，再坐下仔细咨询企业背景，招聘职位所需技能，言辞上要礼貌，问问题要有针对性。包括就业水准，上班时间，招工人数，薪资报酬等，如果有希望再去递出（<em>要是和面试官聊得很投机，到他特地在你简历上做标记的程度，那就是有希望了</em>）</p><h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1><p>自我介绍很重要，没有面试官会喜欢看见应试者在自己面前支支吾吾半天说不出点干货来。这里放下我在应聘售前岗位时的自我介绍，注意，<strong>这是个反例，我会针对自我介绍中的问题来分析</strong>。</p><div class="note info no-icon"><p>我叫XXX，目前就读的专业是软件工程，主修前端方向，当然，这并不代表我的能力局限于此。我的性格是典型的外向型，这很有助于我在执行业务时与客户流畅沟通。同时我也具备足够的判断能力和思考能力，这使得我既能够通过手头已知的信息制定详细计划，也能够灵活应对绝大多数的突发状况。在您们发出的招聘内容上，我了解到售前最需要的就是独立撰写一系列技术文档的能力和沟通能力，沟通能力上还请在接下来的面试中尽情考量。文档编写能力上，简历中有我的个人博客网址，里面有许多我自己写的短篇美文，这可以证明我有十分出色的文字组织能力。另外博客里还有我写的许多堪称事无巨细的教程文档，并且一直保持着持续更新，这证明我有极好的耐心和站在客户角度的换位思考能力。这一点相信也是售前岗位最需要的品质。说到在校期间的项目案例，这些项目的文档，团队里的伙伴都很放心地交由我负责，而我也热衷于和文字打交道。以上就是我对自己能对公司业务起到帮助的能力介绍，如果能够被录取的话，我会尽全力发挥这些特长来帮公司创造收益。</p></div><p>这个自我介绍中存在很多的矛盾点，首先是专业方向和就业选择之间的矛盾，我自称主修前端方向，却不是应聘前端岗位。</p><p>然后是对判断能力的过度吹嘘，我自称“能够通过手头已知的信息制定详细计划”，但是有这个能力的人是不会做出矛盾的事情的，简而言之，如果我有详细的计划制定能力，我的目标肯定相当明确，主修前端方向就找前端岗位才是。</p><p>还有就是对于项目的介绍，没有做到足够详细，虽然可以在介绍之后的问询环节细化，但是自我介绍中底气不足，自然会让面试官产生怀疑，从而在面试中扣印象分。</p><h1 id="面试时的大忌"><a href="#面试时的大忌" class="headerlink" title="面试时的大忌"></a>面试时的大忌</h1><p>先说群面，就是多个应试者一起面试，这时最忌讳的就是腼腆，或许在面试的一些题目中，你们必须互相合作，但是，最终能够被录取的往往只有少部分人，所以本质上所有应试者都是竞争关系，所以在能表现自己能力的环节必须尽可能的去争取话语权。</p><p>然后是单面，多个面试官轮流来面试一个应试者，这个往往是在二面甚至更高的面试时才会有了。单面时的注意点就很多了，这种面试，往往是面试官已经充分看过你的简历和一些自我介绍以及面试时做的答卷情况了。</p><ol><li><p>首先就是不要满口承诺，面试官肯定会一上来就和你讲他们公司就业压力大，这时候正确的做法是详细询问怎么个大法，然后做出你也是经过深思熟虑的，才表示能够接受这样的工作压力环境。</p></li><li><p>然后就是<strong>绝对不能做出和简历或者之前的自我介绍以及答卷上矛盾的事情</strong>，比如你写了自己深谋远虑，那就绝对不能表现出短视的举动。这里我曾经犯的错误就是“我是转专业到软件工程”和“我最终选择的面试工作不是软件编程类”的矛盾，而我在自我介绍中用了句“有良好的计划制定能力”，面试官一看这三点就知道我没有真的去制定计划，没有按部就班的强化专业能力，到头来只能瞎投简历碰运气。</p></li><li><p>再就是在被揭露短板时不能歇斯底里的去试图掩饰。最妥善的做法就是坦然接受，同时和面试官一起分析这些短板是否能在实习时克服或者弥补，抑或这个短板并不影响工作。只要能够说服面试官，被揭露的短板就不算真正的短板，而说服的过程恰恰是展示你交涉能力的好机会。</p></li><li><p>没必要回避谈钱这件事，但是说法不要太市侩。大多数企业的氛围都是注重实用主义，能者多劳多得是再合理不过的事情，我当时犯的错误就是张口闭口说自己缺钱花，现在想来自己都想抽自己一巴掌。正确的做法是向面试官解释自己很早就构建了对金钱的概念，契机可以是父母开始限制自己的开销，并且要求自己靠劳动来换取零用钱。然后表示自己也在学校参与勤工俭学（没参与也可以说参与，问你为啥不在简历里提，就说是觉得这个是理所当然的，没必要提），要把自己对工资的市侩说法转为对实用主义的推崇，表示自己能靠自己的本事去争取更高的薪酬。</p></li></ol><h1 id="几个小技巧"><a href="#几个小技巧" class="headerlink" title="几个小技巧"></a>几个小技巧</h1><ol><li>面试时尽可能保持微笑，回答问题时要直视面试官的双眼，表现出自己的从容。</li><li>事先准备自我介绍和简历时就要想好说辞，对于无可回避的矛盾点要做好合理的解释。</li><li>如果面试官表现的很高傲，就反问他五险一金和工资待遇，然后表示不满意，潇洒走人（你若是能力强的，他会求你留下，能力弱的，他的高傲态度就已经是逐客令了，自己走还能保留点尊严）就业机会不是只此一家，非他不可的，本身面试就不该是一蹴而就的事情，失败权当是积累经验。</li></ol><h1 id="面试官的刁钻提问"><a href="#面试官的刁钻提问" class="headerlink" title="面试官的刁钻提问"></a>面试官的刁钻提问</h1><p>（该部分纯粹是我个人见解，未必有用，酌情参考）<br>提问：如果这次你没被录取，你会怎么做？（这个问题是我遇到过的最刁钻的，而我当时真就傻乎乎的顺着话题去分析了一堆失败后会总结经验，说着期待再来尝试的机会之类的话，之后痛定思痛，我想出了更合适的答案）<br>回答：我的习惯就是，能够被及时补救的错误，那我会在事前就考虑所有我能想到的突发状况，在它发生之前就避免犯错。而面试这件事，我是为了成功而来，若没被录取，那也是等我确定被拒绝以后才会去总结错误。对当前情况于事无补的总结不过是杞人忧天，不自信的人才会去做这种考虑。而我相信自己的能力。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;写在最前&quot;&gt;&lt;a href=&quot;#写在最前&quot; class=&quot;headerlink&quot; title=&quot;写在最前&quot;&gt;&lt;/a&gt;写在最前&lt;/h1&gt;&lt;p&gt;这篇文章的内容算是单纯的个人意见，并没有什么权威的参考价值，可以简单的当做是一篇踩坑笔记来看待。我会把我在实习时遇到的HR的</summary>
+      
+    
+    
+    
+    <category term="Akilarの糖葫芦" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E7%B3%96%E8%91%AB%E8%8A%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>20200106</title>
+    <link href="http://akilarlxh.github.io/post/2744e477.html"/>
+    <id>http://akilarlxh.github.io/post/2744e477.html</id>
+    <published>2020-01-06T00:59:17.000Z</published>
+    <updated>2020-09-06T15:00:29.596Z</updated>
+    
+    <content type="html"><![CDATA[<p>1月6日 星期一 晴</p><p>昨晚上蹬被子着凉了，但是今天的温度很暖和，9℃-22℃，蹬被子还出了一身汗，让人怀疑这是不是冬天。</p><p>毕竟已经过了冬至，白昼的时间一天长过一天，同样的时间起床却让我有种起晚了的错觉。因为想着赶上7点前的那一班公交（那班车不至于那么拥挤，车上的空气不会太浑浊），所以跑着过去候车点。结果错误的估计了自己的体能，在没吃早饭的情况下狂奔300m就废了，以至于在公交上连包子都没胃口吃下去。这个啥原理来着？我记得剧烈运动过会人会偏向于盐分的摄取，奈何今天我买的是豆沙包子。</p><p>早上昏昏沉沉的，周末作息到底还是紊乱了，所以反映在周一上。不能再这样子了，要对自己更严格一点。</p><p>所以头几个小时都是小鸡啄米的状态，得亏没有领导到处巡逻。虽说我的进度已经赶到了这周四，但是被抓到上班打瞌睡还是要心虚的。</p><p>按照上周五果汁姐的指导，细化了南平市那个项目非技术部分的标题，配合评分表来设置内容，这样子做起索引来有种行云流水的顺畅感。还有就是得补上各种承诺书和公章批注。啊啦啦，这个东西忽略了可是要挨批评的。妥妥的废标项啊。</p><p>中午，本来想着找刘驰一起去对面三楼食堂的（这家店名就叫“三楼食堂”，绝了），不过没看见他，不可思议，以前明明动作很慢吞吞的。</p><p>三楼食堂的自助餐厅的菜色吧，各种素菜老喜欢加辣就很难受，海带、土豆丝、千张，每一个都辣的不行。果然还是吃肉最好。不过那家店有一点令我痛心，那个炖鸡把鸡汤熬出来，却只放了个夹子，只能夹点鸡肉。给个汤勺也好啊，哪怕是称重，这种货真价实的鸡汤也当得起这个价。</p><p>中午午睡的时候，卢总跑过来问我带的蒸汽热敷眼罩的事情，哈哈哈，终于，热敷眼罩自血洗了售前部门的同事以后，要开始向管理层进行安利了吗。这么一说我得找店家打钱啊，活广告天天帮着宣传。</p><p>天气真的很热，两件衣服差不多刚好，早上还想着喝热水，下午我已经看到饮水机被打开了制冷开关。在望向刘驰的工位的时候，我突然记起来，他今天工程实习答辩啊，当然不会在公司。</p><p>交了南平的，写完了武义的，但是现在交了，之后几天哟啊不就是没事做，要不就是又有新的活要干，不行，我要尽量摸鱼。已经把实习任务进度刷到4个月以后了，也没法说我不努力了吧。</p><p>多亏了我定好的三个闹钟，总算没在下班时忘记签退。</p><p>买的肩颈按摩仪在下班前终于到了，带回去试了下。塑料质感就不说了，价格摆在那里，问题是这东西是电疗刺激，坦白说我对电疗很反感，而且使用体验一般。然后就是，这玩意还带语音播报的，这都是什么上世纪的审美设计啊，公共场合听着这玩意播报还不得尬死。</p><p>结论，赶快退掉。</p><p>晚饭点了养闲府的两根纯肉烤肠套餐，然后赠品也选了烤肠，加购也选了烤肠，结果最后展现在我眼前的就是一碗烤肠比饭还多的便当，哈哈哈哈。</p><p>题外话</p><p>今天是小寒，恐怕是我记事以来见过的最没牌面的小寒。温度都快赶上春分了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1月6日 星期一 晴&lt;/p&gt;
+&lt;p&gt;昨晚上蹬被子着凉了，但是今天的温度很暖和，9℃-22℃，蹬被子还出了一身汗，让人怀疑这是不是冬天。&lt;/p&gt;
+&lt;p&gt;毕竟已经过了冬至，白昼的时间一天长过一天，同样的时间起床却让我有种起晚了的错觉。因为想着赶上7点前的那一班公交（那班车不至于</summary>
+      
+    
+    
+    
+    <category term="Akilarの泡泡糖" scheme="http://akilarlxh.github.io/categories/Akilar%E3%81%AE%E6%B3%A1%E6%B3%A1%E7%B3%96/"/>
+    
+    
+    <category term="实习日志" scheme="http://akilarlxh.github.io/tags/%E5%AE%9E%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+</feed>
