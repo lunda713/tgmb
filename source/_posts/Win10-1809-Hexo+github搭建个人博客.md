@@ -9,10 +9,11 @@ categories:
 author: Akilar
 abbrlink: 6ef63e2d
 date: 2019-04-09 23:03:00
+description: Windows系统下搭建Hexo+github的教程，包括主题配置以及博客管理。
 sticky: 2
 ---
 # 写在最前
-{% hideToggle %}
+{% hideToggle 无聊的碎碎念不看也罢 %}
 {% note info %}
 最开始接触博客的契机是我第一次重装ubuntu的时候。看的是[楠皮的博客](https://blog.vanxnf.top)，之后又重装了7次ubuntu，每次都去看楠皮的博客，一个人撑起了他的博客访问量。自此，我终于意识到我也该写个博客了，一开始用到的是csdn，虽然csdn自带的网页markdown非常方便，还有快捷键支持，但是实在是架不住那边烦人的站点广告，之后也试过简书，虽然好看了许多，但是还是没有我当初浏览楠皮博客时那种丝般顺滑的感觉。
 {% endnote %}
@@ -346,8 +347,10 @@ hexo deploy
 {% endhideToggle %}
 {% endnote %}
 ## 域名配置
-{% hideToggle %}
-{% note success no-icon %}（20200723修订，最后还是屈服于境泽定律，实在是top域名价格太美丽，首年只要1元/年，之后续费也是25元/年，折算下来比我买v2ray服务还便宜）{% endnote %}
+{% hideToggle 无聊的碎碎念 %}
+{% note success no-icon %}
+最后还是屈服于境泽定律，实在是top域名价格太美丽，首年只要1元/年，之后续费也是25元/年，折算下来比我买v2ray服务还便宜
+{% endnote %}
 {% endhideToggle %}
 ### 购买域名
 {% note primary no-icon %}我使用了腾讯云的对象存储功能作为图床存储，考虑到续费便利性，就在腾讯云购买的top域名，其他的像阿里云的万网也是可行的。
@@ -479,15 +482,15 @@ archives: /archives/ || archive
 # commonweal: /404/ || heartbeat
 ```
 {% endnote %}
-{% hideToggle 注意点 %}
+
 {% note warning %}
-如果事先没有通过hexo new page "pageName"来创建页面的话，
+注意点：如果事先没有通过hexo new page "pageName"来创建页面的话，
 即使在配置文件中取消注释，页面也没法显示
 我们也可以添加自己想要添加的页面，不用局限在配置文件里提供的选择里
 ||后面是fontAwesome里的文件对应的名称
 menu_icons记得选enable: true（默认应该是true）
 {% endnote %}
-{% endhideToggle %}
+
 
 ### 主题风格 schemes
 {% note default no-icon %}
@@ -866,6 +869,7 @@ limit: 10000
 local_search:
 enable: true
 ```
+
 {% endhideToggle %}
 
 # 版本控制
@@ -1056,7 +1060,7 @@ hexo depoly
 <!-- tab 🏆升级版 -->
 {% note primary %}
 新建一个脚本文件：menu.sh,将以下内容复制进去。
-{% hideToggle menu.sh %}
+
 ```bash
 #!/bin/sh
 echo "==========================================="
@@ -1169,7 +1173,6 @@ fi
 fi
 fi
 ```
-{% endhideToggle %}
 
 复制后记得按照注释信息修改个人账户和邮箱。
 界面效果如下：
