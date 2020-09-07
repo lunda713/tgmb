@@ -1,4 +1,6 @@
+const logger = require('hexo-log')()
+
 hexo.on('ready', () => {
   const { version } = require('../../package.json')
-  hexo.log.info(`Butterfly_v${version}`)
+  logger.info(`butterfly_v${version}`)
 })
