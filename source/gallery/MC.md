@@ -2,7 +2,7 @@
 title: MC
 date: 2020-09-03 17:30:48
 description:
-top_img: "https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/MC/20200904024855572.png"
+top_img: "http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/MC/20200907030105835.png"
 comments:
 cover:  
 sticky:
