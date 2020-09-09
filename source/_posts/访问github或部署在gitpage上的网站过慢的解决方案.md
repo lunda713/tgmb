@@ -14,7 +14,7 @@ github时不时抽风，老是访问不了，诚然，用科学上网能解决�
 以windows系统为例，
 hosts的路径是**C:\Windows\System32\drivers\etc**，
 打开后将以下内容复制到文件最下方。
-```
+```bash
 52.74.223.119 github.com
 185.199.110.153 assets-cdn.github.com
 151.101.228.133 avatars0.githubusercontent.com
@@ -28,18 +28,19 @@ hosts的路径是**C:\Windows\System32\drivers\etc**，
 185.199.110.153 github.io
 ```
 保存后，win+X，按A，以管理员权限启动powershell，输入
-```
+```bash
 ipconfig /flushdns
 ```
 
 刷新DNS缓存。之后就能变快了......
-<div class="note info"><p>才怪嘞，因为上述域名的IP是不停在变的，这一串映射仅仅适用于今天而已，到了明天，ip一变动，又登不上了，我总不可能天天来更新吧？</p></div>
+{% note info %}才怪嘞，因为上述域名的IP是不停在变的，这一串映射仅仅适用于今天而已，到了明天，ip一变动，又登不上了，我总不可能天天来更新吧？{% endnote %}
 
 # 使用爬虫脚本实时获取最新ip
+{% note primary %}
 （转载自[weiyinfu的博客园](https://www.cnblogs.com/weiyinfu/p/6376420.html)。以下脚本为weiyinfu所原创，笔者仅做转载)
-
+{% endnote %}
 需要查询ip地址的域名有这么多。手动添加肯定是不乐意的了。
-```
+```bash
 github.com
 assets-cdn.github.com
 avatars0.githubusercontent.com
@@ -60,13 +61,14 @@ github.io
 
 新建一个python脚本——githosts.py（最简单的方法，新建一个txt文本文件，把下面的代码粘贴进去以后，修改后缀为.py）
 
-```
+```bash
 s = """
 github.com
 assets-cdn.github.com
 avatars0.githubusercontent.com
 avatars1.githubusercontent.com
 documentcloud.github.com
+gist.github.com
 help.github.com
 nodeload.github.com
 raw.github.com
