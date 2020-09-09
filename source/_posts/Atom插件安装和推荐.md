@@ -8,15 +8,15 @@ date: 2019-05-13 13:37:46
 
 # 安装Atom
 
-在{% btn 'https://atom.io/',Atom官网,fa-link,blue %} 下载对应版本，因为是个小水管，所以经常会遇到加载失败的问题，有点耐心就可以。
+在{% btn 'https://atom.io/',🔗Atom官网,,blue %} 下载对应版本，因为是个小水管，所以经常会遇到加载失败的问题，有点耐心就可以。
 {% hideToggle 下载加速的几种手段 %}
 因为atom的release被存放在amazon上，而国内很难直接连上amazon域名，所以下载很慢甚至干脆失败。以下提供几种切实有效的加速下载方案。
-1. 科学上网（不推荐，现在大多需要收费）,可以查看这篇教程：[Win重装日记](https://akilar.top/post/29cf4234.html)
-2. 使用代理下载服务，可以查看这篇教程：[从github下载release速度过慢的解决方案](https://akilar.top/post/7357e481.html)
-访问atom作者的github，找到[Atom的release](https://github.com/atom/atom/releases/)，选择需要的版本，右键，复制链接
+1. 科学上网（不推荐，现在大多需要收费）,可以查看这篇教程：{% btn 'https://akilar.top/post/29cf4234.html',🔗Win重装日记,,green %}
+2. 使用代理下载服务，可以查看这篇教程：{% btn 'https://akilar.top/post/7357e481.html',🔗从github下载release速度过慢的解决方案,,green %}
+访问atom作者的github，找到{% btn 'https://github.com/atom/atom/releases/',🔗Atom的release,,red %}，选择需要的版本，右键，复制链接
 ![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200729100407036.png)
-然后使用{% btn 'https://d.serctl.com/?dl_start',Free Download Manager,fa-link,blue %}的代下载服务。这一方法也适用于其他的从github上下载release的情况。
-3. 使用NDM插件:{% btn 'https://akilar.top/post/e332c532.html',基于NDM和TamperMonkey脚本实现高速下载,fa-link,green %}
+然后使用{% btn 'https://d.serctl.com/?dl_start',🔗Free Download Manager,,blue %}的代下载服务。这一方法也适用于其他的从github上下载release的情况。
+3. 使用NDM插件:{% btn 'https://akilar.top/post/e332c532.html',🔗基于NDM和TamperMonkey脚本实现高速下载,,green %}
 {% endhideToggle %}
 可以预览一下，我的配置效果是这样的。
 ![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513014951914.png)
@@ -30,15 +30,15 @@ date: 2019-05-13 13:37:46
 {% note default no-icon %}
 同样的，需要安装node.js和git，安装方法可以对应系统版本参考我那两篇Hexo博客搭建教程。
 
-- {% btn 'https://akilar.top/post/e5502ef6.html',Ubuntu 18.04LTS Hexo+github搭建个人博客,fa-link,green %}
-- {% btn 'https://akilar.top/post/6ef63e2d.html',Win10 1809 Hexo+github搭建个人博客,fa-link,green %}
+- {% btn 'https://akilar.top/post/e5502ef6.html',🔗Ubuntu 18.04LTS Hexo+github搭建个人博客,,green %}
+- {% btn 'https://akilar.top/post/6ef63e2d.html',🔗Win10 1809 Hexo+github搭建个人博客,,green %}
 
 内容都是放在最前面的了，找起来很容易。
 {% endnote %}
 
 ## 安装插件
 {% note default no-icon %}
-因为是通过命令行安装，所以不管是windows系统linux系统，安装步骤都是一样的。这里我拿一个汉化包插件举例~~，就算再怎么劝，我到底还是喜欢多一点中文啊~~。
+因为是通过命令行安装，所以不管是windows系统linux系统，安装步骤都是一样的。这里我拿一个汉化包插件举例。
 
 打开`atom`，在左上角找到`File->Settings->Install`
 
@@ -79,7 +79,7 @@ ubuntu安装方式类似，都是要先找到atom的packages文件夹在哪里�
 {% endnote %}
 
 {% note primary %}
-{% btn 'https://github.com/JoelBesada/activate-power-mode',activate-power-mode,fa-link,red %}
+{% btn 'https://github.com/JoelBesada/activate-power-mode',🔗activate-power-mode,,red %}
 ```
 git clone https://gitee.com/akilarlxh/activate-power-mode.git
 ```
@@ -87,7 +87,7 @@ git clone https://gitee.com/akilarlxh/activate-power-mode.git
 {% endnote %}
 
 {% note primary %}
-{% btn 'https://github.com/Glavin001/atom-beautify',atom-beautify,fa-link,red %}
+{% btn 'https://github.com/Glavin001/atom-beautify',🔗atom-beautify,,red %}
 ```
 git clone https://gitee.com/akilarlxh/atom-beautify.git
 ```
@@ -95,7 +95,7 @@ git clone https://gitee.com/akilarlxh/atom-beautify.git
 {% endnote %}
 
 {% note primary %}
-{% btn 'https://github.com/lee-dohm/file-type-icons',file-type-icons,fa-link,red %}
+{% btn 'https://github.com/lee-dohm/file-type-icons',🔗file-type-icons,,red %}
 ```
 git clone https://gitee.com/akilarlxh/file-type-icons.git
 ```
@@ -103,7 +103,7 @@ git clone https://gitee.com/akilarlxh/file-type-icons.git
 {% endnote %}
 
 {% note primary %}
-{% btn 'https://github.com/atom-minimap/minimap',minimap,fa-link,red %}
+{% btn 'https://github.com/atom-minimap/minimap',🔗minimap,,red %}
 ```
 git clone https://gitee.com/akilarlxh/minimap.git
 ```
@@ -235,7 +235,7 @@ else
 if [ "$answer" = "8" ]; then
 cd ${AtomPath}/packages
 printf "\033[32mINFO \033[0m 正在从远程仓库拉取sync-settings\n"
-git clone git clone https://gitee.com/akilarlxh/sync-settings.git
+git clone https://gitee.com/akilarlxh/sync-settings.git
 printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装sync-settings\n"
 cd ${AtomPath}/packages/sync-settings
 npm install
@@ -275,7 +275,7 @@ fi
 <center><h2>Sync-settings</h2></center>
 这个方法需要翻墙，游客止步。
 首先按照老规矩先安装插件。
-{% btn 'https://github.com/atom-community/sync-settings',Sync-settings,fa-link,red %}
+{% btn 'https://github.com/atom-community/sync-settings',🔗Sync-settings,,red %}
 ```bash
 git clone https://gitee.com/akilarlxh/sync-settings.git
 ```
