@@ -121,7 +121,9 @@ git clone https://gitee.com/akilarlxh/minimap.git
 
 {% note info %}
 <center><h2>安装脚本</h2></center>
-虽然Atom有一款名叫sync-settings的插件可以实现插件多设备同步，但是sync-settings的同步依赖于github的gist服务，而这一服务很不幸的被墙了。于是转而用脚本一键安装来实现重装方案。使用方式为在【C:\Users\用户名\.atom】路径下，新建一个atomplugin.sh的文件，把以下代码复制进去。
+虽然Atom有一款名叫sync-settings的插件可以实现插件多设备同步，但是sync-settings的同步依赖于github的gist服务，而这一服务很不幸的被墙了。
+于是转而用脚本一键安装来实现重装方案。
+使用方式为在【C:\Users\用户名\.atom】路径下，新建一个atomplugin.sh的文件，把以下代码复制进去。
 ```bash
 #!/bin/sh
 echo "==========================================="
@@ -274,12 +276,15 @@ fi
 {% note danger no-icon %}
 <center><h2>Sync-settings</h2></center>
 这个方法需要翻墙，游客止步。
+Sync-settings插件的同步原理是通过插件生成配置文件，上传到gist，gist是github提供的一个代码片段存储手段，所以某种角度上也可以看做是生成了一个配置脚本。以下是具体的使用方式。
 首先按照老规矩先安装插件。
 {% btn 'https://github.com/atom-community/sync-settings',🔗Sync-settings,,red %}
 ```bash
 git clone https://gitee.com/akilarlxh/sync-settings.git
+cd C:\Users\User\.atom\packages\sync-settings #记得改为自己的路径
+npm install
 ```
-按照上述教程安装完成后，需要配置两个内容，分别是Personal Access Token和Gist Id。
+安装完成后，打开Atom，找到插件的配置页，需要配置两个内容，分别是Personal Access Token和Gist Id。
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105519786.png)
 1. 打开自己的 github 创建一个 [personal access token](https://github.com/settings/tokens)
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105149957.png)
@@ -292,7 +297,8 @@ git clone https://gitee.com/akilarlxh/sync-settings.git
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908110409169.png)
 gist id可以在网页URL上找到
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908110850286.png)
-配置完成后就能在atom的工具栏里通过扩展->Syncchronize Settings进行操作，会上传你的插件以及快键键乃至布局配置到gist。如果要换设备的话，只需要按照sync-settings并且重新配置token和gist id即可。
+配置完成后就能在atom的工具栏里通过扩展->Syncchronize Settings进行操作，会上传你的插件以及快键键乃至布局配置到gist。
+如果要换设备的话，只需要按照sync-settings并且重新配置token和gist id即可。
 gist id与token没有关联关系，所以每次使用重新生成token也可以。
 {% endnote %}
 <!-- endtab -->

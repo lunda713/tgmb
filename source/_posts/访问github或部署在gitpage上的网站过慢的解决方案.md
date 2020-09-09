@@ -37,7 +37,7 @@ ipconfig /flushdns
 
 # 使用爬虫脚本实时获取最新ip
 {% note primary %}
-（转载自[weiyinfu的博客园](https://www.cnblogs.com/weiyinfu/p/6376420.html)。以下脚本为weiyinfu所原创，笔者仅做转载)
+转载自[weiyinfu的博客园](https://www.cnblogs.com/weiyinfu/p/6376420.html)。以下脚本为weiyinfu所原创，笔者仅做转载
 {% endnote %}
 需要查询ip地址的域名有这么多。手动添加肯定是不乐意的了。
 ```bash
