@@ -46,7 +46,7 @@ assets-cdn.github.com
 avatars0.githubusercontent.com
 avatars1.githubusercontent.com
 documentcloud.github.com
-gist.github.com
+gist.github.com # gist现在被墙的很彻底，加进hosts也没用了
 help.github.com
 nodeload.github.com
 raw.github.com
