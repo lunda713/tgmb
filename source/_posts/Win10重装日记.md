@@ -18,7 +18,8 @@ sticky: 1
 {% endhideToggle %}
 
 # 准备工作
-{% note default no-icon %}没什么好说的，一个可以正常使用的U盘，没必要太好，随便买个usb2.0的都可以，当然3.0的话安装会快一点哦。
+{% note default no-icon %}
+没什么好说的，一个可以正常使用的U盘，没必要太好，随便买个usb2.0的都可以，当然3.0的话安装会快一点哦。
 我所用到的软件：
 链接:https://pan.baidu.com/s/1JAzVP9UNBdkV4a6mK54fcg 提取码: 030e
 百度网盘下载加速方案可以参看这篇教程：[基于NDM和TamperMonkey脚本实现高速下载](https://akilar.top/post/e332c532.html)
@@ -31,11 +32,7 @@ sticky: 1
 [WePE Downlload](http://www.wepe.com.cn/download.html)
 2. 下载第一个`微PE工具箱V2.0`，附带的Win10系统在下面也有，一并下载即可，虽然win pe本身没在更新，但是这个系统镜像还是有在更新的。
 系统镜像使用的是磁力链接，如果迅雷下载过慢，可以使用百度网盘的离线下载功能，然后使用上述的NDM下载（NDM不支持P2P下载技术）。
-
-{% note warning %}
-如果是双系统用户，注意确认Ubuntu的引导是否是安装在windows系统盘内的，
-若是，那么格式了系统盘之后，Ubuntu的引导也就挂了，到时候最快的办法还是重装Ubuntu。
-{% endnote %}
+*如果是双系统用户，注意确认Ubuntu的引导是否是安装在windows系统盘内的，若是，那么格式了系统盘之后，Ubuntu的引导也就挂了，到时候最快的办法还是重装Ubuntu。*
 3. 后面都是直接傻瓜式安装，wepe会`格式化你的U盘`，千万别放什么重要文件在U盘里头。
 {% endnote %}
 
@@ -167,6 +164,7 @@ Anaconda是一个python库管理软件，可以方便的管理和安装python的
 下载安装，这里我建议是安装在系统盘，但是考虑到以后的库文件会很多，所以我还是装在非系统盘了。
 记得点选把环境变量加入到path。
 {% endnote %}
+
 ## 科学上网
 {% tabs 科学上网,-1 %}
 
@@ -185,7 +183,7 @@ Anaconda是一个python库管理软件，可以方便的管理和安装python的
 <center><h2>v2rayN</h2></center>
 作为一个开源的翻墙项目，`v2ray`的稳定性比`ssr`好了不是一星半点。
 
-- [v2rayN](https://github.com/2dust/v2rayN/releases){% endnote %}
+- [v2rayN](https://github.com/2dust/v2rayN/releases)
 
 下载`v2rayN-core`即可。解压后打开`v2rayN.exe`
 在任务栏找到图标，打开主界面，在“推广”里可以找到很多网站，这些都是运营v2ray服务的，
@@ -216,10 +214,12 @@ clash是一个基于Go语言开发的多平台代理客户端，目前在众开�
 - [chrome下载](https://chrome.en.softonic.com/)
 {% endnote %}
 <!-- endtab -->
-<!-- ♣️Microsoft Edge -->
+<!-- tab ♣️Microsoft Edge -->
+{% note default no-icon %}
 Microsoft Edge更新至最新版以后，因为采用了chromium内核，所以在某种程度上就是个山寨的Chrome，配置插件后体验不输于Chrome，
 对于不想翻墙的用户是个很好的替代品。
 使用方式可以参看这篇教程:[玩转Microsoft Edge](https://akilar.top/post/8c8df126.html)
+{% endnote %}
 <!-- endtab -->
 {% endtabs %}
 
@@ -291,8 +291,9 @@ c/c++ ：CLion
 <!-- endtab -->
 <!-- tab Morphvox pro -->
 {% note warning no-icon %}
-### [Morphvox pro](https://www.52pojie.cn/forum.php?mod=viewthread&tid=826562)
-纯粹是个人恶趣味，这个是个很有意思的变声器软件，不过只能在电脑上使用，会用虚拟声卡替换你的话筒，使得所有录进去的声音都被变声，开黑吗，我萝莉音。{% endnote %}
+[Morphvox pro](https://www.52pojie.cn/forum.php?mod=viewthread&tid=826562)
+纯粹是个人恶趣味，这个是个很有意思的变声器软件，不过只能在电脑上使用，会用虚拟声卡替换你的话筒，使得所有录进去的声音都被变声，开黑吗，我萝莉音。
+{% endnote %}
 <!-- endtab -->
 <!-- tab Potplayer -->
 {% note warning no-icon %}
@@ -304,95 +305,83 @@ c/c++ ：CLion
 
 # 美化软件
 
-{% note info %}我发现在Win10这边，我是把Ubuntu的安装顺序反过来了，Ubuntu那边第一件事是先美化，Win10这边是最后才做。怎么说呢，毕竟Win10是图形化界面，Ubuntu那边修改grub一言不合搞不好引导就挂了，自然是早点解决好。{% endnote %}
+{% note info %}
+我发现在Win10这边，我是把Ubuntu的安装顺序反过来了，Ubuntu那边第一件事是先美化，Win10这边是最后才做。怎么说呢，毕竟Win10是图形化界面，Ubuntu那边修改grub一言不合搞不好引导就挂了，自然是早点解决好。
+{% endnote %}
 
 
 
 ## 主题美化
-
 {% note primary %}
-
-[致美化主题先锋网](https://zhutix.com/){% endnote %}
-
-
-{% note info %}这是一个非常完善的主题美化网站，各种教程应有尽有，还是视频和图文的，绝对不存在不会用的问题。
-软件只需要安装01文件夹里的必装软件即可，02里的右键快捷选项有点用处，透明软件推荐blend，所以03文件夹可以删除了。{% endnote %}
-
+[致美化主题先锋网](https://zhutix.com/)
+{% endnote %}
+{% note info %}
+这是一个非常完善的主题美化网站，各种教程应有尽有，还是视频和图文的，绝对不存在不会用的问题。
+软件只需要安装01文件夹里的必装软件即可，02里的右键快捷选项有点用处，透明软件推荐blend，所以03文件夹可以删除了。
+{% endnote %}
 
 ## 窗口美化
-
 {% note primary %}
-
-[窗口半透明软件blend](https://zhutix.com/tools/touming-blend/){% endnote %}
-
-{% note info %}一款半透明化软件，所有页面都可以半透明，而且支持给每个窗口单独定制透明度，开机启动不占多少资源。反正比上面提到的03文件夹里的玩意儿好用多了。{% endnote %}
-
+[窗口半透明软件blend](https://zhutix.com/tools/touming-blend/)
+{% endnote %}
+{% note info %}
+一款半透明化软件，所有页面都可以半透明，而且支持给每个窗口单独定制透明度，开机启动不占多少资源。反正比上面提到的03文件夹里的玩意儿好用多了。
+{% endnote %}
 
 ## 主题推荐
-
 {% note primary %}
-
-[Arc X 豪华版](https://zhutix.com/pc/arc-x-s/){% endnote %}
-
-
+[Arc X 豪华版](https://zhutix.com/pc/arc-x-s/)
+{% endnote %}
 
 ## 图标推荐
-
 {% note primary %}
-
-[orian-ipack](https://zhutix.com/ico/orian-ipack/){% endnote %}
-
+[orian-ipack](https://zhutix.com/ico/orian-ipack/)
+{% endnote %}
 
 ## 鼠标指针推荐
-
 {% note primary %}
-
-[Apostle](https://zhutix.com/ico/apostle-cs/){% endnote %}
-
+[Apostle](https://zhutix.com/ico/apostle-cs/)
+{% endnote %}
 
 {% note warning %}
-
 虽然Win10也有一个叫My Dock的软件可以让任务栏看起来像mac一样，
 但是还不成熟，bug贼多（易语言写的，自己感受），就不贴出来了。
-其他的像`SAO  Utils`和`rainmeter`之类的，我已经过了那个年纪了。{% endnote %}
-
-
-{% note primary %}
-
-[SAO Utils](http://www.gpbeta.com/post/develop/sao-utils/){% endnote %}
+其他的像`SAO  Utils`和`rainmeter`之类的，我已经过了那个年纪了。
+{% endnote %}
 
 {% note primary %}
-
-[Rainmeter](https://bbs.rainmeter.cn/forum-210-1.html){% endnote %}
-
-{% note default no-icon %}自己探索去吧。{% endnote %}
+[SAO Utils](http://www.gpbeta.com/post/develop/sao-utils/)
+{% endnote %}
+{% note primary %}
+[Rainmeter](https://bbs.rainmeter.cn/forum-210-1.html)
+{% endnote %}
+{% note default no-icon %}
+自己探索去吧。
+{% endnote %}
 
 
 # 遇到的bug归纳（不定时更新）
 ## 复制粘贴时进度条窗口不显示
-
-{% note default no-icon %}打开cmd或者powershell
-输入命令：{% endnote %}
-
-```
+{% note default no-icon %}
+打开cmd或者powershell
+输入命令：
+```bash
 regsvr32 shell32.dll
 ```
-{% note default no-icon %}回车即可。{% endnote %}
+{% endnote %}
 
 
 ## 玩游戏时显示.dll文件丢失
-
-{% note success %}下载一个directX修复工具增强版修复即可{% endnote %}
-
-{% note primary %}
-
-[directX修复工具增强版 v3.8](https://www.crsky.com/soft/31471.html#down){% endnote %}
+{% note success %}
+下载一个directX修复工具增强版修复
+[directX修复工具增强版 v3.8](https://www.crsky.com/soft/31471.html#down)
+{% endnote %}
 
 ## Win10桌面图标设置，点开显示rundll32.exe无法访问指定设备、路径或文件。
 
 {% note default no-icon %}
 win+R打开运行窗口，输入
-```
+```bash
 rundll32.exe shell32.dll,Control_RunDLL desk.cpl,,0
 ```
 即可打开图标设置窗口
