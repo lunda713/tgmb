@@ -142,7 +142,11 @@ echo "[4] 安装图标美化插件：file-type-icons"
 echo "[5] 安装代码小地图：minimap"
 echo "[6] 安装取色器：color-picker"
 echo "[7] 安装颜色显示插件：atom-pigments"
-echo "[8] 安装多端同步插件：Sync-settings"
+echo "[8] 安装代码高亮插件：atom-quick-highlight"
+echo "[9] 安装合并冲突处理插件：merge-conflicts"
+echo "[10] 安装代码校验插件：linter"
+echo "[11] 安装代码补全插件：autocomplete-bibtex"
+echo "[12] 安装多端同步插件：Sync-settings"
 echo " "
 printf "请选择需要的功能，默认选择[0]"
 echo " "
@@ -236,6 +240,54 @@ exec ${AtomPath}/atomplugin.sh
 else
 if [ "$answer" = "8" ]; then
 cd ${AtomPath}/packages
+printf "\033[32mINFO \033[0m 正在从远程仓库拉取atom-quick-highlight\n"
+git clone https://gitee.com/akilarlxh/atom-quick-highlight.git
+printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装atom-quick-highlight\n"
+cd ${AtomPath}/packages/atom-quick-highlight
+npm install
+printf "\033[32mINFO \033[0m atom-quick-highlight安装完毕，请重启Atom应用更改\n"
+sleep 1s
+exec ${AtomPath}/atomplugin.sh
+# 选择9
+else
+if [ "$answer" = "9" ]; then
+cd ${AtomPath}/packages
+printf "\033[32mINFO \033[0m 正在从远程仓库拉取merge-conflicts\n"
+git clone https://gitee.com/akilarlxh/merge-conflicts.git
+printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装merge-conflicts\n"
+cd ${AtomPath}/packages/merge-conflicts
+npm install
+printf "\033[32mINFO \033[0m merge-conflicts安装完毕，请重启Atom应用更改\n"
+sleep 1s
+exec ${AtomPath}/atomplugin.sh
+# 选择10
+else
+if [ "$answer" = "10" ]; then
+cd ${AtomPath}/packages
+printf "\033[32mINFO \033[0m 正在从远程仓库拉取linter\n"
+git clone https://gitee.com/akilarlxh/linter.git
+printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装linter\n"
+cd ${AtomPath}/packages/linter
+npm install
+printf "\033[32mINFO \033[0m linter安装完毕，请重启Atom应用更改\n"
+sleep 1s
+exec ${AtomPath}/atomplugin.sh
+# 选择11
+else
+if [ "$answer" = "11" ]; then
+cd ${AtomPath}/packages
+printf "\033[32mINFO \033[0m 正在从远程仓库拉取autocomplete-bibtex\n"
+git clone https://github.com/apcshields/autocomplete-bibtex.git
+printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装autocomplete-bibtex\n"
+cd ${AtomPath}/packages/autocomplete-bibtex
+npm install
+printf "\033[32mINFO \033[0m autocomplete-bibtex安装完毕，请重启Atom应用更改\n"
+sleep 1s
+exec ${AtomPath}/atomplugin.sh
+# 选择12
+else
+if [ "$answer" = "12" ]; then
+cd ${AtomPath}/packages
 printf "\033[32mINFO \033[0m 正在从远程仓库拉取sync-settings\n"
 git clone https://gitee.com/akilarlxh/sync-settings.git
 printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装sync-settings\n"
@@ -255,6 +307,10 @@ printf "\033[31mERROR \033[0m 输入错误，请返回重新选择...\n"
 sleep 1s
 exec ${AtomPath}/atomplugin.sh
 # 注意有几个选项就要有几个fi。
+fi
+fi
+fi
+fi
 fi
 fi
 fi
