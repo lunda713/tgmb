@@ -1,4 +1,4 @@
-Ubuntu---
+---
 title: Ubuntu安装盘制作教程
 categories:
   - Akilarの巧克力

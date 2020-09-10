@@ -1,4 +1,4 @@
-Ubuntu---
+---
 title: Ubuntu重装日记
 categories:
   - Akilarの巧克力
