@@ -1,36 +1,37 @@
----
-title: Ubuntu18.04LTS安装盘制作教程
+Ubuntu---
+title: Ubuntu安装盘制作教程
 categories:
   - Akilarの巧克力
 tags:
-  - ubuntu
+  - Ubuntu
   - 系统重装
 author: Akialrlxh
+description: 本文所用Ubuntu系统版本为Ubuntu 18.04LTS，其余版本也适用。
 abbrlink: 328a67be
 date: 2019-04-08 14:42:00
 ---
 # 写在最前
-<div class="note info"><p>严格来说这是一个杂交搬运贴，但是当时那些出处我已经懒得贴了。算上这次，已经是我第6次重装ubuntu了，往往倒不是说ubuntu挂了，就是每次依赖安装失败以后我都懒得去看那剪不断理还乱的文件分支，总觉得这样的系统就脏了，不是纯洁的样子了。不能接受。还不如重装来的痛快。</p></div>
+<div class="note info"><p>严格来说这是一个杂交搬运贴，但是当时那些出处我已经懒得贴了。算上这次，已经是我第6次重装Ubuntu了，往往倒不是说Ubuntu挂了，就是每次依赖安装失败以后我都懒得去看那剪不断理还乱的文件分支，总觉得这样的系统就脏了，不是纯洁的样子了。不能接受。还不如重装来的痛快。</p></div>
 
 
 
 # 安装准备
 <div class="note default no-icon"><p>
 
-首先肯定要有一个`ubuntu安装U盘`，这个网上傻瓜式教程太多了，
+首先肯定要有一个`Ubuntu安装U盘`，这个网上傻瓜式教程太多了，
 哪怕是我的体质也没在这个步骤遇到过问题
 ~~（事实上一直是借用楠皮的U盘，我自己的U盘老是识别不出来）。~~
 不过今天我从吉皮哪里搞到了一个U盘，Ubuntu安装盘不用太好，
 usb2.0，8g以上绰绰有余了。正好因为独显驱动导致外接屏幕无法识别了，闹心，干脆再重装。
-首先在`win10`里把U盘`格式化`，选择`FAT32`的格式。</p></div>
+首先在`Win10`里把U盘`格式化`，选择`FAT32`的格式。</p></div>
 
 
 
-# 从ubuntu官网下载镜像文件
+# 从Ubuntu官网下载镜像文件
 
 <div class="note primary"><p>
 
-[ubuntu download](https://www.ubuntu.com/download/desktop)</p></div>
+[Ubuntu download](https://www.ubuntu.com/download/desktop)</p></div>
 
 
 <div class="note default no-icon"><p>我这会是Ubuntu18.04.2LTS，下面还有个18.10的，怎么说呢，学软件的应该都知道越新的版本越有风险吧。还是选择长期支持的稳定版本好了。
@@ -40,7 +41,7 @@ usb2.0，8g以上绰绰有余了。正好因为独显驱动导致外接屏幕无
 
  <div class="note primary"><p>
 
- [ubuntu history mirror](http://mirrors.melbourne.co.uk/ubuntu-releases/)</p></div>
+ [Ubuntu history mirror](http://mirrors.melbourne.co.uk/ubuntu-releases/)</p></div>
 
 
 

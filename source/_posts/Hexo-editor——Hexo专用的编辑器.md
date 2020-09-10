@@ -15,7 +15,7 @@ date: 2019-04-23 19:00:41
 
 <div class="note primary"><p>官方指导手册[hexo-editor](https://github.com/zhuzhuyule/HexoEditor)</p></div>
 
-这里我直接找到了负责发布的那位，所以挑选你自己适配的系统下载就好了，`linux`用`deb`，`win10`用`exe`这种东西不用我教了吧。
+这里我直接找到了负责发布的那位，所以挑选你自己适配的系统下载就好了，`linux`用`deb`，`Win10`用`exe`这种东西不用我教了吧。
 ![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Hexo-editor%E4%B8%93%E7%94%A8%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8/20190426031118809.png)
 # 配置
 

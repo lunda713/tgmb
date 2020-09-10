@@ -1,8 +1,8 @@
 ---
-title: Win10 1809 Hexo+github搭建个人博客
+title: Win10:Hexo+github搭建个人博客
 tags:
 - hexo
-- win10
+- Win10
 - git
 categories:
 - Akilarの棉花糖
@@ -15,7 +15,7 @@ sticky: 2
 # 写在最前
 {% hideToggle 无聊的碎碎念不看也罢 %}
 {% note info %}
-最开始接触博客的契机是我第一次重装ubuntu的时候。看的是[楠皮的博客](https://blog.vanxnf.top)，之后又重装了7次ubuntu，每次都去看楠皮的博客，一个人撑起了他的博客访问量。自此，我终于意识到我也该写个博客了，一开始用到的是csdn，虽然csdn自带的网页markdown非常方便，还有快捷键支持，但是实在是架不住那边烦人的站点广告，之后也试过简书，虽然好看了许多，但是还是没有我当初浏览楠皮博客时那种丝般顺滑的感觉。
+最开始接触博客的契机是我第一次重装Ubuntu的时候。看的是[楠皮的博客](https://blog.vanxnf.top)，之后又重装了7次Ubuntu，每次都去看楠皮的博客，一个人撑起了他的博客访问量。自此，我终于意识到我也该写个博客了，一开始用到的是csdn，虽然csdn自带的网页markdown非常方便，还有快捷键支持，但是实在是架不住那边烦人的站点广告，之后也试过简书，虽然好看了许多，但是还是没有我当初浏览楠皮博客时那种丝般顺滑的感觉。
 {% endnote %}
 
 {% note success %}
@@ -80,7 +80,7 @@ HexoEditor是我目前一直最喜爱的一款Markdown编辑器，自带图片�
 
 ## 建立Hexo文件夹
 {% note default no-icon %}
-在你的非系统盘建立一个文件夹`Hexo`，这个习惯在[win10重装日记](https://akilarlxh.github.io/post/2f7e1a55.html)里提到过了，因为说起来个人博客和工程文件是分在一类的。
+在你的非系统盘建立一个文件夹`Hexo`，这个习惯在[Win10重装日记](https://akilarlxh.github.io/post/2f7e1a55.html)里提到过了，因为说起来个人博客和工程文件是分在一类的。
 {% endnote %}
 
 ## 使用npm安装Hexo
@@ -180,7 +180,7 @@ date: 2017-05-27 13:47:40
 
 ```markdown
 layout: posts
-title: Win10 1809 Hexo+github搭建个人博客
+title: Win10:Hexo+github搭建个人博客
 date: 2019-04-07 00:38:36
 categories: 学习笔记
 tags: [node.js, hexo]
@@ -201,7 +201,7 @@ date: 2018-08-06 22:48:29
 给文章添加标签
 ```markdown
 layout: posts
-title: Win10 1809 Hexo+github搭建个人博客
+title: Win10:Hexo+github搭建个人博客
 date: 2019-04-07 00:38:36
 categories: 学习笔记
 tags: [node.js, hexo] # 逗号是英文逗号
@@ -209,7 +209,7 @@ tags: [node.js, hexo] # 逗号是英文逗号
 第二种写法是用-短划线列出来
 ```markdown
 layout: posts
-title: Win10 1809 Hexo+github搭建个人博客
+title: Win10:Hexo+github搭建个人博客
 date: 2019-04-07 00:38:36
 categories: 学习笔记
 tags:
@@ -1026,7 +1026,7 @@ npm install
 npm install hexo-deployer-git
 ```
 这里的【username.github.io】文件夹其实就是我们一直在说的【Hexo】文件夹。
-在下一篇的[Ubuntu 18.04LTS Hexo+github搭建个人博客](https://akilar.top/post/e5502ef6.html)中，用这个方法部署文件就会很快。
+在下一篇的[Ubuntu-Hexo+github搭建个人博客](https://akilar.top/post/e5502ef6.html)中，用这个方法部署文件就会很快。
 {% endnote %}
 
 ## 指令脚本

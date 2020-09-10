@@ -57,7 +57,7 @@ github.io
 
 因为github相关的诸多域名的ip是在变动的，为了能够实时获取最新的ip，我们可以使用爬虫来从[站长之家](http://ip.chinaz.com/)或其余ip查询网站上爬取最新ip。
 
-这里要用到python，**安装推荐使用Anaconda**，Anaconda安装方式推荐参看[win10重装日记](https://akilarlxh.github.io/post/29cf4234.html)的3.2章节。根据Anaconda版本与python版本的对照选择自己需要的Anaconda安装包，然后直接安装即可，路径建议修改为非系统盘，同时**务必勾选将python路径加入到环境变量**的选项。
+这里要用到python，**安装推荐使用Anaconda**，Anaconda安装方式推荐参看[Win10重装日记](https://akilarlxh.github.io/post/29cf4234.html)的3.2章节。根据Anaconda版本与python版本的对照选择自己需要的Anaconda安装包，然后直接安装即可，路径建议修改为非系统盘，同时**务必勾选将python路径加入到环境变量**的选项。
 
 新建一个python脚本——githosts.py（最简单的方法，新建一个txt文本文件，把下面的代码粘贴进去以后，修改后缀为.py）
 

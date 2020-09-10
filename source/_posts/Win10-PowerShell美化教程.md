@@ -1,9 +1,9 @@
 ---
-title: Win10 1809 PowerShell美化教程
+title: Win10:PowerShell美化教程
 author: Akilarlxh
 description: 对Win10的powershell进行美化，使用ConEmu替换powershell，加装oh-my-posh实现主题风格。
 tags:
-  - win10
+  - Win10
 categories:
   - Akilarの棉花糖
 abbrlink: 8a76eb87
@@ -13,12 +13,12 @@ date: 2019-04-12 09:52:00
 {% hideToggle 无聊的碎碎念不用在意 %}
 我一直秉持着一个美化舒适的开发环境能够极大的激发编程的兴趣这件事。
 
-体验过了ubuntu以后为什么会对它如此着迷呢？我曾经这样问过自己，但是迟迟没想到答案。于是我又复读了两遍我以前写的win10和ubuntu重装日记，发现了一件事情。
+体验过了Ubuntu以后为什么会对它如此着迷呢？我曾经这样问过自己，但是迟迟没想到答案。于是我又复读了两遍我以前写的Win10和Ubuntu重装日记，发现了一件事情。
 
 
-那就是ubuntu下的oh-my-zsh实在是太好用了，界面美观还能提示git的文件夹状态。简直甩win10下的git bash十条街啊。所以怎么说呢。有了这个想法，就一定会希望win10下也可以用。虽然我知道win10专业版是有Linux虚拟机的，可以创建子系统，但是我现在是家庭版，又舍不得那个钱去买个升级码。重装是不可能重装的。
+那就是Ubuntu下的oh-my-zsh实在是太好用了，界面美观还能提示git的文件夹状态。简直甩Win10下的git bash十条街啊。所以怎么说呢。有了这个想法，就一定会希望Win10下也可以用。虽然我知道Win10专业版是有Linux虚拟机的，可以创建子系统，但是我现在是家庭版，又舍不得那个钱去买个升级码。重装是不可能重装的。
 
-那么，到底能不能改一下win10下的powershell风格呢？答案当然是可以的。~~不然我写这个干嘛。~~
+那么，到底能不能改一下Win10下的powershell风格呢？答案当然是可以的。~~不然我写这个干嘛。~~
 
 使用JanDeDobbeleer大神发布的git项目——[oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)，这是一个用 ConEmu替换默认shell来实现主题风格化shell的插件。具体名词不要太深究，好看就完事了。
 {% endhideToggle %}

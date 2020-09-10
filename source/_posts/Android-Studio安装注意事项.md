@@ -16,8 +16,8 @@ date: 2019-06-02 12:24:47
 
 # 打开Android Studio
 首先打开科学上网，调整为全局模式，提供**稳定的网络环境**。不知道怎么做的，去看我的两篇重装日记。
-- [win10 1809 机械革命深海幽灵z2 重装日记](https://akilarlxh.github.io/post/29cf4234.html)的3.3或3.4节
-- [ubuntu18.04LTS 机械革命深海幽灵z2 重装日记](https://akilarlxh.github.io/post/2f7e1a55.html)的7.4节
+- [Win10重装日记](https://akilarlxh.github.io/post/29cf4234.html)的3.3或3.4节
+- [Ubuntu重装日记](https://akilarlxh.github.io/post/2f7e1a55.html)的7.4节
 
 
 第一次打开会提示

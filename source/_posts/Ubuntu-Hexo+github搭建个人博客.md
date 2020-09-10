@@ -1,19 +1,20 @@
 ---
-title: Ubuntu 18.04LTS Hexo+github搭建个人博客
+title: Ubuntu:Hexo+github搭建个人博客
 author: Akilarlxh
 tags:
-  - ubuntu
+  - Ubuntu
   - hexo
   - git
 categories:
   - Akilarの巧克力
+description: Ubuntu下搭建Hexo+github环境。
 abbrlink: e5502ef6
 date: 2019-04-11 17:03:00
 ---
 # 写在最前
 <div class="note default no-icon"><p>
-其实我一开始最先尝试的就是ubuntu上搭建，但是，非常遗憾的是，ubuntu的各种读写权限把我弄得死去活来。
-毕竟一开始看的就是楠皮的博客来尝试的，后来发现没什么大用，不够详细倒是其次，主要是缺乏他其他几篇博客那样的普适性。怎么说呢，我花了三天时间踩坑，终于算是可以正常使用并且和win10完美同步了。
+其实我一开始最先尝试的就是Ubuntu上搭建，但是，非常遗憾的是，Ubuntu的各种读写权限把我弄得死去活来。
+毕竟一开始看的就是楠皮的博客来尝试的，后来发现没什么大用，不够详细倒是其次，主要是缺乏他其他几篇博客那样的普适性。怎么说呢，我花了三天时间踩坑，终于算是可以正常使用并且和Win10完美同步了。
 所以之后写的内容里有很多都会附加上我踩坑时的怨念。
 </p></div>
 
@@ -45,7 +46,7 @@ npm -v
 sudo apt-get install git
 ```
 
-<div class="note default no-icon"><p>如果你是先看了我那篇ubuntu重装日记，那git应该之前就有安装过。</p></div>
+<div class="note default no-icon"><p>如果你是先看了我那篇Ubuntu重装日记，那git应该之前就有安装过。</p></div>
 
 ## 安装Markdown编辑器
 
@@ -97,10 +98,10 @@ sudo apt-get upgrade
 sudo apt-get install -f
 ```
 
-- ii、另外要是安装特别慢的话，就别等了，可以把ubuntu的软件库换成国内源
+- ii、另外要是安装特别慢的话，就别等了，可以把Ubuntu的软件库换成国内源
 目前我知道对于版本适配的比较好的有清华源
-[清华大学 ubuntu | 镜像站 ](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
-他会自动帮你适配你的ubuntu版本。
+[清华大学 Ubuntu | 镜像站 ](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
+他会自动帮你适配你的Ubuntu版本。
 ![AHA69H.png](https://s2.ax1x.com/2019/04/11/AHA69H.png)
 修改你的source.list；
 为了留个备份好反悔我们先把source.list复制一份
@@ -137,12 +138,12 @@ sudo apt-get update
 ---
 
 # 安装Hexo
-## 已经在win10上成功搭建Hexo
+## 已经在Win10上成功搭建Hexo
 
 <div class="note warning"><p>
-首先，未看过win10下搭建Hexo的，只想在ubuntu上搭建Hexo的，请移步到下一小节（三、2）</p></div>
+首先，未看过Win10下搭建Hexo的，只想在Ubuntu上搭建Hexo的，请移步到下一小节（三、2）</p></div>
 
-这里可以说一下，**如果你已经在win10上复现了我上一篇日志里写的全部内容**，~~当然，我希望你还是不要主动去复现bug。~~**并且git版本控制正常，可以正常使用git来提交源码内容到userame.github.io的source分支上。**
+这里可以说一下，**如果你已经在Win10上复现了我上一篇日志里写的全部内容**，~~当然，我希望你还是不要主动去复现bug。~~**并且git版本控制正常，可以正常使用git来提交源码内容到userame.github.io的source分支上。**
 
 那么,现在我们就能很快乐的直接git clone我们已经上传到username.github.io仓库的source分支上的内容了。
 ```
@@ -158,7 +159,7 @@ Permission denied (publickey). fatal: Could not read from remote repository.
 ### 在管理员模式下配置git的sshkey
 
 
-*在ubuntu下，普通用户和超级用户是被当成两个不同的用户的，而不是简单的权限升级。如果你是在普通用户模式下配置的sshkey，那么每当你在提交Hexo时，一旦涉及到到文件读写权限，你必须使用sudo时，对不起，秘钥显示你没有权限读写git仓库。然而诸多文件读写里面，在普通用户和超级用户之间的切换简直是剪不断理还乱。*
+*在Ubuntu下，普通用户和超级用户是被当成两个不同的用户的，而不是简单的权限升级。如果你是在普通用户模式下配置的sshkey，那么每当你在提交Hexo时，一旦涉及到到文件读写权限，你必须使用sudo时，对不起，秘钥显示你没有权限读写git仓库。然而诸多文件读写里面，在普通用户和超级用户之间的切换简直是剪不断理还乱。*
 
 所以，困扰了我许多天的问题就出在这里。**我们首先要在su模式下来配置git**
 ```
@@ -189,7 +190,7 @@ less ~/.ssh/id_rsa.pub
 
 ![AHZAAK.png](https://s2.ax1x.com/2019/04/11/AHZAAK.png)
 
-这部分内容和win10那篇一样了。
+这部分内容和Win10那篇一样了。
 
 ---
 ### 正确配置git后，重新尝试
@@ -210,9 +211,9 @@ sudo npm install -g hexo-cli
 sudo npm install
 sudo npm install hexo-deployer-git
 //还有其他插件可以自己去下。
-//会写在接下来的给未在win10搭建过Hexo的小伙伴的环节里。
+//会写在接下来的给未在Win10搭建过Hexo的小伙伴的环节里。
 ```
-好了，就这些了。对，已经可以了。你在win10流过的血泪在这一刻得到了回报。
+好了，就这些了。对，已经可以了。你在Win10流过的血泪在这一刻得到了回报。
 
 再贴一下一些常用命令
 hexo博客上的：（master分支）
@@ -238,7 +239,7 @@ git版本控制上的：（source分支）
 //把本地仓库的文件推送到远程仓库
 
 ```
-## 未在win10上搭建过Hexo，只想在ubuntu下使用
+## 未在Win10上搭建过Hexo，只想在Ubuntu下使用
 
 ### 建立Hexo文件夹
 随便那个目录都行，别是回收站就成。我是安装在Documents目录下
@@ -406,7 +407,7 @@ tags:
 - 相关资料 [GitHub Pages Basics / User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
 
 ## 配置Git 与 GitHub
-*之前已经说过，在ubuntu下，普通用户和超级用户是被当成两个不同的用户的，而不是简单的权限升级。如果你是在普通用户模式下配置的sshkey，那么每当你在提交Hexo时，一旦涉及到到文件读写权限，你必须使用sudo时，对不起，秘钥显示你没有权限读写git仓库。然而诸多文件读写里面，在普通用户和超级用户之间的切换简直是剪不断理还乱。所以我们要在管理员模式下设置秘钥*
+*之前已经说过，在Ubuntu下，普通用户和超级用户是被当成两个不同的用户的，而不是简单的权限升级。如果你是在普通用户模式下配置的sshkey，那么每当你在提交Hexo时，一旦涉及到到文件读写权限，你必须使用sudo时，对不起，秘钥显示你没有权限读写git仓库。然而诸多文件读写里面，在普通用户和超级用户之间的切换简直是剪不断理还乱。所以我们要在管理员模式下设置秘钥*
 
 打开terminal,**在管理员模式下设置用户名称和邮件地址**
 

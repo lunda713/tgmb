@@ -30,8 +30,8 @@ date: 2019-05-13 13:37:46
 {% note default no-icon %}
 同样的，需要安装node.js和git，安装方法可以对应系统版本参考我那两篇Hexo博客搭建教程。
 
-- {% btn 'https://akilar.top/post/e5502ef6.html',🔗Ubuntu 18.04LTS Hexo+github搭建个人博客,,green %}
-- {% btn 'https://akilar.top/post/6ef63e2d.html',🔗Win10 1809 Hexo+github搭建个人博客,,green %}
+- {% btn 'https://akilar.top/post/e5502ef6.html',🔗Ubuntu-Hexo+github搭建个人博客,,green %}
+- {% btn 'https://akilar.top/post/6ef63e2d.html',🔗Win10-Hexo+github搭建个人博客,,green %}
 
 内容都是放在最前面的了，找起来很容易。
 {% endnote %}
@@ -69,7 +69,7 @@ npm install
 ![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513023001785.png)
 npm install执行完毕后，重启一下atom就可以在Files->Settings->Packages里找到安装的插件了，启用以后就可以了。有些插件会有自定义配置，这个反正在他的介绍或者github主页里肯定会介绍的。我就不画蛇添足了。
 
-ubuntu安装方式类似，都是要先找到atom的packages文件夹在哪里。其他都差不多的。
+Ubuntu安装方式类似，都是要先找到atom的packages文件夹在哪里。其他都差不多的。
 {% endnote %}
 
 # 插件推荐

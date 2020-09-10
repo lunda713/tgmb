@@ -1,18 +1,19 @@
----
-title: Ubuntu18.04LTS 机械革命深海幽灵z2 重装日记
+Ubuntu---
+title: Ubuntu重装日记
 categories:
   - Akilarの巧克力
 tags:
-  - ubuntu
+  - Ubuntu
   - 系统重装
 author: Akilarlxh
+description: Ubuntu18.04LTS安装教程，电脑型号为机械革命深海幽灵z2-1060款。
 abbrlink: 2f7e1a55
 date: 2019-04-08 15:21:00
 ---
 
 # 写在最前
 
-<div class="note info"><p>ubuntu又挂了，实在是体质特殊，同样的安装文件安装方式，到我这总能遇到神奇bug，我都觉得我就应该去做软件测试师，怎么干都有bug，虽然大概会被同事打死。总之为了避免再遇到同样的问题，也遵从楠皮的建议把遇到的坑归纳下来。</p></div>
+<div class="note info"><p>Ubuntu又挂了，实在是体质特殊，同样的安装文件安装方式，到我这总能遇到神奇bug，我都觉得我就应该去做软件测试师，怎么干都有bug，虽然大概会被同事打死。总之为了避免再遇到同样的问题，也遵从楠皮的建议把遇到的坑归纳下来。</p></div>
 
 # 安装盘制作教程
 
@@ -27,12 +28,12 @@ date: 2019-04-08 15:21:00
 <div class="note default"><p>
 
  1. 我的机型是`机械革命深海幽灵z2 1060款` ；
- 2. 第一步： `准备好wepe` ，对，没错就是pe，因为要先准备好`ubuntu的分区`，我只是拿来做做实验外加体验一下linux操作系统，之前双硬盘双系统，
- 3. ~~一个ubuntu明明只要30G上下就够了我却分了256G的ssd硬盘给它，太浪费了~~ 。
- 4. `开机按F2`,	在`boot`项上把`#option1`设置为`USB启动项`，现在设好一会ubuntu的那个U盘就省事了。
- 5. 进入PE以后在分区助手里把`非win10系统盘`里调整分区大小，使得硬盘有一部分`未分配的空闲分区`，大概`50g`左右即可，除非你是一个盘一个系统，那样只要格式化那个盘就好。到时候ubuntu安装时，ubuntu系统会`自动识别这个空闲分区然后填满`。
- 6. 第二步：拔出PE的U盘，换成ubuntu的U盘，进入后选择第二项`Install Ubuntu`，一路默认安装即可，语言选择`English（US）`，因为很多**设置如果路径是中文会遇到不少蛇皮bug**，血淋淋的教训。
- 7. `重启开机按F2`，进入`bios`，在`boot`最下面的设置里，把开机时的系统启动项设置为`ubuntu`。</p></div>
+ 2. 第一步： `准备好wepe` ，对，没错就是pe，因为要先准备好`Ubuntu的分区`，我只是拿来做做实验外加体验一下linux操作系统，之前双硬盘双系统，
+ 3. ~~一个Ubuntu明明只要30G上下就够了我却分了256G的ssd硬盘给它，太浪费了~~ 。
+ 4. `开机按F2`,	在`boot`项上把`#option1`设置为`USB启动项`，现在设好一会Ubuntu的那个U盘就省事了。
+ 5. 进入PE以后在分区助手里把`非Win10系统盘`里调整分区大小，使得硬盘有一部分`未分配的空闲分区`，大概`50g`左右即可，除非你是一个盘一个系统，那样只要格式化那个盘就好。到时候Ubuntu安装时，Ubuntu系统会`自动识别这个空闲分区然后填满`。
+ 6. 第二步：拔出PE的U盘，换成Ubuntu的U盘，进入后选择第二项`Install Ubuntu`，一路默认安装即可，语言选择`English（US）`，因为很多**设置如果路径是中文会遇到不少蛇皮bug**，血淋淋的教训。
+ 7. `重启开机按F2`，进入`bios`，在`boot`最下面的设置里，把开机时的系统启动项设置为`Ubuntu`。</p></div>
 
 
 
@@ -71,7 +72,7 @@ date: 2019-04-08 15:21:00
 
 <div class="note warning"><p>
 
-ubuntu基本都是靠命令行来管理，要做好心理准备。
+Ubuntu基本都是靠命令行来管理，要做好心理准备。
 
 </p></div>
 
@@ -181,7 +182,7 @@ background-repeat: repeat;
 
 ## 可能遇到的bug
 
-<div class="note warning"><p>也不算bug吧，ubuntu更新时会重置gdm3.css，这时候登录界面又会变成丑丑的纯色界面，重新操作一下上面的流程就好。有兴趣继续探索的可以慢慢研究，css嘛，前端学的好的就能改的。</p></div>
+<div class="note warning"><p>也不算bug吧，Ubuntu更新时会重置gdm3.css，这时候登录界面又会变成丑丑的纯色界面，重新操作一下上面的流程就好。有兴趣继续探索的可以慢慢研究，css嘛，前端学的好的就能改的。</p></div>
 
 
 # 安装主题
@@ -514,16 +515,16 @@ sudo apt-get install -f
 
 v2ray的用户请使用v2ray，~~感觉这是一句废话~~</p></div>
 
-<div class="note default"><p>有现成的安装脚本，但在那之前必须先准备好配置文件。希望你们已经看过win10系统下v2rayN客户端的教程。</p></div>
+<div class="note default"><p>有现成的安装脚本，但在那之前必须先准备好配置文件。希望你们已经看过Win10系统下v2rayN客户端的教程。</p></div>
 
 <div class="note primary"><p>
 
-[机械革命深海幽灵z2 win10 1809 重装日记](https://akilarlxh.github.io/post/2f7e1a55.html)</p></div>
+[Win10重装日记](https://akilarlxh.github.io/post/2f7e1a55.html)</p></div>
 
 <div class="note default"><p>
 
-先在`win10`的`v2rayN客户端`选中所有的结点，然后`右键`->`导出所选服务器为客户端配置`，导出的文件保存为`config.json`
-切回`ubuntu`，先在`git`上下载指定的客户端源代码，~~没有图形化界面真是抱歉呢。~~</p></div>
+先在`Win10`的`v2rayN客户端`选中所有的结点，然后`右键`->`导出所选服务器为客户端配置`，导出的文件保存为`config.json`
+切回`Ubuntu`，先在`git`上下载指定的客户端源代码，~~没有图形化界面真是抱歉呢。~~</p></div>
 
 <div class="note primary"><p>
 
@@ -540,18 +541,18 @@ sudo wget https://install.direct/go.sh
 sudo bash go.sh --local ./v2ray-linux-64.zip
 //安装v2ray
 sudo cp config.json /etc/v2ray/config.json
-//ubuntu内客户端和服务端共用同一个配置文件，所以需要复制配置文件，
+//Ubuntu内客户端和服务端共用同一个配置文件，所以需要复制配置文件，
 //但是最新版本这一步不需要了，因为脚本已经帮您复制好了
 sudo chmod 777 /etc/v2ray/config.json
 //给予配置文件读写权限
 sudo gedit /etc/v2ray/config.json
 //打开你的配置文件
 ```
-<div class="note info"><p>接下来就要用到一开始在win10那边生成的文件了，ubuntu是直接可以读写win10那边的文件的真是太好了，不用重启一次。</p></div>
+<div class="note info"><p>接下来就要用到一开始在Win10那边生成的文件了，Ubuntu是直接可以读写Win10那边的文件的真是太好了，不用重启一次。</p></div>
 
 <div class="note default"><p>
 
-把`win10`那边的`config.json`文件内容全部拷贝过来，覆盖到`/etc/v2ray/config.json`内</p></div>
+把`Win10`那边的`config.json`文件内容全部拷贝过来，覆盖到`/etc/v2ray/config.json`内</p></div>
 
 #### 配置文件config.json
 ```
@@ -843,7 +844,7 @@ rm -rf SogouPY* sogou*
 
 ```
 sudo apt-get install chrome-gnome-shell
-//这个是ubuntu系统上的shell拓展支持。
+//这个是Ubuntu系统上的shell拓展支持。
 ```
 
 ## 浏览器插件拓展支持
@@ -859,7 +860,7 @@ sudo apt-get install chrome-gnome-shell
 
 ## 推荐的插件
 <div class="note default"><p>然后是推荐的插件(看不懂的话，右键google网页翻译)，
-不得不说我当初就是因为这些丰富的插件才陷入ubuntu不能自拔的。</p></div>
+不得不说我当初就是因为这些丰富的插件才陷入Ubuntu不能自拔的。</p></div>
 
 - [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 <div class="note default no-icon"><p>Clipboard Manager extension for Gnome-Shell - Adds a clipboard indicator to the top panel, and caches clipboard history.</p></div>
@@ -950,7 +951,7 @@ sudo reboot
 
 <div class="note primary"><p>
 
-[ubuntu 内核历史版本](https://kernel.ubuntu.com/~kernel-ppa/mainline/)
+[Ubuntu 内核历史版本](https://kernel.ubuntu.com/~kernel-ppa/mainline/)
   下载最新版本的内核文件即可。</p></div>
 
 <div class="note default"><p>比如我就是这四个文件</p></div>
@@ -966,13 +967,13 @@ sudo reboot
   uname -r
   //查看当前内核版本
  ```
- ## win10和ubuntu时间不同步
- <div class="note success"><p>在ubuntu下输入以下三行命令</p></div>
+ ## Win10和Ubuntu时间不同步
+ <div class="note success"><p>在Ubuntu下输入以下三行命令</p></div>
 
  ```
  sudo apt-get install ntpdate
  sudo ntpdate time.windows.com
- //在ubuntu下更新本地时间
+ //在Ubuntu下更新本地时间
  sudo hwclock --localtime --systohc
  //将本地时间更新到硬件上
  ```

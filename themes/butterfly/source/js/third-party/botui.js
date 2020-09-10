@@ -3910,7 +3910,7 @@ function bot_ui_ini() {
           }).then(function() {
             botui.message.add({
               delay: 8000,
-              content: "比如巧克力是ubuntu的教程，棉花糖是windows的教程，糖葫芦就是各种通用教程啦！"
+              content: "比如巧克力是Ubuntu的教程，棉花糖是windows的教程，糖葫芦就是各种通用教程啦！"
             }).then(function() {
               botui.message.add({
                 delay: 5000,

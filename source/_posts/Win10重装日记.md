@@ -1,18 +1,19 @@
 ---
-title: Win10 1809 机械革命深海幽灵Z2 重装日记
+title: Win10重装日记
 categories:
   - Akilarの棉花糖
 tags:
-  - win10
+  - Win10
   - 系统重装
 author: Akialrlxh
+description: Win10重装日记，包含系统激活及常用软件推荐以及美化方案。
 abbrlink: 29cf4234
 date: 2019-04-08 15:22:00
 sticky: 1
 ---
 # 写在最前
 
-<div class="note info no-icon"><p>我觉得既然连不常用的ubuntu都写了一个不一定会用到的重装教程，那么经常出问题的win10是肯定要写一个的了。实话说现在这个就有点毛病，诸如剪切复制粘贴文件的时候进度条窗口不显示，还有就是开机logo丢失，但是要是重装一遍的话，因为 ubuntu的开机引导是装在win10系统盘里，啊，盘根错节，我要不还是别把原来的小米air13卖掉了，两台电脑两个系统能省好多事情。不行，grub界面和双系统看上去比较有逼格啊，我当程序员的初衷就是觉得能把电脑搞得花里胡哨很帅啊，尤其是命令行窗口代码翻飞的样子，像极了黑客帝国，罗曼蒂克有木有。不行，我生病了，开始说胡话了。</p></div>
+<div class="note info no-icon"><p>我觉得既然连不常用的Ubuntu都写了一个不一定会用到的重装教程，那么经常出问题的Win10是肯定要写一个的了。实话说现在这个就有点毛病，诸如剪切复制粘贴文件的时候进度条窗口不显示，还有就是开机logo丢失，但是要是重装一遍的话，因为 Ubuntu的开机引导是装在Win10系统盘里，啊，盘根错节，我要不还是别把原来的小米air13卖掉了，两台电脑两个系统能省好多事情。不行，grub界面和双系统看上去比较有逼格啊，我当程序员的初衷就是觉得能把电脑搞得花里胡哨很帅啊，尤其是命令行窗口代码翻飞的样子，像极了黑客帝国，罗曼蒂克有木有。不行，我生病了，开始说胡话了。</p></div>
 
 
 
@@ -39,7 +40,7 @@ sticky: 1
 
 <div class="note default no-icon"><p>
 
-下载第一个`微PE工具箱V2.0`，附带的win10系统在下面也有，一并下载即可，虽然win pe本身没在更新，但是这个系统镜像还是有在更新的。我是机械革命z2自带的出厂系统镜像，好处是不用再去想办法激活，激活也好办啦，`KMSpico`了解一下。哦，要低调，存在我深深的百度网盘里。</p></div>
+下载第一个`微PE工具箱V2.0`，附带的Win10系统在下面也有，一并下载即可，虽然win pe本身没在更新，但是这个系统镜像还是有在更新的。我是机械革命z2自带的出厂系统镜像，好处是不用再去想办法激活，激活也好办啦，`KMSpico`了解一下。哦，要低调，存在我深深的百度网盘里。</p></div>
 
 
 ## 用到的链接
@@ -60,7 +61,7 @@ KMSpico  V10.2.0 链接: https://pan.baidu.com/s/1B_UijZxMzkeiRnMgAgGNrA 提取�
 
 <div class="note warning"><p>
 
-**话说在前面，因为ubuntu的引导是安装在windows系统盘内的，要是格式了系统盘那么ubuntu的引导也就挂了，到时候最快的办法还是重装，没事，我已经先写好了ubuntu的重装日记。**</p></div>
+**话说在前面，因为Ubuntu的引导是安装在windows系统盘内的，要是格式了系统盘那么Ubuntu的引导也就挂了，到时候最快的办法还是重装，没事，我已经先写好了Ubuntu的重装日记。**</p></div>
 
 ## 安装系统
 
@@ -126,11 +127,11 @@ win+X再按A，以管理员模式打开powershell，
 输入
 ```
 slmgr /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J
-//安装win10密钥
+//安装Win10密钥
 slmgr /skms zh.us.to
 //设置kms服务器
 slmgr /ato
-//激活win10系统
+//激活Win10系统
 slmgr /xpr
 //查询激活状态
 ```
@@ -421,7 +422,7 @@ c/c++ ：CLion
 
 # 美化软件
 
-<div class="note info"><p>我发现在win10这边，我是把ubuntu的安装顺序反过来了，ubuntu那边第一件事是先美化，win10这边是最后才做。怎么说呢，毕竟win10是图形化界面，ubuntu那边修改grub一言不合搞不好引导就挂了，自然是早点解决好。</p></div>
+<div class="note info"><p>我发现在Win10这边，我是把Ubuntu的安装顺序反过来了，Ubuntu那边第一件事是先美化，Win10这边是最后才做。怎么说呢，毕竟Win10是图形化界面，Ubuntu那边修改grub一言不合搞不好引导就挂了，自然是早点解决好。</p></div>
 
 
 
@@ -469,7 +470,7 @@ c/c++ ：CLion
 
 <div class="note warning"><p>
 
-虽然win10也有一个叫My Dock的软件可以让任务栏看起来像mac一样，
+虽然Win10也有一个叫My Dock的软件可以让任务栏看起来像mac一样，
 但是还不成熟，bug贼多（易语言写的，自己感受），就不贴出来了。
 其他的像`SAO  Utils`和`rainmeter`之类的，我已经过了那个年纪了。</p></div>
 
@@ -505,7 +506,7 @@ regsvr32 shell32.dll
 
 [directX修复工具增强版 v3.8](https://www.crsky.com/soft/31471.html#down)</p></div>
 
-## win10桌面图标设置，点开显示rundll32.exe无法访问指定设备、路径或文件。
+## Win10桌面图标设置，点开显示rundll32.exe无法访问指定设备、路径或文件。
 
 <div class="note default no-icon"><p>
 win+R打开运行窗口，输入

@@ -2,11 +2,11 @@
 title: 双系统 Hexo和github的常用命令行归纳
 author: Akilarlxh
 tags:
-  - ubuntu
+  - Ubuntu
   - hexo
   - 双系统
   - git
-  - win10
+  - Win10
 categories:
   - Akilarの糖葫芦
 abbrlink: 803c5fab
@@ -16,10 +16,10 @@ date: 2019-04-12 13:58:00
 
 因为想到每次忘记git命令的话，都要回去看一下安装教程有点麻烦，就直接把这些常用内容择出来专门做个归纳。
 
-这里假定来看的都是win10+ubuntu双系统，为了能够在两个系统上都能正常控制Hexo的版本切换，我会分别说下在两个端的每次操作要用哪些代码。
+这里假定来看的都是Win10+Ubuntu双系统，为了能够在两个系统上都能正常控制Hexo的版本切换，我会分别说下在两个端的每次操作要用哪些代码。
 
 
-# ubuntu：
+# Ubuntu：
 ## 打开终端
 可以快捷键打开后切换目录，也可以右键->打开终端。
 
@@ -30,7 +30,7 @@ cd ~/Documents/Hexo
 cd是切换目录，可以自己定位你自己的目录。想不起来全名没关系，按**Tab**键可以自动补全。
 
 ## git命令行操作（source分支）
-这里我们假定你已经在windows那边提交过代码，那么我们在ubuntu下的代码版本是低于远程仓库的。
+这里我们假定你已经在windows那边提交过代码，那么我们在Ubuntu下的代码版本是低于远程仓库的。
 所以要先拉取云端上的项目。用pull命令拉取。
 ```
 sudo git pull origin source
@@ -60,7 +60,7 @@ sudo npm install hexo-admin --save
 sudo hexo server -p 5000
 //这里我指定了5000端口
 ```
-值得一提的是，ubuntu下terminal中，ctrl+C无法直接退出，因为热键被占用。
+值得一提的是，Ubuntu下terminal中，ctrl+C无法直接退出，因为热键被占用。
 必须要用**Ctrl+Shift+C**才行。
 
 编辑完成以后，先用git命令提交你的源代码到git的source分支（二、2），
@@ -89,7 +89,7 @@ sudo hexo clean
 sudo hexo g -d
 ```
 
-# win10：
+# Win10：
 
 ## 打开终端
 可以快捷键打开后切换目录，也可以找到文件夹以后，按住shift，右键->在此处打开powershell。
@@ -105,7 +105,7 @@ d:是切换磁盘，我是把WIN10的Hexo文件目录设置在D盘，而快捷�
 cd是切换目录，可以自己定位你自己的目录。想不起来全名没关系，按**Tab**键可以自动补全。
 
 ## git命令行操作（source分支）
-这里我们假定你已经在ubuntu那边提交过代码，那么我们在win10下的代码版本是低于远程仓库的。
+这里我们假定你已经在Ubuntu那边提交过代码，那么我们在Win10下的代码版本是低于远程仓库的。
 所以要先拉取云端上的项目。用pull命令拉取。
 ```
 git pull origin source
@@ -158,7 +158,7 @@ hexo g -d
 ```
 
 ## git bash和git GUI汉化
-win10的git安装版自带一个git bash的终端和git GUI图形化界面，不过原则上我是要鄙弃的，毕竟用图形化界面一点也不elegant。考虑到看我教程的多半都是初学者，所以还是写一下好了。
+Win10的git安装版自带一个git bash的终端和git GUI图形化界面，不过原则上我是要鄙弃的，毕竟用图形化界面一点也不elegant。考虑到看我教程的多半都是初学者，所以还是写一下好了。
 
 图形化界面本身是没啥难度的，重点在于汉化。
 
