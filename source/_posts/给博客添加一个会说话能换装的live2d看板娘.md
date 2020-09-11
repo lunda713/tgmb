@@ -223,3 +223,8 @@ hexo s
 
 这个看板娘的API貌似随时会到期，作者发布了API的迁移公告以及部署教程:[Live2D 看板娘 API 迁移公告](https://www.fghrsh.net/post/170.html)
 自建API需要用到自己的服务器，PHP服务器部署有一键安装脚本，自搜。
+
+# TO DO
+- [本地化 API 版本](https://github.com/panedioic/live2d_demo_without_api)
+- [原后端API源码](https://github.com/fghrsh/live2d_api)
+- 将API转为本地化，增改模型。
