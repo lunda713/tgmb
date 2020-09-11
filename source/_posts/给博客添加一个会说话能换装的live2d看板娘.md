@@ -189,11 +189,11 @@ const live2d_path = "/live2d-widget/";
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-  + - <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  + - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
++   - <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
++   - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
   bottom:
     # - <script src="xxxx"></script>
-  + - <script src="/live2d-widget/autoload.js"></script>
++   - <script src="/live2d-widget/autoload.js"></script>
 ```
 3. 第三步
 
