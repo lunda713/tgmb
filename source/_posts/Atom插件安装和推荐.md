@@ -1,6 +1,6 @@
 ---
 title: Atom插件安装和推荐
-categories: Akilarの糖葫芦
+categories: 🍡Akilarの糖葫芦
 tags: Atom
 abbrlink: 498e6e74
 date: 2019-05-13 13:37:46

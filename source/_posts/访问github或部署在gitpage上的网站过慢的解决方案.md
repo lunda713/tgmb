@@ -1,6 +1,6 @@
 ---
 title: 访问github或部署在gitpage上的网站过慢的解决方案
-categories: Akilarの棉花糖
+categories: 🍨Akilarの棉花糖
 tags: git
 abbrlink: 61b3e163
 date: 2020-07-29 15:53:50

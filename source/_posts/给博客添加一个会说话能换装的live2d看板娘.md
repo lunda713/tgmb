@@ -3,7 +3,7 @@ title: 给博客添加一个会说话能换装的live2d看板娘
 images:
 abbrlink: 5b8f515f
 date: 2020-08-12 14:10:43
-categories: Akilarの糖葫芦
+categories: 🍡Akilarの糖葫芦
 tags:
   - hexo
   - 看板娘

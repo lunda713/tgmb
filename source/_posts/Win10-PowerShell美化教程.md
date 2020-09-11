@@ -5,7 +5,7 @@ description: 对Win10的powershell进行美化，使用ConEmu替换powershell，
 tags:
   - Win10
 categories:
-  - Akilarの棉花糖
+  - 🍨Akilarの棉花糖
 abbrlink: 8a76eb87
 date: 2019-04-12 09:52:00
 ---

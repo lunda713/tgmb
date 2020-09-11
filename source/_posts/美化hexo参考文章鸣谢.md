@@ -2,7 +2,7 @@
 title: hexo-NexT主题美化参考文章鸣谢
 tags: hexo
 categories:
-  - Akilarの糖葫芦
+  - 🍡Akilarの糖葫芦
 abbrlink: a73a1f5e
 date: 2019-04-21 18:25:00
 ---

@@ -8,7 +8,7 @@ tags:
   - git
   - Win10
 categories:
-  - Akilarの糖葫芦
+  - 🍡Akilarの糖葫芦
 abbrlink: 803c5fab
 date: 2019-04-12 13:58:00
 ---

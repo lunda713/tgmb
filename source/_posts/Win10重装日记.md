@@ -1,7 +1,7 @@
 ---
 title: Win10重装日记
 categories:
-  - Akilarの棉花糖
+  - 🍨Akilarの棉花糖
 tags:
   - Win10
   - 系统重装

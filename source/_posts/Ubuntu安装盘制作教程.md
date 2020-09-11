@@ -1,7 +1,7 @@
 ---
 title: Ubuntu安装盘制作教程
 categories:
-  - Akilarの巧克力
+  - 🍫Akilarの巧克力
 tags:
   - Ubuntu
   - 系统重装

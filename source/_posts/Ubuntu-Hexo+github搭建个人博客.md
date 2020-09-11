@@ -6,7 +6,7 @@ tags:
   - hexo
   - git
 categories:
-  - Akilarの巧克力
+  - 🍫Akilarの巧克力
 description: Ubuntu下搭建Hexo+github环境。
 abbrlink: e5502ef6
 date: 2019-04-11 17:03:00

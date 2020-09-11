@@ -1,6 +1,6 @@
 ---
 title: 从github下载release速度过慢的解决方案
-categories: Akilarの糖葫芦
+categories: 🍡Akilarの糖葫芦
 tags: git
 abbrlink: '7357e481'
 date: 2020-07-29 10:09:23
