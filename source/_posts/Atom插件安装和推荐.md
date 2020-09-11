@@ -320,7 +320,6 @@ fi
 fi
 fi
 fi
-# 从0-8共9个，所以这里有9个fi
 ```
 {% endnote %}
 {% note success %}
