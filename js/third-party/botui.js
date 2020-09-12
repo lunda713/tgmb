@@ -3884,7 +3884,7 @@ function bot_ui_ini() {
   var sure = function() {
       botui.message.add({
         delay: 600,
-        content: "😘"
+        content: "🎉🎉🎉🎉🎉🎉"
       }).then(function() {
         secondpart()
       })
@@ -3892,7 +3892,7 @@ function bot_ui_ini() {
     end = function() {
       botui.message.add({
         delay: 600,
-        content: "![...](https://view.moezx.cc/images/2018/05/06/a1c4cd0452528b572af37952489372b6.md.jpg)"
+        content: "w(ﾟДﾟ)w 不要走！再看看嘛！"
       })
     },
     secondpart = function() {
