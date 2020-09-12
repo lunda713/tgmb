@@ -1,7 +1,7 @@
 ---
 title: Rikkaの六花 萌新指南
 categories: 🍡Akilarの糖葫芦
-tags: MC
+tags: ⚔️MC
 images: >-
   http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Rikka%E3%81%AE%E5%85%AD%E8%8A%B1%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/20190921061245825.png
 abbrlink: 362229ad

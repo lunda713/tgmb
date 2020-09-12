@@ -2,9 +2,9 @@
 title: Ubuntu:Hexo+github搭建个人博客
 author: Akilarlxh
 tags:
-  - Ubuntu
-  - hexo
-  - git
+  - 🍫Unbutu
+  - 📁Hexo
+  - 💻git
 categories:
   - 🍫Akilarの巧克力
 description: Ubuntu下搭建Hexo+github环境。

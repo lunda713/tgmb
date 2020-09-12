@@ -2,7 +2,7 @@
 title: Hexo-editor——Hexo专用的编辑器
 categories: 🍡Akilarの糖葫芦
 tags:
-  - hexo
+  - 📁Hexo
 abbrlink: 1da4f99e
 date: 2019-04-23 19:00:41
 ---

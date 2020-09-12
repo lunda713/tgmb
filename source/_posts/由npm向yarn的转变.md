@@ -1,7 +1,7 @@
 ---
 title: 由npm向yarn的转变
 categories: 🍡Akilarの糖葫芦
-tags: yarn
+tags: ⚙️yarn
 abbrlink: e6610502
 date: 2019-06-03 20:12:39
 ---

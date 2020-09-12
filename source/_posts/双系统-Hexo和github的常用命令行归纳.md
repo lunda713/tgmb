@@ -2,11 +2,11 @@
 title: 双系统 Hexo和github的常用命令行归纳
 author: Akilarlxh
 tags:
-  - Ubuntu
-  - hexo
-  - 双系统
-  - git
-  - Win10
+  - 🍫Unbutu
+  - 📁Hexo
+  - ♊双系统
+  - 💻git
+  - 🍨Win10
 categories:
   - 🍡Akilarの糖葫芦
 abbrlink: 803c5fab

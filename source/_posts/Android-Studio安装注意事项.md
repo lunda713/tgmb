@@ -1,7 +1,7 @@
 ---
 title: Android Studio安装注意事项
 categories: 🍡Akilarの糖葫芦
-tags: Android
+tags: 🤖Android
 abbrlink: 256c7ca
 date: 2019-06-02 12:24:47
 ---

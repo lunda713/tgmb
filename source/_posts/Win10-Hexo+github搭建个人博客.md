@@ -1,9 +1,9 @@
 ---
 title: Win10:Hexo+github搭建个人博客
 tags:
-- hexo
-- Win10
-- git
+- 📁Hexo
+- 🍨Win10
+- 💻git
 categories:
 - 🍨Akilarの棉花糖
 author: Akilar
@@ -214,7 +214,7 @@ date: 2019-04-07 00:38:36
 categories: 学习笔记
 tags:
 - node.js # 注意短线后有空格
-- hexo
+- 📁Hexo
 ```
 {% endnote %}
 # 部署到GitHub

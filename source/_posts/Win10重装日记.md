@@ -3,8 +3,8 @@ title: Win10重装日记
 categories:
   - 🍨Akilarの棉花糖
 tags:
-  - Win10
-  - 系统重装
+  - 🍨Win10
+  - 💠系统重装
 author: Akialrlxh
 description: Win10重装日记，包含系统激活及常用软件推荐以及美化方案。
 abbrlink: 29cf4234

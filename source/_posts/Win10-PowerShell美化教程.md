@@ -3,7 +3,7 @@ title: Win10:PowerShell美化教程
 author: Akilarlxh
 description: 对Win10的powershell进行美化，使用ConEmu替换powershell，加装oh-my-posh实现主题风格。
 tags:
-  - Win10
+  - 🍨Win10
 categories:
   - 🍨Akilarの棉花糖
 abbrlink: 8a76eb87

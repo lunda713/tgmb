@@ -3,8 +3,8 @@ title: Ubuntu重装日记
 categories:
   - 🍫Akilarの巧克力
 tags:
-  - Ubuntu
-  - 系统重装
+  - 🍫Unbutu
+  - 💠系统重装
 author: Akilarlxh
 description: Ubuntu18.04LTS安装教程，电脑型号为机械革命深海幽灵z2-1060款。
 abbrlink: 2f7e1a55

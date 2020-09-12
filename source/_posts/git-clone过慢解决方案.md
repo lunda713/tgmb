@@ -1,7 +1,7 @@
 ---
 title: git clone过慢解决方案
 categories: 🍡Akilarの糖葫芦
-tags: git
+tags: 💻git
 abbrlink: 24a51aa5
 date: 2020-07-28 17:12:56
 ---

@@ -1,6 +1,6 @@
 ---
 title: hexo-NexT主题美化参考文章鸣谢
-tags: hexo
+tags: 📁Hexo
 categories:
   - 🍡Akilarの糖葫芦
 abbrlink: a73a1f5e

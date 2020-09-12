@@ -3,8 +3,8 @@ title: Ubuntu安装盘制作教程
 categories:
   - 🍫Akilarの巧克力
 tags:
-  - Ubuntu
-  - 系统重装
+  - 🍫Unbutu
+  - 💠系统重装
 author: Akialrlxh
 description: 本文所用Ubuntu系统版本为Ubuntu 18.04LTS，其余版本也适用。
 abbrlink: 328a67be

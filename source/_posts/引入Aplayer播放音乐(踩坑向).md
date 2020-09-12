@@ -4,8 +4,8 @@ abbrlink: 3afa069a
 date: 2019-04-24 11:06:48
 categories: 🍡Akilarの糖葫芦
 tags:
-  - Hexo
-  - Aplayer
+  - 📁Hexo
+  - 🎼Aplayer
 ---
 
 # 写在最前
