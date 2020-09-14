@@ -122,7 +122,7 @@ git clone https://gitee.com/akilarlxh/minimap.git
 {% note info %}
 <center><h2>安装脚本</h2></center>
 虽然Atom有一款名叫sync-settings的插件可以实现插件多设备同步，但是sync-settings的同步依赖于github的gist服务，而这一服务很不幸的被墙了。
-于是转而用脚本一键安装来实现重装方案。
+于是转而用脚本一键安装来实现重装方案。缺点是无法像sync-setting那样连配置也一并保留，每次安装都是默认配置。
 使用方式为在【C:\Users\用户名\.atom】路径下，新建一个atomplugin.sh的文件，把以下代码复制进去。
 ```bash
 #!/bin/sh
@@ -147,7 +147,8 @@ echo "[9] 安装合并冲突处理插件：merge-conflicts"
 echo "[10] 安装代码校验插件：linter"
 echo "[11] 安装代码补全插件：autocomplete-bibtex"
 echo "[12] 安装图片粘贴插件：atom-markdown-image-assistant"
-echo "[13] 安装多端同步插件：Sync-settings"
+echo "[13] 安装Atom终端插件：atom-terminal-tab"
+echo "[14] 安装多端同步插件：Sync-settings"
 echo " "
 printf "请选择需要的功能，默认选择[0]"
 echo " "
@@ -297,9 +298,23 @@ npm install
 printf "\033[32mINFO \033[0m atom-markdown-image-assistant安装完毕，请重启Atom应用更改\n"
 sleep 1s
 exec ${AtomPath}/atomplugin.sh
+
+
 # 选择13
 else
 if [ "$answer" = "13" ]; then
+cd ${AtomPath}/packages
+printf "\033[32mINFO \033[0m 正在从远程仓库拉取atom-terminal-tab\n"
+git clone https://gitee.com/akilarlxh/atom-terminal-tab.git
+printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装atom-terminal-tab\n"
+cd ${AtomPath}/packages/atom-terminal-tab
+npm install
+printf "\033[32mINFO \033[0m atom-terminal-tab安装完毕，请重启Atom应用更改\n"
+sleep 1s
+exec ${AtomPath}/atomplugin.sh
+# 选择14
+else
+if [ "$answer" = "14" ]; then
 cd ${AtomPath}/packages
 printf "\033[32mINFO \033[0m 正在从远程仓库拉取sync-settings\n"
 git clone https://gitee.com/akilarlxh/sync-settings.git
@@ -320,6 +335,7 @@ printf "\033[31mERROR \033[0m 输入错误，请返回重新选择...\n"
 sleep 1s
 exec ${AtomPath}/atomplugin.sh
 # 注意有几个选项就要有几个fi。
+fi
 fi
 fi
 fi
