@@ -148,7 +148,8 @@ echo "[10] 安装代码校验插件：linter"
 echo "[11] 安装代码补全插件：autocomplete-bibtex"
 echo "[12] 安装图片粘贴插件：atom-markdown-image-assistant"
 echo "[13] 安装Atom终端插件：atom-terminal-tab"
-echo "[14] 安装多端同步插件：Sync-settings"
+echo "[14] 安装Markdown增强组件：markdown-preview-enhanced"
+echo "[15] 安装多端同步插件：Sync-settings"
 echo " "
 printf "请选择需要的功能，默认选择[0]"
 echo " "
@@ -316,6 +317,18 @@ exec ${AtomPath}/atomplugin.sh
 else
 if [ "$answer" = "14" ]; then
 cd ${AtomPath}/packages
+printf "\033[32mINFO \033[0m 正在从远程仓库拉取markdown-preview-enhanced\n"
+git clone https://gitee.com/akilarlxh/markdown-preview-enhanced.git
+printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装markdown-preview-enhanced\n"
+cd ${AtomPath}/packages/markdown-preview-enhanced
+npm install
+printf "\033[32mINFO \033[0m markdown-preview-enhanced安装完毕，请重启Atom应用更改\n"
+sleep 1s
+exec ${AtomPath}/atomplugin.sh
+# 选择15
+else
+if [ "$answer" = "15" ]; then
+cd ${AtomPath}/packages
 printf "\033[32mINFO \033[0m 正在从远程仓库拉取sync-settings\n"
 git clone https://gitee.com/akilarlxh/sync-settings.git
 printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装sync-settings\n"
@@ -335,6 +348,7 @@ printf "\033[31mERROR \033[0m 输入错误，请返回重新选择...\n"
 sleep 1s
 exec ${AtomPath}/atomplugin.sh
 # 注意有几个选项就要有几个fi。
+fi
 fi
 fi
 fi
