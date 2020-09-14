@@ -309,7 +309,7 @@ printf "\033[32mINFO \033[0m 正在从远程仓库拉取atom-terminal-tab\n"
 git clone https://gitee.com/akilarlxh/atom-terminal-tab.git
 printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装atom-terminal-tab\n"
 cd ${AtomPath}/packages/atom-terminal-tab
-npm install
+npm install -f
 printf "\033[32mINFO \033[0m atom-terminal-tab安装完毕，请重启Atom应用更改\n"
 sleep 1s
 exec ${AtomPath}/atomplugin.sh
