@@ -146,7 +146,7 @@ echo "[8] 安装代码高亮插件：atom-quick-highlight"
 echo "[9] 安装合并冲突处理插件：merge-conflicts"
 echo "[10] 安装代码校验插件：linter"
 echo "[11] 安装代码补全插件：autocomplete-bibtex"
-echo "[12] 安装图片粘贴插件：atom-markdown-image-assistant"
+echo "[12] 安装图片粘贴插件：markdown-img-paste"
 echo "[13] 安装Atom终端插件：atom-terminal-tab"
 echo "[14] 安装Markdown增强组件：markdown-preview-enhanced"
 echo "[15] 安装多端同步插件：Sync-settings"
@@ -291,12 +291,12 @@ exec ${AtomPath}/atomplugin.sh
 else
 if [ "$answer" = "12" ]; then
 cd ${AtomPath}/packages
-printf "\033[32mINFO \033[0m 正在从远程仓库拉取atom-markdown-image-assistant\n"
-git clone https://gitee.com/akilarlxh/atom-markdown-image-assistant.git
-printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装atom-markdown-image-assistant\n"
-cd ${AtomPath}/packages/atom-markdown-image-assistant
+printf "\033[32mINFO \033[0m 正在从远程仓库拉取markdown-img-paste\n"
+git clone https://github.com/cocoakekeyu/markdown-img-paste.git
+printf "\033[32mINFO \033[0m 拉取完毕，即将为您安装markdown-img-paste\n"
+cd ${AtomPath}/packages/markdown-img-paste
 npm install
-printf "\033[32mINFO \033[0m atom-markdown-image-assistant安装完毕，请重启Atom应用更改\n"
+printf "\033[32mINFO \033[0m markdown-img-paste安装完毕，请重启Atom应用更改\n"
 sleep 1s
 exec ${AtomPath}/atomplugin.sh
 
