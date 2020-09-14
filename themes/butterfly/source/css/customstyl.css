@@ -156,20 +156,16 @@ img {
           background-position: 0% 50%;
       }
   }
-# 诗歌体
-.poemsrl {
+/* 诗歌体 */
+@media (min-width: 900px) {
+.poem {
   margin: 0 auto;
   height: 500px;
-  font-size: 25px;
-  writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/
-  writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
-  font-family:楷体 !important;
+  writing-mode: vertical-rl;
+  writing-mode: tb-lr;
 }
-.poemslr {
-  margin: 0 auto;
-  height: 500px;
-  font-size: 25px;
-  writing-mode: vertical-lr;/*从左向右 从右向左是 writing-mode: vertical-rl;*/
-  writing-mode: tb-lr;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
+}
+.poem {
+  font-size: 22px;
   font-family:楷体 !important;
 }
