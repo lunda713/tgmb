@@ -115,7 +115,10 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:Akilarlxh/Akilarlxh.github.io.git
+  repository:
+    github: https://github.com/Akilarlxh/Akilarlxh.github.io.git
+    # gitee: https://gitee.com/akilar/akilar.git
+    coding: https://e.coding.net/akilar/akilar/akilar.git
   branch: master
 
 
