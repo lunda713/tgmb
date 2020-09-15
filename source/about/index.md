@@ -38,6 +38,6 @@ bot_ui_ini()
 {% endraw %}
 
 {% hideBlock 博主爆照 %}
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/index/20190423110548767.png)很遗憾博主并不是个女的。我是最后面那个戴墨镜的。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/index/20190423110548767.png)很遗憾博主并不是个女的。我是最后面那个戴墨镜的。
 选这张照片是因为这是我为数不多的照片中相对比较帅的那个。
 {% endhideBlock %}

@@ -44,13 +44,13 @@ date: 2019-05-13 13:37:46
 
 在搜索框里搜索我们要的插件
 **atom-simplified-chinese-menu**
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513015804849.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513015804849.png)
 不要按右边那个醒目的Install按钮，无限加载看一下午没什么意义。
 
 点击进入介绍界面，找到他的git仓库网址
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513020036320.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513020036320.png)
 然后就到github了，把这个clone到atom的插件文件夹里
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513020210545.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513020210545.png)
 在**C:\Users\用户名\.atom\packages**文件夹打开终端，输入
 ```
 git clone https://github.com/chinakids/atom-simplified-chinese-menu
@@ -66,7 +66,7 @@ npm install
 //也可以用yarn安装，直接输入yarn指令即可
 ```
 
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513023001785.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20190513023001785.png)
 npm install执行完毕后，重启一下atom就可以在Files->Settings->Packages里找到安装的插件了，启用以后就可以了。有些插件会有自定义配置，这个反正在他的介绍或者github主页里肯定会介绍的。我就不画蛇添足了。
 
 Ubuntu安装方式类似，都是要先找到atom的packages文件夹在哪里。其他都差不多的。
@@ -385,18 +385,18 @@ cd C:\Users\User\.atom\packages\sync-settings #记得改为自己的路径
 npm install
 ```
 安装完成后，打开Atom，找到插件的配置页，需要配置两个内容，分别是Personal Access Token和Gist Id。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105519786.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105519786.png)
 1. 打开自己的 github 创建一个 [personal access token](https://github.com/settings/tokens)
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105149957.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105149957.png)
 记住要勾选 gist 权限，见下图），
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105305017.png)![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105305017.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105305017.png)![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105305017.png)
 然后复制生成的 token 序列粘贴到插件的Personal Access Token项内。Token只有生成的那次可见，如果忘记 了就只能重新生成了。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105403503.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908105403503.png)
 2. 点击头像旁边的箭头，找到[Your gists](https://gist.github.com/),创建一个gist
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908110109708.png)
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908110409169.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908110109708.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908110409169.png)
 gist id可以在网页URL上找到
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908110850286.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Atom%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E6%8E%A8%E8%8D%90/20200908110850286.png)
 配置完成后就能在atom的工具栏里通过扩展->Syncchronize Settings进行操作，会上传你的插件以及快键键乃至布局配置到gist。
 如果要换设备的话，只需要按照sync-settings并且重新配置token和gist id即可。
 gist id与token没有关联关系，所以每次使用重新生成token也可以。

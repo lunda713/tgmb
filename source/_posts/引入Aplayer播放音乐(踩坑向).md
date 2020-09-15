@@ -43,14 +43,14 @@ const ap = new APlayer({
       {
         name: "China-Y",
         artist: '徐梦圆',
-        url: 'http://www.ytmp3.cn/down/59298.mp3down/39868.mp3',
-        cover: 'http://oeff2vktt.bkt.clouddn.com/image/84.jpg',
+        url: 'https://www.ytmp3.cn/down/59298.mp3down/39868.mp3',
+        cover: 'https://oeff2vktt.bkt.clouddn.com/image/84.jpg',
       },
       {
         name: 'China-X',
         artist: '徐梦圆',
-        url: 'http://www.ytmp3.cn/down/49003.mp3',
-        cover: 'http://oeff2vktt.bkt.clouddn.com/image/8.jpg',
+        url: 'https://www.ytmp3.cn/down/49003.mp3',
+        cover: 'https://oeff2vktt.bkt.clouddn.com/image/8.jpg',
       },
     ]
 });
@@ -60,7 +60,7 @@ const ap = new APlayer({
 
 **audio**对应的便是音频文件，所以音乐播放器需要播放的音乐是需要自己进行相关信息（如歌曲链接、歌词、封面等）的配置。
 
-顺便附上一个[mp3音乐外链网](http://www.ytmp3.cn/)
+顺便附上一个[mp3音乐外链网](https://www.ytmp3.cn/)
 
 ## 修改_layout.swig
 这一步也是决定能否在你的所有页面显示的关键。
@@ -105,7 +105,7 @@ npm install --save hexo-tag-aplayer
 使用示例，例如在网页里放以下代码，会加载出单曲图标。
 
 ```
-{% aplayer "China-Y" "徐梦圆" "http://www.ytmp3.cn/down/59298.mp3" %}
+{% aplayer "China-Y" "徐梦圆" "https://www.ytmp3.cn/down/59298.mp3" %}
 ```
 
 
@@ -126,15 +126,15 @@ npm install --save hexo-tag-aplayer
         {
              "title": "病名为爱",
             "author": "祖娅纳惜",
-            "url": "http://www.ytmp3.cn/down/60477.mp3",
-            "pic": "http://img.ytmp3.cn/image/49.jpg",
+            "url": "https://www.ytmp3.cn/down/60477.mp3",
+            "pic": "https://img.ytmp3.cn/image/49.jpg",
 
         },
         {
             "title": "アイロニ",
             "author": "鹿乃",
-            "url": "http://www.ytmp3.cn/down/35231.mp3",
-            "pic": "http://img.ytmp3.cn/image/6.jpg"
+            "url": "https://www.ytmp3.cn/down/35231.mp3",
+            "pic": "https://img.ytmp3.cn/image/6.jpg"
         }
     ]
 }

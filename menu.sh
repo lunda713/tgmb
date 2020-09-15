@@ -64,7 +64,7 @@ else
 if [ "$answer" = "6" ]; then
 printf "\033[32mINFO \033[0m 正在将npm源替换为阿里云镜像 ...\n"
 git remote set-url origin https://github.com/Akilarlxh/Akilarlxh.github.io.git # 因为原版本可能是从gitee的镜像clone过来的，重设一下远程仓库，记得替换用户名为自己的
-npm config set registry http://registry.npm.taobao.org # 替换NPM源为阿里镜像
+npm config set registry https://registry.npm.taobao.org # 替换NPM源为阿里镜像
 printf "\033[32mINFO \033[0m Hexo恢复中...\n"
 npm install -g hexo-cli
 npm install

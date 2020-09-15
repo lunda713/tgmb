@@ -11,7 +11,7 @@ date: 2019-04-29 09:54:53
 
 # Tomcat下载
 
-[Apache Tomcat](http://tomcat.apache.org/)
+[Apache Tomcat](https://tomcat.apache.org/)
 在页面左侧的download选择合适版本下载。
 这里我下载的是绿色版的**Tomcat9 64-bit Windows zip (pgp, sha512)**，理由是方便删干净，就是这么无情。
 

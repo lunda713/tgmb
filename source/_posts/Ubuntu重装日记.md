@@ -402,7 +402,7 @@ java -version
 
 因为有一个python版本的对应，这里给个对照图表好了
 
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18.04LTS-%E6%9C%BA%E6%A2%B0%E9%9D%A9%E5%91%BD%E6%B7%B1%E6%B5%B7%E5%B9%BD%E7%81%B5z2-%E9%87%8D%E8%A3%85%E6%97%A5%E8%AE%B0-'/20190612070757742.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18.04LTS-%E6%9C%BA%E6%A2%B0%E9%9D%A9%E5%91%BD%E6%B7%B1%E6%B5%B7%E5%B9%BD%E7%81%B5z2-%E9%87%8D%E8%A3%85%E6%97%A5%E8%AE%B0-'/20190612070757742.png)
 
 </p></div>
 
@@ -443,7 +443,7 @@ source ~/.zshrc
 
 <div class="note primary"><p>
 
-下载chrome的deb安装包[chrome for linux](http://www.ubuntuchrome.com/)</p></div>
+下载chrome的deb安装包[chrome for linux](https://www.ubuntuchrome.com/)</p></div>
 
 <div class="note default"><p>
 
@@ -709,7 +709,7 @@ Clash是一个Go语言开发的多平台代理客户端
 
 <div class="note primary"><p>
 
-这个就不得不说jetbrain大法好了，直接到官网下载[jetbrain toolbox](http://www.jetbrains.com/toolbox/app/)
+这个就不得不说jetbrain大法好了，直接到官网下载[jetbrain toolbox](https://www.jetbrains.com/toolbox/app/)
 
 </p></div>
 
@@ -784,11 +784,11 @@ sudo ./install.sh
 
 <div class="note success no-icon"><p>
 
-[qq](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/)
-[tim](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.office/)
-[wechat](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/)
-[百度网盘](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.baidu.pan/)
-[迅雷极速版](http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.thunderspeed/)
+[qq](https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/)
+[tim](https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.office/)
+[wechat](https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/)
+[百度网盘](https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.baidu.pan/)
+[迅雷极速版](https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.thunderspeed/)
 
 </p></div>
 

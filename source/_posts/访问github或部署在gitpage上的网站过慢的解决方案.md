@@ -55,7 +55,7 @@ training.github.com
 github.io
 ```
 
-因为github相关的诸多域名的ip是在变动的，为了能够实时获取最新的ip，我们可以使用爬虫来从[站长之家](http://ip.chinaz.com/)或其余ip查询网站上爬取最新ip。
+因为github相关的诸多域名的ip是在变动的，为了能够实时获取最新的ip，我们可以使用爬虫来从[站长之家](https://ip.chinaz.com/)或其余ip查询网站上爬取最新ip。
 
 这里要用到python，**安装推荐使用Anaconda**，Anaconda安装方式推荐参看[Win10重装日记](https://akilarlxh.github.io/post/29cf4234.html)的3.2章节。根据Anaconda版本与python版本的对照选择自己需要的Anaconda安装包，然后直接安装即可，路径建议修改为非系统盘，同时**务必勾选将python路径加入到环境变量**的选项。
 
@@ -81,7 +81,7 @@ from bs4 import BeautifulSoup
 
 ans = []
 for i in s.split():
-    url = "http://ip.tool.chinaz.com/" + i.strip()
+    url = "https://ip.tool.chinaz.com/" + i.strip()
     resp = requests.get(url)
     soup = BeautifulSoup(resp.text,"html.parser")
     x = soup.find(class_="IcpMain02")

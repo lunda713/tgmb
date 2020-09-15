@@ -360,7 +360,7 @@ tidio:
   public_key:
 
 # daovoice
-# http://daovoice.io/
+# https://daovoice.io/
 daovoice:
   enable: true
   app_id: 77178ed9
@@ -439,7 +439,7 @@ bing_site_verification:
 # See: https://ziyuan.baidu.com/site/
 baidu_site_verification:
 # 360 Webmaster tools verification setting
-# see http://zhanzhang.so.com/
+# see https://zhanzhang.so.com/
 qihu_site_verification:
 
 # Yandex Webmaster tools verification setting
@@ -484,7 +484,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of color: '#49B202'
-# The formal of image: url(http://xxxxxx.com/xxx.jpg)
+# The formal of image: url(https://xxxxxx.com/xxx.jpg)
 # White color will be shown as default
 background: url(https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/background.png)
 # Show the footer background image (same as top_img)
@@ -593,7 +593,7 @@ subtitle:
   # source: false 關閉調用
   # source: 1  調用搏天api的隨機語錄（簡體） https://api.btstu.cn/
   # source: 2  調用一言網的一句話（簡體） https://hitokoto.cn/
-  # source: 3  調用一句網（簡體） http://yijuzhan.com/
+  # source: 3  調用一句網（簡體） https://yijuzhan.com/
   # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
   source: 2
@@ -622,7 +622,7 @@ aside:
       link: https://github.com/Akilarlxh
   card_announcement:
     enable: true
-    content: <div>Butterfly主题施工中。。。</div><div class="social-button"><a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=JopvoYdw" rel="external nofollow noreferrer" target="_blank">🎉欢迎加入QQ群🎉</a></div><div class="social-button"><a class="button--animated" href="http://wpa.qq.com/msgrd?v=3&uin=844893474&site=qq&menu=yes" rel="external nofollow noreferrer" target="_blank">🎊QQ好友扩列🎊</a></div
+    content: <div>Butterfly主题施工中。。。</div><div class="social-button"><a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=JopvoYdw" rel="external nofollow noreferrer" target="_blank">🎉欢迎加入QQ群🎉</a></div><div class="social-button"><a class="button--animated" href="https://wpa.qq.com/msgrd?v=3&uin=844893474&site=qq&menu=yes" rel="external nofollow noreferrer" target="_blank">🎊QQ好友扩列🎊</a></div
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -699,7 +699,7 @@ darkmode:
 medium_zoom: false
 
 # fancybox
-# http://fancyapps.com/fancybox/3/
+# https://fancyapps.com/fancybox/3/
 fancybox: true
 
 # Tag Plugins settings (標籤外掛)

@@ -87,7 +87,7 @@ HexoEditor是我目前一直最喜爱的一款Markdown编辑器，自带图片�
 {% note default no-icon %}
 然后在`Hexo`文件夹内`右键`->`Git Bash Here`,输入
 ```bash
-npm config set registry http://registry.npm.taobao.org
+npm config set registry https://registry.npm.taobao.org
 #将npm源替换为阿里的镜像。之后的安装就会迅速很多了。
 npm install hexo-cli -g
 # 安装Hexo
@@ -306,7 +306,7 @@ ssh -T -p 443 git@ssh.github.com
 
 ```yml
 # 站点部署到github要配置Deployment
-## Docs: http://zespia.tw/hexo/docs/deploy.html
+## Docs: https://zespia.tw/hexo/docs/deploy.html
 deploy:
 type: git
 repository: git@github.com:username/username.github.io.git # 记得把username替换为自己的用户名
@@ -411,7 +411,7 @@ hexo depoly
 ## 安装NexT
 {% note info %}
 NexT主题，界面简洁但是功能强大。配置教程可以参考以下内容：
-1. [NexT使用文档](http://theme-next.iissnan.com/)
+1. [NexT使用文档](https://theme-next.iissnan.com/)
 **参考文章**
 2. [绝配：hexo+next主题及我走过的坑](https://www.jianshu.com/p/21c94eb7bcd1)
 3. [Hexo NexT主题中集成gitalk评论系统](https://asdfv1929.github.io/2018/01/20/gitalk/)
@@ -844,7 +844,7 @@ gitalk.render('gitalk-container')
 {% note info %}
 
 Local Search 由 flashlab 贡献,
-在[next使用文档](http://theme-next.iissnan.com/third-party-services.html#local-search)里有完备的安装指导。{% endnote %}
+在[next使用文档](https://theme-next.iissnan.com/third-party-services.html#local-search)里有完备的安装指导。{% endnote %}
 
 #### 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：
 ```bash
@@ -1128,7 +1128,7 @@ else
 if [ "$answer" = "6" ]; then
 printf "\033[32mINFO \033[0m 正在将npm源替换为阿里云镜像 ...\n"
 git remote set-url origin https://github.com/Akilarlxh/Akilarlxh.github.io.git # 因为原版本可能是从gitee的镜像clone过来的，重设一下远程仓库，记得替换用户名为自己的
-npm config set registry http://registry.npm.taobao.org # 替换NPM源为阿里镜像
+npm config set registry https://registry.npm.taobao.org # 替换NPM源为阿里镜像
 printf "\033[32mINFO \033[0m Hexo恢复中...\n"
 npm install -g hexo-cli
 npm install

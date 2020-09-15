@@ -205,7 +205,7 @@ sudo git clone git@github.com:username/username.github.io.git
 
 ```
 cd username.github.io.git
-sudo npm config set registry http://registry.npm.taobao.org
+sudo npm config set registry https://registry.npm.taobao.org
 //这里为了提速，使用的是阿里的镜像。
 sudo npm install -g hexo-cli
 sudo npm install
@@ -255,7 +255,7 @@ cd Hexo
 事实上我就算翻墙照样慢，没办法，没有钱啊，买不起高速服务器。
 亲身体会是不翻墙的话两个小时下不下一个插件，慢到怀疑人生。
 ```
-sudo npm config set registry http://registry.npm.taobao.org
+sudo npm config set registry https://registry.npm.taobao.org
 //这里使用的是阿里的镜像。
 ```
 ### 全局安装Hexo
@@ -461,7 +461,7 @@ provide shell access.
 
 ```
 # 站点部署到github要配置Deployment
-## Docs: http://zespia.tw/hexo/docs/deploy.html
+## Docs: https://zespia.tw/hexo/docs/deploy.html
 deploy:
   type: git
   repository: git@github.com:username/username.github.io.git
@@ -552,7 +552,7 @@ hexo depoly
 # 主题配置
 我使用的nexT，理由是它界面简洁但是功能强大。
 首先贴出它的使用文档
-- [NexT使用文档](http://theme-next.iissnan.com/)
+- [NexT使用文档](https://theme-next.iissnan.com/)
 理论上你可以在这里找到所有使用教程。
 - **参考文章**
 - 01 [绝配：hexo+next主题及我走过的坑](https://www.jianshu.com/p/21c94eb7bcd1)
@@ -907,7 +907,7 @@ Gitalk项目仓库 Issues115，通过MD5加密ID来缩短labal长度。*/
 
 ### 全局搜索功能 local search
 
-Local Search 由 flashlab 贡献,在[next使用文档](http://theme-next.iissnan.com/third-party-services.html#local-search)里有完备的安装指导。
+Local Search 由 flashlab 贡献,在[next使用文档](https://theme-next.iissnan.com/third-party-services.html#local-search)里有完备的安装指导。
 #### 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：
 ```
 npm install hexo-generator-search --save

@@ -29,7 +29,7 @@ sticky: 1
 ## 制作PE启动盘
 {% note default no-icon %}
 1. 先安装`WePe`，这是一个纯净的PE系统，不会给你安装任何全家桶服务，虽然很久没有更新了，但是功能完善，依然可用。
-[WePE Downlload](http://www.wepe.com.cn/download.html)
+[WePE Downlload](https://www.wepe.com.cn/download.html)
 2. 下载第一个`微PE工具箱V2.0`，附带的Win10系统在下面也有，一并下载即可，虽然win pe本身没在更新，但是这个系统镜像还是有在更新的。
 系统镜像使用的是磁力链接，如果迅雷下载过慢，可以使用百度网盘的离线下载功能，然后使用上述的NDM下载（NDM不支持P2P下载技术）。
 *如果是双系统用户，注意确认Ubuntu的引导是否是安装在windows系统盘内的，若是，那么格式了系统盘之后，Ubuntu的引导也就挂了，到时候最快的办法还是重装Ubuntu。*
@@ -91,7 +91,7 @@ slmgr /xpr
 # 查询激活状态
 ```
 kms激活一般180天，到期后再次激活即可。
-[可用的kms激活服务器](http://www.xitongcheng.com/jiaocheng/dnrj_article_44606.html)
+[可用的kms激活服务器](https://www.xitongcheng.com/jiaocheng/dnrj_article_44606.html)
 
 如果是其他版本也可以使用KMSPico
 {% endnote %}
@@ -158,7 +158,7 @@ Anaconda是一个python库管理软件，可以方便的管理和安装python的
 [Anaconda历史版本](https://repo.continuum.io/archive/)
 这里再附上历史版本和python版本的对应。这里虽然可以通过安装`venv`虚拟环境置换，但是我只要`python3.6`干嘛多此一举。
 
-![Anaconda版本与python版本对于关系](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E6%9C%BA%E6%A2%B0%E9%9D%A9%E5%91%BD%E6%B7%B1%E6%B5%B7%E5%B9%BD%E7%81%B5z2-win10-1809-%E9%87%8D%E8%A3%85%E6%97%A5%E8%AE%B0/20190612072907886.png)
+![Anaconda版本与python版本对于关系](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E6%9C%BA%E6%A2%B0%E9%9D%A9%E5%91%BD%E6%B7%B1%E6%B5%B7%E5%B9%BD%E7%81%B5z2-win10-1809-%E9%87%8D%E8%A3%85%E6%97%A5%E8%AE%B0/20190612072907886.png)
 
 我选择的是`Anaconda3-5.2.0-Windows-x86_64.exe`
 下载安装，这里我建议是安装在系统盘，但是考虑到以后的库文件会很多，所以我还是装在非系统盘了。
@@ -200,7 +200,7 @@ clash是一个基于Go语言开发的多平台代理客户端，目前在众开�
 - [Clash for windows](https://github.com/Fndroid/clash_for_windows_pkg/releases)
 - [Clash for Android](https://github.com/Kr328/ClashForAndroid/releases)
 这里仅以clash for windows为例，至于android还请自行领悟。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/win10%E9%87%8D%E8%A3%85%E6%97%A5%E8%AE%B0-/20200708045049111.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/win10%E9%87%8D%E8%A3%85%E6%97%A5%E8%AE%B0-/20200708045049111.png)
 {% endnote %}
 <!-- endtab -->
 {% endtabs %}
@@ -226,7 +226,7 @@ Microsoft Edge更新至最新版以后，因为采用了chromium内核，所以�
 ## IDE安装，jetbrains全家桶
 {% note default no-icon %}
 jetbrains产品的UI设计和庞大的插件能够给编程带来极为舒适的体验。
-[jetbrains toolbox](http://www.jetbrains.com/toolbox/app/)
+[jetbrains toolbox](https://www.jetbrains.com/toolbox/app/)
 登录自己的学生账号以后就能免费使用一年。在校期间总共可以验证三次。
 {% note primary %}
 学生账号认证 [jetbrains学生产品](https://www.jetbrains.com/student/)
@@ -279,7 +279,7 @@ c/c++ ：CLion
 <!-- endtab -->
 <!-- tab 弹弹play -->
 {% note danger no-icon %}
-[弹弹play](http://www.dandanplay.com/)是一个看新番的软件，p2p下载，基本上b站上有的资源都有，
+[弹弹play](https://www.dandanplay.com/)是一个看新番的软件，p2p下载，基本上b站上有的资源都有，
 会员不想买就在这下载着看，能加载弹幕，也能发弹幕，和b站没有太大差别了。不过毕竟是没买票，还请低调。
 {% endnote %}
 <!-- endtab -->
@@ -297,7 +297,7 @@ c/c++ ：CLion
 <!-- endtab -->
 <!-- tab Potplayer -->
 {% note warning no-icon %}
-[potplayer](http://potplayer.daum.net/?lang=zh_CN)
+[potplayer](https://potplayer.daum.net/?lang=zh_CN)
 视频播放软件，解码器是我见过最完全的，而且颜值也很高，用起来尤为舒服。
 {% endnote %}
 <!-- endtab -->
@@ -350,7 +350,7 @@ c/c++ ：CLion
 {% endnote %}
 
 {% note primary %}
-[SAO Utils](http://www.gpbeta.com/post/develop/sao-utils/)
+[SAO Utils](https://www.gpbeta.com/post/develop/sao-utils/)
 {% endnote %}
 {% note primary %}
 [Rainmeter](https://bbs.rainmeter.cn/forum-210-1.html)

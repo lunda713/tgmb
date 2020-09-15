@@ -15,20 +15,20 @@ git算得上是最舒适的版本控制软件了，但是因为各种各样的�
 
 # 导入仓库
 注册完毕后，在首页右上角的找到**从Github/GitLab导入仓库**选项。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052051207.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052051207.png)
 然后在github那边找到我们要导入的仓库地址。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052317216.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052317216.png)
 把它粘贴到码云的**Git仓库URL**栏中。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052501594.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052501594.png)
 如果没兴趣在码云也配置一遍SSH keys的话，记得拉到下面**点选公开**。然后导入即可。
 
 # 直接从github导入
 用github授权以后可以直接从github导入已有仓库。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052745339.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728052745339.png)
 
 # 从码云获得git clone url
 进入码云的仓库，获取url，再用它来clone就快多了。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728053033220.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/git-clone%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200728053033220.png)
 
 # 注意事项
 如果只是为了git别人的开源库，那么只看上文即可。如果是涉及到博客或者gitpages，也就是要git clone的是username.github.io这个仓库的时候，就要记得更换git remote origin，不然会提交到码云的仓库，那样对github那边是不会有任何修改的。

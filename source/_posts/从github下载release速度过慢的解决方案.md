@@ -13,12 +13,12 @@ date: 2020-07-29 10:09:23
 # 使用Free Download Manager
 
 找到需要下载的release中的安装包，右键，复制链接，粘贴到[Free Download Manager](https://d.serctl.com/?dl_start)中，提交，稍等片刻后从它这里下载即可。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101743352.png)
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101822410.png)
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101901681.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101743352.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101822410.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101901681.png)
 
 # 使用芒果Geek开发的代下载服务
 这个是芒果Geek大神开发的代下载服务网站，操作方式和上述方案基本一致。
-找到需要下载的release中的安装包，右键，复制链接，粘贴到[Github代下载服务](http://g.widora.cn/)网站中，输入验证码，等待压缩完成后下载即可，体验上比Free Download Manager还要快一些。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101743352.png)
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729102554936.png)
+找到需要下载的release中的安装包，右键，复制链接，粘贴到[Github代下载服务](https://g.widora.cn/)网站中，输入验证码，等待压缩完成后下载即可，体验上比Free Download Manager还要快一些。
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729101743352.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E4%BB%8Egithub%E4%B8%8B%E8%BD%BDrelease%E9%80%9F%E5%BA%A6%E8%BF%87%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/20200729102554936.png)

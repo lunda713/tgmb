@@ -21,15 +21,15 @@ date: 2019-06-02 12:24:47
 
 
 第一次打开会提示
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602123201095.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602123201095.png)
 选择第二项。
 
 在启动的时候会弹出下图
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602123257566.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602123257566.png)
 虽然确实会用到代理，不过我们已经配置了全局科学上网模式。所以这里我们点取消。之后全部默认安装即可。
 
 # 新建一个项目
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602124410404.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602124410404.png)
 一路默认即可。
 
 然后就是一直困扰我的**Gradle build慢**的问题。
@@ -41,9 +41,9 @@ date: 2019-06-02 12:24:47
 打开C:\Users\username\ .gradle\ wrapper\ dists
 查看对应的gradle版本。
 比如我就是
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602125502131.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602125502131.png)
 然后到gradle发布网站下载对应版本。
-[Gradle distributions](http://services.gradle.org/distributions/)
+[Gradle distributions](https://services.gradle.org/distributions/)
 
 之后把下载下来的压缩包放到**C:\Users\ username \ .gradle\ wrapper\ dists\ gradle-5.1.1-all\ 97z1ksx6lirer3kbvdnh7jtjg ** 里。
 
@@ -56,7 +56,7 @@ date: 2019-06-02 12:24:47
 # 打开原有的工程
 
 先把图中这四个文件删了再打开即可。
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602125942731.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/Android-Studio%E4%B8%ADgradle-build%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/20190602125942731.png)
 
 # 其他
 

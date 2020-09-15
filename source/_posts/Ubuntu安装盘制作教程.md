@@ -34,7 +34,7 @@ usb2.0，8g绰绰有余了。
 
 {% note default no-icon %}
 我这会是Ubuntu18.04.2LTS，下面还有个18.10的，怎么说呢，学软件的应该都知道越新的版本越有风险吧。还是选择长期支持的稳定版本好了。
-如果有钟情于老版本的，这里附上Ubuntu历史版本的镜像库：[Ubuntu history mirror](http://mirrors.melbourne.co.uk/ubuntu-releases/)
+如果有钟情于老版本的，这里附上Ubuntu历史版本的镜像库：[Ubuntu history mirror](https://mirrors.melbourne.co.uk/ubuntu-releases/)
 {% endnote %}
 
 
@@ -50,14 +50,14 @@ usb2.0，8g绰绰有余了。
 后面直接照搬一下人家的图文教程
 {% endnote %}
 {% gallery %}
-![1：主界面](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612071928636.png)
-![2：按照下图中红色字体说明，选择你需要制作的Ubuntu版本，点击"打开"按钮](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072049787.png)
-![3：选择-启动->写入硬盘映像](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072019938.png)
-![4:在写入方式中选择"USB-HDD"或者"USB-HDD+"（两者均可，默认是USB-HDD+），然后点击"便捷启动"](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072115995.png)
+![1：主界面](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612071928636.png)
+![2：按照下图中红色字体说明，选择你需要制作的Ubuntu版本，点击"打开"按钮](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072049787.png)
+![3：选择-启动->写入硬盘映像](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072019938.png)
+![4:在写入方式中选择"USB-HDD"或者"USB-HDD+"（两者均可，默认是USB-HDD+），然后点击"便捷启动"](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072115995.png)
 
-![5.1:选择便捷启动->写入新的驱动器引导扇区->Syslinux，然后在跳出的窗口中点击"是"，最后会提示"引导扇区写入成功"，然后点击"确定"](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072149401.png)
-![5.2](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072206677.png)
-![5.3](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072222507.png)
-![6:选择"写入"，会提示"你确定继续操作吗？"，选择"是"](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072240039.png)
-![7:等到"完成比例"达到"100%"，就制作完成了，可以关闭ultriso了](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072256306.png)
+![5.1:选择便捷启动->写入新的驱动器引导扇区->Syslinux，然后在跳出的窗口中点击"是"，最后会提示"引导扇区写入成功"，然后点击"确定"](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072149401.png)
+![5.2](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072206677.png)
+![5.3](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072222507.png)
+![6:选择"写入"，会提示"你确定继续操作吗？"，选择"是"](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072240039.png)
+![7:等到"完成比例"达到"100%"，就制作完成了，可以关闭ultriso了](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/ubuntu18-04LTS%E5%AE%89%E8%A3%85%E7%9B%98%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/20190612072256306.png)
 {% endgallery %}

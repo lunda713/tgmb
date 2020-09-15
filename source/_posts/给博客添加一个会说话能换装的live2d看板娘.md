@@ -128,13 +128,13 @@ const live2d_path = "/live2d-widget/";
 <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
 ```
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E4%BC%9A%E8%AF%B4%E8%AF%9D%E8%83%BD%E6%8D%A2%E8%A3%85%E7%9A%84live2d%E7%9C%8B%E6%9D%BF%E5%A8%98/20200812030316962.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E4%BC%9A%E8%AF%B4%E8%AF%9D%E8%83%BD%E6%8D%A2%E8%A3%85%E7%9A%84live2d%E7%9C%8B%E6%9D%BF%E5%A8%98/20200812030316962.png)
 
 在< body >标签中新增如下内容，
 ```html
 <script src="/live2d-widget/autoload.js"></script>
 ```
-![](http://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E4%BC%9A%E8%AF%B4%E8%AF%9D%E8%83%BD%E6%8D%A2%E8%A3%85%E7%9A%84live2d%E7%9C%8B%E6%9D%BF%E5%A8%98/20200812025853981.png)
+![](https://akilar-1259097125.cos.ap-shanghai.myqcloud.com/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E4%BC%9A%E8%AF%B4%E8%AF%9D%E8%83%BD%E6%8D%A2%E8%A3%85%E7%9A%84live2d%E7%9C%8B%E6%9D%BF%E5%A8%98/20200812025853981.png)
 3. 第三步
 
 在**主题配置文件~/Hexo/themes/next/_config.yml**底部添加如下内容

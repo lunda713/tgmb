@@ -99,7 +99,7 @@ https://example.com/path/to/live2d-widget/
 - `waifu-tips.json` 中定义了触发条件（`selector`，CSS 选择器）和触发时显示的文字（`text`）；
 - `waifu.css` 是看板娘的样式表。
 
-源文件是对 Hexo 的 [NexT 主题](http://github.com/next-theme/hexo-theme-next)有效的，为了适用于你自己的网页，可能需要自行修改，或增加新内容。  
+源文件是对 Hexo 的 [NexT 主题](https://github.com/next-theme/hexo-theme-next)有效的，为了适用于你自己的网页，可能需要自行修改，或增加新内容。  
 **警告：作者不对包括但不限于 `waifu-tips.js` 和 `waifu-tips.json` 文件中的内容负责，请自行确保它们是合适的。**
 
 如果有任何疑问，欢迎提 Issue。如果有任何修改建议，欢迎提 Pull Request。
@@ -119,7 +119,7 @@ https://example.com/path/to/live2d-widget/
 代码自这篇博文魔改而来：  
 https://www.fghrsh.net/post/123.html
 
-点击看板娘的纸飞机按钮时，会出现一个彩蛋，这来自于 [WebsiteAsteroids](http://www.websiteasteroids.com)。
+点击看板娘的纸飞机按钮时，会出现一个彩蛋，这来自于 [WebsiteAsteroids](https://www.websiteasteroids.com)。
 
 ## 更多 More
 
@@ -142,7 +142,7 @@ https://github.com/LikeNeko/L2dPetForMac
 ## 许可证 License
 
 Released under the GNU General Public License v3  
-http://www.gnu.org/licenses/gpl-3.0.html
+https://www.gnu.org/licenses/gpl-3.0.html
 
 本仓库中涉及的所有 Live2D 模型、图片、动作数据等版权均属于其原作者，仅供研究学习，不得用于商业用途。
 
@@ -153,7 +153,7 @@ https://live2d.github.io
 Live2D Cubism Core は Live2D Proprietary Software License で提供しています。  
 https://www.live2d.com/eula/live2d-proprietary-software-license-agreement_en.html  
 Live2D Cubism Components は Live2D Open Software License で提供しています。  
-http://www.live2d.com/eula/live2d-open-software-license-agreement_en.html
+https://www.live2d.com/eula/live2d-open-software-license-agreement_en.html
 
 > The terms and conditions do prohibit modification, but obfuscating in `live2d.min.js` would not be considered illegal modification.
 
