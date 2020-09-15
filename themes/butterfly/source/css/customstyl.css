@@ -163,6 +163,7 @@ img {
   height: 500px;
   writing-mode: vertical-rl;
   writing-mode: tb-rl;
+  font-size: 25px;
 }
 }
 .poem {
