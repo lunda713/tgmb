@@ -659,7 +659,7 @@ $(function () {
     if (curProtocol === 'https') {
       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
     } else {
-      bp.src = 'https://push.zhanzhang.baidu.com/push.js'
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
     }
     bp.dataset.pjax = ''
     const s = document.getElementsByTagName('script')[0]
