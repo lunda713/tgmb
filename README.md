@@ -1,4 +1,6 @@
 # Akilarlxh.github.io
+<html>
+<head>
 <style>
 /* 诗歌体 */
 @media (min-width: 900px) {
@@ -13,7 +15,9 @@
 .poem {
   font-family:楷体 !important;
 }
-  </style>
+</style>
+</head>
+<body>
 <center class="poem"><b>
 <h1>山鬼辞</h1>
 君不见，武穆风骨凭栏望，当关一夫封居胥。 <br>
@@ -30,3 +34,5 @@
 君莫笑，卧沙骨， <br>
 只恨不是书中人，魑魅魍魉魁魈无！<br>
 </b></center>
+</body>
+</html>
