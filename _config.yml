@@ -118,7 +118,7 @@ deploy:
   repo:
     github: git@github.com:Akilarlxh/Akilarlxh.github.io.git
     gitee: git@gitee.com:akilar/akilar.git
-    # coding: git@e.coding.net:akilar/akilar/akilar.git
+    coding: git@e.coding.net:akilar/akilar/akilar.git
   branch: master
 
 
