@@ -2,7 +2,7 @@ var OriginTitile = document.title;
 var titleTime;
 document.addEventListener('visibilitychange', function () {
     if (document.hidden) {
-        $('[rel="shortcut icon"]').attr('href', "/img/siteicon/siteicon.png");
+        $('[rel="shortcut icon"]').attr('href', "/img/siteicon/144.png");
         document.title = 'w(ﾟДﾟ)w 不要走！再看看嘛！';
         clearTimeout(titleTime);
     }
