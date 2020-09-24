@@ -14,7 +14,7 @@ Akilarの糖果屋是一个个人性质的博客，在这里你可以看到：<b
 5. 🍬Akilarの泡泡糖：个人日记，被室友戏称为刘水账。<br>
 6. 🍰Akilarの太妃糖：在下引以为傲的诗文微小说，希望您能喜欢。<br>
 <br>
-主页：https://akilar.top/home/<br>
+主页：https://blog.akilar.top/<br>
 使用的是<a href="https://zfe.one">冰卡诺</a>使用Metro 4制作的Win10磁贴风格界面。<br>
 喜欢的可以去给他点个Star：https://github.com/Zfour/zfe.one<br>
 主题使用的是<a href="https://demo.jerryc.me/">Butterfly</a>,<br>
