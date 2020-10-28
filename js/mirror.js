@@ -1,0 +1,1 @@
+"use strict";function Mirror(){var o=window.location.pathname,i=(window.location.hostname,"https://akilar.gitee.io"+o);window.location.href=i}
