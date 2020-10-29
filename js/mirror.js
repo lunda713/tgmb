@@ -1,1 +1,1 @@
-"use strict";function Mirror(){var o=window.location.pathname,i=(window.location.hostname,"https://akilar.gitee.io"+o);window.location.href=i}
+"use strict";function Mirror(){var o,t=window.location.pathname;"https://akilar.top"===window.location.hostname?(o="https://akilar.gitee.io"+t,window.location.href=o):window.alert("您已经在镜像站了，无需跳转。")}
