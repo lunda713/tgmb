@@ -1,1 +1,0 @@
-"use strict";GitHubCalendar(".calendar","Akilarlxh"),GitHubCalendar(".calendar","Akilarlxh",{responsive:!0});

@@ -1,1 +1,1 @@
-"use strict";function Mirror(){var o,i=window.location.pathname;"akilar.top"===window.location.hostname?(o="https://akilar.gitee.io"+i,window.alert("即将为您跳转至镜像站"),window.location.href=o):window.alert("您已经在镜像站了，无需跳转。")}
+"use strict";function Mirror(){var i,o=window.location.pathname,t=window.location.hostname;"akilar.top"===t?(i="https://akilar.gitee.io"+o,window.alert("即将为您跳转至镜像站"),window.location.href=i):"akilar.gitee.io"===t?(i="https://akilar.top"+o,window.alert("当前为镜像站，即将返回主站"),window.location.href=i):window.alert("本地调试，拒绝跳转")}
