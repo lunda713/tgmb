@@ -13,14 +13,15 @@
   alert(pathname);
   if (hostname === 'akilar.top') {
     url = "https://akilar.gitee.io" + pathname;
-    window.alert("即将前往糖果屋分店🍬");
+    document.title="即将前往糖果屋分店🍬";
     window.location.href = url;
   }
   else if(hostname === 'akilar.gitee.io') {
     url = "https://akilar.top" + pathname;
-    window.alert("正在返回糖果屋本部🍭！");
+    document.title="正在返回糖果屋本部🍭！";
     window.location.href = url;
   }
   else {
     window.alert("Master，本地调试不需要跳转哦！🍫");
+    window.location.href = refurl
   }}, 3000);</script></body></html>
