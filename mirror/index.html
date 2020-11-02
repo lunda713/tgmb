@@ -4,13 +4,13 @@
   let hostname;
   let url;
   refurl = document.referrer;
-  alert(refurl);
+  // alert(refurl);
   refurlquery =refurl.split('/');
   hostname = refurlquery[2];
-  alert(hostname);
+  // alert(hostname);
   pathname='';
   for (var i=3;i<refurlquery.length;i++) {pathname = pathname+'/'+refurlquery[i];}
-  alert(pathname);
+  // alert(pathname);
   if (hostname === 'akilar.top') {
     url = "https://akilar.gitee.io" + pathname;
     document.title="即将前往糖果屋分店🍬";
