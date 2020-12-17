@@ -1,0 +1,1 @@
+"use strict";$("<style type='text/css' id='dynamic-after' />").appendTo("head"),$("#dynamic-after").text(".magnetname:after{background:"+linecolor+"!important}");
